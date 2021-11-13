@@ -17,26 +17,26 @@ function pdo_get_connection(){
 
 //Thêm xóa sửa
 function pdo_execute($sql){
-    $sql_args=array_slice(func_get_args(),1);
-    $conn=pdo_get_connection();
-    $stmt=$conn->prepare($sql);
+    $sql_args = array_slice(func_get_args(),1);
+    $conn = pdo_get_connection();
+    $stmt = $conn->prepare($sql);
     $stmt->execute($sql_args);
     return $stmt;
 }
 //Lấy ra tất cả
 function pdo_query($sql){
-    $sql_args=array_slice(func_get_args(),1);
-    $conn=pdo_get_connection();
-    $stmt=$conn->prepare($sql);
+    $sql_args = array_slice(func_get_args(),1);
+    $conn  =pdo_get_connection();
+    $stmt = $conn->prepare($sql);
     $stmt->execute($sql_args);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
 //Lấy ra 1 cái
 function pdo_query_one($sql){
-    $sql_args=array_slice(func_get_args(),1);
-    $conn=pdo_get_connection();
-    $stmt=$conn->prepare($sql);
+    $sql_args = array_slice(func_get_args(),1);
+    $conn = pdo_get_connection();
+    $stmt = $conn->prepare($sql);
     $stmt->execute($sql_args);
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     return $result;
