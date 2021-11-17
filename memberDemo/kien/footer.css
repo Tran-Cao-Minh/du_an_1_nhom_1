@@ -1,5 +1,6 @@
 
 
+
 .footer{
     width: 1440px;
     background-color: var(--black);
@@ -20,7 +21,6 @@
    height: auto;
    margin: 2.5rem 0;
 }
-
 .footer__heading {
 padding-top: 5rem;
 padding-top: 2.5rem;
