@@ -13,6 +13,12 @@
     src: url(/public/font/Roboto/Roboto-Bold.ttf);
 }
 
+:root {
+    --regular: 'Roboto Regular', sans-serif;
+    --medium: 'Roboto Medium', sans-serif;
+    --bold: 'Roboto Bold', sans-serif;
+}
+
 /* @font-face {
     font-family: 'Roboto ';
     src: url(/public/font/Roboto);
