@@ -9,6 +9,19 @@ html {
     font-size: 10px;
 }
 
+/* responsive with REM */
+@media only screen and (max-width: 1024px) {
+    * {
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    * {
+        font-size: 8px;
+    }
+}
+
 *,
 *:before,
 *:after {
