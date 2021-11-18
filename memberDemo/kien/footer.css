@@ -1,29 +1,33 @@
-.footer {
-    width: 1440px;
-    background-color: var(--black);
+footer {
     display: flex;
+    width: 100%;
+    background-color: var(--black); 
 }
 
 .footer__container {
     display: flex;
-    width: 114rem;
+
+    width: 117rem;
     height: auto;
-    background-color: var(--black);
-    margin: 0 15rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
 .footer__column {
-    color: white;
-    padding: 0 1.5rem;
     width: 27.4rem;
     height: auto;
+    padding: 0 1.5rem;
     margin: 2.5rem 0;
-    font-family: 'Roboto Bold';
+
+    color: var(--white);
+
+    font-family: var(--regular);
 }
 
 .footer__heading {
-    padding-top: 5rem;
-    padding-top: 2.5rem;
+    padding: 2.5rem 0;
+    
+
     font-size: 1.8rem;
 }
 
@@ -33,15 +37,19 @@
 }
 
 .footer__link {
-    text-decoration: none;
-    color: var(--white);
-    padding-top: 1.5rem;
     display: block;
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
     font-size: 1.8rem;
+
+    color: var(--white);
 }
 
 .footer__link:hover {
     color: var(--tertiary-color);
+
     transition: 0.2s color ease;
 }
 
