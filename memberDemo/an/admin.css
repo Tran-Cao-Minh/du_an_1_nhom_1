@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
+    
 }
 
 :root {
@@ -56,7 +57,7 @@ body {
 
 .navmenu ul li {
     position: relative;
-    width: 200%;
+    width: 100%;
     list-style: none;
     border-bottom-left-radius: 25px;
     border-top-left-radius: 25px;
@@ -109,6 +110,32 @@ body {
     text-align: start;
     white-space: nowrap;
 }
+.navmenu ul li:hover a::before,
+.navmenu ul li.hovered a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--grey);
+    pointer-events: none;
+}
+.navmenu ul li:hover a::after,
+.navmenu ul li.hovered a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--grey);
+    pointer-events: none;
+}
 
 /* main */
 .main {
@@ -121,8 +148,8 @@ body {
 }
 
 .main.active {
-    width: 1296px;
     left: 70px;
+    width: 1296px;
 }
 
 .topbar {
@@ -195,10 +222,10 @@ body {
 .cardBox {
     position: relative;
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
+    grid-gap: 20px;
 }
 
 a {
@@ -209,7 +236,7 @@ a {
 .cardBox .card {
     position: relative;
     background: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     display: flex;
     cursor: pointer;
@@ -397,4 +424,89 @@ a {
 }
 .recentCustomers table tr:hover td h4 span{
     color: var(--grey);
+}
+/* Reponsive*/
+@media (max-width: 991px){
+    .navmenu{
+        left: -300px;
+    }
+    .navmenu.active{
+        width: 300px;
+        left: 0;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        left: 300px;
+    }
+    .cardBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 768px){
+    .detail{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .recentOrders{
+        overflow-x: auto;
+    }
+    .status.inprogress{
+        white-space: nowrap;
+    }
+    .search{
+        width: 300px;
+    }
+}
+@media (max-width: 480px){
+    .cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardHeader h2{
+        font-size: 20px;
+    }
+    .user{
+        min-width: 40px;
+    }
+    .navmenu{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navmenu.active{
+        width: 100%;
+        left: 0;
+    }
+    .toggle{
+        z-index: 10001;
+    }
+    .main.active .toggle{
+        color: #fff;
+        position: fixed;
+        right: 0;
+        left: inherit;
+    }
+    .search{
+        width: 230px;
+    }
+    .user{
+        left: 0;
+    }
+}
+@media (max-width: 1024px) and (min-width: 991px){
+    .main{
+        width: 774px;
+    }
+    .main.active{
+        width: 954px;
+    }
+}
+@media (max-width: 1920px) and(min-width: 1366px){
+    .main{
+        width: 1670px;
+    }
+    .main.active{
+        width: 1850px;
+    }
 }
