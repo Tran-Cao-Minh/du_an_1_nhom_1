@@ -1,0 +1,264 @@
+.form__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 56.2rem;
+  margin: 0 auto;
+  border-radius: 2rem;
+
+  background: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0.7rem 2.9rem 0px;
+
+  position: relative;
+}
+
+.form__register__phone,
+.form__login {
+  width: 46.2rem;
+}
+
+.form__register__phone {
+  padding: 3.2rem 0;
+}
+
+.form__heading {
+  color: var(--primary-color);
+
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  text-align: center;
+}
+
+.form__group {
+  padding-top: 4rem;
+}
+
+.form__label {
+  color: var(--black);
+
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-family: var(--regular);
+}
+
+.form__input {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1.2rem 0.8rem;
+  border: 0.2rem solid var(--light-gray);
+  border-radius: 0.3rem;
+
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  font-family: var(--regular);
+}
+
+.form__input--primary:focus {
+  border-color: var(--tertiary-color);
+}
+
+.form__input--error {
+  border-color: var(--primary-color);
+}
+
+.form__message {
+  display: block;
+
+  padding-top: 0.5rem;
+
+  color: var(--primary-color);
+
+  font-size: 1.6rem;
+  font-family: var(--regular);
+}
+
+.form__date,
+.form__password {
+  position: relative;
+}
+
+.form__toggle {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+
+  cursor: pointer;
+}
+
+.form__toggle i {
+  padding: 1.2rem;
+
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+}
+
+.form__date__icon i {
+  font-size: 2.5rem;
+  line-height: 3.9rem;
+}
+
+.form__password__icon:hover {
+  background: var(--light-gray);
+
+  border-radius: 50%;
+}
+
+.form__button {
+  display: inline-block;
+  
+  width: 100%;
+  padding: 1.6rem 0;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  
+  background: var(--primary-color);
+  color: #fff;
+
+  border: none;
+  
+  font-size: 1.8rem;
+  font-family: var(--regular);
+
+  transition: 0.2s background ease;
+}
+
+.form__button:hover {
+  opacity: 0.9;
+}
+
+.form__action {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--primary-color);
+
+  font-family: var(--regular);
+}
+
+.form__forget,
+.form__create {
+  font-size: 1.4rem;
+}
+
+.form__forget:hover,
+.form__create:hover {
+  color: var(--tertiary-color);
+
+  cursor: pointer;
+}
+
+.line {
+  position: relative;
+
+  width: 100%;
+  border-bottom: 0.1rem solid var(--light-gray);
+  margin-top: 2.2rem;
+}
+
+.line__text {
+  position: absolute;
+  top: -1rem;
+  left: 15rem;
+
+  padding: 0 1.2rem;
+
+  background: var(--white);
+  color: var(--gray);
+
+  font-size: 1.6rem;
+  font-family: var(--regular);
+}
+
+.social {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social .social__image {
+  width: 6rem;
+}
+
+.social .social__image:hover {
+  opacity: 0.9;
+}
+
+.form__close {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+
+  background: var(--white);
+
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+
+  cursor: pointer;
+}
+
+.form__close i {
+  font-size: 3rem;
+
+  color: var(--gray);
+}
+
+.form__close:hover {
+  background: var(--light-gray);
+}
+
+.form__close i:hover {
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width:480px) {
+  .form__container {
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 32px;
+  }
+
+  .form__register__phone,
+  .form__login {
+    padding: 0 24px 24px;
+  }
+
+  .line__text {
+    left: 11rem;
+  }
+
+  /* .form__input {
+    font-size: 1.4rem;
+  }
+
+  .form__label,
+  .line__text,
+  .form__message,
+  .form__button,
+  .form__forget,
+  .form__create {
+    font-size: 1.3rem;
+  }
+
+  .social .social__image {
+    width: 5rem;
+  }
+
+  .form__close i {
+    font-size: 2rem;
+  }
+
+  .form__date__icon i {
+    font-size: 1.5rem;
+  } */
+}
