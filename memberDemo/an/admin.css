@@ -140,7 +140,7 @@ body {
 /* main */
 .main {
     position: absolute;
-    width: 1116px;
+    width: 1096px;
     left: 250px;
     min-height: 100vh;
     background: var(--grey);
@@ -149,7 +149,7 @@ body {
 
 .main.active {
     left: 70px;
-    width: 1296px;
+    width: 1276px;
 }
 
 .topbar {
@@ -251,10 +251,10 @@ a {
     color: var(--blue1);
 }
 
-.cardBoc .card .card_name {
+.card_box .card .card_name {
     color: black;
     font-size: 1.1em;
-    margin-top: 5px;
+    margin: 5px 0 0 5px;
 }
 
 .card_box .card .icon_card {
@@ -301,6 +301,17 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-top: 10px;
+}
+.card_header_r {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card_header h2, .card_header_r h2 {
+    font-weight: 500;
+    color: var(--dark);
 }
 
 .card_header h2 {
@@ -499,10 +510,10 @@ a {
 }
 @media (max-width: 1024px) and (min-width: 991px){
     .main{
-        width: 774px;
+        width: 759px;
     }
     .main.active{
-        width: 954px;
+        width: 939px;
     }
 }
 @media (max-width: 1920px) and(min-width: 1366px){
