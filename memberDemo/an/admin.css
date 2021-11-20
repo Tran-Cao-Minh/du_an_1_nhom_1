@@ -477,7 +477,7 @@ a {
     .card_box{
         grid-template-columns: repeat(1,1fr);
     }
-    .card_header h2{
+    .card_header h2, .card_header_r h2{
         font-size: 20px;
     }
     .user{
@@ -506,6 +506,13 @@ a {
     }
     .user{
         left: 0;
+    }
+    .card_box .card .numbers{
+        font-size: 2em;
+    }
+    .card_box .card .card_name{
+        font-size: 0.9em;
+        font-weight: 500;
     }
 }
 @media (max-width: 1024px) and (min-width: 991px){
