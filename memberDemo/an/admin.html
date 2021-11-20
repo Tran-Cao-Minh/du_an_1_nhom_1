@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <!--left Menu-->
-        <div class="navmenu">
+        <div class="nav_menu">
             <ul>
                 <li>
                     <a href="#">
@@ -88,14 +88,14 @@
                 </div>
             </div>
             <!--Card-->
-            <div class="cardBox">
+            <div class="card_box">
                 <a href="">
                     <div class="card">
                         <div>
                             <div class="numbers">1234</div>
-                            <div class="cardName">ASD</div>
+                            <div class="card_name">ASD</div>
                         </div>
-                        <div class="iconCard">
+                        <div class="icon_card">
                             <ion-icon name="documents-outline"></ion-icon>
                         </div>
                     </div>
@@ -104,9 +104,9 @@
                     <div class="card">
                         <div>
                             <div class="numbers">1234</div>
-                            <div class="cardName">ASD</div>
+                            <div class="card_name">ASD</div>
                         </div>
-                        <div class="iconCard">
+                        <div class="icon_card">
                             <ion-icon name="color-palette-outline"></ion-icon>
                         </div>
                     </div>
@@ -115,9 +115,9 @@
                     <div class="card">
                         <div>
                             <div class="numbers">1234</div>
-                            <div class="cardName">ASD</div>
+                            <div class="card_name">ASD</div>
                         </div>
-                        <div class="iconCard">
+                        <div class="icon_card">
                             <ion-icon name="library-outline"></ion-icon>
                         </div>
                     </div>
@@ -126,9 +126,9 @@
                     <div class="card">
                         <div>
                             <div class="numbers">1234</div>
-                            <div class="cardName">ASD</div>
+                            <div class="card_name">ASD</div>
                         </div>
-                        <div class="iconCard">
+                        <div class="icon_card">
                             <ion-icon name="documents-outline"></ion-icon>
                         </div>
                     </div>
@@ -136,8 +136,8 @@
             </div>
             <div class="detail">
                 <!--Manage Orders-->
-                <div class="recentOrders">
-                    <div class="cardHeader">
+                <div class="recent_orders">
+                    <div class="card_header">
                         <h2>Recent Order</h2>
                         <a href="#" class="btn">View All</a>
                     </div>
@@ -209,41 +209,41 @@
                     </table>
                 </div>
                 <!--Customers-->
-                <div class="recentCustomers">
-                    <div class="cardHeader">
+                <div class="recent_customers">
+                    <div class="card_header">
                         <h2>Recent Customers</h2>
                     </div>
                     <table>
                         <tr>
-                            <td width="60px"><div class="imgBx"><img src="Picture/LogoAN1.png" alt=""></div></td>
+                            <td width="60px"><div class="img_box"><img src="Picture/LogoAN1.png" alt=""></div></td>
                             <td><h4>User <br><span>Country</span></h4></td>
                         </tr>
                         <tr>
-                            <td width="60px"><div class="imgBx"><img src="Picture/LogoAN1.png" alt=""></div></td>
+                            <td width="60px"><div class="img_box"><img src="Picture/LogoAN1.png" alt=""></div></td>
                             <td><h4>User <br><span>Country</span></h4></td>
                         </tr>
                         <tr>
-                            <td width="60px"><div class="imgBx"><img src="Picture/LogoAN1.png" alt=""></div></td>
+                            <td width="60px"><div class="img_box"><img src="Picture/LogoAN1.png" alt=""></div></td>
                             <td><h4>User <br><span>Country</span></h4></td>
                         </tr>
                         <tr>
-                            <td width="60px"><div class="imgBx"><img src="Picture/LogoAN1.png" alt=""></div></td>
+                            <td width="60px"><div class="img_box"><img src="Picture/LogoAN1.png" alt=""></div></td>
                             <td><h4>User <br><span>Country</span></h4></td>
                         </tr>
                         <tr>
-                            <td width="60px"><div class="imgBx"><img src="Picture/LogoAN1.png" alt=""></div></td>
+                            <td width="60px"><div class="img_box"><img src="Picture/LogoAN1.png" alt=""></div></td>
                             <td><h4>User <br><span>Country</span></h4></td>
                         </tr>
                         <tr>
-                            <td width="60px"><div class="imgBx"><img src="Picture/LogoAN1.png" alt=""></div></td>
+                            <td width="60px"><div class="img_box"><img src="Picture/LogoAN1.png" alt=""></div></td>
                             <td><h4>User <br><span>Country</span></h4></td>
                         </tr>
                         <tr>
-                            <td width="60px"><div class="imgBx"><img src="Picture/LogoAN1.png" alt=""></div></td>
+                            <td width="60px"><div class="img_box"><img src="Picture/LogoAN1.png" alt=""></div></td>
                             <td><h4>User <br><span>Country</span></h4></td>
                         </tr>
                         <tr>
-                            <td width="60px"><div class="imgBx"><img src="Picture/LogoAN1.png" alt=""></div></td>
+                            <td width="60px"><div class="img_box"><img src="Picture/LogoAN1.png" alt=""></div></td>
                             <td><h4>User <br><span>Country</span></h4></td>
                         </tr>
                     </table>
@@ -255,15 +255,15 @@
     <script>
         // Xử lí menu thu gọn
         let toggle = document.querySelector('.toggle');
-        let navmenu = document.querySelector('.navmenu');
+        let nav_menu = document.querySelector('.nav_menu');
         let main = document.querySelector('.main');
 
         toggle.onclick=function(){
-            navmenu.classList.toggle('active');
+            nav_menu.classList.toggle('active');
             main.classList.toggle('active');
         }
         // Hover lên phần đã chọn
-        let list=document.querySelectorAll('.navmenu li');
+        let list=document.querySelectorAll('.nav_menu li');
         function activelink(){
             list.forEach((item)=>item.classList.remove('hovered'));
             this.classList.add('hovered');
