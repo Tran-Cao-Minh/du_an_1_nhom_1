@@ -1,0 +1,64 @@
+.home {
+    max-width: 100%;
+    height: auto;
+}
+.home__container {
+    width: 100%;
+    height: auto;
+
+
+}
+/* background */
+.home__background {
+    width: 100%;
+    height: auto;
+}
+.home__background-img {
+    background-image: url(/public/image/site/home_page/background.png);
+
+    max-width: 100%;
+    height: 48.6rem;
+
+    background-repeat: no-repeat; /* không lập hình ảnh */
+    background-position: center; 
+    background-size: cover; /*Thay đổi kích thước hình nền để bao phủ toàn bộ vùng chứa*/
+    
+   
+}
+.home__titleBar {
+    width: 85%;
+    height: auto;
+    
+    margin: auto;
+    border-radius: 0.5rem;
+
+    background-color: var(--primary-color-blur);
+}
+
+.home__titleBar p {
+    
+    height: auto;
+    width: 30%;
+    height: 100%;
+    padding: 1.5rem 0 ;
+    
+    margin: auto;
+    text-align: center;
+    
+    font-size: 1.8rem;
+    font-family: var(--medium);
+}
+.home__productInf {
+    width:100%;
+    height: auto;
+    background-color: violet;
+    margin: auto;
+}
+.home__productInf-img {
+    width: 37rem;
+    height: 37rem;
+    
+}
+
+
+
