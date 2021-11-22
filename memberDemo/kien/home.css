@@ -7,7 +7,6 @@
     width: 100%;
     height: auto;
 
-
 }
 
 /* background */
@@ -35,15 +34,21 @@
 .home__titleBar {
     width: 1170px;
     height: 50px;
-    text-align: center;
-    background-color: blue;
-    /* background-color: var(--primary-color-blur); 
-    */
+    flex-wrap: wrap;
+
+    border: 1px #D8E3E7;
+    border-radius: 5px;
+    background-color: var(--primary-color-blur);
+
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
 }
 
 .home__titleBar p {
-
 
     font-size: 1.8rem;
     font-family: var(--medium);
@@ -53,16 +58,66 @@
 
 .home__productInf {
     width: 100%;
-    height: ;
+    height: auto;
+    display: flex;
     background-color: violet;
-    margin: auto;
-    
-    padding: 0 135px;
+    padding: 2rem 13.5rem;
+
 }
 
 .home__productInf-img {
     width: 37rem;
-    height: 37rem;
+    height: auto;
+    
+}
+
+/*  */
+.home__productInf-information {
+
+    width: auto;
+    height: 370px;
+    padding: 0 15px;
+
+
+}
+
+/* Thêm vào giỏ hàng - mua ngay */
+.home__containBtn {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.home__containBtn-add {
+    width: 37rem;
+    height: 5rem;
+    display: flex;
+
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--white);
+
+    background-color: yellowgreen;
+    
+}
+
+.home__containBtn-buy {
+    
+    width: 37rem;
+    height: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* color: var(--white); */
+    color: #EE6F57;
+    border: 2px  solid #EE6F57;
+    border-radius: 5px;
 
 }
 
@@ -70,10 +125,12 @@
 .home__thuongHieu {
     width: 100%;
     height: auto;
+    padding-top: 2rem;
 }
 
 .home__containLogo {
     display: flex;
+    flex-wrap: wrap;
 
     padding: 0 150px;
     padding-top: 2rem;
@@ -83,18 +140,21 @@
 .home__Logo {
     width: 370px;
     height: 100px;
-    padding-left: 2rem;
-    padding-right: 2rem;
 
-
-    border: 1px solid #D8E3E7;
+    border: 2px solid #D8E3E7;
     border-radius: 5px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 150px;
+}
+
+.home__logo a {
+    padding: 0 0.75rem;
 }
 
 .home__Logo img {
     width: 89px;
+
 }
