@@ -60,5 +60,26 @@
     
 }
 
+/* Thương hiệu */
+.home__thuongHieu {
 
+}
+.home__containLogo {
+    display: flex;
+    width: 80%;
+    height: auto;
+    justify-content: space-around;
+    background-color: brown;
 
+}
+.home__Logo {
+    width: 370px;
+    height: auto;
+    background-color: blue;
+    
+}
+.home__logo img {
+    width: 105px ;
+    height: 51px;
+
+}

@@ -27,7 +27,7 @@ footer {
     padding-top: 3rem;
     padding-bottom: 1.5rem;
 
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
@@ -41,7 +41,7 @@ footer {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 
     color: var(--white);
     transition: color 0.2s;
@@ -58,7 +58,7 @@ footer {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 
     color: var(--white);
 }
