@@ -13,6 +13,19 @@
   position: relative;
 }
 
+.overlay {
+  position: fixed; 
+  width: 100%; 
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.1);
+  z-index: 2; 
+  cursor: pointer;
+}
+
 .form__register__phone,
 .form__login {
   width: 46.2rem;
@@ -46,7 +59,7 @@
   width: 100%;
   margin-top: 1rem;
   padding: 1.2rem 0.8rem;
-  border: 0.2rem solid var(--light-gray);
+  border: 0.2rem solid var(--gray-blur);
   border-radius: 0.3rem;
 
   font-size: 1.8rem;
@@ -55,11 +68,11 @@
 }
 
 .form__input--primary:focus {
-  border-color: var(--tertiary-color);
+  border-color: var(--primary-color);
 }
 
 .form__input--error {
-  border-color: var(--primary-color);
+  border-color: var(--red);
 }
 
 .form__message {
@@ -67,7 +80,7 @@
 
   padding-top: 0.5rem;
 
-  color: var(--primary-color);
+  color: var(--red);
 
   font-size: 1.6rem;
   font-family: var(--regular);
@@ -99,7 +112,7 @@
 }
 
 .form__password__icon:hover {
-  background: var(--light-gray);
+  background: var(--gray-blur);
 
   border-radius: 50%;
 }

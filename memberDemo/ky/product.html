@@ -15,9 +15,9 @@
 
 <body>
     <div class="product">
-        <div class="container">
+        <div class="product__container">
             <div class="product__filter">
-                <!-- Start variant column -->
+                <!-- Start filter column -->
                 <div class="product__filter__column">
                     <label class="label__head" for="sex">Giới tính
                         <span class="plus__icon">
@@ -43,8 +43,30 @@
                         </div>
                     </div>
                 </div>
-                <!-- End variant column -->
-                <!-- Start variant column -->
+                <!-- End filter column -->
+                <!-- Start filter column -->
+                <div class="product__filter__column">
+                    <label class="label__head" for="age">Độ tuổi
+                        <span class="plus__icon">
+                            <i><i class="fas fa-plus"></i></i>
+                        </span>
+                    </label>
+                    <input class="product__filter__toggle" type="checkbox" name="" id="age">
+                    <div class="product__filter__content">
+                        <div class="product__filter__item">
+                            <input type="checkbox" id="adults">
+                            <label class="product__filter__label" for="adults"><span
+                                    class="product__filter__name">Ngưới lớn</span></label>
+                        </div>
+                        <div class="product__filter__item">
+                            <input type="checkbox" id="childen">
+                            <label class="product__filter__label" for="childen"><span
+                                    class="product__filter__name">Trẻ em</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!-- End filter column -->
+                <!-- Start filter column -->
                 <div class="product__filter__column">
                     <label class="label__head" for="brands"> Thương hiệu
                         <span class="plus__icon">
@@ -86,8 +108,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- End variant column -->
-                <!-- Start variant column -->
+                <!-- End filter column -->
+                <!-- Start filter column -->
                 <div class="product__filter__column">
                     <label class="label__head" for="colors">Màu sắc
                         <span class="plus__icon">
@@ -98,43 +120,43 @@
                     <div class="product__filter__content product__filter__content--color">
                         <div class="product__filter__item">
                             <input type="checkbox" id="orange">
-                            <label class="product__filter__label--color" for="orange"
+                            <label class="product__filter__label--circle" for="orange"
                                 style="background:#EE6F57;"></label>
                         </div>
                         <div class="product__filter__item">
                             <input type="checkbox" id="red">
-                            <label class="product__filter__label--color" for="red" style="background:
+                            <label class="product__filter__label--circle" for="red" style="background:
                             #CF455C;"></label>
                         </div>
                         <div class="product__filter__item">
                             <input type="checkbox" id="turqoise">
-                            <label class="product__filter__label--color" for="turqoise" style="background:
+                            <label class="product__filter__label--circle" for="turqoise" style="background:
                                 #51C4D3;"></label>
                         </div>
                         <div class="product__filter__item">
                             <input type="checkbox" id="black">
-                            <label class="product__filter__label--color" for="black" style="background:
+                            <label class="product__filter__label--circle" for="black" style="background:
                                 #333333;"></label>
                         </div>
                         <div class="product__filter__item">
                             <input type="checkbox" id="white">
-                            <label class="product__filter__label--color" for="white" style="background:
+                            <label class="product__filter__label--circle" for="white" style="background:
                                 #ffffff;"></label>
                         </div>
                         <div class="product__filter__item">
                             <input type="checkbox" id="gray">
-                            <label class="product__filter__label--color" for="gray" style="background:
+                            <label class="product__filter__label--circle" for="gray" style="background:
                                 #8d886f;"></label>
                         </div>
                         <div class="product__filter__item">
                             <input type="checkbox" id="lightgray">
-                            <label class="product__filter__label--color" for="lightgray" style="background:
+                            <label class="product__filter__label--circle" for="lightgray" style="background:
                                 #999999;"></label>
                         </div>
                     </div>
                 </div>
-                <!-- End variant column -->
-                <!-- Start variant column -->
+                <!-- End filter column -->
+                <!-- Start filter column -->
                 <div class="product__filter__column">
                     <label class="label__head" for="sizes">Kích cỡ
                         <span class="plus__icon">
@@ -185,7 +207,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- End variant column -->
+                <!-- End filter column -->
+            </div>
+            <div class="product__section">
+
             </div>
         </div>
     </div>
