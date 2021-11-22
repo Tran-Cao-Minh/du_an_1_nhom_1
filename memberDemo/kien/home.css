@@ -62,6 +62,7 @@
     display: flex;
     background-color: violet;
     padding: 2rem 13.5rem;
+    border: 2px  solid #EE6F57;
 
 }
 
@@ -77,7 +78,7 @@
     width: auto;
     height: 370px;
     padding: 0 15px;
-
+    color: white;
 
 }
 
@@ -126,6 +127,7 @@
     width: 100%;
     height: auto;
     padding-top: 2rem;
+    color:  #333333;
 }
 
 .home__containLogo {
