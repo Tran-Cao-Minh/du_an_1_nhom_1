@@ -2,8 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
-     
+    font-size: 10px;
 }
 
 :root {
@@ -32,7 +31,8 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    background: var(--grey);
+    background: var(--white);
+    width: 100%;
 }
 
 .container {
@@ -44,14 +44,14 @@ body {
     position: fixed;
     width: 25rem;
     height: 100%;
-    background: var(--primary-color);
+    background: var(--tertiary-color);
     border-left: 10px solid var(--blue);
     transition: 0.25s ease;
     overflow: hidden;
 }
 
 .nav_menu.active {
-    width: 70px;
+    width: 6rem;
 }
 
 .nav_menu ul {
@@ -71,7 +71,7 @@ body {
 
 .nav_menu ul li:hover,
 .nav_menu ul li.hovered {
-    background: var(--grey);
+    background: var(--white);
     transition: 0.3s ease;
 }
 
@@ -86,7 +86,7 @@ body {
     width: 100%;
     display: flex;
     text-decoration: none;
-    color: #fff;
+    color:var(--white);
 
     font-family: var(--regular);
 }
@@ -103,10 +103,11 @@ body {
     height: 50px;
     line-height: 60px;
     text-align: center;
+    top: 5px;
 }
 
 .nav_menu ul li a .icon ion-icon {
-    font-size: 1.75em;
+    font-size: 3rem;
 }
 
 .nav_menu ul li a .title {
@@ -117,6 +118,7 @@ body {
     line-height: 50px;
     text-align: start;
     white-space: nowrap;
+    font-size: 1.6rem;
 }
 .nav_menu ul li:hover a::before,
 .nav_menu ul li.hovered a::before{
@@ -176,8 +178,10 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
-    font-size: 2.1em;
     cursor: pointer;
+}
+.toggle ion-icon{
+    font-size: 3rem;
 }
 
 .search {
@@ -198,13 +202,14 @@ body {
     padding: 5px 20px;
     outline: none;
     border: 1px solid #000;
+    font-size: 1.6rem;
 }
 
 .search label ion-icon {
     position: absolute;
     right: 10px;
-    top: 0;
-    font-size: 1.2em;
+    top: -8px;
+    font-size: 2.5rem;
 
 }
 
@@ -234,6 +239,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+    font-family: var(--medium);
 }
 
 a {
@@ -243,7 +249,7 @@ a {
 
 .card_box .card {
     position: relative;
-    background: white;
+    background:var(--secondary-color);
     padding: 10px 20px;
     border-radius: 20px;
     display: flex;
@@ -255,33 +261,36 @@ a {
 .card_box .card .numbers {
     position: relative;
     font-weight: 500;
-    font-size: 2.5em;
-    color: var(--blue1);
+    font-size: 4rem;
+    color: var(--primary-color);
 }
 
 .card_box .card .card_name {
-    color: black;
-    font-size: 1.1em;
+    color: var(--bg-overlay);
+    font-size: 1.6rem;
     margin: 5px 0 0 5px;
 }
 
 .card_box .card .icon_card {
-    font-size: 2.5em;
+    font-size: 3rem;
     color: var(--dark);
     position: relative;
     left: 0;
     top: 10px;
 }
+.card_box .card .icon_card ion-icon{
+    font-size: 3.3rem;
+}
 
 .card_box .card:hover {
-    background: var(--blue);
+    background: var(--tertiary-color);
     transition: 0.3s ease;
 }
 
 .card_box .card:hover .numbers,
 .card_box .card:hover .card_name,
 .card_box .card:hover .icon_card {
-    color: var(--grey);
+    color: var(--secondary-color);
     transition: 0.3s ease;
 }
 
@@ -299,7 +308,7 @@ a {
     position: relative;
     display: grid;
     min-height: 500px;
-    background: var(--grey);
+    background: var(--secondary-color);
     padding: 10px;
     border-radius: 20px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
@@ -320,6 +329,8 @@ a {
 .card_header h2, .card_header_r h2 {
     font-weight: 500;
     color: var(--dark);
+    font-size: 2.7rem;
+    font-family: var(--medium);
 }
 
 .card_header h2 {
@@ -330,10 +341,12 @@ a {
 .btn {
     position: relative;
     padding: 5px 10px;
-    background: var(--blue);
+    background: var(--tertiary-color);
     text-decoration: none;
     color: var(--dark);
     border-radius: 6px;
+    font-size: 1.6rem;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .detail table {
@@ -344,18 +357,24 @@ a {
 
 .detail table thead td {
     font-weight: 600;
+    font-size: 1.8rem;
+    font-family: var(--medium);
 }
 
 .detail .recent_orders table tr {
     color: black;
     border-bottom: 1px solid rgba(0,0 , 0, 0.1);
 }
+.detail .recent_orders table tbody td{
+    font-size: 1.6rem;
+    font-family: 'Ubuntu', sans-serif;
+}
 .detail .recent_orders table tr:last-child{
     border-bottom: none;
 }
 .detail .recent_orders table tbody tr:hover{
-    background: var(--blue1);
-    color: white;
+    background: var(--primary-color);
+    color: var(--white);
 }
 .detail .recent_orders table tr td{
     padding: 10px;
@@ -371,24 +390,24 @@ a {
 }
 .status.delivered{
     padding: 2px 4px;
-    background: yellowgreen;
-    color: white;
+    background: var(--primary-contrast-color);
+    color: var(--white);
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
 }
 .status.return{
     padding: 2px 4px;
-    background: red;
-    color: white;
+    background: var(--red);
+    color: var(--white);
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
 }
 .status.pending{
     padding: 2px 4px;
-    background: var(--dark);
-    color: white;
+    background: orange;
+    color: var(--white);
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
@@ -396,7 +415,7 @@ a {
 .status.inprogress{
     padding: 2px 4px;
     background: rgb(3, 243, 43);
-    color: white;
+    color: var(--white);
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
@@ -408,7 +427,8 @@ a {
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0 , 0, 0.08);
     border-radius: 20px;
-    background: var(--grey);
+    background: var(--secondary-color);
+    font-family: 'Ubuntu', sans-serif;
 }
 .recent_customers .img_box{
     position: relative;
@@ -426,8 +446,8 @@ a {
     object-fit: cover;
 }
 .recent_customers table tr:hover{
-    background: var(--blue1);
-    color: var(--grey);
+    background: var(--primary-color);
+    color: var(--white);
 }
 .recent_customers table tr td{
     padding:12px 10px;
@@ -442,10 +462,10 @@ a {
     color: gray;
 }
 .recent_customers table tr:hover td h4 span{
-    color: var(--grey);
+    color: var(--white);
 }
 /* Reponsive*/
-@media (max-width: 991px){
+@media only screen and (max-width: 991px){
     .nav_menu{
         left: -300px;
     }
@@ -463,8 +483,11 @@ a {
     .card_box{
         grid-template-columns: repeat(2,1fr);
     }
+    .toggle ion-icon{
+        font-size: 4rem;
+    }
 }
-@media (max-width: 768px){
+@media only screen and (max-width: 768px){
     .detail{
         grid-template-columns: repeat(1,1fr);
     }
@@ -480,13 +503,16 @@ a {
     .user{
         left: 0;
     }
+    .toggle ion-icon{
+        font-size: 4rem;
+    }
 }
-@media (max-width: 480px){
+@media only screen and (max-width: 480px){
     .card_box{
         grid-template-columns: repeat(1,1fr);
     }
     .card_header h2, .card_header_r h2{
-        font-size: 20px;
+        font-size: 2rem;
     }
     .user{
         min-width: 40px;
@@ -496,12 +522,18 @@ a {
         left: -100%;
         z-index: 1000;
     }
+    .nav_menu ul li a .title{
+        font-size: 1.8rem;
+    }
     .nav_menu.active{
         width: 100%;
         left: 0;
     }
     .toggle{
         z-index: 10001;
+    }
+    .toggle ion-icon{
+        font-size: 4rem;
     }
     .main.active .toggle{
         color: #fff;
@@ -516,14 +548,14 @@ a {
         left: 0;
     }
     .card_box .card .numbers{
-        font-size: 2em;
+        font-size: 2.5rem;
     }
     .card_box .card .card_name{
-        font-size: 0.9em;
+        font-size: 1.5rem;
         font-weight: 500;
     }
 }
-@media (max-width: 1024px) and (min-width: 991px){
+@media only screen and (max-width: 1024px) and (min-width: 991px){
     .main{
         width: 759px;
     }
@@ -531,7 +563,7 @@ a {
         width: 939px;
     }
 }
-@media (max-width: 1920px) and(min-width: 1366px){
+@media only screen and (max-width: 1920px) and(min-width: 1366px){
     .main{
         width: 1670px;
     }
@@ -539,7 +571,7 @@ a {
         width: 1850px;
     }
 }
-@media (width: 1080px){
+@media only screen and (width: 1080px){
     .main{
         width: 830px;
     }
