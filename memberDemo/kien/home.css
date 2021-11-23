@@ -3,31 +3,21 @@
     height: auto;
 }
 
-.home__container {
-    width: 100%;
-    height: auto;
 
-}
 
 /* background */
-.home__background {
-    width: 100%;
+.home__banner {
+    width: auto;
     height: auto;
+    display: flex;
 }
 
-.home__background-img {
-    background-image: url(/public/image/site/home_page/background.png);
+.home__banner-img {
 
-    max-width: 100%;
-    height: 48.6rem;
+    width: 100%;
+    height: auto;
 
-    background-repeat: no-repeat;
-    /* không lập hình ảnh */
-    background-position: center;
-    background-size: cover;
-    /*Thay đổi kích thước hình nền để bao phủ toàn bộ vùng chứa*/
-
-
+  
 }
 
 /* thương hiệu uy tín - top 5 sản phẩm nổi bật */
