@@ -9,7 +9,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    
+    margin: 2rem 0 3rem 0;
 }
 
 .banner__container-img {
@@ -18,44 +18,103 @@
     height: auto;
     display: flex;
 }
-
+/* nút lùi */
 .banner__prev-btn {
     width: 5rem;
     height: 6rem;
-    background-color: blue;
+
     position: absolute;
-    
+    border-radius: 0px 5px 5px 0px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #333333;
+    opacity: 0.6;
 }
+.banner__prev-btn:hover {
+    background-color: #333333;
+    opacity: 0.8;
+    Transition: 0.2s;
+}
+.banner__prev-btn img {
+    width: 1.9rem;
+    height: 5rem;
+}
+/* nút tiếp */
+
 .banner__next-btn {
     width: 5rem;
     height: 6rem;
-    background-color: red;
     position: absolute;
     right: 0;
+    border-radius: 5px 0px 0px 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #333333;
+    opacity: 0.6;
     
+}
+.banner__next-btn:hover {
+    background-color: #333333;
+    opacity: 0.8;
+    Transition: 0.2s;
+}
+.banner__next-btn img {
+    width: 1.9rem;
+    height: 5rem;
 }
 
 .banner__index-group {
-    width: 10rem;
+    width: 100%;
     height: 1rem;
-    position:absolute ;
-    background-color: yellow;
-    bottom: 0;
-    left: 50%;
-   
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+
+
+
     /* calc(100% - 2.5rem); */
+}
+.banner__index-group div {
+    width: 3rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
 
+.banner__index-group div button {
+    width: 3rem;
+    height: 1rem;
+    opacity: 0.6;
+    border-radius: 5px;
+    transform: rotate(-180deg);
 
+    background-color: #333333;
 
 }
+.banner__index-group div button:hover {
+    background-color: #333333;
+    opacity: 0.8;
+    transform: 0.2s;
+}
+
 
 /* thương hiệu uy tín - top 5 sản phẩm nổi bật */
 .home__titleBar {
-    width: 1170px;
+    width: auto;
     height: 50px;
     flex-wrap: wrap;
 
-    border: 1px #D8E3E7;
+    border: 1px;
     border-radius: 5px;
     background-color: var(--primary-color-blur);
 
@@ -63,14 +122,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
 
 }
+
 
 .home__titleBar p {
 
     font-size: 1.8rem;
     font-family: var(--medium);
+}
+
+/* home__top-5-product */
+.home__top-5-product {
+    width: 100%;
+    height: auto;
+    padding: 0 13.5rem;
+    margin-bottom: 2rem;
 }
 
 /*  */
@@ -79,26 +148,59 @@
     width: 100%;
     height: auto;
     display: flex;
-    background-color: violet;
-    padding: 2rem 13.5rem;
-    border: 2px  solid #EE6F57;
-
-}
-
-.home__productInf-img {
-    width: 37rem;
-    height: auto;
+    border: 2px solid rgba(18, 110, 130, 0.05);
+    box-sizing: border-box;
+    border-radius: 5px;
+    position: relative;
+    align-items: center;
     
 }
 
-/*  */
-.home__productInf-information {
+.home__productInf-img  {
+    width: 37rem;
+    height: auto;
+    padding: 1.5rem;
+    
+}
 
+/* home__productNameTop */
+.home__productNameTop {
     width: auto;
-    height: 370px;
-    padding: 0 15px;
-    color: white;
+    height: 5rem;
+    background: rgba(18, 110, 130, 0.05);
+    color: #126E82;
+    display: flex;
+    align-items: center;
+    
+}
 
+.home__productNameTop p {
+    
+    font-family: var(--regular);
+    font-size: 1.8rem;
+}
+
+/* màu sắc  */
+.home__chooseColor{
+    width: auto;
+    height: 5rem;
+    display: flex;
+    margin: 1.5rem 0;
+}
+.home__chooseColor input {
+    width: 5rem;
+    height: 5rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+.radio-1{
+    background-color: ;
+}
+.radio-2{
+    background: #51C4D3;
+}
+.radio-3{
+    background-color: #51C4D3 ;
 }
 
 /* Thêm vào giỏ hàng - mua ngay */
@@ -122,11 +224,11 @@
     color: var(--white);
 
     background-color: yellowgreen;
-    
+
 }
 
 .home__containBtn-buy {
-    
+
     width: 37rem;
     height: 5rem;
 
@@ -136,7 +238,7 @@
 
     /* color: var(--white); */
     color: #EE6F57;
-    border: 2px  solid #EE6F57;
+    border: 2px solid #EE6F57;
     border-radius: 5px;
 
 }
@@ -146,7 +248,7 @@
     width: 100%;
     height: auto;
     padding-top: 2rem;
-    color:  #333333;
+    color: #333333;
 }
 
 .home__containLogo {
