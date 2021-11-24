@@ -204,6 +204,45 @@
 .radio-3{
     background-color: #51C4D3 ;
 }
+/* Kích cỡ  */
+.home__chooseSize {
+    width: auto;
+    height: 5rem;
+    margin: 1rem 0;
+    display: flex;
+}
+.home__chooseSize input {
+    height: 5rem;
+    width: 5rem;
+    margin: 0 0.75rem;
+    opacity: 0.00000001;
+    border: 2px solid #D8E3E7;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+/* giá tiền */
+.home__pricInf {
+    width: auto;
+    height: 50px;
+    display: flex;
+    background-color: wheat;
+    justify-content: center;
+    margin: 1rem 0 ;
+    
+}
+.home__pricInf div{
+    width: auto;
+    height: 50px;
+    background-color: violet;
+    padding:0.8rem;
+    align-items: center;
+    display: flex;
+}
+.pricInf-percent {
+    height:auto ;
+    width:auto ;
+    background-color: yellow;
+}  
 
 /* Thêm vào giỏ hàng - mua ngay */
 .home__containBtn {
@@ -225,8 +264,13 @@
 
     color: var(--white);
 
-    background-color: yellowgreen;
+    background-color: #126E82;
+    margin: 0 0.7rem;
 
+}
+.home__containBtn-add p {
+    font-size: 1.8rem;
+    font-family: var(--regular);
 }
 
 .home__containBtn-buy {
@@ -237,12 +281,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
+    margin: 0 0.7rem;
+    border: 2px solid #EE6F57;
+
 
     /* color: var(--white); */
     color: #EE6F57;
-    border: 2px solid #EE6F57;
-    border-radius: 5px;
+    
 
+}
+.home__containBtn-buy p {
+    font-size: 1.8rem;
+    font-family: var(--regular);
 }
 
 /* Thương hiệu */
