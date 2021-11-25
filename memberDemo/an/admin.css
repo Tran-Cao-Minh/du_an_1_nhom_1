@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 :root {
@@ -32,7 +32,6 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     background: var(--white);
-    width: 100%;
 }
 
 .container {
@@ -45,7 +44,7 @@ body {
     width: 25rem;
     height: 100%;
     background: var(--tertiary-color);
-    border-left: 10px solid var(--blue);
+    border-left: 1rem solid var();
     transition: 0.25s ease;
     overflow: hidden;
 }
@@ -65,8 +64,8 @@ body {
     position: relative;
     width: 100%;
     list-style: none;
-    border-bottom-left-radius: 25px;
-    border-top-left-radius: 25px;
+    border-bottom-left-radius: 2.5rem;
+    border-top-left-radius: 2.5rem;
 }
 
 .nav_menu ul li:hover,
@@ -76,7 +75,7 @@ body {
 }
 
 .nav_menu ul li:nth-child(1) {
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
     pointer-events: none;
 }
 
@@ -93,17 +92,17 @@ body {
 
 .nav_menu ul li:hover a,
 .nav_menu ul li.hovered a {
-    color: var(--blue1);
+    color: var(--primary-color);
 }
 
 .nav_menu ul li a .icon {
     position: relative;
     display: block;
-    min-width: 50px;
-    height: 50px;
-    line-height: 60px;
+    min-width: 5rem;
+    height: 5rem;
+    line-height: 6rem;
     text-align: center;
-    top: 5px;
+    top: 0.5rem;
 }
 
 .nav_menu ul li a .icon ion-icon {
@@ -113,9 +112,9 @@ body {
 .nav_menu ul li a .title {
     position: relative;
     display: block;
-    padding: 0 10px;
-    height: 50px;
-    line-height: 50px;
+    padding: 0 1rem;
+    height: 5rem;
+    line-height: 5rem;
     text-align: start;
     white-space: nowrap;
     font-size: 1.6rem;
@@ -125,12 +124,12 @@ body {
     content: '';
     position: absolute;
     right: 0;
-    top: -50px;
-    width: 50px;
-    height: 50px;
+    top: -5rem;
+    width: 5rem;
+    height: 5rem;
     background: transparent;
     border-radius: 50%;
-    box-shadow: 35px 35px 0 10px var(--grey);
+    box-shadow: 3.5rem 3.5rem 0 1rem var(--grey);
     pointer-events: none;
 }
 .nav_menu ul li:hover a::after,
@@ -138,20 +137,20 @@ body {
     content: '';
     position: absolute;
     right: 0;
-    bottom: -50px;
-    width: 50px;
-    height: 50px;
+    bottom: -5rem;
+    width: 5rem;
+    height: 5rem;
     background: transparent;
     border-radius: 50%;
-    box-shadow: 35px -35px 0 10px var(--grey);
+    box-shadow: 3.5rem -3.5rem 0 1rem var(--grey);
     pointer-events: none;
 }
 
 /* main */
 .main {
-    position: absolute;
-    width: 1096px;
-    left: 250px;
+    position: relative;
+    width: calc(100%-25rem);
+    left: 25rem;
     min-height: 100vh;
     background: var(--grey);
     transition: 0.5s;
@@ -159,22 +158,22 @@ body {
 
 .main.active {
     left: 70px;
-    width: 1276px;
+    width: calc(100%-7rem);
 }
 
 .topbar {
     width: 100%;
-    height: 60px;
+    height: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 1rem;
 }
 
 .toggle {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 6rem;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -186,8 +185,8 @@ body {
 
 .search {
     position: relative;
-    width: 400px;
-    margin: 0 10px;
+    width: 40rem;
+    margin: 0 1rem;
 }
 
 .search label {
@@ -197,9 +196,9 @@ body {
 
 .search label input {
     width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    padding: 5px 20px;
+    height: 4rem;
+    border-radius: 4rem;
+    padding: 0.5rem 2rem;
     outline: none;
     border: 1px solid #000;
     font-size: 1.6rem;
@@ -207,17 +206,17 @@ body {
 
 .search label ion-icon {
     position: absolute;
-    right: 10px;
-    top: -8px;
+    right: 1rem;
+    top: -0.8rem;
     font-size: 2.5rem;
 
 }
 
 .user {
     position: relative;
-    left: -20px;
-    width: 40px;
-    height: 40px;
+    left: -2rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
@@ -235,10 +234,10 @@ body {
 .card_box {
     position: relative;
     width: 100%;
-    padding: 10px;
+    padding: 1rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-gap: 2rem;
     font-family: var(--medium);
 }
 
@@ -250,12 +249,12 @@ a {
 .card_box .card {
     position: relative;
     background:var(--secondary-color);
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
     display: flex;
     cursor: pointer;
     justify-content: space-between;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0.7rem 2.5rem rgba(0, 0, 0, 0.08);
 }
 
 .card_box .card .numbers {
@@ -268,7 +267,7 @@ a {
 .card_box .card .card_name {
     color: var(--bg-overlay);
     font-size: 1.6rem;
-    margin: 5px 0 0 5px;
+    margin: 0.5rem 0 0 0.5rem;
 }
 
 .card_box .card .icon_card {
@@ -276,7 +275,7 @@ a {
     color: var(--dark);
     position: relative;
     left: 0;
-    top: 10px;
+    top: 1rem;
 }
 .card_box .card .icon_card ion-icon{
     font-size: 3.3rem;
@@ -297,20 +296,20 @@ a {
 .detail {
     position: relative;
     width: 100%;
-    padding: 20px;
+    padding: 2rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-gap: 30px;
-    /*margin-top: 10px;*/
+    grid-gap: 3rem;
+    /*margin-top: 1rem;*/
 }
 
 .detail .recent_orders {
     position: relative;
     display: grid;
-    min-height: 500px;
+    min-height: 50rem;
     background: var(--secondary-color);
-    padding: 10px;
-    border-radius: 20px;
+    padding: 1rem;
+    border-radius: 2rem;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
 
@@ -318,7 +317,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 .card_header_r {
     display: flex;
@@ -340,11 +339,11 @@ a {
 
 .btn {
     position: relative;
-    padding: 5px 10px;
+    padding: 5px 1rem;
     background: var(--tertiary-color);
     text-decoration: none;
     color: var(--dark);
-    border-radius: 6px;
+    border-radius: 0.6rem;
     font-size: 1.6rem;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -352,7 +351,7 @@ a {
 .detail table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 .detail table thead td {
@@ -377,7 +376,7 @@ a {
     color: var(--white);
 }
 .detail .recent_orders table tr td{
-    padding: 10px;
+    padding: 1rem;
 }
 .detail .recent_orders table tr td:last-child{
     text-align: end;
@@ -389,51 +388,51 @@ a {
     text-align: center;
 }
 .status.delivered{
-    padding: 2px 4px;
+    padding: 0.2rem 0.4rem;
     background: var(--primary-contrast-color);
     color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 .status.return{
-    padding: 2px 4px;
+    padding: 0.2rem 0.4rem;
     background: var(--red);
     color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 .status.pending{
-    padding: 2px 4px;
+    padding: 0.2rem 0.4rem;
     background: orange;
     color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 .status.inprogress{
-    padding: 2px 4px;
+    padding: 0.2rem 0.4rem;
     background: rgb(3, 243, 43);
     color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 .recent_customers{
     position: relative;
     display: grid;
-    min-height: 500px;
-    padding: 20px;
-    box-shadow: 0 7px 25px rgba(0,0 , 0, 0.08);
-    border-radius: 20px;
+    min-height: 50rem;
+    padding: 2rem;
+    box-shadow: 0 0.7rem 2.5rem rgba(0,0 , 0, 0.08);
+    border-radius: 2rem;
     background: var(--secondary-color);
     font-family: 'Ubuntu', sans-serif;
 }
 .recent_customers .img_box{
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -450,15 +449,15 @@ a {
     color: var(--white);
 }
 .recent_customers table tr td{
-    padding:12px 10px;
+    padding:1.2rem 1rem;
 }
 .recent_customers table tr td h4{
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
-    line-height: 1.2em;
+    line-height: 1.2rem;
 }
 .recent_customers table tr td h4 span{
-    font-size: 14px;
+    font-size: 1.4rem;
     color: gray;
 }
 .recent_customers table tr:hover td h4 span{
@@ -467,10 +466,10 @@ a {
 /* Reponsive*/
 @media only screen and (max-width: 991px){
     .nav_menu{
-        left: -300px;
+        left: -30rem;
     }
     .nav_menu.active{
-        width: 300px;
+        width: 30rem;
         left: 0;
     }
     .main{
@@ -478,7 +477,7 @@ a {
         left: 0;
     }
     .main.active{
-        left: 300px;
+        left: 30rem;
     }
     .card_box{
         grid-template-columns: repeat(2,1fr);
@@ -498,7 +497,7 @@ a {
         white-space: nowrap;
     }
     .search{
-        width: 300px;
+        width: 30rem;
     }
     .user{
         left: 0;
@@ -515,7 +514,7 @@ a {
         font-size: 2rem;
     }
     .user{
-        min-width: 40px;
+        min-width: 4rem;
     }
     .nav_menu{
         width: 100%;
@@ -542,7 +541,7 @@ a {
         left: inherit;
     }
     .search{
-        width: 230px;
+        width: 23rem;
     }
     .user{
         left: 0;
@@ -555,7 +554,7 @@ a {
         font-weight: 500;
     }
 }
-@media only screen and (max-width: 1024px) and (min-width: 991px){
+@media only screen and (max-width: 1020.4rem) and (min-width: 991px){
     .main{
         width: 759px;
     }
@@ -563,19 +562,19 @@ a {
         width: 939px;
     }
 }
-@media only screen and (max-width: 1920px) and(min-width: 1366px){
+@media only screen and (max-width: 192rem) and(min-width: 1366px){
     .main{
         width: 1670px;
     }
     .main.active{
-        width: 1850px;
+        width: 180.5rem;
     }
 }
 @media only screen and (width: 1080px){
     .main{
-        width: 830px;
+        width: 83rem;
     }
     .main.active{
-        width: 1010px;
+        width: 101rem;
     }
 }
