@@ -232,9 +232,12 @@
 }
 
 .chooseColor-1 input {
-    width: 5rem;
-    height: 5rem;
-    opacity: 0;
+    
+    display: none;
+}
+
+.chooseColor-1 input:checked~.chooseColor-1 {
+    background-color: red;
 }
 
 /* 2 */
