@@ -40,10 +40,11 @@ body{
     height: 40rem;
     left: 10%;
 }
-.order{
+.general-cart{
     width: 100%;
+    margin-bottom: 1.2rem;
 }
-.properties{
+.general-cart__properties{
     width: 50%;
     height: 10rem;
     margin-left: 25%;
@@ -52,32 +53,33 @@ body{
     background: rgba(18, 110, 130, 0.05);
     border-radius: 0.5rem;
 }
-.title{
+.general-cart__title,.product-detail__title{
     width: 80%;
     height: 2.7rem;
     margin-left: 10%;
     border: 1px solid rgba(18, 110, 130, 0.05);
     display: flex;
+    border-radius: 0.4rem;
     justify-content: space-between;
     align-items: flex-start;
     background: rgba(18, 110, 130, 0.05);
 }
-.title h2{
+.general-cart__title span,.product-detail__title span{
     color: var(--primary-color);
     padding: 10px;
     font-weight: 500;
 }
-.title a{
+.general-cart__title a{
     width: 13rem;
     line-height: 1.4rem;
     background: rgba(18, 110, 130, 0.05);
 }
-.order .title > a:hover{
+.general-cart .general-cart__title > a:hover{
     background: var(--tertiary-color);
     color: var(--white);
     transition: 0.3s ease-in-out;
 }
-.order_recent{
+.general-cart__title__order_recent{
     justify-content: right;
 }
 .order_icon i{
@@ -89,21 +91,21 @@ a{
     color: black;
     text-decoration: none;
 }
-.order_recent{
+.general-cart__title__order_recent{
     display: flex;
 }
 table{
     width: 100%;
     padding: 10px;
 }
-.box_cost table tr td{
+.general-cart__properties__box_cost table tr td{
     padding: 1px;
 }
-.box_cost table tr:first-child td:last-child{
+.general-cart__properties__box_cost table tr:first-child td:last-child{
     text-align: right;
     color: var(--red);
 }
-.box_cost table tr:last-child td{
+.general-cart__properties__box_cost table tr:last-child td{
     color: var(--red);
     font-size: 0.8rem;
 }
@@ -124,7 +126,7 @@ table{
     color: #fff;
 }
 .detail_button a .btn_1:hover{
-    color: var(--tertiary-color);
+    color: var(--primary-color);
     background: var(--white);
     transition: 0.3s ease-out;
 }
@@ -177,6 +179,8 @@ table{
     line-height: 1.5rem;
 }
 .product_size{
+    position: absolute;
+    left: 11rem;
     margin-left: 0.8rem;
     margin-right: 0.8rem;
     width: 1.6rem;
@@ -187,6 +191,8 @@ table{
     text-align: center;
 }
 .product_price{
+    position: absolute;
+    left: 14rem;;
     margin-left: 0.8rem;
     margin-right: 0.8rem;
     width: 6rem;
@@ -256,3 +262,15 @@ table{
     -webkit-appearance:none;
     margin:0;
 }*/
+.product_detail_1{
+    line-height: 1.6rem
+}
+.product_color{
+    position: absolute;
+    top: 3.9rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    background: var(--red);
+    border-radius: 50%;
+    cursor: pointer;
+}

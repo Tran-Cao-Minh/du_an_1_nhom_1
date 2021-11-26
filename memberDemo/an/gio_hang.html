@@ -9,27 +9,26 @@
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="gio_hang.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 </head>
 
 <body>
-    <div class="main">
-        <div class="order">
-            <div class="title">
-                <h2>Tổng quan</h2>
+    <section class="main">
+        <section class="general-cart">
+            <div class="general-cart__title">
+                <span>Tổng quan</span>
                 <a href="#">
-                    <div class="order_recent">
-                        <h2>Đơn hàng của tôi</h2>
+                    <div class="general-cart__title__order_recent">
+                        <span>Đơn hàng của tôi</span>
                         <div class="order_icon">
                             <i class="fas fa-id-card"></i>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="properties">
-                <div class="box_cost">
+            <div class="general-cart__properties">
+                <div class="general-cart__properties__box_cost">
                     <table>
                         <tr>
                             <td>Tổng tiền</td>
@@ -49,10 +48,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="product_detail">
-            <div class="title" style="margin-top: 1.2rem;">
-                <h2>Chi tiết</h2>
+        </section>
+        <section class="product-detail">
+            <div class="product-detail__title">
+                <span>Chi tiết</span>
             </div>
             <div class="chitiet">
                 <div class="product_box">
@@ -61,12 +60,12 @@
                     </div>
                     <div class="product_name">Nike Air Max</div>
                     <div class="product_detail_1">
-                        <div class="product_color">1</div>
+                        <div class="product_color"></div>
                         <div class="product_size">41</div>
                         <div class="product_price">3.456.000đ</div>
                     </div>
                     <div class="product_quantity">
-                        <div class="input-group">
+                        <!--<div class="input-group">
                             <span class="input-group-btn">
                                 <button type="button" class="btn btn-danger btn-number" data-type="minus"
                                     data-field="quant[2]">
@@ -81,16 +80,17 @@
                                     <span class="glyphicon glyphicon-plus"></span>
                                 </button>
                             </span>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <div class="product_box">
                     <div class="product_img">
                         <img src="Picture/test.jpg" alt="">
                     </div>
-                    <div class="product_name">asd</div>
+                    <div class="product_name">Nike Air Max</div>
                     <div class="product_detail_1">
-                        <div class="product_color">1</div>
+                        <div class="product_color">
+                        </div>
                         <div class="product_size">41</div>
                         <div class="product_price">3.456.000đ</div>
                     </div>
@@ -99,9 +99,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>   
-    <script src="add_quantity.js"></script>    
+        </section>
+    </section>   
+    <!--<script src="add_quantity.js"></script>-->    
 </body>
 
 </html>
