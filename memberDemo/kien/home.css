@@ -22,6 +22,7 @@
     height: 5rem;
 
     position: absolute;
+    border-color: transparent;
     border-radius: 0px 5px 5px 0px;
     left: 0;
 
@@ -47,7 +48,7 @@
     position: absolute;
     right: 0;
     border-radius: 0px 5px 5px 0px;
-
+    border-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,10 +94,12 @@
     margin: 0 0.75rem;
 
     opacity: 0.6;
-    border-radius: 0.5rem;
+    border-radius:  0.5rem;
     transform: rotate(-180deg);
+    border-color: transparent;
 
     background-color: #333333;
+    
 
 }
 .banner__index:hover {
@@ -108,6 +111,19 @@
 .banner__icon {
     font-size: 5rem;
     color:white;
+}
+.banner__index--choosen {
+    width: 3rem;
+    height: 1rem;
+    margin: 0 0.75rem;
+
+    opacity: 0.6;
+    border-radius:  0.5rem;
+    transform: rotate(-180deg);
+    border-color: transparent;
+
+    background-color: var(--primary-color);    
+
 }
 
 
