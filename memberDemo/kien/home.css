@@ -1,6 +1,3 @@
-.home {
-    width: 100%;
-}
 
 /* background */
 .banner__container {
@@ -66,12 +63,7 @@
     Transition: 0.2s;
 }
 
-.fas fa-caret-left {
-    position: absolute;
-    display: flex;
-    
-    
-}
+
 .banner__index-group {
     width: 100%;
     height: 1rem;
@@ -79,36 +71,43 @@
     bottom: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+
 
 
 
     /* calc(100% - 2.5rem); */
 }
 
-.banner__index-group div {
-    width: 3rem;
+/* .banner__index-group {
+    width: 3rem;iv
     height: 1rem;
     display: flex;
-    align-items: center;
     margin-left: 0.7rem;
     margin-right: 0.7rem;
-}
+} */
 
-.banner__index-group div button {
+.banner__index {
     width: 3rem;
     height: 1rem;
+    margin: 0 0.75rem;
+
     opacity: 0.6;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     transform: rotate(-180deg);
 
     background-color: #333333;
 
 }
-
-.banner__index-group div button:hover {
-    background-color: #333333;
+.banner__index:hover {
     opacity: 0.8;
     transform: 0.2s;
+}
+
+
+.banner__icon {
+    font-size: 5rem;
+    color:white;
 }
 
 
@@ -127,10 +126,7 @@
     align-items: center;
     justify-content: center;
 
-
-
 }
-
 
 .titleBar p {
 
@@ -141,7 +137,7 @@
 /*  */
 
 /* home__top-5-product */
-.top5__product {
+.top5__productInf{
     width: 100%;
     height: auto;
     padding: 0 13.5rem;
@@ -163,7 +159,7 @@
 
 }
 
-.productInf__img {
+.top5__productInf-img {
     width: auto;
     height: auto;
     padding:1.5rem;
@@ -206,21 +202,22 @@
 }
 
 /* màu sắc  */
-.choose-Color {
+.top5__choose-Color {
     width: auto;
     height: auto;
     display: flex;
     align-items: center;
     margin: 1.5rem 0;
 }
-.choose-Color div {
+.choose-Color {
     width: 5rem;
     height: 5rem;
 
     border-radius: 50%;
     margin: 0 0.75rem;
+    background: yellow;
 }
-.choose-Color  div input {
+.choose-Color-input {
     width: 5rem;
     height: 5rem;
     opacity: 0;
@@ -228,14 +225,14 @@
 
 
 /* Kích cỡ giày  */
-.choose-Size {
+.top5__choose-Size {
     width: auto;
     height: 5rem;
     display: flex;
     margin: 0.5rem 0;
 }
 
-.choose-Size div {
+.top5__choose-Size div {
     width: 5rem;
     height: 5rem;
 
@@ -249,7 +246,7 @@
     border: 2px solid #D8E3E7;
 }
 
-.choose-Size div input {
+.top5__choose-Size div input {
     width: 50px;
     height: 50px;
     display: flex;
@@ -257,29 +254,29 @@
     opacity: 0;
 }
 
-.choose-Size div p {
+.top5__choose-Size div p {
     font-size: 1.8rem;
     font-family: var(--regular);
 }
 
-.choose-Size div:hover {
+.top5__choose-Size div:hover {
     border: 2px solid #126E82;
 }
 
 /* giá tiền */
-.pricInf {
+.top5__price {
     width: auto;
     height: auto;
     display: flex;
 
 }
-.pricInf div p {
+.top5__price div p {
     font-size: 1.8rem;
     font-family: var(--regular);
     
 }
 
-.pricInf-1 {
+.top5__price-cost {
     width: 17rem;
     height: 5rem;
     margin: 0.8rem;
@@ -287,13 +284,17 @@
     align-items: center;
     display: flex;
     justify-content: center;
+
+    font-size: 1.8rem;
+    font-family: var(--regular);
+    color: #EE6F57;
     
     background: rgba(153, 153, 153, 0.1);
     
     border-radius: 25px;
 }
 
-.pricInf-percent {
+.top5__price-percent {
     width: 8rem;
     height: 5rem;
 
@@ -301,22 +302,43 @@
     align-items: center;
     justify-content: center;
     display: flex;
-
     border-radius: 25px;
+
+    font-size: 1.8rem;
+    font-family: var(--regular);
+    color: white;
 
     background: #EE6F57;
     
 }
+.top5__price-reduce {
+    width: 17rem;
+    height: 5rem;
+    margin: 0.8rem;
+
+    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+
+
+    font-size: 1.8rem;
+    font-family: var(--regular);
+    color:#999999;
+    
+    background: rgba(153, 153, 153, 0.1);
+}
 
 /* Thêm vào giỏ hàng - mua ngay */
-.containBtn {
+.top5__cart {
     width: auto;
     height: auto;
     display: flex;
     margin:2rem 0 ;
 }
 
-.containBtn-add {
+.cart__add {
     width: 37rem;
     height: 5rem;
     display: flex;
@@ -332,12 +354,12 @@
 
 }
 
-.containBtn-add p {
+.cart__add p {
     font-size: 1.8rem;
     font-family: var(--regular);
 }
 
-.containBtn-buy {
+.cart__buy {
 
     width: 37rem;
     height: 5rem;
@@ -356,13 +378,13 @@
 
 }
 
-.containBtn-buy p {
+.cart__buy p {
     font-size: 1.8rem;
     font-family: var(--regular);
 }
 
 /* Thương hiệu */
-.thuongHieu {
+.trademark {
     width: 100%;
     height: auto;
     padding-top: 2rem;
@@ -370,7 +392,28 @@
     padding: 0 15rem;
 }
 
-.containLogo {
+.trademark__titleBar {
+    width: auto;
+    height: 50px;
+    flex-wrap: wrap;
+
+    border: 1px;
+    border-radius: 5px;
+    background-color: var(--primary-color-blur);
+
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.trademark__titleBar p {
+
+    font-size: 1.8rem;
+    font-family: var(--medium);
+}
+.trademark__containLogo {
     display: flex;
     flex-wrap: wrap;
 
