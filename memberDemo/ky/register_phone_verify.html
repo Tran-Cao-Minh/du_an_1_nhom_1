@@ -15,24 +15,26 @@
 </head>
 
 <body>
-    <div class="form">
-        <div class="form__container">
-            <form action="" class="form__register__phone">
-                <h2 class="form__heading">Đăng ký tài khoản</h2>
-                <div class="form__group">
-                    <label class="form__label" for="">Nhập mã xác nhận</label>
-                    <input class="form__input form__input--primary" type="text"
-                        placeholder="Nhập mã xác nhận gồm 6 chữ số" />
-                    <span class="form__message"></span>
+    <div class="overlay">
+        <div class="form">
+                <form action="" class="form__register">
+                    <h2 class="form__heading">Đăng ký tài khoản</h2>
+                    <div class="form__group">
+                        <label class="form__label" for="">Nhập mã xác nhận</label>
+                        <input class="form__input form__input--primary" type="text"
+                            placeholder="Nhập mã xác nhận gồm 6 chữ số" />
+                        <span class="form__message"></span>
+                    </div>
+                    <div class="form__group">
+                        <button class="form__button" type="submit">Xác nhận</button>
+                    </div>
+                    <div class="form__register__message">
+                        <p>Không nhận được?</p> <a href="">Gửi lại mã</a>
+                    </div>
+                </form>
+                <div class="form__close">
+                    <span class="form__close__icon"><i class="fas fa-times"></i> </span>
                 </div>
-                <div class="form__group">
-                    <button class="form__button" type="submit">Xác nhận</button>
-                </div>
-
-            </form>
-            <div class="form__close">
-                <span class="form__close__icon"><i class="fas fa-times"></i> </span>
-            </div>
         </div>
     </div>
     <!-- Font Awsome -->
