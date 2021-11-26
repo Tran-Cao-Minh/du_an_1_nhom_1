@@ -6,115 +6,160 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Global CSS -->
     <link rel="stylesheet" href="/public/css/global/reset.css">
     <link rel="stylesheet" href="/public/css/global/theme.css">
     <link rel="stylesheet" href="/public/css/global/font.css">
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./home.css">
 </head>
 
 <body>
     <!--  -->
-    <div class="home">
-        <section class="banner">
-            <div class="banner__container">
-                <div class="banner__contain-img">
-                    <img src="/public/image/site/home_page/banner.png" alt="">
-                </div>
-                <button class="banner__prev-btn">
-                    <img src="/public/image/site/home_page/prev-btn.png" alt="">
-                </button>
-                <button class="banner__next-btn">
-                    <img src="/public/image/site/home_page/next-btn.png" alt="">
-                </button>
-                <div class="banner__index-group">
-                    <div>
-                        <button class=""></button>
-                    </div>
-                    <div>
-                        <button></button>
-                    </div>
-                    <div>
-                        <button></button>
-                    </div>
-                    <div>
-                        <button></button>
-                    </div>
-                </div> 
+    <section class="banner">
+        <div class="banner__container">
+            <div class="banner__contain-img">
+                <img src="/public/image/site/home_page/banner.png" alt="">
             </div>
-        </section>  
-        <!-- sản phẩm nổi bật -->
-        <div class="home__top-5-product">
-            <div class="home__titleBar">
-                <p>TOP 5 SẢN PHẨM NỔI BẬT</p>
-            </div>
-            <div class="home__productInf">
-                <!-- buton -->
-                <button class="banner__prev-btn">
-                    <img src="/public/image/site/home_page/prev-btn.png" alt="">
-                </button>
-                <button class="banner__next-btn">
-                    <img src="/public/image/site/home_page/next-btn.png" alt="">
-                </button>
-                <!-- img sản phẩm nổi bật -->
-                <div class="home__productInf-img">
-                    <img src="/public/image/site/home_page/productImage.png" alt="">
+            <button class="banner__prev-btn">
+                <i style="font-size: 2.4rem;" class="fas fa-caret-left"></i>
+            </button>
+            <button class="banner__next-btn">
+                <i style="font-size: 2.4rem;" class="fas fa-caret-left"></i>
+            </button>
+            <div class="banner__index-group">
+                <div>
+                    <button class=""></button>
                 </div>
-                <!-- thông tin sản phẩm nổi bật -->
-                <div class="home__productInf-information">
-                    
-                    <div class="home__productNameTop">
-                        
-                        <p> Giày Thể Thao Nam Biti's Hunter X Z Collection InGereenZ</p>
-                    </div>
-                    <div class="home__chooseColor">
-                        <input type="checkbox" name="" id="">
-                        <input type="checkbox" name="" id="">
-                        <input class="radio-1" type="radio">
-                        <input class="radio-2" type="radio">
-                        <input class="radio-3" type="radio">
-                    </div>
-                    <div class="home__chooseSize">
-                        <input type="radio">
-                        <input type="radio">
-                        <input type="radio">
-                        <input type="radio">
-                        <input type="radio">
-                        <input type="radio">
-                        <input type="radio">
-                    </div>
-                    <div class="home__pricInf">
-
-                    </div>
-                    <div class="home__containBtn">
-                        <a class="home__containBtn-add" href="">
-                            <p>Thêm vào giỏ hàng</p>
-                        </a>
-                        <a class="home__containBtn-buy" href="">
-                            <p>Mua ngay</p>
-                        </a>
-                    </div>
+                <div>
+                    <button></button>
+                </div>
+                <div>
+                    <button></button>
+                </div>
+                <div>
+                    <button></button>
                 </div>
             </div>
         </div>
-        <!-- Thương hiệu -->
-        <div class="home__thuongHieu">
-            <div class="home__titleBar">
-                <p>THƯƠNG HIỆU UY TÍN</p>
+    </section>
+    <!-- sản phẩm nổi bật -->
+    <section class="top5__productInf">
+        <div class="titleBar">
+            <p>TOP 5 SẢN PHẨM NỔI BẬT</p>
+        </div>
+        <div class="productInf">
+            <!-- buton -->
+            <button class="banner__prev-btn">
+                <i style="font-size: 2.4rem;" class="fas fa-caret-left"></i>
+            </button>
+            <button class="banner__next-btn">
+                <i style="font-size: 2.4rem;" class="fas fa-caret-left"></i>
+            </button>
+            <!-- img sản phẩm nổi bật -->
+            <div class="productInf__img">
+                <img src="/public/image/site/home_page/productImage.png" alt="">
             </div>
-            <div class="home__containLogo">
-                <a class="home__Logo" href="">
-                    <img src="/public/image/site/home_page/nike.png" alt="">
-                </a>
-                <a class="home__Logo" href="">
-                    <img src="/public/image/site/home_page/adidas.png" alt="">
-                </a>
-                <a class="home__Logo" href="">
-                    <img src="/public/image/site/home_page/puma.png" alt="">
-                </a>
+            <!-- thông tin sản phẩm nổi bật -->
+            <div class="home__productInf-information">
+                <div class="productInf-NameTop">
+                    <div class="">
+                        <p>1</p>
+                    </div>
+                    <p> Giày Thể Thao Nam Biti's Hunter X Z Collection InGereenZ</p>
+                </div>
+                <div class="choose-Color">
+                    <div class="chooseColor-1">
+                        <input type="radio" id="1" name="hooseColor" value="">
+                        <label class="chooseColor-img" for="1"></label>
 
+                    </div>
+                    <div class="chooseColor-2">
+                        <input type="radio" id="2" name="hooseColor" value="">
+                        <label class="chooseColor-img" for="2"></label>
+                    </div>
+                    <div class="chooseColor-3">
+                        <input type="radio" id="3" name="hooseColor" value="">
+                        <label class="chooseColor-img" for="3"></label>
+                    </div>
+                    <!-- <input type="radio" id="" name="color" value="">
+                        <input type="radio" id="" name="color" value="">
+                        <input type="radio" id="" name="color" value=""> -->
+                </div>
+                <div class="choose-Size">
+                    <div>
+                        <input type="radio" id="" name="size" value="">
+                        <p>39</p>
+                    </div>
+                    <div>
+                        <input type="radio" id="" name="size" value="">
+                        <p>40</p>
+                    </div>
+                    <div>
+                        <input type="radio" id="" name="size" value="">
+                        <p>41</p>
+                    </div>
+                    <div>
+                        <input type="radio" id="" name="size" value="">
+                        <p>42</p>
+                    </div>
+                    <div>
+                        <input type="radio" id="" name="size" value="">
+                        <p>43</p>
+                    </div>
+                    <div>
+                        <input type="radio" id="" name="size" value="">
+                        <p>44</p>
+                    </div>
+                    <div>
+                        <input type="radio" id="" name="size" value="">
+                        <p>45</p>
+                    </div>
+                </div>
+                <div class="Line" style="margin: 3rem 0;">
+                    <img src="/public/image/site/home_page/Line 1.png" alt="">
+                </div>
+                <div class="pricInf">
+                    <div class="pricInf-1">
+                        <p>1.199.000đ</p>
+                    </div>
+                    <div class="pricInf-percent">
+                        <p>12%</p>
+                    </div>
+                    <div class="pricInf-1">
+                        <p>1.599.999</p>
+                    </div>
+                </div>
+                <div class="containBtn">
+                    <a class="containBtn-add" href="">
+                        <p>Thêm vào giỏ hàng</p>
+                    </a>
+                    <a class="containBtn-buy" href="">
+                        <p>Mua ngay</p>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- Thương hiệu -->
+    <section class="thuongHieu">
+        <div class="titleBar">
+            <p>THƯƠNG HIỆU UY TÍN</p>
+        </div>
+        <div class="containLogo">
+            <a class="Logo" href="">
+                <img src="/public/image/site/home_page/nike.png" alt="">
+            </a>
+            <a class="Logo" href="">
+                <img src="/public/image/site/home_page/adidas.png" alt="">
+            </a>
+            <a class="Logo" href="">
+                <img src="/public/image/site/home_page/puma.png" alt="">
+            </a>
+
+        </div>
+    </section>
 </body>
 
 </html>
