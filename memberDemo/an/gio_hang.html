@@ -6,11 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- >>> copy link start here -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/public/css/global/reset.css">
+    <link rel="stylesheet" href="/public/css/global/theme.css">
+    <link rel="stylesheet" href="/public/css/global/font.css">
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
+    <!-- >>> copy link end here -->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link rel="stylesheet" href="gio_hang.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 </head>
 
 <body>
@@ -53,8 +60,8 @@
             <div class="product-detail__title">
                 <span>Chi tiết</span>
             </div>
-            <div class="chitiet">
-                <div class="product_box">
+            <div class="product-detail__order">
+                <div class="product-detail__order__box">
                     <div class="product_img">
                         <img src="Picture/test.jpg" alt="">
                     </div>
@@ -65,25 +72,53 @@
                         <div class="product_price">3.456.000đ</div>
                     </div>
                     <div class="product_quantity">
-                        <!--<div class="input-group">
-                            <span class="input-group-btn">
-                                <button type="button" class="btn btn-danger btn-number" data-type="minus"
-                                    data-field="quant[2]">
-                                    <span class="glyphicon glyphicon-minus"></span>
-                                </button>
-                            </span>
-                            <input name="quant[2]" class="form-control input-number" value="1" min="1" max="9999"
-                                type="text">
-                            <span class="input-group-btn">
-                                <button type="button" class="btn btn-success btn-number" data-type="plus"
-                                    data-field="quant[2]">
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                </button>
-                            </span>
-                        </div>-->
+                        <div class="buttons_added">
+                            <input class="minus is-form" type="button" value="-">
+                            <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number"
+                                value="1">
+                            <input class="plus is-form" type="button" value="+">
+                        </div>
                     </div>
                 </div>
-                <div class="product_box">
+                <div class="product-detail__order__box">
+                    <div class="product_img">
+                        <img src="Picture/test.jpg" alt="">
+                    </div>
+                    <div class="product_name">Nike Air Max</div>
+                    <div class="product_detail_1">
+                        <div class="product_color"></div>
+                        <div class="product_size">41</div>
+                        <div class="product_price">3.456.000đ</div>
+                    </div>
+                    <div class="product_quantity">
+                        <div class="buttons_added">
+                            <input class="minus is-form" type="button" value="-">
+                            <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number"
+                                value="1">
+                            <input class="plus is-form" type="button" value="+">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-detail__order__box">
+                    <div class="product_img">
+                        <img src="Picture/test.jpg" alt="">
+                    </div>
+                    <div class="product_name">Nike Air Max</div>
+                    <div class="product_detail_1">
+                        <div class="product_color"></div>
+                        <div class="product_size">41</div>
+                        <div class="product_price">3.456.000đ</div>
+                    </div>
+                    <div class="product_quantity">
+                        <div class="buttons_added">
+                            <input class="minus is-form" type="button" value="-">
+                            <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number"
+                                value="1">
+                            <input class="plus is-form" type="button" value="+">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-detail__order__box">
                     <div class="product_img">
                         <img src="Picture/test.jpg" alt="">
                     </div>
@@ -95,13 +130,39 @@
                         <div class="product_price">3.456.000đ</div>
                     </div>
                     <div class="product_quantity">
-
+                        <div class="buttons_added">
+                            <input class="minus is-form" type="button" value="-">
+                            <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number"
+                                value="1">
+                            <input class="plus is-form" type="button" value="+">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    </section>   
-    <!--<script src="add_quantity.js"></script>-->    
+    </section>
+    <script>
+        //<![CDATA[
+        $('input.input-qty').each(function () {
+            var $this = $(this),
+                qty = $this.parent().find('.is-form'),
+                min = Number($this.attr('min')),
+                max = Number($this.attr('max'))
+            if (min == 0) {
+                var d = 0
+            } else d = min
+            $(qty).on('click', function () {
+                if ($(this).hasClass('minus')) {
+                    if (d > min) d += -1
+                } else if ($(this).hasClass('plus')) {
+                    var x = Number($this.val()) + 1
+                    if (x <= max) d += 1
+                }
+                $this.attr('value', d).val(d)
+            })
+        })
+        //]]>
+    </script>
 </body>
 
 </html>
