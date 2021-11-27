@@ -67,6 +67,18 @@
     opacity: 0.8;
     Transition: 0.2s;
 }
+.banner__icon-prev {
+    font-size: 5rem;
+    color:white;
+    font-weight: 900;
+    margin-right: 0.65rem;
+}
+.banner__icon-next {
+    font-size: 5rem;
+    color:white;
+    font-weight: 900;
+    margin-right: 0.65rem;
+}
 
 
 .banner__index-group {
@@ -111,19 +123,6 @@
     transform: 0.2s;
 }
 
-
-.banner__icon-prev {
-    font-size: 5rem;
-    color:white;
-    font-weight: 900;
-    margin-right: 0.65rem;
-}
-.banner__icon-next {
-    font-size: 5rem;
-    color:white;
-    font-weight: 900;
-    margin-right: 0.65rem;
-}
 .banner__index--choosen {
     width: 3rem;
     height: 1rem;
@@ -159,7 +158,7 @@
 .titleBar p {
 
     font-size: 1.8rem;
-    font-family: var(--medium);
+    font-family: var(--regular);
 }
 
 /*  */
@@ -186,6 +185,80 @@
     align-items: center;
 
 }
+/*  */
+.productInf__prev-btn {
+    width: 5rem;
+    height: 5rem;
+
+    position: absolute;
+    border-color: transparent;
+    border-radius: 0px 5px 5px 0px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color:  var(--primary-color 5%);
+}
+
+.productInf__prev-btn:hover {
+    background-color: var(--secondary-color);
+
+    Transition: 0.2s;
+}
+
+/* nút tiếp */   
+
+.productInf__next-btn {
+    width: 5rem;
+    height: 5rem;
+    right: 0;
+
+    
+    border-radius: 0px 5px 5px 0px;
+    border-color: transparent;
+
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+
+    background-color:  var(--primary-color 5%);
+    transform: rotate(180deg);
+    
+}
+
+.productInf__next-btn:hover {
+    background-color: var(--secondary-color);
+    Transition: 0.2s;
+    
+}
+.productInf__icon {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 0.65rem;
+
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--gray);
+
+    font-size: 2.4rem;
+    font-weight: 900;
+    
+}
+.productInf__icon:hover {
+    margin-right: 0.65rem;
+    font-size: 2.4rem;
+    font-weight: 900;
+
+    color: var(--primary-color);
+
+}
+
 
 .top5__productInf-img {
     width: auto;
@@ -253,14 +326,14 @@
 
 
 /* Kích cỡ giày  */
-.top5__choose-Size {
+.top5__size {
     width: auto;
     height: 5rem;
     display: flex;
     margin: 0.5rem 0;
 }
 
-.top5__choose-Size div {
+.top5__size-conhang {
     width: 5rem;
     height: 5rem;
 
@@ -274,7 +347,7 @@
     border: 2px solid #D8E3E7;
 }
 
-.top5__choose-Size div input {
+.top5__size-input {
     width: 50px;
     height: 50px;
     display: flex;
@@ -282,13 +355,52 @@
     opacity: 0;
 }
 
-.top5__choose-Size div p {
+.top5__size-conhang p {
     font-size: 1.8rem;
     font-family: var(--regular);
 }
 
-.top5__choose-Size div:hover {
-    border: 2px solid #126E82;
+.top5__size-conhang:hover {
+    border: 2px solid var(--primary-color);
+}
+/* size choonsen */
+.top5__size-choosen {
+    width: 5rem;
+    height: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    margin: 0 0.75rem;
+    border-radius: 5px;
+    border: 2px solid #D8E3E7;
+}
+.top5__size-choosen p {
+    font-size: 1.8rem;
+    font-family: var(--regular);
+    color: var(--primary-color);
+}
+
+/* size hết hàng */
+.top5__size-hethang {
+    width: 5rem;
+    height: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    margin: 0 0.75rem;
+    border-radius: 5px;
+    border: 2px solid #D8E3E7;
+}
+.top5__size-hethang p {
+    font-size: 1.8rem;
+    font-family: var(--regular);
+    color: var(--gray);
 }
 
 /* giá tiền */
@@ -350,7 +462,7 @@
     justify-content: center;
     border-radius: 25px;
 
-
+    text-decoration-line: line-through;
     font-size: 1.8rem;
     font-family: var(--regular);
     color:#999999;
