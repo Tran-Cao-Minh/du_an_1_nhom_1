@@ -254,6 +254,7 @@
     margin-right: 0.65rem;
     font-size: 2.4rem;
     font-weight: 900;
+    transform: 0.2s;
 
     color: var(--primary-color);
 
@@ -303,7 +304,7 @@
 }
 
 /* màu sắc  */
-.top5__choose-Color {
+.top5__Color {
     width: auto;
     height: auto;
     display: flex;
@@ -355,7 +356,7 @@
     opacity: 0;
 }
 
-.top5__size-conhang p {
+.top5__size-conhang label {
     font-size: 1.8rem;
     font-family: var(--regular);
 }
@@ -377,7 +378,7 @@
     border-radius: 5px;
     border: 2px solid #D8E3E7;
 }
-.top5__size-choosen p {
+.top5__size-choosen label {
     font-size: 1.8rem;
     font-family: var(--regular);
     color: var(--primary-color);
@@ -397,7 +398,7 @@
     border-radius: 5px;
     border: 2px solid #D8E3E7;
 }
-.top5__size-hethang p {
+.top5__size-hethang label {
     font-size: 1.8rem;
     font-family: var(--regular);
     color: var(--gray);
@@ -557,26 +558,23 @@
     display: flex;
     flex-wrap: wrap;
 
-    
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
 .Logo {
-    width: 370px;
+    width: auto;
     height: 100px;
+    padding: 0 150px;
+
 
     border: 2px solid #D8E3E7;
     border-radius: 5px;
     margin: 0 auto;
     display: flex;
+
     align-items: center;
     justify-content: center;
-    padding: 0 150px;
-}
-
-.logo a {
-    padding: 0 0.75rem;
 }
 
 .Logo img {
