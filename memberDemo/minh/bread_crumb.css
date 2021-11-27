@@ -1,0 +1,85 @@
+:root {
+  --primary-color: rgb(18, 109, 130);
+  --primary-color-blur: rgba(18, 109, 130, 0.05);
+  --secondary-color: rgb(216, 227, 231);
+  --tertiary-color: rgb(81, 196, 211);
+  --primary-contrast-color: rgb(238, 111, 87);
+  --primary-contrast-color-blur: rgba(238, 111, 87, 0.05);
+
+  --red: rgb(207, 69, 92);
+  --gray: rgb(153, 153, 153);
+  --gray-blur: rgba(153, 153, 153, 0.1);
+  --white: rgb(255, 255, 255);
+  --black: rgb(51, 51, 51);
+
+  --bg-overlay: rgba(0, 0, 0, 0.35);
+}
+
+:root {
+  --regular: 'Roboto Regular', sans-serif;
+  --medium: 'Roboto Medium', sans-serif;
+  --bold: 'Roboto Bold', sans-serif;
+}
+
+.bread-crumb{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 8rem;
+
+  /* background: blue; */
+}
+.bread-crumb__container{
+  display: flex;
+
+  width: 117rem;
+  height: 4rem;
+  margin: 0 1.5rem;
+  padding: 0 1.5rem;
+
+  background: var(--primary-color-blur);
+
+  border-radius: 0.5rem;
+}
+
+.bread-crumb__link{
+  display: block;
+
+  display: flex;
+  align-items: center;
+
+  width: fit-content;
+  height: 4rem;
+
+  /* background: green; */
+  color: var(--primary-color);
+
+  font-family: var(--regular);
+  font-size: 1.7rem;
+}
+.bread-crumb__contain-icon{
+  display: flex;
+  align-items: center;
+
+  width: auto;
+  height: 4rem;
+  margin: 0 1rem;
+
+  /* background: yellow; */
+}
+.bread-crumb__icon{
+  margin-top: 0.2rem;
+
+  color: var(--primary-color);
+
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 660px) {
+  .bread-crumb{
+    margin-top: 11rem;
+  }
+}
+
