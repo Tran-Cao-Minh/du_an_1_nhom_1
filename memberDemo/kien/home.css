@@ -30,12 +30,12 @@
     align-items: center;
     justify-content: center;
 
-    background-color: #333333;
+    background-color:var(--black);
     opacity: 0.6;
 }
 
 .banner__prev-btn:hover {
-    background-color: #333333;
+    background-color: var(--black);
     opacity: 0.8;
     transition: 0.2s;
 }
@@ -56,53 +56,51 @@
     align-items: center;
     justify-content: center;
 
-    background-color: #333333;
+    background-color:var(--black);
     opacity: 0.6;
     transform: rotate(180deg);
     
 }
 
 .banner__next-btn:hover {
-    background-color: #333333;
     opacity: 0.8;
     Transition: 0.2s;
+
+    background-color:var(--black);
+
 }
 .banner__icon-prev {
-    font-size: 5rem;
-    color:white;
-    font-weight: 900;
     margin-right: 0.65rem;
+
+
+    font-size: 5rem;
+    font-weight: 900;
+    color:var(--white);
+
 }
 .banner__icon-next {
-    font-size: 5rem;
-    color:white;
-    font-weight: 900;
     margin-right: 0.65rem;
+
+
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--white);
+
 }
 
 
 .banner__index-group {
     width: 100%;
     height: 1rem;
-    position: absolute;
+
     bottom: 1rem;
+    
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
 
-
-
-
-    /* calc(100% - 2.5rem); */
 }
-
-/* .banner__index-group {
-    width: 3rem;iv
-    height: 1rem;
-    display: flex;
-    margin-left: 0.7rem;
-    margin-right: 0.7rem;
-} */
 
 .banner__index {
     width: 3rem;
@@ -114,7 +112,7 @@
     transform: rotate(-180deg);
     border-color: transparent;
 
-    background-color: #333333;
+    background-color: var(--black);
     
 
 }
@@ -141,11 +139,11 @@
 /* thương hiệu uy tín - top 5 sản phẩm nổi bật */
 .titleBar {
     width: auto;
-    height: 50px;
+    height: 5rem;
     flex-wrap: wrap;
 
-    border: 1px;
-    border-radius: 5px;
+    border: 0.01rem;
+    border-radius: 0.5rem;
     background-color: var(--primary-color-blur);
 
     margin: 0 auto;
@@ -176,13 +174,14 @@
 .productInf {
     width: 100%;
     height: auto;
-    display: flex;
-    border: 0.2rem solid rgba(18, 110, 130, 0.05);
-    box-sizing: border-box;
+    margin-bottom: 4rem;
     border-radius: 0.5rem;
+    border: 0.2rem solid rgba(18, 110, 130, 0.05);
+
+    display: flex;
+    box-sizing: border-box;
     position: relative;
     align-items: center;
-    margin-bottom: 4rem;
 
 }
 /*  */
@@ -271,12 +270,15 @@
 .productInf-NameTop {
     width: auto;
     height: 5rem;
-    background: rgba(18, 110, 130, 0.05);
-    color: #126E82;
-    display: flex;
-    align-items: center;
     margin: 1rem 0;
     border-radius: 3.5rem;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--primary-color);
+    background: rgba(18, 110, 130, 0.05);
+
 
 }
 .productInf-NameTop div{
@@ -290,7 +292,7 @@
     justify-content: center;
     position: relative;
 
-    background-color: #126E82;
+    background-color: var(--primary-color);
 }
 .productInf-NameTop div p {
     font-size: 1.8rem;
@@ -317,15 +319,15 @@
 .top5__color-size {
     width: 5rem;
     height: 5rem;
-    position: relative;
     margin: 0 0.7rem;
-    cursor: pointer;
 
-    
+    position: relative;
+    cursor: pointer;
 }
 .choose-color-input {
     width: 5rem;
     height: 5rem;
+
     position: absolute;
     opacity: 0;
 }
@@ -345,9 +347,11 @@
 }   
 .color-icon {
     position:absolute ;
-    color: var(--white);
     opacity: 0;
+
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+    color: var(--white);
+
 }
 
 
@@ -363,22 +367,25 @@
 .top5__size {
     width: auto;
     height: 5rem;
-    display: flex;
     margin: 0.5rem 0;
+
+    display: flex;
 }
 
 .top5__size-conhang {
     width: 5rem;
     height: 5rem;
+    margin: 0 0.75rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     position: relative;
-    margin: 0 0.75rem;
+
     border-radius: 0.5rem;
     border: 0.2rem solid #D8E3E7;
+
 }
 
 .top5__size-input {
@@ -388,20 +395,40 @@
     display: flex;
     position: absolute;
     opacity: 0;
+    cursor: pointer;
+
+    
 }
 .top5__size-input:checked ~ label {
-    color: var(--primary-color);
     transition: 0.2s;
+
+    color: var(--primary-color);
+
 }
 
-.top5__size-conhang label {
+
+.top5__size-conhang--lable {
+
+    width: 5rem;
+    height: 5rem;
+
+   
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
     font-size: 1.8rem;
     font-family: var(--regular);
+
 }
 
 .top5__size-conhang:hover {
-    border: 0.2rem solid var(--primary-color);
     transition: 0.2s;
+
+    border: 0.2rem solid var(--primary-color);
+
 }
 
 /* size hết hàng */
@@ -421,11 +448,13 @@
 .top5__size-hethang label {
     font-size: 1.8rem;
     font-family: var(--regular);
+
     color: var(--gray);
 }
 .top5__size--input-hethang {
     width: 5rem;
     height: 5rem;
+
     display: flex;
     position: absolute;
     opacity: 0;
@@ -441,6 +470,7 @@
 .top5__price {
     width: auto;
     height: auto;
+
     display: flex;
 
 }
@@ -460,7 +490,7 @@
     justify-content: center;
 
     font-size: 1.8rem;
-    color: #EE6F57;
+    color: var(--primary-contrast-color);
     
     background: rgba(153, 153, 153, 0.1);
     
@@ -475,13 +505,13 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    border-radius: 25px;
+    border-radius: 2.5rem;
 
     font-size: 1.8rem;
     font-family: var(--regular);
-    color: white;
+    color: var(--white);
 
-    background: #EE6F57;
+    background: var(--primary-contrast-color);
     
 }
 .top5__price-reduce {
@@ -498,7 +528,7 @@
     text-decoration-line: line-through;
     font-size: 1.8rem;
     font-family: var(--regular);
-    color:#999999;
+    color:var(--gray);
     
     background: rgba(153, 153, 153, 0.1);
 }
@@ -507,8 +537,10 @@
 .top5__cart {
     width: auto;
     height: auto;
-    display: flex;
     margin:2rem 0 ;
+
+
+    display: flex;
 }
 .cart__add {
     width: 37rem;
@@ -582,11 +614,11 @@
 
 .trademark__titleBar {
     width: auto;
-    height: 50px;
+    height: 5rem;
     flex-wrap: wrap;
 
-    border: 1px;
-    border-radius: 5px;
+    border: 0.1rem;
+    border-radius: 0.5rem;
     background-color: var(--primary-color-blur);
 
     margin: 0 auto;
@@ -599,7 +631,7 @@
 .trademark__titleBar p {
 
     font-size: 1.8rem;
-    font-family: var(--medium);
+    font-family: var(--regular);
 }
 .trademark__containLogo {
     display: flex;
@@ -611,12 +643,12 @@
 
 .Logo {
     width: auto;
-    height: 100px;
-    padding: 0 150px;
+    height: 10rem;
+    padding: 0 15rem;
 
 
-    border: 2px solid #D8E3E7;
-    border-radius: 5px;
+    border: 0.2rem solid #D8E3E7;
+    border-radius: 0.5rem;
     margin: 0 auto;
     display: flex;
 
@@ -625,27 +657,152 @@
 }
 
 .Logo img {
-    width: 89px;
+    width: 8.9rem;
 
 }
 
 @media only screen and (max-width: 1140px) {
+    
     .productInf {
         width: 100%;
         height: auto;
-
-        border: 0.2rem solid rgba(18, 110, 130, 0.05);
+        margin-bottom: 4rem;
         border-radius: 0.5rem;
+        border: 0.2rem solid rgba(18, 110, 130, 0.05);
+    
+        display:block ;
+        box-sizing: border-box;
+        position: relative;
+        align-items: center;
+        
+    
+    }
+    .productInf__prev-btn {
+        width: 5rem;
+        height: 5rem;
+    
+        position: absolute;
+        border-color: transparent;
+        border-radius: 0px 5px 5px 0px;
+        top: 30%;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background-color:  var(--primary-color 5%);
+    }
 
-        display: none;
+    .productInf__next-btn {
+        width: 5rem;
+        height: 5rem;
+        right: 0;
+        top: 30%;
+    
+        
+        border-radius: 0px 5px 5px 0px;
+        border-color: transparent;
+    
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+    
+        background-color:  var(--primary-color 5%);
+        transform: rotate(180deg);
+        
+    }
+
+    
+    .Logo {
+        width: 100%;
+        height: 10rem;
+        padding: 0 1px;
+        margin: 0.75rem 0;
+    
+    
+        border: 2px solid #D8E3E7;
+        border-radius: 5px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* mobile  */
+@media only screen and (max-width: 768px) {
+    .top5__productInf{
+        width: 100%;
+        height: auto;
+        padding: 0 8rem;
+        margin-bottom: 2rem; 
+        
+    }
+    .productInf__prev-btn {
+        width: 5rem;
+        height: 5rem;
+    
+        position: absolute;
+        border-color: transparent;
+        border-radius: 0px 5px 5px 0px;
+        top: 25%;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background-color:  var(--primary-color 5%);
+    }
+
+    .productInf__next-btn {
+        width: 5rem;
+        height: 5rem;
+        right: 0;
+        top: 25%;
+    
+        
+        border-radius: 0px 5px 5px 0px;
+        border-color: transparent;
+    
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+    
+        background-color:  var(--primary-color 5%);
+        transform: rotate(180deg);
+        
+    }
+.productInf {
+        width: 100%;
+        height: auto;
+        margin-bottom: 4rem;
+        border-radius: 0.5rem;
+        border: 0.2rem solid rgba(18, 110, 130, 0.05);
+    
+        /* display:inline-block ; */
         box-sizing: border-box;
         position: relative;
         align-items: center;
     
     }
-}
-/* mobile  */
-@media only screen and (max-width: 768px) {
+
+    .top5__size-conhang {
+        width: 5rem;
+        height: 5rem;
+        margin: 0 0.6rem;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        position: relative;
+    
+        border-radius: 0.5rem;
+        border: 0.2rem solid #D8E3E7;
+    
+    }
+
     .trademark__containLogo {
         width: 100%;
         height: 100px;
@@ -653,10 +810,10 @@
     }
     
     .Logo {
-        width: 30%;
+        width: 100%;
         height: 10rem;
         padding: 0 1px;
-        background-color: #333333;
+        margin: 0.75rem 0;
     
     
         border: 2px solid #D8E3E7;
