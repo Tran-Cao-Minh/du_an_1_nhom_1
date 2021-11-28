@@ -349,6 +349,7 @@
     position:absolute ;
     opacity: 0;
 
+    font-size: 2rem;
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
     color: var(--white);
 
