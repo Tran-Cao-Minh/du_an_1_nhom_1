@@ -182,6 +182,7 @@
     border-radius: 0.5rem;
     position: relative;
     align-items: center;
+    margin-bottom: 4rem;
 
 }
 /*  */
@@ -318,6 +319,8 @@
     height: 5rem;
     position: relative;
     margin: 0 0.7rem;
+    cursor: pointer;
+
     
 }
 .choose-color-input {
