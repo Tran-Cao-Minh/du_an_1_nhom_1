@@ -1014,7 +1014,9 @@
   }
 
   .header__top-container {
-    background: var(--secondary-color);
+    background: url(../../../image/client/base/header-mobile-bg.jpg);
+    background-size: cover;
+
     box-shadow: none;
   }
 
@@ -1042,19 +1044,23 @@
     height: 5rem;
     border-radius: 0.5rem;
 
-    background: var(--primary-color-blur);
+    background: var(--primary-color);
 
     transition: 0.2s;
   }
 
   .header__menu-mobile-btn:hover {
-    background: var(--primary-contrast-color-blur);
+    background: var(--secondary-color);
   }
 
   .header__menu-mobile-icon {
-    color: var(--primary-color);
+    color: var(--white);
 
     font-size: 3rem;
+  }
+
+  .header__menu-mobile-btn:hover .header__menu-mobile-icon {
+    color: var(--primary-color);
   }
 
   #header__menu-mobile-check:checked~.header__menu-mobile {
