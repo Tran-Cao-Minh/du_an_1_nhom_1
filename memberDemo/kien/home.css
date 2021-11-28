@@ -37,7 +37,7 @@
 .banner__prev-btn:hover {
     background-color: #333333;
     opacity: 0.8;
-    Transition: 0.2s;
+    transition: 0.2s;
 }
 
 /* nút tiếp */
@@ -152,7 +152,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .titleBar p {
@@ -254,7 +253,7 @@
     margin-right: 0.65rem;
     font-size: 2.4rem;
     font-weight: 900;
-    transform: 0.2s;
+    transition: 0.2s;
 
     color: var(--primary-color);
 
@@ -265,7 +264,6 @@
     width: auto;
     height: auto;
     padding:1.5rem;
-
 }
 
 /* home__productNameTop */
@@ -283,47 +281,79 @@
 .productInf-NameTop div{
     width: 5rem;
     height: 5rem;
-    display: flex;
-    position: relative;
-    background-color: #126E82;
+    margin: 0 1rem;
     border-radius: 50%;
+
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 1rem;
+    position: relative;
+
+    background-color: #126E82;
 }
 .productInf-NameTop div p {
     font-size: 1.8rem;
     position: absolute;
+
     color: var(--white);
     
 }
 .productInf-NameTop p {
-
     font-family: var(--regular);
     font-size: 1.8rem;
 }
 
 /* màu sắc  */
-.top5__Color {
+.top5__color {
     width: auto;
     height: auto;
+    margin: 1.5rem 0;
+
+
     display: flex;
     align-items: center;
-    margin: 1.5rem 0;
 }
-.choose-Color {
+.top5__color-size {
     width: 5rem;
     height: 5rem;
-
-    border-radius: 50%;
-    margin: 0 0.75rem;
-    background: yellow;
+    position: relative;
+    margin: 0 0.7rem;
+    
 }
-.choose-Color-input {
+.choose-color-input {
     width: 5rem;
     height: 5rem;
+    position: absolute;
     opacity: 0;
 }
+.chooseColor-img {
+    width: 5rem;
+    height: 5rem;
+    
+    position: absolute;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bg-color);
+
+}   
+.color-icon {
+    position:absolute ;
+    color: var(--white);
+    opacity: 0;
+    text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+
+.choose-color-input:checked ~ label i  {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+
 
 
 /* Kích cỡ giày  */
@@ -344,16 +374,21 @@
 
     position: relative;
     margin: 0 0.75rem;
-    border-radius: 5px;
-    border: 2px solid #D8E3E7;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #D8E3E7;
 }
 
 .top5__size-input {
     width: 50px;
     height: 50px;
+
     display: flex;
     position: absolute;
     opacity: 0;
+}
+.top5__size-input:checked ~ label {
+    color: var(--primary-color);
+    transition: 0.2s;
 }
 
 .top5__size-conhang label {
@@ -362,26 +397,8 @@
 }
 
 .top5__size-conhang:hover {
-    border: 2px solid var(--primary-color);
-}
-/* size choonsen */
-.top5__size-choosen {
-    width: 5rem;
-    height: 5rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-    margin: 0 0.75rem;
-    border-radius: 5px;
-    border: 2px solid #D8E3E7;
-}
-.top5__size-choosen label {
-    font-size: 1.8rem;
-    font-family: var(--regular);
-    color: var(--primary-color);
+    border: 0.2rem solid var(--primary-color);
+    transition: 0.2s;
 }
 
 /* size hết hàng */
@@ -395,13 +412,26 @@
 
     position: relative;
     margin: 0 0.75rem;
-    border-radius: 5px;
-    border: 2px solid #D8E3E7;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #D8E3E7;
 }
 .top5__size-hethang label {
     font-size: 1.8rem;
     font-family: var(--regular);
     color: var(--gray);
+}
+.top5__size--input-hethang {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    position: absolute;
+    opacity: 0;
+}
+.Line {
+    width: auto;
+    height: 0;
+    border-top: 2px dashed #D8E3E7;
+    margin: 3rem 0;
 }
 
 /* giá tiền */
@@ -413,7 +443,7 @@
 }
 .top5__price div p {
     font-size: 1.8rem;
-    font-family: var(--regular);
+    font-family: var(--medium);
     
 }
 
@@ -427,7 +457,6 @@
     justify-content: center;
 
     font-size: 1.8rem;
-    font-family: var(--regular);
     color: #EE6F57;
     
     background: rgba(153, 153, 153, 0.1);
@@ -461,7 +490,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    border-radius: 25px;
+    border-radius: 2.5rem;
 
     text-decoration-line: line-through;
     font-size: 1.8rem;
@@ -478,7 +507,6 @@
     display: flex;
     margin:2rem 0 ;
 }
-
 .cart__add {
     width: 37rem;
     height: 5rem;
@@ -490,7 +518,9 @@
 
     color: var(--white);
 
-    background-color: #126E82;
+    background-color: var(--primary-color);
+    opacity: 0.9;
+    
     margin: 0 0.7rem;
 
 }
@@ -498,6 +528,16 @@
 .cart__add p {
     font-size: 1.8rem;
     font-family: var(--regular);
+}
+.cart__add:hover {
+    transition: 0.2s;
+
+    border: 0.2rem solid var(--primary-color);
+
+    background-color: var(--white);
+    color: var(--primary-color);
+    opacity: 0.9;
+    
 }
 
 .cart__buy {
@@ -510,13 +550,17 @@
     justify-content: center;
     border-radius: 5px;
     margin: 0 0.7rem;
-    border: 2px solid #EE6F57;
+    border: 2px solid var(--primary-contrast-color);
 
 
     /* color: var(--white); */
-    color: #EE6F57;
+    color: var(--primary-contrast-color);
 
-
+}
+.cart__buy:hover {
+    background-color: var(--primary-contrast-color);
+    color: var(--white);
+    transition: 0.2s;
 }
 
 .cart__buy p {
@@ -579,5 +623,46 @@
 
 .Logo img {
     width: 89px;
+
+}
+
+@media only screen and (max-width: 1140px) {
+    .productInf {
+        width: 100%;
+        height: auto;
+
+        border: 0.2rem solid rgba(18, 110, 130, 0.05);
+        border-radius: 0.5rem;
+
+        display: none;
+        box-sizing: border-box;
+        position: relative;
+        align-items: center;
+    
+    }
+}
+/* mobile  */
+@media only screen and (max-width: 768px) {
+    .trademark__containLogo {
+        width: 100%;
+        height: 100px;
+        display: flex;
+    }
+    
+    .Logo {
+        width: 30%;
+        height: 10rem;
+        padding: 0 1px;
+        background-color: #333333;
+    
+    
+        border: 2px solid #D8E3E7;
+        border-radius: 5px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 
 }
