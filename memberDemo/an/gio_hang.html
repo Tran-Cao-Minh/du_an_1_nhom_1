@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/public/css/global/font.css">
     <!-- Font Awsome -->
     <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <!-- >>> copy link end here -->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
     <link rel="stylesheet" href="gio_hang.css">
@@ -26,7 +27,7 @@
             <div class="general-cart__title">
                 <span>Tổng quan</span>
                 <a href="#">
-                    <div class="general-cart__title__order_recent">
+                    <div class="general-cart__title__order-recent">
                         <span>Đơn hàng của tôi</span>
                         <div class="order_icon">
                             <i class="fas fa-id-card"></i>
@@ -35,7 +36,7 @@
                 </a>
             </div>
             <div class="general-cart__properties">
-                <div class="general-cart__properties__box_cost">
+                <div class="general-cart__properties__box-cost">
                     <table>
                         <tr>
                             <td>Tổng tiền</td>
@@ -61,7 +62,7 @@
                 <span>Chi tiết</span>
             </div>
             <div class="product-detail__order">
-                <div class="product-detail__order__box">
+                <div class="product-detail__order-box">
                     <div class="product_img">
                         <img src="Picture/test.jpg" alt="">
                     </div>
@@ -79,8 +80,13 @@
                             <input class="plus is-form" type="button" value="+">
                         </div>
                     </div>
+                    <div class="product_delete">
+                        <span>
+                            <i class="fas fa-times"></i><input type="button" value="" name="delete-button">
+                        </span>
+                    </div>
                 </div>
-                <div class="product-detail__order__box">
+                <div class="product-detail__order-box">
                     <div class="product_img">
                         <img src="Picture/test.jpg" alt="">
                     </div>
@@ -98,8 +104,13 @@
                             <input class="plus is-form" type="button" value="+">
                         </div>
                     </div>
+                    <div class="product_delete">
+                        <span>
+                            <i class="fas fa-times"></i><input type="button" value="" name="delete-button">
+                        </span>
+                    </div>
                 </div>
-                <div class="product-detail__order__box">
+                <div class="product-detail__order-box">
                     <div class="product_img">
                         <img src="Picture/test.jpg" alt="">
                     </div>
@@ -117,8 +128,13 @@
                             <input class="plus is-form" type="button" value="+">
                         </div>
                     </div>
+                    <div class="product_delete">
+                        <span>
+                            <i class="fas fa-times"></i><input type="button" value="" name="delete-button">
+                        </span>
+                    </div>
                 </div>
-                <div class="product-detail__order__box">
+                <div class="product-detail__order-box">
                     <div class="product_img">
                         <img src="Picture/test.jpg" alt="">
                     </div>
@@ -137,32 +153,16 @@
                             <input class="plus is-form" type="button" value="+">
                         </div>
                     </div>
+                    <div class="product_delete">
+                        <span>
+                            <i class="fas fa-times"></i><input type="button" value="" name="delete-button">
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
     </section>
-    <script>
-        //<![CDATA[
-        $('input.input-qty').each(function () {
-            var $this = $(this),
-                qty = $this.parent().find('.is-form'),
-                min = Number($this.attr('min')),
-                max = Number($this.attr('max'))
-            if (min == 0) {
-                var d = 0
-            } else d = min
-            $(qty).on('click', function () {
-                if ($(this).hasClass('minus')) {
-                    if (d > min) d += -1
-                } else if ($(this).hasClass('plus')) {
-                    var x = Number($this.val()) + 1
-                    if (x <= max) d += 1
-                }
-                $this.attr('value', d).val(d)
-            })
-        })
-        //]]>
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
