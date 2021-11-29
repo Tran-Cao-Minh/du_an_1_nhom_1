@@ -39,105 +39,107 @@
     <!-- sản phẩm nổi bật -->
 
     <section class="top-product">
-            <div class="top-product__title-Bar">
-                <p>TOP 5 SẢN PHẨM NỔI BẬT</p>
+        <div class="top-product__title-Bar">
+            <p>TOP 5 SẢN PHẨM NỔI BẬT</p>
+        </div>
+
+        <div class="top-product__product-Inf">
+            <!-- button -->
+            <button class="top-product__button-prev--btn">
+                <i class="fas fa-chevron-left top-product__button-icon"></i>
+            </button>
+            <button class="top-product__button-next--btn">
+                <i class="fas fa-chevron-left top-product__button-icon"></i>
+            </button>
+            <!-- img sản phẩm nổi bật -->
+            <div class="top-product__img">
+                <img src="./img/productImage.png" alt="">
             </div>
-            
-            <div class="top-product__product-Inf" >
-                <!-- button -->
-                <button class="top-product__button-prev--btn">
-                    <i class="fas fa-chevron-left top-product__button-icon"></i>
-                </button>
-                <button class="top-product__button-next--btn">
-                    <i class="fas fa-chevron-left top-product__button-icon"></i>
-                </button>
-                <!-- img sản phẩm nổi bật -->
-                <div class="top-product__img">
-                    <img src="./img/productImage.png" alt="">
+            <!-- thông tin sản phẩm nổi bật -->
+            <div class="top-product__information">
+                <div class="top-product__Name-Top">
+                    <div class="top-product__Name-Top--number">
+                        <p>1</p>
+                    </div>
+                    <p class="top-product__Name-Top--number---letter"> Giày Thể Thao Nam Biti's Hunter X Z Collection
+                        InGereenZ</p>
                 </div>
-                <!-- thông tin sản phẩm nổi bật -->
-                <div class="top-product__information">
-                    <div class="top-product__Name-Top">
-                        <div class="top-product__Name-Top--number">
-                            <p>1</p>
-                        </div>
-                        <p class="top-product__Name-Top--number---letter"> Giày Thể Thao Nam Biti's Hunter X Z Collection InGereenZ</p>
+                <div class="top-product__color">
+                    <div class="top-product__color-size">
+                        <input class="top-product__color-input" type="radio" id="1" name="hoose-color" value="">
+                        <label class="top-product__color-bg" for="1" style="--bg-color: #8D886F;">
+                            <i class="fas fa-check top-product__color-icon"></i>
+                        </label>
                     </div>
-                    <div class="top-product__color">
-                        <div class="top-product__color-size">
-                            <input class="top-product__color-input" type="radio" id="1" name="hoose-color" value="">
-                            <label class="top-product__color-bg" for="1" style="--bg-color: #8D886F;">
-                                <i class="fas fa-check top-product__color-icon"></i>
-                            </label>
-                        </div>
-                        <div class="top-product__color-size">
-                            <input class="top-product__color-input" type="radio" id="2" name="hoose-color" value="">
-                            <label class="top-product__color-bg" for="2" style="background-color: var(--primary-contrast-color);">
-                                <i class="fas fa-check top-product__color-icon"></i>
-                            </label>
-                        </div>
-                        <div class="top-product__color-size">
-                            <input class="top-product__color-input" type="radio" id="3" name="hoose-color" value="">
-                            <label class="top-product__color-bg" for="3" style="background-color:var(--tertiary-color);">
-                                <i class="fas fa-check top-product__color-icon"></i>
-                            </label>
-                        </div>
+                    <div class="top-product__color-size">
+                        <input class="top-product__color-input" type="radio" id="2" name="hoose-color" value="">
+                        <label class="top-product__color-bg" for="2"
+                            style="background-color: var(--primary-contrast-color);">
+                            <i class="fas fa-check top-product__color-icon"></i>
+                        </label>
                     </div>
-                    <div class="top-product__size">
-                        <div class="top-product__size-stocking">
-                            <input class="top-product__size-input" type="radio" id="1" name="size" value="">
-                            <label class="top-product__size-stocking--lable" for="1">39</label>
-                        </div>
-                        <div class="top-product__size-stocking">
-                            <input class="top-product__size-input" type="radio" id="1" name="size" value="1">
-                            <label class="top-product__size-stocking--lable" for="">40</label>
-                        </div>
-                        <div class="top-product__size-stocking">
-                            <input class="top-product__size-input" type="radio" id="1" name="size" value="">
-                            <label class="top-product__size-stocking--lable" for="41">41</label>
-                        </div>
-                        <div class="top-product__size-stocking">
-                            <input class="top-product__size-input" type="radio" id="1" name="size" value="">
-                            <label class="top-product__size-stocking--lable" for="">42</label>
-                        </div>
-                        <div class="top-product__size-stocking">
-                            <input class="top-product__size-input" type="radio" id="1" name="size" value="">
-                            <label class="top-product__size-stocking--lable" for="43">43</label>
-                        </div>
-                        <div class="top-product__size-out-of-stock">
-                            <input class="top-product__size-input--out-of-stock" type="radio" id="1" name="size" value="">
-                            <label class="top-product__size-stocking--lable" for="44">44</label>
-                        </div>
-                        <div class="top-product__size-stocking">
-                            <input class="top-product__size-input" type="radio" id="1" name="size" value="">
-                            <label class="top-product__size-stocking--lable" for="">45</label>
-                        </div>
-                    </div>
-                    <div class="top-product__line"></div>
-                    <div class="top-product__price">
-                        <div class="top-product__price-cost">
-                            <p>1.199.000đ</p>
-                        </div>
-                        <div class="top-product__price-percent">
-                            <p>12%</p>
-                        </div>
-                        <div class="top-product__price-reduce">
-                            <p>1.599.999đ</p>
-                        </div>
-                    </div>
-                    <div class="top-product__cart">
-                        <a class="top-product__cart-add" href="">
-                            <p>Thêm vào giỏ hàng</p>
-                        </a>
-                        <a class="top-product__cart-buy" href="">
-                            <p>Mua ngay</p>
-                        </a>
+                    <div class="top-product__color-size">
+                        <input class="top-product__color-input" type="radio" id="3" name="hoose-color" value="">
+                        <label class="top-product__color-bg" for="3" style="background-color:var(--tertiary-color);">
+                            <i class="fas fa-check top-product__color-icon"></i>
+                        </label>
                     </div>
                 </div>
+                <div class="top-product__size">
+                    <div class="top-product__size-stocking">
+                        <input class="top-product__size-input" type="radio" id="1" name="size" value="">
+                        <label class="top-product__size-stocking--lable" for="1">39</label>
+                    </div>
+                    <div class="top-product__size-stocking">
+                        <input class="top-product__size-input" type="radio" id="1" name="size" value="1">
+                        <label class="top-product__size-stocking--lable" for="">40</label>
+                    </div>
+                    <div class="top-product__size-stocking">
+                        <input class="top-product__size-input" type="radio" id="1" name="size" value="">
+                        <label class="top-product__size-stocking--lable" for="41">41</label>
+                    </div>
+                    <div class="top-product__size-stocking">
+                        <input class="top-product__size-input" type="radio" id="1" name="size" value="">
+                        <label class="top-product__size-stocking--lable" for="">42</label>
+                    </div>
+                    <div class="top-product__size-stocking">
+                        <input class="top-product__size-input" type="radio" id="1" name="size" value="">
+                        <label class="top-product__size-stocking--lable" for="43">43</label>
+                    </div>
+                    <div class="top-product__size-out-of-stock">
+                        <input class="top-product__size-input--out-of-stock" type="radio" id="1" name="size" value="">
+                        <label class="top-product__size-stocking--lable" for="44">44</label>
+                    </div>
+                    <div class="top-product__size-stocking">
+                        <input class="top-product__size-input" type="radio" id="1" name="size" value="">
+                        <label class="top-product__size-stocking--lable" for="">45</label>
+                    </div>
+                </div>
+                <div class="top-product__line"></div>
+                <div class="top-product__price">
+                    <div class="top-product__price-cost">
+                        <p>1.199.000đ</p>
+                    </div>
+                    <div class="top-product__price-percent">
+                        <p>12%</p>
+                    </div>
+                    <div class="top-product__price-reduce">
+                        <p>1.599.999đ</p>
+                    </div>
+                </div>
+                <div class="top-product__cart">
+                    <a class="top-product__cart-add" href="">
+                        <p>Thêm vào giỏ hàng</p>
+                    </a>
+                    <a class="top-product__cart-buy" href="">
+                        <p>Mua ngay</p>
+                    </a>
+                </div>
             </div>
-            <div class="trademark__title-Bar">
-                <p>THƯƠNG HIỆU UY TÍN</p>
-            </div>
+        </div>
+        <div class="trademark__title-Bar">
+            <p>THƯƠNG HIỆU UY TÍN</p>
+        </div>
     </section>
     <!-- Thương hiệu -->
     <section class="trademark">
