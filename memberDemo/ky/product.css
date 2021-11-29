@@ -249,7 +249,7 @@ input[type="checkbox"]:checked~.product__filter-label--circle::after {
     flex-wrap: wrap;
 }
 
-.product-size__name {
+.prodduct__size-name {
     font-size: 1.8rem;
     line-height: 2.1rem;
     color: var(--primary-color);
@@ -523,7 +523,7 @@ input[type="checkbox"]:checked~.product-bar__label {
 }
 
 .product__price--new {
-    color: var(--primary-contrast-color);
+    color: var(--red);
 
     font-size: 1.8rem;
     line-height: 1.2rem;
@@ -674,6 +674,8 @@ input[type="checkbox"]:checked~.product-bar__label {
     flex-wrap: wrap;
 
     font-family: var(--regular);
+
+    border-radius: 0.5rem;
 }
 
 .form__product__action {
@@ -682,10 +684,6 @@ input[type="checkbox"]:checked~.product-bar__label {
     margin: 0 auto;
 
     margin-top: 1.5rem;
-}
-
-.form__product__action button:hover {
-    opacity: 0.9;
 }
 
 .form__product__action__top {
@@ -714,14 +712,23 @@ input[type="checkbox"]:checked~.product-bar__label {
     margin-right: 1.5rem;
 }
 
-.form__product__action__top .btn__pay {
-    background: var(--white);
-    color: var(--primary-contrast-color);
-
-    border: 0.2rem solid var(--primary-contrast-color);
+.form__product__action__top .btn__add:hover {
+    opacity: 0.9;
 }
 
-.form__product__action__bottom button {
+.form__product__action__top .btn__pay {
+    background: var(--white);
+    color: var(--red);
+
+    border: 0.2rem solid var(--red);
+}
+
+.form__product__action__top .btn__pay:hover {
+    background: var(--red);
+    color: var(--white);
+}
+
+.btn__detail {
     border: none;
     outline: none;
 
@@ -734,8 +741,12 @@ input[type="checkbox"]:checked~.product-bar__label {
     font-size: 1.8rem;
     line-height: 2.1rem;
 
-    background: var(--secondary-color);
+    background: var(--primary-color-blur);
     color: var(--primary-color);
+}
+
+.btn__detail:hover {
+    background: var(--secondary-color);
 }
 
 .product__filter-label--disabled {
