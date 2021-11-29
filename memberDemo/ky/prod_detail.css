@@ -43,7 +43,7 @@
     font-size: 2rem;
     line-height: 2.3rem;
 
-    color: var(--red);
+    color: var(--primary-contrast-color);
     background: var(--primary-contrast-color-blur);
 
     transition: all 0.2s ease;
@@ -192,7 +192,7 @@ input[type="checkbox"]:checked~ .heart__icon:before {
     line-height: 2.1rem;
     font-family: var(--regular);
 
-    color: var(--red);
+    color: var(--primary-contrast-color);
 
     transition: all 0.2s ease;
 }
@@ -208,7 +208,7 @@ input[type="checkbox"]:checked~ .heart__icon:before {
 
     padding: 1rem;
 
-    color: var(--red);
+    color: var(--primary-contrast-color);
 }
 
 .prod__detail-info-view-quantity {
@@ -380,13 +380,13 @@ input[type="checkbox"]:checked~ .heart__icon:before {
 }
 
 .prod__detail-price .prod__detail-price-new {
-    color: var(--red);
+    color: var(--primary-contrast-color);
     background: var(--primary-contrast-color-blur);
 }
 
 .prod__detail-price .prod__detail-price-sale {
     color: var(--white);
-    background: var(--red);
+    background: var(--primary-contrast-color);
 }
 
 .prod__detail-price .prod__detail-price-old {
@@ -440,13 +440,13 @@ input[type="checkbox"]:checked~ .heart__icon:before {
 
 .prod__detail-action .btn__buy {
     background: var(--white);
-    color: var(--red);
+    color: var(--primary-contrast-color);
 
-    border: 0.2rem solid var(--red);
+    border: 0.2rem solid var(--primary-contrast-color);
 }
 
 .prod__detail-action .btn__buy:hover {
-    background: var(--red);
+    background: var(--primary-contrast-color);
     color: var(--white);
 }
 
@@ -568,7 +568,7 @@ input[type="checkbox"]:checked~ .heart__icon:before {
     line-height: 2.1rem;
     font-family: var(--regular);
 
-    color: var(--red);
+    color: var(--primary-contrast-color);
 
     background: var(--primary-contrast-color-blur);
 }
@@ -580,7 +580,7 @@ input[type="checkbox"]:checked~ .heart__icon:before {
     font-size: 2.2rem;
     line-height: 2.5rem;
 
-    color: var(--red);
+    color: var(--primary-contrast-color);
     
     transition: all .2s;
 
@@ -596,15 +596,13 @@ input[type="checkbox"]:checked~ .heart__icon:before {
     font-weight: 900;
     font-family: 'Font Awesome 5 Free';
 
-    color: var(--red);
+    color: var(--primary-contrast-color);
 
     transition: all .25s;
 }
 
 .star-5:checked~.star:before {
-    color: var(--red);
-
-    text-shadow: 0 0 0.5rem var(--red);
+    color: var(--primary-contrast-color);
 }
 
 .star:before {
@@ -750,7 +748,7 @@ input[type="checkbox"]:checked~ .heart__icon:before {
     font-size: 1.4rem;
     line-height: 1.6rem;
 
-    color: var(--red);
+    color: var(--primary-contrast-color);
 }
 
 .prod__detail-comment-content-item-heading-user-date {
