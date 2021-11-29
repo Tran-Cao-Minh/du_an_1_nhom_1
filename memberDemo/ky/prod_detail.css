@@ -769,3 +769,68 @@ input[type="checkbox"]:checked~ .heart__icon:before {
 
     color: var(--black);
 }
+
+@media only screen and (max-width: 1023px) {
+   .prod__detail  {
+       width: 100%;
+       padding: 0 1.5rem;
+   }
+
+   img {
+       width: 100%;
+   }
+
+   .prod__detail-comment {
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+}
+
+@media only screen and (max-width: 700px) {
+    .prod__detail  {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .prod__detail-similar-prod {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prod__detail-comment {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    .prod__detail-wrapper {
+        flex-direction: column;
+    }
+
+    .prod__detail-left {
+        margin: 0;
+    }
+
+    .prod__detail-right {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .prod__detail-comment-rating  {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+
+    .prod__detail-comment-order-item {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+
+    .star {
+        font-size: 1.6rem;
+    }
+
+}

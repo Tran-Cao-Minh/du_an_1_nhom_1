@@ -330,7 +330,9 @@ input[type="checkbox"]:checked~.product__filter-label-size::after {
 }
 
 .product__area {
-    width: 85.2rem;
+    max-width: 85.2rem;
+
+    overflow: hidden;
 }
 
 .product-bar {
@@ -383,11 +385,15 @@ input[type="checkbox"]:checked~.product-bar__label {
 }
 
 .product__section {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    margin-left: -0.75rem;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 1.5rem;
+
+    width: calc(100% + 1.5rem);
 }
 
 .product__breadcrumb {
@@ -457,6 +463,8 @@ input[type="checkbox"]:checked~.product-bar__label {
     background: var(--primary-color-blur);
 
     border-radius: 0.5rem;
+    margin: 0 0.75rem;
+    width: 26.4rem;
 
     display: flex;
     flex-direction: column;
@@ -753,4 +761,72 @@ input[type="checkbox"]:checked~.product-bar__label {
     pointer-events: none;
 
     opacity: 0.4;
+}
+
+#toggle__filter:checked ~ .product__filter {
+    display: none;
+}
+
+#toggle__filter:checked ~ .product__area {
+    max-width: 100% !important;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .product__filter {
+        display: none;
+    }
+
+    #toggle__filter:checked+.product__filter{
+        display: block;
+        width: 30rem;
+    }
+
+    .product__section {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .product__area {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    .product__name p {
+        font-size: 1.5rem;
+    }
+
+    .product__price--new,
+    .product__price--old {
+        font-size: 1.4rem;
+    }
+
+    .product__price--old span,
+    .product__price--old small {
+        font-size: 1.4rem;
+    }
+
+    .input[type="checkbox"]:checked~.product__filter {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .product__filter {
+        display: none;
+    }
+
+    #toggle__filter:checked + .product__filter {
+        display: block;
+        width: 30rem;
+    }
+
+    .product__section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product__area {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
 }
