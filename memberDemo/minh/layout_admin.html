@@ -364,8 +364,8 @@
     </section>
     <section class="main-body">
       <section class="filter-form">
-        <input type="checkbox" id="filer-form__check">
-        <label class="filter-form__header">
+        <input type="checkbox" id="filter-form__check">
+        <label for="filter-form__check" class="filter-form__header">
           <div class="filter-form__title">
             Bộ lọc
           </div>
@@ -373,27 +373,103 @@
             <i class="fas fa-plus filter-form__collapse-icon"></i>
           </div>
         </label>
-        <div class="filer-form__body">
-          <div class="filter-form__form-group">
-            <div class="filter-form__form-title">
-
+        <div class="filter-form__body-container">
+          <form class="filter-form__body">
+            <div class="filter-form__form-group--first">
+              <div class="filter-form__form-title">
+                Chọn cột được lọc
+              </div>
+              <select class="filter-form__select-input js-select-filter-column-input">
+                <option value="a" data-type="text" class="filter-form__select-option">
+                  Tên danh mục
+                </option>
+                <option value="v" data-type="text" class="filter-form__select-option">
+                  Mã danh mục
+                </option>
+              </select>
             </div>
-            <select name="" class="filter-form__choose-column">
-              <option value="a" class="filter-form__column-name">
-                Tên danh mục
-              </option>
-              <option value="a" class="filter-form__column-name">
-                Mã danh mục
-              </option>
-            </select>
-            <div class="filter-form__notification">
-
+            <div class="filter-form__form-group">
+              <div class="filter-form__form-title">
+                Cơ chế sắp xếp
+              </div>
+              <div class="filter-form__radio-input-group">
+                <div class="filter-form__radio-input-container">
+                  <input class="filter-form__radio-input" type="radio" name="sort_rule" id="asc" value="asc">
+                  <label for="asc" class="filter-form__radio-input-label">Tăng dần</label>
+                </div>
+                <div class="filter-form__radio-input-container">
+                  <input class="filter-form__radio-input" type="radio" name="sort_rule" id="desc" value="desc">
+                  <label for="desc" class="filter-form__radio-input-label">Giảm dần</label>
+                </div>
+              </div>
             </div>
-          </div>
+            <div class="filter-form__form-group--open-sub-form">
+              <div class="filter-form__form-title">
+                Giá trị lọc
+              </div>
+              <div class="filter-form__radio-input-group js-check-open-filter-value-form">
+                <div class="filter-form__radio-input-container">
+                  <input class="filter-form__radio-input" type="radio" name="sort_value" id="identify" value="identify">
+                  <label for="identify" class="filter-form__radio-input-label">Xác định</label>
+                </div>
+                <div class="filter-form__radio-input-container">
+                  <input class="filter-form__radio-input" type="radio" name="sort_value" id="interval" value="interval">
+                  <label for="interval" class="filter-form__radio-input-label">Theo khoảng</label>
+                </div>
+              </div>
+            </div>
+            <div class="js-enter-identify-value-form">
+              <div class="filter-form__form-title">
+                Giá trị cần tìm
+              </div>
+              <input type="text" name="" id="" class="filter-form__input js-filter-value-input">
+              <div class="filter-form__notification">
+                Some test case ~
+              </div>
+            </div>
+            <div class="js-enter-interval-value-form">
+              <div class="filter-form__form-group--first">
+                <div class="filter-form__form-title">
+                  Giá trị nhỏ nhất
+                </div>
+                <input type="text" name="" id="" class="filter-form__input js-filter-value-input">
+                <div class="filter-form__notification">
+                  Some test case ~
+                </div>
+              </div>
+              <div class="filter-form__form-group">
+                <div class="filter-form__form-title">
+                  Giá trị lớn nhất
+                </div>
+                <input type="text" name="" id="" class="filter-form__input js-filter-value-input">
+                <div class="filter-form__notification">
+                  Some test case ~
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="filter-form__submit-btn">
+              Xác nhận lọc
+            </button>
+          </form>
+        </div>
+
+      </section>
+      <section class="data-table">
+        <div class="data-table__header">
+
+        </div>
+        <div class="data-table__body">
+
+        </div>
+        <div class="data-table__footer">
+
         </div>
       </section>
     </section>
   </main>
+
+  <!-- link JS -->
+  <script src="../../public/js/admin/filter_form.js"></script>
 </body>
 
 </html>
