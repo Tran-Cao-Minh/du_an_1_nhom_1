@@ -665,20 +665,22 @@
 
 
 .trademark__contain-logo {
-  width: 117rem;
+  max-width: 117rem;
   height: auto;
 
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .trademark__logo {
-  width: 37rem;
+  max-width: 37rem;
+  width: 100%;
   height: 10rem;
 
   border: 0.2rem solid var(--secondary-color);
   border-radius: 0.5rem;
-  margin: 1.5rem auto 1.5rem;
+  margin: 0.75rem;
 
   display: flex;
   align-items: center;
