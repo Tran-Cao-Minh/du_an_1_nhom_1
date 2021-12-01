@@ -17,7 +17,7 @@
 .bread-crumb-custom {
   display: flex;
 
-  max-width: 117rem;
+  width: 117rem;
   height: 4rem;
 
   padding:0 1.5rem;
@@ -50,7 +50,7 @@
 /* top-bar */
 .top-bar{
   max-width: 114rem;
-  height: 10.6rem;
+  height: auto;
 
   margin: 0 auto 15rem;
 }
@@ -307,10 +307,25 @@ right: 0;
   max-width: 114rem;
   height: 100rem;
   background-color: turquoise;
-  display: block;
+  display: flex;
 }
 .a{
-  width: calc((100%-6rem)/3rem);
+  width: calc((100%-6rem)/3);
   background-color: chartreuse;
   height: 30rem;
+}
+.b{
+  width: calc((100%-6rem)/3);
+  background-color: antiquewhite;
+  height: 30rem;
+}
+.c{
+  width: calc((100%-6rem)/3);
+  background-color: aqua;
+  height: 30rem;
+}
+.d {
+  width: 6rem;
+  height: 30rem;
+  background-color: black;
 }
