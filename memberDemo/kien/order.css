@@ -1,0 +1,125 @@
+:root {
+  --primary-color: rgb(18, 109, 130);
+  --primary-color-blur: rgba(18, 109, 130, 0.05);
+  --secondary-color: rgb(216, 227, 231);
+  --tertiary-color: rgb(81, 196, 211);
+  --primary-contrast-color: rgb(238, 111, 87);
+  --primary-contrast-color-blur: rgba(238, 111, 87, 0.05);
+
+  --red: rgb(207, 69, 92);
+  --gray: rgb(153, 153, 153);
+  --gray-blur: rgba(153, 153, 153, 0.1);
+  --white: rgb(255, 255, 255);
+  --black: rgb(51, 51, 51);
+  
+  --bg-overlay: rgba(0, 0, 0, 0.35);
+}
+.bread-crumb-custom {
+  display: flex;
+
+  max-width: 117rem;
+  height: 4rem;
+
+  padding:0 1.5rem;
+  margin: 0 auto 13rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+
+
+  align-items: center;
+
+  background-color: var(--primary-color-blur);
+
+}
+.bread-crumb-custom p {
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  color: var(--primary-color);
+
+}
+.bread-crumb-custom__icon {
+  padding: 0 1rem;
+  
+  font-size: 1.4rem;
+  color: var(--primary-color);
+
+  transform: rotate(180deg);
+
+}
+/* top-bar */
+.top-bar{
+  max-width: 114rem;
+  height: 10.6rem;
+
+  margin: 0 auto 15rem;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+.top-bar__tile-bar {
+  display: flex;
+
+  width: 114rem;
+  height: 5rem;
+
+  margin-bottom: 0.6rem;
+  border-radius: 0.5rem;
+
+  justify-content: space-between;
+  align-items: center;
+
+  background:var(--primary-color-blur);
+}
+.top-bar__tile-bar-status {
+  padding-left:1.5rem ;
+ 
+}
+
+.top-bar__tile-bar-text-status {
+  font-size: 1.8rem;
+  font-family: var(--regular);
+}
+
+/* top-bar__tile-bar-my-shopping-cart */
+.top-bar__tile-bar-my-shopping-cart {
+  display: flex;
+
+  max-width: 20.9rem;
+  height: 5rem;
+
+  border-radius: 0.5rem;
+
+  align-items: center;
+
+
+  background-color: var(--primary-color-blur);
+
+}
+.top-bar__tile-bar-text-my-shopping-cart {
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  padding-left: 1.2rem;
+}
+.my-shopping-cart__icon {
+  display: flex;
+
+  width: 5rem;
+  height: 5rem;
+  
+  border-radius: 0.5rem;
+
+  align-items: center;
+  justify-content:center;
+
+  font-size: 2rem;
+
+  background-color: var(--primary-contrast-color-blur);
+}
+
+/* top-bar__status-group */
+.top-bar__status-group {
+  max-width: 66rem;
+  height: 5rem;
+
+  border-radius: 0.5rem;
+}
