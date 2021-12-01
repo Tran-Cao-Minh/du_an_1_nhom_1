@@ -21,7 +21,7 @@ main {
   position: relative;
 
   width: 100%;
-  min-width: 320px;
+  min-width: 300px;
   height: 7rem;
 
   background: var(--white);
@@ -282,9 +282,11 @@ main {
 
 .main-body {
   width: 100%;
+  min-width: 300px;
   height: auto;
+  padding-bottom: 4rem;
   
-  background: lightblue;
+  /* background: lightblue; */
 }
 
 @media only screen and (max-width: 768px) {

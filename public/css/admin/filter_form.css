@@ -1,12 +1,12 @@
 .filter-form {
   max-width: 50rem;
-  min-width: 40rem;
+  min-width: 300px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
   padding: 1.5rem;
 
-  background: pink;
+  /* background: pink; */
 }
 
 #filter-form__check {
@@ -36,7 +36,7 @@
   color: var(--black);
 
   font-family: var(--regular);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 
   transition: 0.4s;
 }
@@ -144,7 +144,7 @@
   border: 0.2rem solid var(--secondary-color);
 
   font-family: var(--regular);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 
   transition: 0.2s;
 }
@@ -162,7 +162,7 @@
   color: var(--black);
 
   font-family: var(--regular);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 .filter-form__notification {
@@ -212,7 +212,7 @@
   border-radius: 0.5rem;
 
   font-family: var(--regular);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 4.6rem;
   text-align: center;
 
@@ -240,7 +240,7 @@
   border: 0.2rem solid var(--secondary-color);
 
   font-family: var(--regular);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 
   transition: 0.2s;
 }
