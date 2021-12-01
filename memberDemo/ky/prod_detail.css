@@ -16,7 +16,7 @@
 }
 
 .prod__detail-right {
-    width: 65.9rem;
+    max-width: 65.9rem;
 }
 
 .prod__detail-image {
@@ -39,7 +39,7 @@
     width: 5rem;
     height: 5rem;
     border-radius: 0.5rem;
-    
+
     font-size: 2rem;
     line-height: 2.3rem;
 
@@ -57,9 +57,13 @@
     font-weight: 400;
 }
 
-input[type="checkbox"]:checked~ .heart__icon:before {
+input[type="checkbox"]:checked~.heart__icon:before {
     content: '\f004';
     font-weight: 900;
+}
+
+input[type="checkbox"]:checked~.heart__icon {
+    background: var(--secondary-color);
 }
 
 .heart__icon:hover {
@@ -466,10 +470,10 @@ input[type="checkbox"]:checked~ .heart__icon:before {
     position: relative;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 
-    margin: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 .prod__detail-similar-prod i {
@@ -564,15 +568,17 @@ input[type="checkbox"]:checked~ .heart__icon:before {
     padding: 0 1rem;
     border-radius: 0.5rem;
 
+
+    background: var(--primary-contrast-color-blur);
+}
+
+.prod__detail-comment-rating p {
     font-size: 1.8rem;
     line-height: 2.1rem;
     font-family: var(--regular);
 
     color: var(--primary-contrast-color);
-
-    background: var(--primary-contrast-color-blur);
 }
-
 
 .star {
     padding: 0.5rem;
@@ -581,7 +587,7 @@ input[type="checkbox"]:checked~ .heart__icon:before {
     line-height: 2.5rem;
 
     color: var(--primary-contrast-color);
-    
+
     transition: all .2s;
 
     float: right;
@@ -619,7 +625,7 @@ input[type="checkbox"]:checked~ .heart__icon:before {
 
     height: 5rem;
     border-radius: 0.5rem;
-    border:  0.2rem solid var(--secondary-color);
+    border: 0.2rem solid var(--secondary-color);
 
     font-family: var(--regular);
 
@@ -650,7 +656,7 @@ input[type="checkbox"]:checked~ .heart__icon:before {
 
 .prod__detail-comment-order-contain-item {
     list-style: none;
-    
+
     width: 20rem;
 
     font-size: 1.8rem;
@@ -710,7 +716,7 @@ input[type="checkbox"]:checked~ .heart__icon:before {
     background: var(--primary-color-blur);
 
     border-radius: 0.5rem;
-    
+
     padding: 1.5rem;
 }
 
@@ -771,25 +777,31 @@ input[type="checkbox"]:checked~ .heart__icon:before {
 }
 
 @media only screen and (max-width: 1023px) {
-   .prod__detail  {
-       width: 100%;
-       padding: 0 1.5rem;
-   }
+    .prod__detail {
+        max-width: 100%;
+        padding: 0 1.5rem;
 
-   img {
-       width: 100%;
-   }
+        overflow-x: hidden;
+    }
 
-   .prod__detail-comment {
-    width: 100%;
-    padding: 0 1.5rem;
-}
+    .prod__detail-similar-prod {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .prod__detail-comment {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    .prod__detail-right {
+        max-width: 55.9rem;
+    }
 
 }
 
 @media only screen and (max-width: 700px) {
-    .prod__detail  {
-        width: 100%;
+    .prod__detail {
+        max-width: 100%;
         padding: 0 1.5rem;
     }
 
@@ -819,18 +831,12 @@ input[type="checkbox"]:checked~ .heart__icon:before {
         margin-top: 1.5rem;
     }
 
-    .prod__detail-comment-rating  {
-        font-size: 1.4rem;
-        line-height: 1.8rem;
+    .prod__detail-comment-overview {
+        flex-wrap: wrap;
     }
 
-    .prod__detail-comment-order-item {
-        font-size: 1.4rem;
-        line-height: 1.8rem;
-    }
-
-    .star {
-        font-size: 1.6rem;
+    .prod__detail-comment-order {
+        margin-top: 1.5rem;
     }
 
 }
