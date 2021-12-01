@@ -7,18 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <!-- Global CSS -->
-  <link rel="stylesheet" href="/public/css/base/reset.css">
-  <link rel="stylesheet" href="/public/css/base/theme.css">
-  <link rel="stylesheet" href="/public/css/base/font.css">
+  <link rel="stylesheet" href="../public/css/base/reset.css">
+  <link rel="stylesheet" href="../public/css/base/theme.css">
+  <link rel="stylesheet" href="../public/css/base/font.css">
   <!-- Font Awsome -->
   <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
   <!-- Layout CSS -->
-  <link rel="stylesheet" href="../../public/css/admin/layout/sidebar.css">
-  <link rel="stylesheet" href="../../public/css/admin/layout/main_header.css">
+  <link rel="stylesheet" href="../public/css/admin/layout/sidebar.css">
+  <link rel="stylesheet" href="../public/css/admin/layout/main_header.css">
   <!-- Filter Form CSS -->
-  <link rel="stylesheet" href="../../public/css/admin/filter_form.css">
+  <link rel="stylesheet" href="../public/css/admin/filter_form.css">
   <!-- Data Table CSS -->
-  <link rel="stylesheet" href="../../public/css/admin/data_table.css">
+  <link rel="stylesheet" href="../public/css/admin/data_table.css">
 </head>
 
 <body>
@@ -329,7 +329,7 @@
         </label>
         <div class="main-header__user-control">
           <div class="main-header__contain-user-avatar">
-            <img src="image/userImg.png" alt="" class="main-header__user-avatar">
+            <img src="../memberDemo/minh/image/userImg.png" alt="" class="main-header__user-avatar">
           </div>
           <div class="main-header__contain-dropdown-icon">
             <i class="fas fa-sort-down main-header__dropdown-icon"></i>
@@ -372,7 +372,7 @@
   </main>
 
   <!-- link JS -->
-  <script src="../../public/js/admin/filter_form.js"></script>
+  <script src="../public/js/admin/filter_form.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,9 @@
 <?php
   session_start();
 
+  include_once '../global/connect_database.php';
+  connectDatabase();
+
   if (isset($_GET['page_name'])) {
     session_destroy();
     $_SESSION['page_name'] = $_GET['page_name'];
