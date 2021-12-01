@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Roboto Regular';
-    src: url(/public/font/Roboto/Roboto-Regular.ttf);
+    src: url(../../font/Roboto/Roboto-Regular.ttf);
 }
 
 @font-face {
     font-family: 'Roboto Medium';
-    src: url(/public/font/Roboto/Roboto-Medium.ttf);
+    src: url(../../font/Roboto/Roboto-Medium.ttf);
 }
 
 @font-face {
     font-family: 'Roboto Bold';
-    src: url(/public/font/Roboto/Roboto-Bold.ttf);
+    src: url(../../font/Roboto/Roboto-Bold.ttf);
 }
 
 :root {
@@ -18,8 +18,3 @@
     --medium: 'Roboto Medium', sans-serif;
     --bold: 'Roboto Bold', sans-serif;
 }
-
-/* @font-face {
-    font-family: 'Roboto ';
-    src: url(/public/font/Roboto);
-} */
