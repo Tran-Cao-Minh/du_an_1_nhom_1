@@ -21,8 +21,7 @@
   height: 4rem;
 
   padding:0 1.5rem;
-  margin: 0 auto 13rem;
-  margin-bottom: 1rem;
+  margin: 0 auto 2rem;
   margin-top: 1rem;
   border-radius: 0.5rem;
 
@@ -52,7 +51,7 @@
   max-width: 114rem;
   height: auto;
 
-  margin: 0 auto 15rem;
+  margin: 0 auto 1.5rem;
 }
 .top-bar__tile-bar {
   display: flex;
@@ -302,30 +301,207 @@ right: 0;
   font-size:2rem;
   color: var(--red);
 }
+/*  */
+/*  */
 /* table */
-.table {
+.table{
   max-width: 114rem;
-  height: 100rem;
-  background-color: turquoise;
+  height: auto;
+  margin: 0 auto 1.5rem;
+
+}
+
+
+/* header */
+.table__row {
+  max-width: 114rem;
+  height: auto;
+  border-collapse: collapse;
+}
+.table__header {
+  width: 1140rem;
+  height: 5rem;
+
+  border-radius: 0.5rem;
+
+  background-color: var(--primary-color);
+}
+.table__row-header-1 {
+  width: calc((100%-6rem)/3);
+  height: 5rem;
+
+  padding-left: 1.5rem;
+
+  border-radius: 0.5rem 0 0 0.5rem;
+  
+  font-family: var(--regular);
+  font-size: 1.8rem;
+  color: var(--white);
+}
+.table__row-header {
+  width: calc((100%-6rem)/3);
+  height: 5rem;
+
+  padding-left: 1.5rem;
+
+  font-family: var(--regular);
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+/* table__row-group(1-2) */
+.table__row-group-1 {
+  width:114rem;
+  height: 6rem;
+}
+.table__row-group-2 {
+  width:114rem;
+  height: 6rem;
+
+ background-color: var(--primary-color-blur);
+}
+/* table-row(1-2-3) */
+
+.table__row-1 {
+  padding-left: 1.5rem;
+
+  border-radius: 0.5rem 0 0 0.5rem;
+
+  font-size: 1.8rem;
+  font-family:var(--regular);
+
+}
+.table__row-2{
+  padding-left: 1.5rem;
+
+  font-size: 1.8rem;
+  font-family:var(--regular);
+}
+.table__row-3{
+  padding-left: 1.5rem;
+
+  font-size: 1.8rem;
+  font-family:var(--regular);
+}
+/* Processing (đang sử lý) */
+.table__row-3--Processing {
+  padding-left: 1.5rem;
+
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  color: var(--primary-contrast-color);
+}
+/* completed (Hoàn tất) */
+.table__row--completed {
+  padding-left: 1.5rem;
+
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  color: var(--primary-color);
+}
+/* đang giao */
+.table__row-3--delivering {
+  padding-left: 1.5rem;
+
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  color: var(--black);
+}
+/* bị hủy */
+.table__row-3--cancel {
+  padding-left: 1.5rem;
+
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  color: var(--red);
+}
+/* hover */
+.table__row-group-1:hover {
+  background-color: var(--primary-contrast-color-blur);
+  transition: 0.2s;
+  
+}
+.table__row-group-2:hover {
+  background-color: var(--primary-contrast-color-blur);
+  transition: 0.2s;
+}
+
+/* icon */
+.table__group-icon {
+  border-radius: 0 0.5rem 0.5rem 0;
+
+}
+/* button */
+.table__button {
+  width: 5rem;
+  height: 5rem;
+
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  border-color: transparent;
+
+  background-color: var(--primary-color-blur);
+}
+
+
+.table__icon {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+/* hover button */
+.table__button:hover {
+  background-color: var(--secondary-color);
+  transition: 0.2s;
+}
+/*  */
+.product__pagination {
   display: flex;
+
+  max-width: 33rem;
+  height: 5rem;
+
+  margin: 0 auto 0;
+
+  align-items: center;
+  justify-content: space-between;
+
 }
-.a{
-  width: calc((100%-6rem)/3);
-  background-color: chartreuse;
-  height: 30rem;
+.product__pagination__link {
+
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  list-style-type: none;
+  border-radius: 0.5rem;
+
+  font-size: 1.8rem;
+
 }
-.b{
-  width: calc((100%-6rem)/3);
-  background-color: antiquewhite;
-  height: 30rem;
+.product__pagination-button {
+  height: 5rem;
+  width: 5rem;
+
+  position: absolute;
+  border-radius: 0.5rem;
+  border-color: transparent;
+
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  color: var(--primary-color);
+
+  background-color: var(--primary-color-blur);
+
+  
 }
-.c{
-  width: calc((100%-6rem)/3);
-  background-color: aqua;
-  height: 30rem;
+.fa-angle-double-right {
+  font-size: 2rem;
+  color: var(--primary-color);
 }
-.d {
-  width: 6rem;
-  height: 30rem;
-  background-color: black;
+.product__pagination-button:hover {
+  transition: 0.2s;
+}
+
+.product__pagination__link--active{
+  border: 0.2rem solid var(--primary-color);
+  
 }
