@@ -14,12 +14,12 @@
   <link rel="stylesheet" href="./order.css">
 </head>
 <body>
-  <div class="bread-crumb-custom">
+  <section class="bread-crumb-custom">
     <p>giỏ hàng</p> 
     <i class="fas fa-chevron-left bread-crumb-custom__icon"></i>
     <p>Danh sách đơn hàng</p>
-  </div>
-  <div class="top-bar">
+  </section>
+  <section class="top-bar">
     <div class="top-bar__tile-bar">
       <div class="top-bar__tile-bar-status">
         <p class="top-bar__tile-bar-text-status">Trạng thái</p>
@@ -27,15 +27,53 @@
       <div class="top-bar__tile-bar-my-shopping-cart">
         <button >
           <p class="top-bar__tile-bar-text-my-shopping-cart">Giỏ hàng của tôi</p>
-        <i class="fas fa-shopping-basket my-shopping-cart__icon"></i>
+          <div class="my-shopping-cart__group">
+            <i class="fas fa-shopping-basket my-shopping-cart__icon"></i>
+          </div>
         </button>
       </div>
     </div>
     <div class="top-bar__status-group">
-      <button>
-        
+      <button class="top-bar__status-order-status-1">
+        <p class="top-bar__status-order-status-1-text">Đang sử lý</p>
+        <div class="top-bar__status-order-status-1-group" >
+          <i class="fas fa-cart-arrow-down top-bar__status-order-status-1-icon"></i>
+        </div>
+      </button>
+      <button class="top-bar__status-order-status-2">
+        <p class="top-bar__status-order-status-2-text">Đang giao hàng</p>
+        <div class="top-bar__status-order-status-2-group" >
+          <i class="fas fa-shipping-fast top-bar__status-order-status-2-icon"></i>
+        </div>
+      </button>
+      <button class="top-bar__status-order-status-3">
+        <p class="top-bar__status-order-status-3-text">Hoàn tất</p>
+        <div class="top-bar__status-order-status-3-group" >
+          <i class="fas fa-user-check top-bar__status-order-status-3-icon"></i>
+        </div>
+      </button>
+      <button class="top-bar__status-order-status-4">
+        <p class="top-bar__status-order-status-4-text">Bị hủy</p>
+        <div class="top-bar__status-order-status-4-group" >
+          <i class="fas fa-trash-alt top-bar__status-order-status-4-icon  "></i>
+        </div>
       </button>
     </div>
-  </div>
+    <!-- table -->
+    <section class="table">
+        <div class="a">
+
+        </div>
+        <div class="b">
+
+        </div>
+        <div class="c">
+
+        </div>
+        <div class="d">
+
+        </div>
+    </section >
+  </section>
 </body>
 </html>

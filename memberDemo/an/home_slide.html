@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/public/css/base/reset.css">
+    <link rel="stylesheet" href="/public/css/base/theme.css">
+    <link rel="stylesheet" href="/public/css/base/font.css">
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <section class="banner">
+        <div class="banner__container">
+            <!-- banner photo -->
+            <div class="banner__contain-img js-banner">
+                <img src="./img/banner_1.jpg" alt="">
+            </div>
+            <div class="banner__contain-img js-banner">
+                <img src="./img/banner_2.jpg" alt="">
+            </div>
+            <div class="banner__contain-img js-banner">
+                <img src="./img/banner_3.jpg" alt="">
+            </div>
+            <div class="banner__contain-img js-banner">
+                <img src="./img/banner_4.jpg" alt="">
+            </div>
+            <!-- button -->
+            <button class="banner__prev-btn" onclick="prevSlide(1)">
+                <i class="fas fa-caret-left banner__icon-prev"></i>
+            </button>
+            <button class="banner__next-btn" onclick="plusSlide(0)">
+                <i class="fas fa-caret-left banner__icon-next"></i>
+            </button>
+            <div class="banner__index-group">
+                <button class="banner__index" onclick="currentSlide(0)"></button>
+                <button class="banner__index" onclick="currentSlide(1)"></button>
+                <button class="banner__index" onclick="currentSlide(2)"></button>
+                <button class="banner__index" onclick="currentSlide(3)"></button>
+            </div>
+        </div>
+    </section>
+    <script src="slide_show.js"></script>
+</body>
+
+</html>

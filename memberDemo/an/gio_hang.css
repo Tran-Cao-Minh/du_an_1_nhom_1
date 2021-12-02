@@ -15,7 +15,7 @@
 :root {
     --primary-color: rgb(18, 109, 130);
     --primary-color-blur: rgba(18, 109, 130, 0.05);
-    --secondary-color: rgb(216, 227, 231);
+    --secondary-color: rgb(216, 227, 231,1);
     --tertiary-color: rgb(81, 196, 211);
     --primary-contrast-color: rgb(238, 111, 87);
     --primary-contrast-color-blur: rgba(238, 111, 87, 0.05);
@@ -36,15 +36,15 @@ body {
 }
 
 .main {
-    position: relative;
-    max-width: 100%;
-    top: 0.5rem;
-    left: 3rem;
+    margin: auto;
+    max-width: 85%;
 }
 
 .general-cart {
     width: 100%;
     margin-bottom: 1.2rem;
+    position: relative;
+    top: 0.5rem;
 }
 
 .general-cart__properties {
@@ -186,7 +186,7 @@ table {
 .product-detail {
     width: 60rem;
     position: relative;
-    top: 14rem;
+    top: 14.5rem;
     left: 8rem;
 }
 
@@ -233,7 +233,7 @@ table {
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 0.2rem;
-    background: rgba(7, 5, 5, 0.1);
+    background: var(--gray-blur);
     border: 1px solid none;
     text-align: center;
 }
@@ -245,7 +245,7 @@ table {
     height: 1.6rem;
     color: var(--primary-contrast-color);
     border-radius: 0.2rem;
-    background: rgba(7, 5, 5, 0.1);
+    background: var(--gray-blur);
     text-align: center;
 }
 
@@ -285,6 +285,7 @@ table {
     font-size: 1.3rem;
     border: 0.1rem solid var(--white);
     cursor: pointer;
+    line-height: 1.1rem;
 }
 
 .is-form:focus,
@@ -294,11 +295,23 @@ table {
 
 .is-form.minus {
     border-radius: 0.2rem 0 0 0.2rem;
+    font-size: 2.2rem;
+
+}
+.is-form.is-form.minus:hover{
+    background: var(--secondary-color);
+    color: var(--red);
+    transition: 0.2s ease-in;
 }
 
 .is-form.plus {
     border-radius: 0 0.2rem 0.2rem 0;
-    background: #D8E3E7;
+    background: var(--secondary-color);
+}
+.is-form.is-form.plus:hover{
+    background: var(--tertiary-color);
+    color: var(--red);
+    transition: 0.2s ease-in;
 }
 
 .input-qty {
