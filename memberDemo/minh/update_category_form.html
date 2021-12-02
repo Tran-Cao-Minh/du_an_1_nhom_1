@@ -7,20 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <!-- Global CSS -->
-  <link rel="stylesheet" href="../public/css/base/reset.css">
-  <link rel="stylesheet" href="../public/css/base/theme.css">
-  <link rel="stylesheet" href="../public/css/base/font.css">
+  <link rel="stylesheet" href="/public/css/base/reset.css">
+  <link rel="stylesheet" href="/public/css/base/theme.css">
+  <link rel="stylesheet" href="/public/css/base/font.css">
   <!-- Font Awsome -->
   <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
   <!-- Layout CSS -->
-  <link rel="stylesheet" href="../public/css/admin/layout/sidebar.css">
-  <link rel="stylesheet" href="../public/css/admin/layout/main_header.css">
+  <link rel="stylesheet" href="../../public/css/admin/layout/sidebar.css">
+  <link rel="stylesheet" href="../../public/css/admin/layout/main_header.css">
   <!-- Filter Form CSS -->
-  <link rel="stylesheet" href="../public/css/admin/filter_form.css">
+  <link rel="stylesheet" href="../../public/css/admin/filter_form.css">
   <!-- Data Table CSS -->
-  <link rel="stylesheet" href="../public/css/admin/data_table.css">
+  <link rel="stylesheet" href="../../public/css/admin/data_table.css">
   <!-- Interaction Form CSS -->
-  <link rel="stylesheet" href="../public/css/admin/interaction_form.css">
+  <link rel="stylesheet" href="../../public/css/admin/interaction_form.css">
 </head>
 
 <body>
@@ -331,7 +331,7 @@
         </label>
         <div class="main-header__user-control">
           <div class="main-header__contain-user-avatar">
-            <img src="../memberDemo/minh/image/userImg.png" alt="" class="main-header__user-avatar">
+            <img src="image/userImg.png" alt="" class="main-header__user-avatar">
           </div>
           <div class="main-header__contain-dropdown-icon">
             <i class="fas fa-sort-down main-header__dropdown-icon"></i>
@@ -367,14 +367,48 @@
       </div>
     </section>
     <section class="main-body">
-      <?php
-        include_once $view_link;
-      ?>
+      <section class="interaction-form">
+        <form>
+          <div class="interaction-form__title--update">
+            Sửa danh mục
+          </div>
+          <div class="interaction-form__form-group">
+            <div class="interaction-form__form-title">
+              Mã danh mục
+            </div>
+            <input value="1" type="text" readonly name="category_name" class="interaction-form__input--read-only">
+          </div>
+          <div class="interaction-form__form-group">
+            <label for="category_name" class="interaction-form__form-title">
+              Tên danh mục
+            </label>
+            <input type="text" name="category_name" id="category_name" class="interaction-form__input">
+            <div class="interaction-form__notification">
+              Some test case ~
+            </div>
+          </div>
+          <div class="interaction-form__action-group">
+            <button type="submit" class="interaction-form__submit-btn--update">
+              Xác nhận sửa
+            </button>
+            <a href="#" class="interaction-form__return-link">
+              Quay lại
+            </a>
+          </div>
+        </form>
+      </section>
+
+      <section class="notification">
+        <span class="notification__title">Thông báo: </span>
+        <span class="notification__content">
+          Lọc danh mục thành công
+        </span>
+      </section>
     </section>
   </main>
 
   <!-- link JS -->
-  <script src="../public/js/admin/filter_form.js"></script>
+  <script src="../../public/js/admin/filter_form.js"></script>
 </body>
 
 </html>

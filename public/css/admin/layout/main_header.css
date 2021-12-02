@@ -291,6 +291,7 @@ main {
 
 @media only screen and (max-width: 768px) {
   .main-header {
+    width: 100vw;
     height: 12rem;
   }
 
@@ -305,4 +306,7 @@ main {
     z-index: 2;
   }
   
+  .main-body {
+    width: 100vw;
+  }
 }
