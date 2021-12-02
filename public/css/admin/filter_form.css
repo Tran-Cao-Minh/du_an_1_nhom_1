@@ -160,6 +160,8 @@
 }
 
 .filter-form__select-option {
+  /* line height, padding, height can not custom this option height */
+  /* try to use ul li and custom with js */
   background: var(--white);
   color: var(--black);
 
@@ -310,6 +312,7 @@
   border-radius: 0.5rem;
 
   font-family: var(--regular);
+  line-height: 2.4rem;
 }
 
 .filter-form__notification-title{
@@ -319,4 +322,11 @@
 .filter-form__notification-content{
   font-size: 1.6rem;
 
+}
+
+.data-table__contain-table-body--empty {
+  width: 100%;
+  height: 5rem;
+
+  background: red;
 }

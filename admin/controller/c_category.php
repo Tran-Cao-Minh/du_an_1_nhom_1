@@ -11,7 +11,19 @@
 
   switch ($view_name) {
     case 'overview':
-      // get filter information
+      $notification = '';
+      
+      // DELETE DATA
+      if (isset($_GET['delete_confirm']) && isset($_GET['object_id'])) {
+        $object_id = $_GET['object_id'];
+        deleteCategory($object_id);
+      }
+      // END DELETE DATA
+
+      // DATA FILTER
+      $page_quantity = '';
+      $page_size = 6;
+
       if (isset($_GET['filter_confirm'])) {
         $_SESSION['filter_confirm'] = $_GET['filter_confirm'];
 
@@ -48,19 +60,25 @@
       }
 
       if ($_SESSION['filter_value'] === 'identify') {
-        getCategoryByIdentifyValue(
+        $data_result = getCategoryByIdentifyValue(
           $_SESSION['filter_column'],
           $_SESSION['sort_rule'],
           $_SESSION['filter_value_identify'],
           $_SESSION['page_num'],
-          $page_size = 6
+          $page_size
         );
 
       } else if ($_SESSION['filter_value'] === 'interval') {
-        
+        $data_result = getCategoryByIntervalValue(
+          $_SESSION['filter_column'],
+          $_SESSION['sort_rule'],
+          $_SESSION['filter_value_interval_min'],
+          $_SESSION['filter_value_interval_max'],
+          $_SESSION['page_num'],
+          $page_size
+        );
       }
-
-
+      // END DATA FILTER
 
       $view_link = 'v_category/v_category_overview.php';
       break;
