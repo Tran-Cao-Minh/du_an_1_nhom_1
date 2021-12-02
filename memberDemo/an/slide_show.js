@@ -27,7 +27,7 @@
       if (slideIndex > slides.length - 1) {
         slideIndex = 0
       }    
-      //tự động chuyển đổi slide sau 5s
+      //tự động chuyển đổi slide sau 4s
       setTimeout(showSlides, 4000);
   }
   //mặc định hiển thị slide đầu tiên 
