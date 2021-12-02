@@ -82,5 +82,66 @@
 
       $view_link = 'v_category/v_category_overview.php';
       break;
+
+    case 'add':
+      $notification = '';
+      
+      // INSERT DATA
+      if (
+        isset($_GET['insert_confirm']) && 
+        isset($_GET['category_name'])
+      ) {
+        $category_name = $_GET['category_name'];
+        
+        if (strlen($category_name) > 32) {
+          $notification = 'Vui lòng nhập tên danh mục ít hơn 32 ký tự </br>';
+
+        } else {
+          insertCategory($category_name);
+        }
+      }
+      // END INSERT DATA
+
+      $view_link = 'v_category/v_category_add.php';
+      break;
+
+    case 'update':
+      $notification = '';
+      
+      // UPDATE DATA
+      if (
+        isset($_GET['update_confirm']) && 
+        isset($_GET['object_id']) &&
+        isset($_GET['category_name'])
+      ) {
+        $category_name = $_GET['category_name'];
+        
+        if (strlen($category_name) > 32) {
+          $notification = 'Vui lòng nhập tên danh mục ít hơn 32 ký tự </br>';
+
+        } else {
+          $object_id = $_GET['object_id'];
+          updateCategory(
+            $object_id,
+            $category_name
+          );
+        }
+      }
+      // END UPDATE DATA
+
+      // GET DATA FOR UPDATE PAGE
+      if (isset($_GET['object_id'])) {
+        $object_id = $_GET['object_id'];
+
+        $object_data = getCategoryDataById($object_id);
+
+      } else {
+        $object_data = '';
+        $notification = 'Vui lòng truyền vào khóa chính để lấy thông tin của đối tượng </br>';
+      }
+      // END GET DATA FOR UPDATE PAGE
+
+      $view_link = 'v_category/v_category_update.php';
+      break;
   }
 ?>

@@ -29,7 +29,7 @@
 
     global $notification;
     if ($notification === '') {
-      $notification = 'Lọc dữ liệu thành công trả về '.$row_quantity.' hàng kết quả </br>';
+      $notification = 'Lọc danh mục thành công trả về '.$row_quantity.' hàng kết quả </br>';
 
       $notification .= 'Cột được lọc: ';
       switch ($filter_column) {
@@ -134,7 +134,7 @@
 
     global $notification;
     if ($notification === '') {
-      $notification = 'Lọc dữ liệu thành công trả về '.$row_quantity.' hàng kết quả </br>';
+      $notification = 'Lọc danh mục thành công trả về '.$row_quantity.' hàng kết quả </br>';
 
       $notification .= 'Cột được lọc: ';
       switch ($filter_column) {
@@ -234,15 +234,83 @@
 
     $sql = "DELETE FROM `product_type` 
             WHERE `PkType_Id` = '$object_id'";
-
     $delete_result = $conn->exec($sql);
 
     global $notification;
     if ($delete_result === 1) {
-      $notification = 'Xóa dữ liệu thành công </br>';
+      $notification = 'Xóa danh mục thành công </br>';
 
     } else {
-      $notification = 'Xóa dữ liệu không thành công </br>';
+      $notification = 'Xóa danh mục không thành công </br>';
     }
+
+    $conn = null;
+  }
+
+  function insertCategory($category_name) {
+    $conn = connectDatabase();
+
+    $sql = "INSERT INTO `product_type` 
+              (`TypeName`) 
+            VALUES 
+              ('$category_name')";
+    $insert_result = $conn->exec($sql);
+
+    global $notification;
+    if ($insert_result === 1) {
+      $notification = 'Thêm danh mục thành công </br>'
+                    . 'Tên danh mục được thêm: '.$category_name.' </br>';
+
+    } else {
+      $notification = 'Thêm danh mục không thành công </br>';
+    }
+
+    $conn = null;
+  }
+
+  function getCategoryDataById($object_id) {
+    $conn = connectDatabase();
+
+    $sql = "SELECT * 
+            FROM `product_type` 
+            WHERE `PkType_Id` = '$object_id'";
+    $data_result = $conn->query($sql);
+
+    $return_quantity = $data_result->rowCount();
+    $conn = null;
+
+    global $notification;
+    if ($return_quantity === 0) {
+      $notification = 'Không có danh mục có mã là "'.$object_id.'" </br>';
+      return '';
+
+    } else {
+      return $data_result->fetch(PDO::FETCH_ASSOC);
+    }
+  }
+
+  function updateCategory (
+    $object_id,
+    $category_name
+  ) {
+    $conn = connectDatabase();
+
+    $sql = "UPDATE `product_type` 
+            SET 
+              `TypeName` = '$category_name' 
+            WHERE `PkType_Id` = '$object_id'";
+    $update_result = $conn->exec($sql);
+
+    global $notification;
+    if ($update_result === 1) {
+      $notification = 'Sửa danh mục thành công </br>'
+                    . 'Mã danh mục được sửa: '.$object_id.' </br>';
+
+    } else {
+      $notification = 'Sửa danh mục không thành công </br>'
+                    . 'Có thể do bạn chưa thay đổi thông tin trước khi nhấn nút xác nhận sửa </br>';
+    }
+
+    $conn = null;
   }
 ?>

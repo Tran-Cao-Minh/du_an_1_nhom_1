@@ -100,14 +100,14 @@
     <div class="data-table__header-title">
       Bảng dữ liệu
     </div>
-    <div class="data-table__header-add-object">
+    <a href="?view_name=add" class="data-table__header-add-object">
       <div class="data-table__header-add-object-title">
         Thêm danh mục
       </div>
       <div class="data-table__header-add-object-contain-icon">
         <i class="fas fa-plus data-table__header-add-object-icon"></i>
       </div>
-    </div>
+    </a>
   </div>
   <div class="data-table__body">
     <table class="data-table__table" style="--cell-1-width: 18rem; --cell-2-width: 25rem; --cell-3-width: 13.5rem;">
@@ -141,7 +141,7 @@
                           <i class="far fa-trash-alt data-table__delete-icon"></i>
                         </button>
                       </form>
-                      <a href="" class="data-table__view-detail-link">
+                      <a href="?view_name=update&object_id='.$row['PkType_Id'].'" class="data-table__view-detail-link">
                         <i class="fas fa-wrench data-table__view-detail-icon"></i>
                       </a>
                     </td>

@@ -1,0 +1,209 @@
+:root {
+  --primary-color: rgb(18, 109, 130);
+  --primary-color-blur: rgba(18, 109, 130, 0.05);
+  --secondary-color: rgb(216, 227, 231);
+  --tertiary-color: rgb(81, 196, 211);
+  --primary-contrast-color: rgb(238, 111, 87);
+  --primary-contrast-color-blur: rgba(238, 111, 87, 0.05);
+
+  --red: rgb(207, 69, 92);
+  --gray: rgb(153, 153, 153);
+  --gray-blur: rgba(153, 153, 153, 0.1);
+  --white: rgb(255, 255, 255);
+  --black: rgb(51, 51, 51);
+
+  --bg-overlay: rgba(0, 0, 0, 0.35);
+}
+
+:root {
+  --regular: 'Roboto Regular', sans-serif;
+  --medium: 'Roboto Medium', sans-serif;
+  --bold: 'Roboto Bold', sans-serif;
+}
+
+.interaction-form {
+  max-width: 50rem;
+  min-width: 300px;
+  height: auto;
+  margin: 1.5rem auto 0;
+  padding: 1.5rem;
+
+  background: var(--white);
+
+  border-radius: 0.5rem;
+}
+
+.interaction-form__title--add,
+.interaction-form__title--update {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 5rem;
+
+  border-radius: 0.5rem;
+
+  font-size: 1.7rem;
+  font-family: var(--medium);
+}
+
+.interaction-form__title--add {
+  background: var(--primary-color-blur);
+  color: var(--primary-color);
+}
+
+.interaction-form__title--update {
+  background: var(--primary-contrast-color-blur);
+  color: var(--primary-contrast-color);
+}
+
+.interaction-form__form-group {
+  width: 100%;
+  max-height: 100rem;
+  margin-top: 2rem;
+
+  /* background: pink; */
+}
+
+.interaction-form__form-title {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+
+  /* background: lightblue; */
+  color: var(--black);
+
+  font-family: var(--regular);
+  font-size: 1.6rem;
+}
+
+.interaction-form__input,
+.interaction-form__input--read-only {
+  width: 100%;
+  height: 5rem;
+  padding: 1.5rem;
+
+  background: var(--white);
+  color: var(--black);
+
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--secondary-color);
+
+  font-family: var(--regular);
+  font-size: 1.7rem;
+
+  transition: 0.2s;
+}
+
+.interaction-form__input:focus,
+.interaction-form__input:hover {
+  border-color: var(--primary-color);
+}
+
+.interaction-form__notification {
+  width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+
+  /* background: lightgreen; */
+  color: var(--primary-contrast-color);
+
+  font-family: var(--regular);
+  font-size: 1.4rem;
+}
+
+.interaction-form__action-group{
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 5rem;
+  margin-top: 2rem;
+
+  /* background: lightgreen; */
+}
+.interaction-form__submit-btn--add,
+.interaction-form__submit-btn--update{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: calc(50% - 0.5rem);
+  height: 5rem;
+
+  border-radius: 0.5rem;
+
+  font-family: var(--medium);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+  transition: 0.2s;
+}
+
+.interaction-form__submit-btn--add {
+  background: var(--primary-color);
+  color: var(--white);
+
+  border: none;
+}
+
+.interaction-form__submit-btn--update {
+  background: var(--white);
+  color: var(--primary-contrast-color);
+
+  border: 0.2rem solid var(--primary-contrast-color);
+}
+.interaction-form__return-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: calc(50% - 0.5rem);
+  height: 5rem;
+
+  background: var(--black);
+  color: var(--white);
+
+  border-radius: 0.5rem;
+
+  font-family: var(--medium);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+  transition: 0.2s;
+}
+
+.interaction-form__submit-btn--add:hover,
+.interaction-form__return-link:hover {
+  opacity: 0.9;
+}
+
+.interaction-form__submit-btn--update:hover {
+  background: var(--primary-contrast-color);
+  color: var(--white);
+}
+
+.notification{
+  max-width: 50rem;
+  min-width: 300px;
+  height: auto;
+  margin: 0 auto;
+  padding: 1.5rem;
+
+  background: var(--black);
+  color: var(--white);
+
+  border-radius: 0.5rem;
+
+  font-family: var(--regular);
+  line-height: 3rem;
+}
+.notification__title{
+  font-size: 1.6rem;
+}
+.notification__content{
+  font-size: 1.6rem;
+}
