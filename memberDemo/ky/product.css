@@ -24,6 +24,8 @@
 .filter-toggle:checked~.product__filter-content {
     height: 0;
     overflow: hidden;
+
+    transition: height .2s ease;
 }
 
 .label__head {
@@ -771,7 +773,7 @@ input[type="checkbox"]:checked~.product-bar__label {
     right: 1.5rem;
 
 
-    
+
     display: none;
 }
 
@@ -863,6 +865,66 @@ input[type="checkbox"]:checked~.product-bar__label {
 #toggle__filter:checked~.product__area {
     max-width: 100% !important;
     transition: max-width 0.2s ease-in-out;
+}
+
+.product__list {
+    max-width: 117rem;
+    margin: 2% auto;
+}
+
+.product__favourite-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+
+    background: var(--secondary-color);
+}
+
+.product__favourite-icon i {
+    font-size: 2rem;
+    line-height: 2.3rem;
+
+    color: var(--red);
+}
+
+.product__favourite-delete {
+    position: absolute;
+    top: 0;
+    right: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 5rem;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    font-family: var(--regular);
+
+    color: var(--primary-contrast-color);
+    background: var(--primary-contrast-color-blur);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(5rem);
+    transition: all 0.2s ease;
+}
+
+.product__favourite:hover .product__favourite-delete {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
 }
 
 @media only screen and (max-width: 1024px) {
