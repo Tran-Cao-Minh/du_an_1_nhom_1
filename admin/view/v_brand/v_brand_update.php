@@ -2,20 +2,20 @@
   <form>
     <?php
       if ($object_data != '') {
-        $object_id = $object_data['PkType_Id'];
-        $category_name = $object_data['TypeName'];
+        $object_id = $object_data['PkBrand_Id'];
+        $brand_name = $object_data['BrandName'];
 
       } else {
         $object_id = '';
-        $category_name = '';
+        $brand_name = '';
       }
     ?>
     <div class="interaction-form__title--update">
-      Sửa danh mục
+      Sửa thương hiệu
     </div>
     <div class="interaction-form__form-group">
       <div class="interaction-form__form-title">
-        Mã danh mục
+        Mã thương hiệu
       </div>
       <input  type="text" class="interaction-form__input--read-only"
         readonly
@@ -23,14 +23,14 @@
         name="object_id">
     </div>
     <div class="interaction-form__form-group">
-      <label for="category_name" class="interaction-form__form-title">
-        Tên danh mục 
+      <label for="brand_name" class="interaction-form__form-title">
+        Tên thương hiệu 
       </label>
-      <input type="text" id="category_name" class="interaction-form__input"
+      <input type="text" id="brand_name" class="interaction-form__input"
         required
         maxlength="32"
-        name="category_name"
-        value="<?php echo $category_name; ?>"
+        name="brand_name"
+        value="<?php echo $brand_name; ?>"
       >
       <div class="interaction-form__notification">
         <!-- Some test case ~ -->

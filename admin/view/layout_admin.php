@@ -185,7 +185,7 @@
         </label>
         <ul class="sidebar__sub-menu-list" style="--heigth: 15rem;">
           <li>
-            <a href="#" class="sidebar__sub-menu-item">
+            <a href="?page_name=manage_category" class="sidebar__sub-menu-item">
               Chỉnh sửa danh mục
             </a>
           </li>
@@ -195,7 +195,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="sidebar__sub-menu-item">
+            <a href="?page_name=manage_brand" class="sidebar__sub-menu-item">
               Chỉnh sửa thương hiệu
             </a>
           </li>
@@ -355,15 +355,15 @@
         </div>
       </div>
       <div class="main-header__bread-crumb">
-        <a class="main-header__bread-crumb-link" href="#">
-          Quản lý thuộc tính
-        </a>
+        <div class="main-header__bread-crumb-link">
+          <?php echo $main_bread_crumb; ?>
+        </div>
         <div class="main-header__bread-crumb-contain-icon">
           <i class="fas fa-chevron-right main-header__bread-crumb-icon"></i>
         </div>
-        <a class="main-header__bread-crumb-link" href="#">
-          Chỉnh sửa danh mục
-        </a>
+        <div class="main-header__bread-crumb-link">
+          <?php echo $sub_bread_crumb; ?>
+        </div>
       </div>
     </section>
     <section class="main-body">

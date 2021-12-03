@@ -1,25 +1,25 @@
 <section class="interaction-form">
   <form>
     <?php
-      if (isset($_GET['category_name'])) {
-        $category_name = $_GET['category_name'];
+      if (isset($_GET['brand_name'])) {
+        $brand_name = $_GET['brand_name'];
 
       } else {
-        $category_name = '';
+        $brand_name = '';
       }
     ?>
     <div class="interaction-form__title--add">
-      Thêm danh mục
+      Thêm thương hiệu
     </div>
     <div class="interaction-form__form-group">
-      <label for="category_name" class="interaction-form__form-title">
-        Tên danh mục
+      <label for="brand_name" class="interaction-form__form-title">
+        Tên thương hiệu
       </label>
-      <input type="text" id="category_name" class="interaction-form__input" 
+      <input type="text" id="brand_name" class="interaction-form__input" 
         required
         maxlength="32"
-        name="category_name" 
-        value="<?php echo $category_name; ?>"
+        name="brand_name"
+        value="<?php echo $brand_name; ?>"
       >
       <div class="interaction-form__notification">
         <!-- Some test case ~ -->
