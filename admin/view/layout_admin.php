@@ -15,12 +15,14 @@
   <!-- Layout CSS -->
   <link rel="stylesheet" href="../public/css/admin/layout/sidebar.css">
   <link rel="stylesheet" href="../public/css/admin/layout/main_header.css">
-  <!-- Filter Form CSS -->
-  <link rel="stylesheet" href="../public/css/admin/filter_form.css">
-  <!-- Data Table CSS -->
-  <link rel="stylesheet" href="../public/css/admin/data_table.css">
-  <!-- Interaction Form CSS -->
-  <link rel="stylesheet" href="../public/css/admin/interaction_form.css">
+  <?php
+    if ($link_css_arr != '') {
+      echo '<!-- Link CSS -->';
+      foreach ($link_css_arr as $link_css) {
+        echo '<link rel="stylesheet" href="'.$link_css.'">';
+      }
+    }
+  ?>
 </head>
 
 <body>
@@ -190,7 +192,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="sidebar__sub-menu-item">
+            <a href="?page_name=manage_color" class="sidebar__sub-menu-item">
               Chỉnh sửa màu sắc
             </a>
           </li>
@@ -372,9 +374,15 @@
       ?>
     </section>
   </main>
-
-  <!-- link JS -->
-  <script src="../public/js/admin/filter_form.js"></script>
+  
+  <?php
+    if ($link_js_arr != '') {
+      echo '<!-- link JS -->';
+      foreach ($link_js_arr as $link_js) {
+        echo '<script src="'.$link_js.'"></script>';
+      }
+    }
+  ?>
 </body>
 
 </html>

@@ -30,6 +30,13 @@
       $main_bread_crumb = 'Quản lý thuộc tính';
       $sub_bread_crumb = 'Chỉnh sửa thương hiệu';
       break;
+
+    case 'manage_color': 
+      include_once 'controller/c_color.php';
+
+      $main_bread_crumb = 'Quản lý thuộc tính';
+      $sub_bread_crumb = 'Chỉnh sửa màu sắc';
+      break;  
   }
 
   include_once 'view/layout_admin.php';

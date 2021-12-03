@@ -1,5 +1,5 @@
 <?php
-  function getCategoryByIdentifyValue (
+  function getColorByIdentifyValue (
     $filter_column,
     $sort_rule,
     $filter_value_identify,
@@ -11,7 +11,7 @@
     $keyword_list = preg_split('/[\s,]+/', $filter_value_identify);
 
     $sql = "SELECT COUNT(*)
-            FROM `product_type`
+            FROM `product_color`
             WHERE 1";
     foreach ($keyword_list as $keyword) {
       $sql .= " AND `$filter_column` LIKE '%$keyword%'";
@@ -29,15 +29,15 @@
 
     global $notification;
     if ($notification === '') {
-      $notification = 'Lọc danh mục thành công trả về '.$row_quantity.' hàng kết quả </br>';
+      $notification = 'Lọc màu sắc thành công trả về '.$row_quantity.' hàng kết quả </br>';
 
       $notification .= 'Cột được lọc: ';
       switch ($filter_column) {
-        case 'PkType_Id':
-          $notification .= 'Mã danh mục';
+        case 'PkColor_Id':
+          $notification .= 'Mã màu sắc';
           break;
-        case 'TypeName':
-          $notification .= 'Tên danh mục';
+        case 'ColorName':
+          $notification .= 'Tên màu sắc';
           break;
       }
       $notification .= '</br>';
@@ -64,8 +64,8 @@
     // count row in talbe if row is 0 and row get from data is greater than 0, set SESSION page_num
     // it help avoid to show table with no row inside
     $limit_start = ($page_num - 1) * $page_size;
-    $sql = "SELECT `PkType_Id`
-            FROM `product_type`
+    $sql = "SELECT `PkColor_Id`
+            FROM `product_color`
             WHERE 1";
     foreach ($keyword_list as $keyword) {
       $sql .= " AND `$filter_column` LIKE '%$keyword%'";
@@ -81,7 +81,7 @@
 
     $limit_start = ($page_num - 1) * $page_size;
     $sql = "SELECT * 
-            FROM `product_type`
+            FROM `product_color`
             WHERE 1";
     foreach ($keyword_list as $keyword) {
       $sql .= " AND `$filter_column` LIKE '%$keyword%'";
@@ -95,7 +95,7 @@
     return $data_result;
   }
 
-  function getCategoryByIntervalValue (
+  function getColorByIntervalValue (
     $filter_column,
     $sort_rule,
     $filter_value_interval_min,
@@ -106,7 +106,7 @@
     $conn = connectDatabase();
 
     $sql = "SELECT COUNT(*)
-            FROM `product_type`
+            FROM `product_color`
             WHERE `$filter_column`";
     if ($filter_value_interval_min === '' && $filter_value_interval_max === '') {
       $sql .= " LIKE '%%'";
@@ -134,15 +134,15 @@
 
     global $notification;
     if ($notification === '') {
-      $notification = 'Lọc danh mục thành công trả về '.$row_quantity.' hàng kết quả </br>';
+      $notification = 'Lọc màu sắc thành công trả về '.$row_quantity.' hàng kết quả </br>';
 
       $notification .= 'Cột được lọc: ';
       switch ($filter_column) {
-        case 'PkType_Id':
-          $notification .= 'Mã danh mục';
+        case 'PkColor_Id':
+          $notification .= 'Mã màu sắc';
           break;
-        case 'TypeName':
-          $notification .= 'Tên danh mục';
+        case 'ColorName':
+          $notification .= 'Tên màu sắc';
           break;
       }
       $notification .= '</br>';
@@ -178,8 +178,8 @@
     // count row in talbe if row is 0 and row get from data is greater than 0, set SESSION page_num
     // it help avoid to show table with no row inside
     $limit_start = ($page_num - 1) * $page_size;
-    $sql = "SELECT `PkType_Id`
-            FROM `product_type`
+    $sql = "SELECT `PkColor_Id`
+            FROM `product_color`
             WHERE `$filter_column`";
     if ($filter_value_interval_min === '' && $filter_value_interval_max === '') {
       $sql .= " LIKE '%%'";
@@ -205,7 +205,7 @@
 
     $limit_start = ($page_num - 1) * $page_size;
     $sql = "SELECT *
-            FROM `product_type`
+            FROM `product_color`
             WHERE `$filter_column`";
     if ($filter_value_interval_min === '' && $filter_value_interval_max === '') {
       $sql .= " LIKE '%%'";
@@ -229,30 +229,30 @@
     return $data_result;
   }
 
-  function deleteCategory($object_id) {
+  function deleteColor($object_id) {
     $conn = connectDatabase();
 
-    $sql = "DELETE FROM `product_type` 
-            WHERE `PkType_Id` = '$object_id'";
+    $sql = "DELETE FROM `product_color` 
+            WHERE `PkColor_Id` = '$object_id'";
     $delete_result = $conn->exec($sql);
 
     global $notification;
     if ($delete_result === 1) {
-      $notification = 'Xóa danh mục thành công </br>';
+      $notification = 'Xóa màu sắc thành công </br>';
 
     } else {
-      $notification = 'Xóa danh mục không thành công </br>';
+      $notification = 'Xóa màu sắc không thành công </br>';
     }
 
     $conn = null;
   }
 
-  function checkCategoryName($category_name) {
+  function checkColorId($object_id) {
     $conn = connectDatabase();
 
-    $sql = "SELECT `TypeName` 
-            FROM `product_type`
-            WHERE `TypeName` = '$category_name'
+    $sql = "SELECT `PkColor_Id` 
+            FROM `product_color`
+            WHERE `PkColor_Id` = '$object_id'
             LIMIT 1";
     $stmt = $conn->query($sql);
     $exist_result = $stmt->rowCount();
@@ -267,41 +267,62 @@
     }
   }
 
-  function insertCategory($category_name) {
+  function checkColorName($color_name, $object_id) {
     $conn = connectDatabase();
 
-    $sql = "INSERT INTO `product_type` 
-              (`TypeName`) 
+    $sql = "SELECT `ColorName` 
+            FROM `product_color`
+            WHERE `ColorName` = '$color_name'
+            AND `PkColor_Id` <> '$object_id'
+            LIMIT 1";
+    $stmt = $conn->query($sql);
+    $exist_result = $stmt->rowCount();
+
+    $conn = null;
+
+    if ($exist_result === 1) {
+      return false;
+
+    } else {
+      return true;
+    }
+  }
+
+  function insertColor($object_id, $color_name) {
+    $conn = connectDatabase();
+
+    $sql = "INSERT INTO `product_color` 
+              (`PkColor_Id`, `ColorName`)
             VALUES 
-              ('$category_name')";
+              ('$object_id', '$color_name')";
     $insert_result = $conn->exec($sql);
 
     global $notification;
     if ($insert_result === 1) {
-      $notification = 'Thêm danh mục thành công </br>'
-                    . 'Tên danh mục được thêm: '.$category_name.' </br>';
+      $notification = 'Thêm màu sắc thành công </br>'
+                    . 'Tên màu sắc được thêm: '.$color_name.' </br>';
 
     } else {
-      $notification = 'Thêm danh mục không thành công </br>';
+      $notification = 'Thêm màu sắc không thành công </br>';
     }
 
     $conn = null;
   }
 
-  function getCategoryDataById($object_id) {
+  function getColorDataById($object_id) {
     $conn = connectDatabase();
 
     $sql = "SELECT * 
-            FROM `product_type` 
-            WHERE `PkType_Id` = '$object_id'";
+            FROM `product_color` 
+            WHERE `PkColor_Id` = '$object_id'";
     $data_result = $conn->query($sql);
 
     $return_quantity = $data_result->rowCount();
     $conn = null;
-
+    
     global $notification;
     if ($return_quantity === 0) {
-      $notification = 'Không có danh mục có mã là "'.$object_id.'" </br>';
+      $notification = 'Không có màu sắc có mã là "'.$object_id.'" </br>';
       return '';
 
     } else {
@@ -309,25 +330,27 @@
     }
   }
 
-  function updateCategory (
+  function updateColor (
     $object_id,
-    $category_name
+    $new_object_id,
+    $color_name
   ) {
     $conn = connectDatabase();
 
-    $sql = "UPDATE `product_type` 
+    $sql = "UPDATE `product_color` 
             SET 
-              `TypeName` = '$category_name' 
-            WHERE `PkType_Id` = '$object_id'";
+              `PkColor_Id` = '$new_object_id',
+              `ColorName` = '$color_name' 
+            WHERE `PkColor_Id` = '$object_id'";
     $update_result = $conn->exec($sql);
 
     global $notification;
     if ($update_result === 1) {
-      $notification = 'Sửa danh mục thành công </br>'
-                    . 'Mã danh mục được sửa: '.$object_id.' </br>';
+      $notification = 'Sửa màu sắc thành công </br>'
+                    . 'Tên màu sắc được sửa: '.$color_name.' </br>';
 
     } else {
-      $notification = 'Sửa danh mục không thành công </br>'
+      $notification = 'Sửa màu sắc không thành công </br>'
                     . 'Có thể do bạn chưa thay đổi thông tin trước khi nhấn nút xác nhận sửa </br>';
     }
 

@@ -1,5 +1,5 @@
 <?php
-  include_once 'model/m_category.php';
+  include_once 'model/m_color.php';
 
   if (isset($_GET['view_name'])) {
     $_SESSION['view_name'] = $_GET['view_name'];
@@ -16,7 +16,7 @@
       // DELETE DATA
       if (isset($_GET['delete_confirm']) && isset($_GET['object_id'])) {
         $object_id = $_GET['object_id'];
-        deleteCategory($object_id);
+        deleteColor($object_id);
       }
       // END DELETE DATA
 
@@ -45,7 +45,7 @@
       } elseif (!isset($_SESSION['filter_confirm'])) {
         $_SESSION['filter_confirm'] = 'true';
 
-        $_SESSION['filter_column'] = 'PkType_Id';
+        $_SESSION['filter_column'] = 'PkColor_Id';
         $_SESSION['sort_rule'] = 'ASC';
 
         $_SESSION['filter_value'] = 'identify';
@@ -60,7 +60,7 @@
       }
 
       if ($_SESSION['filter_value'] === 'identify') {
-        $data_result = getCategoryByIdentifyValue(
+        $data_result = getColorByIdentifyValue(
           $_SESSION['filter_column'],
           $_SESSION['sort_rule'],
           $_SESSION['filter_value_identify'],
@@ -69,7 +69,7 @@
         );
 
       } else if ($_SESSION['filter_value'] === 'interval') {
-        $data_result = getCategoryByIntervalValue(
+        $data_result = getColorByIntervalValue(
           $_SESSION['filter_column'],
           $_SESSION['sort_rule'],
           $_SESSION['filter_value_interval_min'],
@@ -87,7 +87,7 @@
       $link_js_arr = array (
           '../public/js/admin/filter_form.js',
       );
-      $view_link = 'v_category/v_category_overview.php';
+      $view_link = 'v_color/v_color_overview.php';
       break;
 
     case 'add':
@@ -96,18 +96,23 @@
       // INSERT DATA
       if (
         isset($_GET['insert_confirm']) && 
-        isset($_GET['category_name'])
+        isset($_GET['object_id']) &&
+        isset($_GET['color_name'])
       ) {
-        $category_name = $_GET['category_name'];
+        $object_id = substr($_GET['object_id'], 1, 6); // cut # char in HEX Code Color
+        $color_name = $_GET['color_name'];
         
-        if (checkCategoryName($category_name) == false) {
-          $notification = 'Danh mục có tên "'.$category_name.'" đã tồn tại </br>';
+        if (checkColorId($object_id) == false) {
+          $notification = 'Màu sắc có mã "'.$object_id.'" đã tồn tại </br>';
 
-        } elseif (strlen($category_name) > 32 || strlen($category_name) === 0) {
-          $notification = 'Vui lòng nhập tên danh mục ít hơn 32 ký tự </br>';
+        } elseif (checkColorName($color_name) == false) {
+          $notification = 'Màu sắc có tên "'.$color_name.'" đã tồn tại </br>';
+          
+        } elseif (strlen($color_name) > 32 || strlen($color_name) === 0) {
+          $notification = 'Vui lòng nhập tên màu sắc ít hơn 32 ký tự </br>';
 
         } else {
-          insertCategory($category_name);
+          insertColor($object_id, $color_name);
         }
       }
       // END INSERT DATA
@@ -116,7 +121,7 @@
         '../public/css/admin/interaction_form.css',
       );
       $link_js_arr = '';
-      $view_link = 'v_category/v_category_add.php';
+      $view_link = 'v_color/v_color_add.php';
       break;
 
     case 'update':
@@ -126,31 +131,52 @@
       if (
         isset($_GET['update_confirm']) && 
         isset($_GET['object_id']) &&
-        isset($_GET['category_name'])
+        isset($_GET['new_object_id']) &&
+        isset($_GET['color_name'])
       ) {
-        $category_name = $_GET['category_name'];
+        $object_id = $_GET['object_id']; 
+        $new_object_id = substr($_GET['new_object_id'], 1, 6); // cut # char in HEX Code Color
+        $color_name = $_GET['color_name'];
         
-        if (checkCategoryName($category_name) == false) {
-          $notification = 'Danh mục có tên "'.$category_name.'" đã tồn tại </br>';
-
-        } elseif (strlen($category_name) > 32 || strlen($category_name) === 0) {
-          $notification = 'Vui lòng nhập tên danh mục ít hơn 32 ký tự </br>';
+        if ($new_object_id == $object_id) {
+          $check_object_id_exist = true;
 
         } else {
-          $object_id = $_GET['object_id'];
-          updateCategory(
+          $check_object_id_exist = checkColorId($new_object_id);
+        }
+
+        $update_status = false;
+
+        if ($check_object_id_exist == false) {
+          $notification = 'Màu sắc có mã "'.$new_object_id.'" đã tồn tại </br>';
+
+        } elseif (checkColorName($color_name, $object_id) == false) {
+          $notification = 'Màu sắc có tên "'.$color_name.'" đã tồn tại </br>';
+          
+        } elseif (strlen($color_name) > 32 || strlen($color_name) === 0) {
+          $notification = 'Vui lòng nhập tên màu sắc ít hơn 32 ký tự </br>';
+
+        } else {
+          updateColor(
             $object_id,
-            $category_name
+            $new_object_id,
+            $color_name
           );
+
+          $update_status = true;
         }
       }
       // END UPDATE DATA
 
       // GET DATA FOR UPDATE PAGE
       if (isset($_GET['object_id'])) {
-        $object_id = $_GET['object_id'];
+        if (isset($_GET['new_object_id']) && $update_status == true) {
+          $object_id = substr($_GET['new_object_id'], 1, 6); // cut # char in HEX Code Color
 
-        $object_data = getCategoryDataById($object_id);
+        } else {
+          $object_id = $_GET['object_id'];
+        }
+        $object_data = getColorDataById($object_id);
 
       } else {
         $object_data = '';
@@ -162,7 +188,7 @@
         '../public/css/admin/interaction_form.css',
       );
       $link_js_arr = '';
-      $view_link = 'v_category/v_category_update.php';
+      $view_link = 'v_color/v_color_update.php';
       break;
   }
 ?>

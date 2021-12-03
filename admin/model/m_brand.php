@@ -247,6 +247,26 @@
     $conn = null;
   }
 
+  function checkBrandName($brand_name) {
+    $conn = connectDatabase();
+
+    $sql = "SELECT `BrandName` 
+            FROM `product_brand`
+            WHERE `BrandName` = '$brand_name'
+            LIMIT 1";
+    $stmt = $conn->query($sql);
+    $exist_result = $stmt->rowCount();
+
+    $conn = null;
+
+    if ($exist_result === 1) {
+      return false;
+
+    } else {
+      return true;
+    }
+  }
+
   function insertBrand($brand_name) {
     $conn = connectDatabase();
 

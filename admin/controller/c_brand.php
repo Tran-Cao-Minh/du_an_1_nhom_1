@@ -80,6 +80,13 @@
       }
       // END DATA FILTER
 
+      $link_css_arr = array (
+          '../public/css/admin/filter_form.css',
+          '../public/css/admin/data_table.css',
+      );
+      $link_js_arr = array (
+          '../public/js/admin/filter_form.js',
+      );
       $view_link = 'v_brand/v_brand_overview.php';
       break;
 
@@ -93,7 +100,10 @@
       ) {
         $brand_name = $_GET['brand_name'];
         
-        if (strlen($brand_name) > 32 || strlen($brand_name) === 0) {
+        if (checkBrandName($brand_name) == false) {
+          $notification = 'Thương hiệu có tên "'.$brand_name.'" đã tồn tại </br>';
+
+        } elseif (strlen($brand_name) > 32 || strlen($brand_name) === 0) {
           $notification = 'Vui lòng nhập tên thương hiệu ít hơn 32 ký tự </br>';
 
         } else {
@@ -102,6 +112,10 @@
       }
       // END INSERT DATA
 
+      $link_css_arr = array (
+        '../public/css/admin/interaction_form.css',
+      );
+      $link_js_arr = '';
       $view_link = 'v_brand/v_brand_add.php';
       break;
 
@@ -116,7 +130,10 @@
       ) {
         $brand_name = $_GET['brand_name'];
         
-        if (strlen($brand_name) > 32 || strlen($brand_name) === 0) {
+        if (checkBrandName($brand_name) == false) {
+          $notification = 'Thương hiệu có tên "'.$brand_name.'" đã tồn tại </br>';
+
+        } elseif (strlen($brand_name) > 32 || strlen($brand_name) === 0) {
           $notification = 'Vui lòng nhập tên thương hiệu ít hơn 32 ký tự </br>';
 
         } else {
@@ -140,7 +157,11 @@
         $notification = 'Vui lòng truyền vào khóa chính để lấy thông tin của đối tượng </br>';
       }
       // END GET DATA FOR UPDATE PAGE
-
+      
+      $link_css_arr = array (
+        '../public/css/admin/interaction_form.css',
+      );
+      $link_js_arr = '';
       $view_link = 'v_brand/v_brand_update.php';
       break;
   }

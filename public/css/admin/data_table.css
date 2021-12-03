@@ -370,12 +370,16 @@
   font-size: 1.4rem;
 }
 
-
-
 .data-table__table-body-cell-empty-notification {
   padding: 0 1.5rem;
 
   font-family: var(--regular);
   font-size: 1.7rem;
   line-height: 6rem;
+}
+
+.data-table__preview-color-icon {
+
+  color: var(--bg-color);
+  font-size: 2rem;
 }
