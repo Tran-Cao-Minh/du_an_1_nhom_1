@@ -8,7 +8,7 @@
 }
 
 main {
-  overflow: hidden;
+  overflow-x: hidden;
   width: calc(100% - 27.6rem);
   height: auto;
 
@@ -257,12 +257,6 @@ main {
   color: var(--primary-color);
   font-family: var(--regular);
   font-size: 1.7rem;
-
-  transition: 0.2s;
-}
-
-.main-header__bread-crumb-link:hover {
-  color: var(--black);
 }
 
 .main-header__bread-crumb-contain-icon {
