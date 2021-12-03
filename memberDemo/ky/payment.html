@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./payment.css">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/public/css/base/reset.css">
+    <link rel="stylesheet" href="/public/css/base/theme.css">
+    <link rel="stylesheet" href="/public/css/base/font.css">
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="payment">
+        <article class="payment__left">
+            <div class="payment__left-promotional">
+                <p>Nhập mã khuyến mãi (Nếu có)</p>
+                <div class="payment__left-promotional-code">
+                    <input type="text" class="payment__left-promotional-input">
+                    <button class="payment__left-promotional-button">Áp dụng</button>
+                </div>
+            </div>
+            <div class="payment__left-customer">
+                <div class="payment__left-customer-tittle">
+                    Thông tin người nhận
+                </div>
+                <ul class="payment__left-customer-choose">
+                    <li class="payment__left-customer-choose-item">
+                        <input type="radio" name="customer" id="customer__self">
+                        <label class="customer__label" for="customer__self">Tôi</label>
+                    </li>
+                    <li class="payment__left-customer-choose-item">
+                        <input type="radio" name="customer" id="customer__other">
+                        <label for="customer__other" class="customer__label">Người khác</label>
+                    </li>
+                    <li class="payment__left-customer-choose-item">
+                        <input type="radio" name="customer" id="customer__new">
+                        <label for="customer__new" class="customer__label">Thêm mới</label>
+                    </li>
+                </ul>
+                <div class="payment__left-customer-form">
+                    <div class="form__group">
+                        <label class="form__label" for="">Email</label>
+                        <input class="form__input form__input--primary" type="text"
+                            placeholder="Nhập email mới của bạn" />
+                        <span class="form__message">Hihi</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <aside class="payment__info">
+
+        </aside>
+    </section>
+</body>
+
+</html>

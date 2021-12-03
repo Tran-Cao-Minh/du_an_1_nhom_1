@@ -830,7 +830,7 @@ input[type="checkbox"]:checked~.heart__icon {
         width: 100%;
         margin-top: 1.5rem;
     }
-
+    
     .prod__detail-comment-overview {
         flex-wrap: wrap;
     }

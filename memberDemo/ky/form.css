@@ -13,6 +13,14 @@
   position: relative;
 }
 
+.pt3-5 {
+  padding-top: 3.5rem !important;
+}
+
+.mb2-5 {
+  margin-bottom: 2.5rem !important;
+}
+
 .overlay {
   position: fixed;
   width: 100%;
@@ -43,7 +51,7 @@
 }
 
 .form__group {
-  padding-top: 3rem;
+  padding-top: 1.5rem;
 }
 
 .form__label {
@@ -67,7 +75,7 @@
   font-family: var(--regular);
 }
 
-.form__input--primary:focus {
+.form__input--primary:hover {
   border-color: var(--primary-color);
 }
 
@@ -94,7 +102,7 @@
 .form__password__icon {
   position: absolute;
   right: 0.5rem;
-  top: 6rem;
+  top: 5rem;
 
   cursor: pointer;
 }
@@ -172,7 +180,7 @@
   position: relative;
 
   width: 100%;
-  border-bottom: 0.1rem solid var(--light-gray);
+  border-bottom: 0.1rem solid var(--gray-blur);
   margin-top: 2.2rem;
 }
 
@@ -262,6 +270,48 @@
 
 .form__close i:hover {
   color: var(--primary-color);
+}
+
+.form__group--flex {
+  display: flex;
+}
+
+.form__button--small {
+  border: none;
+  outline: none;
+
+  height: 5rem;
+  width: 19.3rem;
+  border-radius: 0.5rem;
+
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  font-family: var(--regular);
+
+  transition: all 0.2s ease;
+}
+
+.form__button-back {
+  color: var(--primary-contrast-color);
+  background: var(--white);
+
+  margin-right: 1.5rem;
+
+  border: 0.2rem solid var(--primary-contrast-color);
+}
+
+.form__button-accept {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.form__button-accept:hover {
+  opacity: 0.9;
+}
+
+.form__button-back:hover {
+  background: var(--primary-contrast-color);
+  color: var(--white);
 }
 
 @media only screen and (max-width:480px) {
