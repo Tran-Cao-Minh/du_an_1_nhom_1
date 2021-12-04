@@ -18,10 +18,10 @@
   <div class="overlay">
     <section class="form">
       <!-- Start form -->
-      <form action="" class="form__login" id="form-1">
+      <form action="" class="form__login" id="">
         <!-- Start form group -->
         <div class="form__group pt3-5">
-          <label class="form__label" for="log">Tên đăng nhập</label>
+          <label class="form__label" for="">Tên đăng nhập</label>
           <input class="form__input form__input--primary" type="text"
             placeholder="Nhập số điện thoại hoặc email của bạn" />
           <span class="form__message"></span>
@@ -29,7 +29,7 @@
         <!-- End form group -->
         <!-- Start form group -->
         <div class="form__group form__password">
-          <label class="form__label" for="password">Mật khẩu</label>
+          <label class="form__label" for="">Mật khẩu</label>
           <input class="form__input form__input--error" type="password" placeholder="Nhập mật khẩu của bạn" />
           <p class="form__toggle form__password__icon">
             <i class="far fa-eye-slash "></i>
@@ -73,18 +73,6 @@
   </div>
   <!-- Font Awsome -->
   <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
-  <script src="./login_form.js"></script>
-  <script>
-    Validator({
-      form: '#form-1',
-      rules: [
-        Validator.isRequired('#log'),
-        Validator.isPassword('#password'),
-      ]
-    });
-    
-  </script>
-
 </body>
 
 </html>
