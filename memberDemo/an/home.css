@@ -13,11 +13,12 @@
     display: none;
 }
 
-.banner__container-img {
+.banner__contain-img {
 
     width: 100%;
     height: auto;
     display: flex;
+
 }
 
 /* nút lùi */
@@ -168,6 +169,35 @@
 
     background-color: var(--primary-color);
 
+}
+.imgIn { 
+    animation: moveImgIn 0.3s forwards;
+}
+
+.imgOutRight {
+    animation: moveImgOutRight 0.3s forwards;
+}
+
+.imgOutLeft {
+    animation: moveImgOutLeft 0.3s forwards;
+}
+
+@keyframes moveImgIn {
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes moveImgOutRight {
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes moveImgOutLeft {
+    100% {
+        left: -100%;
+    }
 }
 
 /* Start animate slide*/
