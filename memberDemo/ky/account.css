@@ -1,0 +1,382 @@
+.account {
+    display: flex;
+
+    max-width: 114rem;
+    margin: 2% auto;
+
+    font-family: var(--regular);
+}
+
+.account__article {
+    display: flex;
+
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    max-width: 56.2rem;
+
+    background: var(--primary-color-blur);
+}
+
+.account__aside {
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    max-width: 56.2rem;
+    margin-left: 1.5rem;
+
+    background: var(--primary-color-blur);
+}
+
+.account__article-left {
+    width: 16.1rem;
+}
+
+.account__image img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.account__image {
+    position: relative;
+}
+
+.account__image-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+
+    background: var(--primary-color);
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.account__image-icon:hover {
+    background: var(--secondary-color);
+}
+
+.account__image-icon i:hover {
+    color: var(--primary-color)
+}
+
+.account__image-icon i {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    width: 5rem;
+    height: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--white);
+}
+
+.account__btn button {
+    height: 5rem;
+    width: 100%;
+    margin: 0.75rem 0;
+    border-radius: 0.5rem;
+
+    font-family: var(--regular);
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+
+    transition: all 0.2s ease;
+}
+
+.account__btn button:hover {
+    opacity: 0.9;
+}
+
+.account__btn-log-out {
+    border: none;
+
+    background: var(--primary-color-blur);
+    color: var(--primary-color);
+}
+
+.account__btn-change-pass {
+    background: var(--primary-color);
+    color: var(--white);
+
+    border: none;
+}
+
+.account__aside .form__group {
+    width: 53.1rem;
+}
+
+.account .form__group {
+    position: relative;
+}
+
+.account .form__flex {
+    position: relative;
+}
+
+.account__aside .account__btn {
+    position: absolute;
+    top: 0.1rem;
+    right: 0;
+}
+
+.account__btn .account__btn-accept-change {
+    padding: 0 1.5rem;
+    width: 9.2rem;
+    border: none;
+
+    font-family: var(--regular);
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+
+    background: var(--primary-color-blur);
+    color: var(--primary-color);
+}
+
+.account__btn .account__btn-accept-change:hover {
+    background: var(--secondary-color);
+}
+
+.account__article-right .form__group {
+    padding-left: 1.5rem;
+}
+
+
+.form__group-icon-calendar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 5rem;
+    height: 5rem;
+}
+
+.form__group-icon-calendar i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 5rem;
+    height: 5rem;
+
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+
+    color: var(--black);
+
+    cursor: pointer;
+}
+
+.account .form__group textarea {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1.2rem 0.8rem;
+    border: 0.2rem solid var(--secondary-color);
+    border-radius: 0.5rem;
+    height: 7.4rem;
+
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-family: var(--regular);
+
+    resize: none;
+}
+
+.account .form__group:not(:first-child) {
+    padding-top: 1.5rem;
+}
+
+.account .form__label {
+    color: var(--primary-color);
+
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    font-family: var(--regular);
+}
+
+.account .form__input {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1.2rem 0.8rem;
+    border: 0.2rem solid var(--secondary-color);
+    border-radius: 0.5rem;
+    height: 5rem;
+
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-family: var(--regular);
+}
+
+.account.form__input--primary:hover {
+    border-color: var(--primary-color);
+}
+
+.form__sex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35.5rem;
+    margin-top: 1rem;
+    border: 0.2rem solid var(--secondary-color);
+    border-radius: 0.5rem;
+    height: 5rem;
+}
+
+.form__sex .form__sex-label {
+    position: relative;
+    display: block;
+
+    min-height: 3.2rem;
+    padding: 1.5rem 4.2rem;
+    margin-bottom: 0;
+    border-radius: 0.5rem;
+
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+
+    color: var(--primary-color);
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.form__sex .form__sex-label::before {
+    content: '';
+
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+
+    background: var(--primary-color-blur);
+}
+
+.form__sex .form__sex-label::after {
+    content: '';
+
+    position: absolute;
+    top: 1.9rem;
+    left: 1.7rem;
+
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+
+    background: var(--primary-color);
+
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="radio"]:checked~.form__sex-label::after {
+    transform: scale(1);
+}
+
+input[type="radio"]:checked~.form__sex-label {
+    background: var(--primary-color-blur);
+}
+
+.form__sex .form__sex-label:hover {
+    background: var(--primary-color-blur);
+}
+
+
+.account__article-right .account__btn-accept {
+    border: none;
+
+    margin-top: 1.5rem;
+
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.account .tittle__bar-my-order {
+    display: flex;
+    align-items: center;
+
+    margin: 1.5rem 0;
+
+    width: fit-content;
+    height: 5rem;
+    border-radius: 0.5rem;
+
+    background: var(--primary-color-blur);
+
+    cursor: pointer;
+}
+
+.account .tittle__bar-my-order-name {
+    padding: 1.5rem;
+
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+
+    color: var(--primary-color);
+}
+
+.account .tittle__bar-my-order-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+
+    outline: none;
+    border: none;
+
+    background: var(--primary-color-blur);
+
+    transition: all 0.2s ease;
+}
+
+.account .tittle__bar-my-order-icon i {
+    font-size: 2rem;
+    line-height: 2.3rem;
+
+    color: var(--primary-color);
+}
+
+.account .tittle__bar-my-order-name:hover,
+.account .tittle__bar-my-order-icon:hover {
+    background: var(--secondary-color);
+
+    border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 1024px) { 
+    .account {
+        padding: 0 1.5rem;
+
+        flex-wrap: wrap;
+    }
+
+    .account__aside {
+        margin-top: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) { 
+    .account {
+        padding: 0 1.5rem;
+
+        flex-wrap: wrap;
+    }
+
+    .account__aside {
+        margin-top: 1.5rem;
+    }
+}
