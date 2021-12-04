@@ -512,6 +512,8 @@ input[type="checkbox"]:checked~.heart__icon {
     font-family: var(--regular);
 
     transition: all 0.2s ease;
+
+    resize: none;
 }
 
 .prod__detail-comment-input:hover {

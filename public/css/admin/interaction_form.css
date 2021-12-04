@@ -34,7 +34,8 @@
 }
 
 .interaction-form__title--add,
-.interaction-form__title--update {
+.interaction-form__title--update,
+.interaction-form__title--sub {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +59,16 @@
   color: var(--primary-contrast-color);
 }
 
+.interaction-form__title--sub {
+  margin-top: 4rem;
+
+  background: var(--gray-blur);
+  color: var(--black);
+}
+
 .interaction-form__form-group {
+  position: relative;
+
   width: 100%;
   max-height: 100rem;
   margin-top: 2rem;
@@ -115,7 +125,7 @@
   font-size: 1.4rem;
 }
 
-.interaction-form__action-group{
+.interaction-form__action-group {
   display: flex;
   justify-content: space-between;
 
@@ -125,8 +135,9 @@
 
   /* background: lightgreen; */
 }
+
 .interaction-form__submit-btn--add,
-.interaction-form__submit-btn--update{
+.interaction-form__submit-btn--update {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +167,8 @@
 
   border: 0.2rem solid var(--primary-contrast-color);
 }
-.interaction-form__return-link{
+
+.interaction-form__return-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,7 +198,7 @@
   color: var(--white);
 }
 
-.notification{
+.notification {
   max-width: 50rem;
   min-width: 300px;
   height: auto;
@@ -201,9 +213,531 @@
   font-family: var(--regular);
   line-height: 3rem;
 }
-.notification__title{
+
+.notification__title {
   font-size: 1.6rem;
 }
-.notification__content{
+
+.notification__content {
   font-size: 1.6rem;
+}
+
+.interaction-form__select-input {
+  width: 100%;
+  height: 5rem;
+  padding: 0 1rem;
+
+  background: var(--white);
+  color: var(--black);
+
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--secondary-color);
+
+  font-family: var(--regular);
+  font-size: 1.7rem;
+
+  transition: 0.2s;
+}
+
+.interaction-form__select-input:hover {
+  border-color: var(--primary-color);
+}
+
+.interaction-form__select-input:focus {
+  border-color: var(--primary-color);
+}
+
+.interaction-form__select-option {
+  /* line height, padding, height can not custom this option height */
+  /* try to use ul li and custom with js */
+  background: var(--white);
+  color: var(--black);
+
+  font-family: var(--regular);
+  font-size: 1.8rem;
+}
+
+.interaction-form__color-group {
+  display: flex;
+  flex-wrap: wrap;
+
+  background: var(--primary-color-blur);
+
+  border-radius: 0.5rem;
+}
+
+.interaction-form__color-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 5rem;
+  height: 5rem;
+
+  background: transparent;
+
+  border-radius: 0.5rem;
+
+  transition: 0.2s;
+}
+
+.interaction-form__color-item--add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 5rem;
+  height: 5rem;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  transition: 0.2s;
+}
+
+.interaction-form__color-item--add-btn:hover {
+  background: var(--primary-color-blur);
+}
+
+.interaction-form__color-icon--add-icon {
+  color: var(--primary-color);
+
+  font-size: 1.6rem;
+}
+
+.interaction-form__color-item--choosen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 5rem;
+  height: 5rem;
+}
+
+.interaction-form__color-item:hover {
+  background: var(--primary-color-blur);
+}
+
+.interaction-form__color-icon {
+  position: relative;
+
+  width: 3rem;
+  height: 3rem;
+
+  background: var(--bg-color);
+
+  border-radius: 50%;
+  border: 0.1rem solid var(--secondary-color);
+
+  transition: 0.2s;
+}
+
+.interaction-form__color-icon--choosen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 3rem;
+  height: 3rem;
+
+  background: var(--bg-color);
+
+  border-radius: 50%;
+  border: 0.1rem solid var(--black);
+}
+
+.interaction-form__color-icon--contain-add-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 3rem;
+  height: 3rem;
+
+  background: var(--primary-color-blur);
+
+  border-radius: 50%;
+  border: 0.1rem solid var(--secondary-color);
+}
+
+.interaction-form__color-item:hover .interaction-form__color-icon {
+  border: 0.1rem solid var(--primary-color);
+}
+
+.interaction-form__color-icon:after {
+  content: '';
+  display: block;
+
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 0.1rem solid var(--secondary-color);
+
+  background: var(--primary-color);
+
+  transform: scale(0);
+  transition: 0.2s;
+}
+
+.interaction-form__color-icon--choosen-icon {
+  margin-top: 0.2rem;
+  
+  color: var(--black);
+
+  font-size: 1.5rem;
+  text-shadow: 0.1rem 0 0 var(--secondary-color), 
+              -0.1rem 0 0 var(--secondary-color), 
+               0 0.1rem 0 var(--secondary-color), 
+               0 -0.1rem 0 var(--secondary-color), 
+               0.05rem 0.05rem var(--secondary-color), 
+              -0.05rem -0.05rem 0 var(--secondary-color), 
+               0.05rem -0.05rem 0 var(--secondary-color), 
+              -0.05rem 0.05rem 0 var(--secondary-color);;
+}
+.interaction-form__input--hidden {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  width: 1px;
+  height: 1px;
+
+  /* background: red; */
+}
+
+.interaction-form__input--hidden:checked~.interaction-form__color-icon::after {
+  transform: scale(1);
+}
+
+.interaction-form__form-title--main-img {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 20rem;
+
+  background: var(--primary-color-blur);
+}
+
+.interaction-form__main-img-area {
+  overflow: hidden;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20rem;
+  height: 20rem;
+
+  /* background: red; */
+
+  border-radius: 1rem;
+  border: 0.2rem dashed var(--secondary-color);
+
+  transition: 0.2s;
+}
+
+.interaction-form__main-img-area:hover {
+  background: var(--primary-color-blur);
+
+  border-color: var(--primary-color);
+}
+
+.interaction-form__main-img-icon {
+  margin-top: 0.5rem;
+
+  color: var(--secondary-color);
+
+  font-size: 6.5rem;
+}
+
+.interaction-form__main-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: auto;
+
+  transition: 0.2s;
+}
+
+.interaction-form__main-img:hover {
+  opacity: 0.9 !important;
+}
+
+.interaction-form__sub-img-group {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+
+  background: var(--primary-color-blur);
+
+  border-radius: 0.5rem;
+}
+
+.interaction-form__contain-sub-img {
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 6rem;
+  height: 6rem;
+  margin: 0.5rem;
+
+  border-radius: 0.5rem;
+}
+
+.interaction-form__sub-img {
+  width: 100%;
+  height: auto;
+}
+
+.interaction-form__img-custom-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 5rem;
+
+  background: var(--primary-color-blur);
+  color: var(--primary-color);
+
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--secondary-color);
+
+  font-family: var(--regular);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+  transition: 0.2s;
+}
+
+.interaction-form__img-custom-input:hover {
+  border-color: var(--primary-color);
+}
+
+.interaction-form__sub-variant-group {
+  list-style: none;
+
+  width: 100%;
+  height: auto;
+}
+
+.interaction-form__sub-variant-title {
+  display: flex;
+
+  width: 100%;
+
+  /* background: gray; */
+}
+
+.interaction-form__sub-variant-title,
+.interaction-form__sub-variant-title-cell-1,
+.interaction-form__sub-variant-title-cell-2,
+.interaction-form__sub-variant-title-cell-3 {
+  height: 2.3rem;
+}
+
+.interaction-form__sub-variant-title-cell-1 {
+  width: 10.5rem;
+
+  /* background: lightblue; */
+
+  font-family: var(--regular);
+  font-size: 1.6rem;
+}
+
+.interaction-form__sub-variant-title-cell-2 {
+  width: calc(100% - 16.5rem);
+
+  /* background: lightpink; */
+
+  font-family: var(--regular);
+  font-size: 1.6rem;
+}
+
+.interaction-form__sub-variant-title-cell-3 {
+  width: 6rem;
+
+  /* background: lightblue; */
+}
+
+.interaction-form__sub-variant-row {
+  display: flex;
+
+  width: 100%;
+  height: 6rem;
+  padding-left: 0.5rem;
+
+  border-radius: 0.5rem;
+
+  transition: 0.2s;
+}
+
+.interaction-form__sub-variant-row:nth-child(even) {
+  background: var(--primary-color-blur);
+}
+
+.interaction-form__sub-variant-row:hover {
+  background: var(--primary-contrast-color-blur);
+}
+
+.interaction-form__sub-variant-row-cell-1 {
+  display: flex;
+  align-items: center;
+
+  width: 10.5rem;
+  height: 6rem;
+
+  /* background: lightblue; */
+}
+
+.interaction-form__sub-variant-size-input {
+  width: 7.5rem;
+  height: 5rem;
+  padding: 0 1rem;
+
+  background: var(--white);
+
+  border: 0.2rem solid var(--secondary-color);
+  border-radius: 0.5rem;
+
+  font-family: var(--regular);
+  font-size: 1.7rem;
+
+  transition: 0.2s;
+}
+
+.interaction-form__sub-variant-row-cell-2 {
+  display: flex;
+  align-items: center;
+
+  width: calc(100% - 17rem);
+  height: 6rem;
+
+  /* background: lightpink; */
+
+  font-family: var(--regular);
+  font-size: 1.6rem;
+}
+
+.interaction-form__sub-variant-quantity-input {
+  width: calc(100% - 1.3rem);
+  height: 5rem;
+  padding: 0 1rem;
+
+  background: var(--white);
+
+  border: 0.2rem solid var(--secondary-color);
+  border-radius: 0.5rem;
+
+  font-family: var(--regular);
+  font-size: 1.7rem;
+
+  transition: 0.2s;
+}
+
+.interaction-form__sub-variant-size-input:hover,
+.interaction-form__sub-variant-quantity-input:hover {
+  border-color: var(--primary-color);
+}
+
+.interaction-form__sub-variant-row-cell-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 6rem;
+  height: 6rem;
+}
+
+.interaction-form__sub-variant-delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+
+  background: transparent;
+
+  border: none;
+
+  transition: 0.2s;
+}
+
+.interaction-form__sub-variant-delete-btn:hover {
+  background: var(--primary-contrast-color-blur);
+}
+
+.interaction-form__sub-variant-delete-icon {
+  color: var(--primary-contrast-color);
+
+  font-size: 2.3rem;
+}
+
+.interaction-form__sub-variant-add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: calc(100% - 0.5rem);
+  height: 5rem;
+  margin: 0.5rem 0.25rem 0;
+
+  background: var(--primary-color-blur);
+  color: var(--primary-color);
+
+  border: none;
+  border-radius: 0.5rem;
+
+  font-family: var(--medium);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+  transition: 0.2s;
+}
+
+.interaction-form__sub-variant-add-btn:hover {
+  background: var(--secondary-color);
+}
+
+.interaction-form__add-variant-btn {
+  width: 100%;
+  height: 5rem;
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+
+  background: var(--white);
+  color: var(--primary-color);
+
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 0.5rem;
+
+  font-family: var(--medium);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.interaction-form__add-variant-btn:hover {
+  background: var(--primary-color-blur);
 }

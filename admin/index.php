@@ -37,6 +37,13 @@
       $main_bread_crumb = 'Quản lý thuộc tính';
       $sub_bread_crumb = 'Chỉnh sửa màu sắc';
       break;  
+
+    case 'manage_product': 
+      include_once 'controller/c_product.php';
+
+      $main_bread_crumb = 'Quản lý sản phẩm';
+      $sub_bread_crumb = 'Chỉnh sửa sản phẩm';
+      break; 
   }
 
   include_once 'view/layout_admin.php';

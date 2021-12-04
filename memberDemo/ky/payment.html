@@ -45,16 +45,86 @@
                 </ul>
                 <div class="payment__left-customer-form">
                     <div class="form__group">
-                        <label class="form__label" for="">Email</label>
+                        <label class="form__label" for="">Họ và tên</label>
                         <input class="form__input form__input--primary" type="text"
-                            placeholder="Nhập email mới của bạn" />
-                        <span class="form__message">Hihi</span>
+                            placeholder="Nhập họ và tên người nhận" />
+                        <span class="form__message">Lỗi</span>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="">Số điện thoại</label>
+                        <input class="form__input form__input--primary" type="text"
+                            placeholder="Nhập số điện thoại người nhận" />
+                        <span class="form__message">Lỗi</span>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="">Địa chỉ</label>
+                        <input class="form__input form__input--primary" type="text"
+                            placeholder="Nhập địa chỉ người nhận" />
+                        <span class="form__message">Lỗi</span>
+                    </div>
+                    <div class="form__group-btn">
+                        <button class="form__btn">
+                            Xác nhận
+                        </button>
                     </div>
                 </div>
             </div>
         </article>
         <aside class="payment__info">
-
+            <div class="payment__info-method">
+                <div class="payment__info-method-choose">
+                    <div class="payment__info-method-head">
+                        Phương thức thanh toán
+                    </div>
+                    <div class="payment__info-method-body">
+                        <div class="payment__info-method-item">
+                            <input type="radio" name="" id="direct">
+                            <label class="payment__info-method-label" for="direct">Trực tiếp</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment__info-method-delivery">
+                    <div class="payment__info-method-head">
+                        Đơn vị giao hàng
+                    </div>
+                    <div class="payment__info-method-item">
+                        <input type="radio" name="" id="viettel-post">
+                        <label class="payment__info-method-label" for="viettel-post">Viettel post</label>
+                    </div>
+                </div>
+            </div>
+            <div class="payment__info-total">
+                <div class="payment__info-total-head">
+                    Ghi chú
+                </div>
+                <div class="payment__info-method-note">
+                    <textarea class="payment__info-total-note-area" placeholder="Nhập ghi chú của bạn..." name=""
+                        id=""></textarea>
+                </div>
+                <div class="payment__info-result">
+                    <div class="payment__info-result-1 payment__info-result-0">
+                        <p class="payment__info-result-name">Phí vận chuyển</p>
+                        <p class="payment__info-result-price">50.000 đ</p>
+                    </div>
+                    <div class="payment__info-result-2 payment__info-result-0">
+                        <p class="payment__info-result-name">Tổng tiền</p>
+                        <p class="payment__info-result-price">2.535.000 đ</p>
+                    </div>
+                    <div class="payment__info-result-3 payment__info-result-0">
+                        <p class="payment__info-result-name">Giảm giá</p>
+                        <p class="payment__info-result-price">20.000 đ</p>
+                    </div>
+                    <div class="payment__info-result-4 payment__info-result-0">
+                        <p class="payment__info-result-name--18">Tổng cộng</p>
+                        <p class="payment__info-result-price">50.000 đ</p>
+                    </div>
+                    <div class="payment__info-result-5">
+                        <button class="payment__info-result-btn">
+                            Xác nhận thanh toán
+                        </button>
+                    </div>
+                </div>
+            </div>
         </aside>
     </section>
 </body>
