@@ -76,6 +76,13 @@
       $sub_bread_crumb = '';
       break;
 
+    case 'favorite_product':
+      include_once 'controller/c_favorite_product.php';
+      
+      $main_bread_crumb = 'Sản phẩm yêu thích';
+      $sub_bread_crumb = '';
+      break;
+
     
   }
 
