@@ -1,5 +1,5 @@
 
-  //khai báo biến slideIndex đại diện cho slide hiện tại
+ //khai báo biến slideIndex đại diện cho slide hiện tại
   var slideIndex;
   function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -37,9 +37,9 @@
 /*let currentIndex = 1; // xac dinh anh hien tai
 // lay phan tu xac dinh vi tri anh vao mang
 let dot = document.getElementsByClassName("banner_index");
-let slideArray = document.querySelectorAll(".js-banner"); // lay anh vao mang
+let slideArray = document.querySelectorAll(".banner__contain-img"); // lay anh vao mang
 // cho anh dau tien hien thi
-document.querySelector(".js-banner:nth-child(" + 1 + ")")
+document.querySelector(".banner__contain-img:nth-child(" + 1 + ")")
     .style.left = 0;
 // them, xu ly su kien chuyen toi anh tiep theo
 document.querySelector(".banner__next-btn")
@@ -51,13 +51,13 @@ document.querySelector(".banner__next-btn")
         }
         // * nth:child chay bat dau tu 1 
         // xu ly hieu ung khi chuyen anh
-        document.querySelector(".js-banner:nth-child(" + (nextIndex) + ")")
+        document.querySelector(".banner__contain-img:nth-child(" + (nextIndex) + ")")
             .style.left = "100%";
-        document.querySelector(".js-banner:nth-child(" + (nextIndex) + ")")
+        document.querySelector(".banner__contain-img:nth-child(" + (nextIndex) + ")")
             .setAttribute("class", "imgIn");
-        document.querySelector(".js-banner:nth-child(" + (currentIndex) + ")")
+        document.querySelector(".banner__contain-img:nth-child(" + (currentIndex) + ")")
             .style.left = 0;
-        document.querySelector(".js-banner:nth-child(" + (currentIndex) + ")")
+        document.querySelector(".banner__contain-img:nth-child(" + (currentIndex) + ")")
             .setAttribute("class", "imgOutLeft");
         // cap nhat currentIndex
         currentIndex = nextIndex;
@@ -75,13 +75,13 @@ document.querySelector(".banner__prev-btn")
         }
         // * nth:child chay bat dau tu 1
         // xu ly hieu ung khi chuyen anh
-        document.querySelector(".js-banner:nth-child(" + (prevIndex) + ")")
+        document.querySelector(".banner__contain-img:nth-child(" + (prevIndex) + ")")
             .style.left = "-100%";
-        document.querySelector(".js-banner:nth-child(" + (prevIndex) + ")")
+        document.querySelector(".banner__contain-img:nth-child(" + (prevIndex) + ")")
             .setAttribute("class", "imgIn");
-        document.querySelector(".js-banner:nth-child(" + (currentIndex) + ")")
+        document.querySelector(".banner__contain-img:nth-child(" + (currentIndex) + ")")
             .style.left = 0;
-        document.querySelector(".js-banner:nth-child(" + (currentIndex) + ")")
+        document.querySelector(".banner__contain-img:nth-child(" + (currentIndex) + ")")
             .setAttribute("class", "imgOutRight");
         // cap nhat currentIndex
         currentIndex = prevIndex;
