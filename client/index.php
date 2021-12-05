@@ -23,9 +23,18 @@
     case 'introduce':
       include_once 'controller/c_introduce.php';
 
-      $mein_bread_crumb = "Giới thiệu";
+      $mein_bread_crumb = 'Giới thiệu';
       $sub_bread_crumb= '';
       break;
+
+    case 'order':
+      include_once 'controller/c_order.php';
+      
+      $mein_bread_crumb = 'Danh sách đơn hàng';
+      $sub_bread_crumb = '';
+      break;
+
+    
   }
 
   include_once 'view/layout/layout.php';
