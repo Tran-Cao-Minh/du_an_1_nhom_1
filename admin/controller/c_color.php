@@ -105,7 +105,7 @@
         if (checkColorId($object_id) == false) {
           $notification = 'Màu sắc có mã "'.$object_id.'" đã tồn tại </br>';
 
-        } elseif (checkColorName($color_name) == false) {
+        } elseif (checkColorName($color_name, $object_id) == false) {
           $notification = 'Màu sắc có tên "'.$color_name.'" đã tồn tại </br>';
           
         } elseif (strlen($color_name) > 32 || strlen($color_name) === 0) {

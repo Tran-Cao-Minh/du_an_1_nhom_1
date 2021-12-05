@@ -28,8 +28,8 @@
         $product_variant_color_id = '';
       }
     ?>
-    <div class="interaction-form__title--add">
-      Thêm sản phẩm
+    <div class="interaction-form__title--update">
+      Sửa sản phẩm
     </div>
     <div class="interaction-form__form-group">
       <label for="product_name" class="interaction-form__form-title">
@@ -190,7 +190,7 @@
       </div>
     </div>
     <div class="interaction-form__title--sub">
-      Biến thể chính
+      Danh sách biến thể
     </div>
     <div class="interaction-form__form-group">
       <div class="interaction-form__form-title">

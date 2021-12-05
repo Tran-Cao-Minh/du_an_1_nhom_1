@@ -50,11 +50,25 @@
       <?php
         if (isset($_GET['previous_page'])) {
           $previous_page = $_GET['previous_page'];
-          if ($previous_page == 'add_product') {
-            $return_link = '?page_name=manage_product&view_name=add';
+
+          switch ($previous_page) {
+            case 'add_product':
+              $return_link = '?page_name=manage_product&view_name=add';
+              break;
+
+            case 'add_product_variant':
+              $return_link = '?page_name=manage_product&view_name=add_variant&product_id='.$_GET['object_id'];
+              break;
           }
-        } else {
+
+          $_SESSION['v_color_add_return_link'] = $return_link;
+        } 
+
+        if (!isset($_SESSION['v_color_add_return_link'])) {
           $return_link = '?view_name=overview';
+
+        } else {
+          $return_link = $_SESSION['v_color_add_return_link'];
         }
       ?>
       <a href="<?php echo $return_link; ?>" class="interaction-form__return-link">
