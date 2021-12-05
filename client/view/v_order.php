@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- Global CSS -->
-  <link rel="stylesheet" href="/public/css/base/reset.css">
-  <link rel="stylesheet" href="/public/css/base/theme.css">
-  <link rel="stylesheet" href="/public/css/base/font.css">
-  <!-- Font Awsome -->
-  <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./order.css">
-</head>
-
-<body> 
-  <section class="top-bar">
+<section class="top-bar">
     <div class="top-bar__tile-bar">
       <div class="top-bar__tile-bar-status">
         <p class="top-bar__tile-bar-text-status">Trạng thái</p>
@@ -144,7 +126,3 @@
           <i class="fas fa-angle-double-right"></i></button></li>
     </ul>
   </section>
-
-</body>
-
-</html>
