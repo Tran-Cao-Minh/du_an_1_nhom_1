@@ -223,10 +223,6 @@ input[type="radio"]:checked~.customer__label {
 
     background: var(--primary-color-blur);
 }
-/* 
-.payment__info-method-delivery {
-    width: 27.4rem;
-} */
 
 .payment__info-method-head {
     display: flex;
@@ -333,6 +329,8 @@ input[type="radio"]:checked ~ .payment__info-method-label::after {
     line-height: 2.7rem;
 
     resize: none;
+    overflow-y: hidden; 
+    overflow-x: hidden;
 }
 
 .payment__info-result {

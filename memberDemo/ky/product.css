@@ -936,6 +936,10 @@ input[type="checkbox"]:checked~.product-bar__label {
         display: flex;
     }
 
+    .product__list {
+        padding: 0 1.5rem;
+    }
+
     .product__filter-action {
         display: flex;
     }
@@ -980,9 +984,13 @@ input[type="checkbox"]:checked~.product-bar__label {
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 767px) {
     .product__filter {
         display: none;
+    }
+
+    .product__list {
+        padding: 0 1.5rem;
     }
 
     .product__filter-icon-close {
@@ -991,6 +999,15 @@ input[type="checkbox"]:checked~.product-bar__label {
 
     .product__filter-action {
         display: flex;
+    }
+
+    .product__section {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product__column {
+        width: fit-content;
     }
 
     #toggle__filter:checked+.product__filter {
