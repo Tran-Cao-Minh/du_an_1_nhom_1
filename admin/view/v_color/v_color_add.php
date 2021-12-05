@@ -47,7 +47,17 @@
       <button type="submit" name="insert_confirm" value="true" class="interaction-form__submit-btn--add">
         Xác nhận thêm
       </button>
-      <a href="?view_name=overview" class="interaction-form__return-link">
+      <?php
+        if (isset($_GET['previous_page'])) {
+          $previous_page = $_GET['previous_page'];
+          if ($previous_page == 'add_product') {
+            $return_link = '?page_name=manage_product&view_name=add';
+          }
+        } else {
+          $return_link = '?view_name=overview';
+        }
+      ?>
+      <a href="<?php echo $return_link; ?>" class="interaction-form__return-link">
         Quay lại
       </a>
     </div>

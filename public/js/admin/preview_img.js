@@ -16,7 +16,7 @@ window.addEventListener('load', function () {
       previewImgElement.style.zIndex = 0;
 
       if (imgFile['size'] > 2097152) {
-        notification.innerHTML = 'Vui lòng chọn ảnh có kích thước nhỏ hơn 2MB'
+        notification.innerHTML = 'Vui lòng chọn ảnh có kích thước nhỏ hơn 2MB';
 
       } else {
         notification.innerHTML = '';

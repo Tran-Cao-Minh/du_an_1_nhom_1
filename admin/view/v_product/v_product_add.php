@@ -7,6 +7,7 @@
         isset($_POST['product_sale']) &&
         isset($_POST['product_category_id']) &&
         isset($_POST['product_brand_id']) &&
+        isset($_POST['product_view_status']) &&
         isset($_POST['product_variant_color_id'])
       ) {
         $product_name = $_POST['product_name'];
@@ -14,6 +15,7 @@
         $product_sale = $_POST['product_sale'];
         $product_category_id = $_POST['product_category_id'];
         $product_brand_id = $_POST['product_brand_id'];
+        $product_view_status = $_POST['product_view_status'];
         $product_variant_color_id = $_POST['product_variant_color_id'];
 
       } else {
@@ -22,6 +24,7 @@
         $product_sale = '';
         $product_category_id = '';
         $product_brand_id = '';
+        $product_view_status = 1;
         $product_variant_color_id = '';
       }
     ?>
@@ -34,7 +37,7 @@
       </label>
       <input type="text" id="product_name" class="interaction-form__input"
         required 
-        maxlength="32"
+        maxlength="80"
         name="product_name"
         value="<?php echo $product_name; ?>"
       >
@@ -44,12 +47,13 @@
     </div>
     <div class="interaction-form__form-group">
       <label for="product_price" class="interaction-form__form-title">
-        Giá sản phẩm
+        Giá sản phẩm (VND)
       </label>
       <input type="number" id="product_price" class="interaction-form__input"
         required 
         min="1000"
         max="1000000000"
+        step="1"
         name="product_price" 
         value="<?php echo $product_price; ?>"
       >
@@ -65,6 +69,7 @@
         required 
         min="0"
         max="100"
+        step="1"
         name="product_sale"
         value="<?php echo $product_sale; ?>"
       >
@@ -136,6 +141,54 @@
         ?>
       </select>
     </div>
+    <div class="interaction-form__form-group">
+      <div class="interaction-form__form-title">
+        Trạng thái
+      </div>
+      <div class="interaction-form__radio-group">
+        <?php if ($product_view_status == 1): ?>
+          <div class="interaction-form__radio-item-50">
+            <input type="radio" class="interaction-form__input--hidden" id="show" 
+              checked 
+              name="product_view_status"
+              value="1"
+            >
+            <label for="show" class="interaction-form__radio-item-label">
+              Hiển thị
+            </label>
+          </div>
+          <div class="interaction-form__radio-item-50">
+            <input type="radio" class="interaction-form__input--hidden" id="hide" 
+              name="product_view_status"
+              value="0"
+            >
+            <label for="hide" class="interaction-form__radio-item-label">
+              Ẩn
+            </label>
+          </div>
+        <?php else: ?>
+          <div class="interaction-form__radio-item-50">
+            <input type="radio" class="interaction-form__input--hidden" id="show" 
+              name="product_view_status"
+              value="show"
+            >
+            <label for="show" class="interaction-form__radio-item-label">
+              Hiển thị
+            </label>
+          </div>
+          <div class="interaction-form__radio-item-50">
+            <input type="radio" class="interaction-form__input--hidden" id="hide" 
+              checked 
+              name="product_view_status"
+              value="hide"
+            >
+            <label for="hide" class="interaction-form__radio-item-label">
+              Ẩn
+            </label>
+          </div>
+        <?php endif; ?>
+      </div>
+    </div>
     <div class="interaction-form__title--sub">
       Biến thể chính
     </div>
@@ -182,13 +235,16 @@
                 ';
               }
             }
-          } 
+          } else {
+            echo '
+              <a href="?page_name=manage_color&view_name=add&previous_page=add_product" class="interaction-form__color-item--add-btn" title="Thêm màu sắc">
+                <div class="interaction-form__color-icon--contain-add-icon">
+                  <i class="fas fa-plus interaction-form__color-icon--add-icon"></i>
+                </div>
+              </a>
+            ';
+          }
         ?>
-        <button type="submit" name="view_name" value="add_color" class="interaction-form__color-item--add-btn" title="Thêm màu sắc">
-          <div class="interaction-form__color-icon--contain-add-icon">
-            <i class="fas fa-plus interaction-form__color-icon--add-icon"></i>
-          </div>
-        </button>
       </div>
     </div>
     <div class="interaction-form__form-group">
@@ -221,7 +277,7 @@
         required
         multiple 
         accept="image/*" 
-        name="product_variant_sub_img_list"
+        name="product_variant_sub_img_list[]"
       >
       <div class="interaction-form__sub-img-group js-multiple-img-container">
         <!-- add img when up file by preview_multiple_img.js -->
@@ -247,7 +303,7 @@
               required 
               min="1" 
               max="99"
-              name="product_variant_size_list"
+              name="product_variant_size_list[]"
             >
           </div>
           <div class="interaction-form__sub-variant-row-cell-2">
@@ -255,7 +311,8 @@
               required 
               min="0" 
               max="1000000000"
-              name="product_variant_quantity_list"
+              step="1"
+              name="product_variant_quantity_list[]"
             >
           </div>
           <div class="interaction-form__sub-variant-row-cell-3">

@@ -11,7 +11,7 @@
     $keyword_list = preg_split('/[\s,]+/', $filter_value_identify);
 
     $sql = "SELECT COUNT(*)
-            FROM `product_type`
+            FROM `product`
             WHERE 1";
     foreach ($keyword_list as $keyword) {
       $sql .= " AND `$filter_column` LIKE '%$keyword%'";
@@ -36,7 +36,7 @@
         case 'PkType_Id':
           $notification .= 'Mã danh mục';
           break;
-        case 'TypeName':
+        case 'ProductName':
           $notification .= 'Tên danh mục';
           break;
       }
@@ -65,7 +65,7 @@
     // it help avoid to show table with no row inside
     $limit_start = ($page_num - 1) * $page_size;
     $sql = "SELECT `PkType_Id`
-            FROM `product_type`
+            FROM `product`
             WHERE 1";
     foreach ($keyword_list as $keyword) {
       $sql .= " AND `$filter_column` LIKE '%$keyword%'";
@@ -81,7 +81,7 @@
 
     $limit_start = ($page_num - 1) * $page_size;
     $sql = "SELECT * 
-            FROM `product_type`
+            FROM `product`
             WHERE 1";
     foreach ($keyword_list as $keyword) {
       $sql .= " AND `$filter_column` LIKE '%$keyword%'";
@@ -106,7 +106,7 @@
     $conn = connectDatabase();
 
     $sql = "SELECT COUNT(*)
-            FROM `product_type`
+            FROM `product`
             WHERE `$filter_column`";
     if ($filter_value_interval_min === '' && $filter_value_interval_max === '') {
       $sql .= " LIKE '%%'";
@@ -141,7 +141,7 @@
         case 'PkType_Id':
           $notification .= 'Mã danh mục';
           break;
-        case 'TypeName':
+        case 'ProductName':
           $notification .= 'Tên danh mục';
           break;
       }
@@ -179,7 +179,7 @@
     // it help avoid to show table with no row inside
     $limit_start = ($page_num - 1) * $page_size;
     $sql = "SELECT `PkType_Id`
-            FROM `product_type`
+            FROM `product`
             WHERE `$filter_column`";
     if ($filter_value_interval_min === '' && $filter_value_interval_max === '') {
       $sql .= " LIKE '%%'";
@@ -205,7 +205,7 @@
 
     $limit_start = ($page_num - 1) * $page_size;
     $sql = "SELECT *
-            FROM `product_type`
+            FROM `product`
             WHERE `$filter_column`";
     if ($filter_value_interval_min === '' && $filter_value_interval_max === '') {
       $sql .= " LIKE '%%'";
@@ -232,7 +232,7 @@
   function deleteProduct($object_id) {
     $conn = connectDatabase();
 
-    $sql = "DELETE FROM `product_type` 
+    $sql = "DELETE FROM `product` 
             WHERE `PkType_Id` = '$object_id'";
     $delete_result = $conn->exec($sql);
 
@@ -247,12 +247,12 @@
     $conn = null;
   }
 
-  function checkProductName($category_name) {
+  function checkProductName($product_name) {
     $conn = connectDatabase();
 
-    $sql = "SELECT `TypeName` 
-            FROM `product_type`
-            WHERE `TypeName` = '$category_name'
+    $sql = "SELECT `ProductName` 
+            FROM `product`
+            WHERE `ProductName` = '$product_name'
             LIMIT 1";
     $stmt = $conn->query($sql);
     $exist_result = $stmt->rowCount();
@@ -267,19 +267,19 @@
     }
   }
 
-  function insertProduct($category_name) {
+  function insertProduct($product_name) {
     $conn = connectDatabase();
 
-    $sql = "INSERT INTO `product_type` 
-              (`TypeName`) 
+    $sql = "INSERT INTO `product` 
+              (`ProductName`) 
             VALUES 
-              ('$category_name')";
+              ('$product_name')";
     $insert_result = $conn->exec($sql);
 
     global $notification;
     if ($insert_result === 1) {
       $notification = 'Thêm danh mục thành công </br>'
-                    . 'Tên danh mục được thêm: '.$category_name.' </br>';
+                    . 'Tên danh mục được thêm: '.$product_name.' </br>';
 
     } else {
       $notification = 'Thêm danh mục không thành công </br>';
@@ -292,7 +292,7 @@
     $conn = connectDatabase();
 
     $sql = "SELECT * 
-            FROM `product_type` 
+            FROM `product` 
             WHERE `PkType_Id` = '$object_id'";
     $data_result = $conn->query($sql);
 
@@ -311,13 +311,13 @@
 
   function updateProduct (
     $object_id,
-    $category_name
+    $product_name
   ) {
     $conn = connectDatabase();
 
-    $sql = "UPDATE `product_type` 
+    $sql = "UPDATE `product` 
             SET 
-              `TypeName` = '$category_name' 
+              `ProductName` = '$product_name' 
             WHERE `PkType_Id` = '$object_id'";
     $update_result = $conn->exec($sql);
 
@@ -338,7 +338,7 @@
     $conn = connectDatabase();
 
     $sql = "SELECT * 
-            FROM `product_type`";
+            FROM `product`";
     $data_result = $conn->query($sql);
 
     $return_quantity = $data_result->rowCount();

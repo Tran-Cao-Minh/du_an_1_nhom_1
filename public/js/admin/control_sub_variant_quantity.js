@@ -11,7 +11,7 @@ window.addEventListener('load', function () {
         required 
         min="1" 
         max="99"
-        name="product_variant_size_list"
+        name="product_variant_size_list[]"
       >
       </div>
       <div class="interaction-form__sub-variant-row-cell-2">
@@ -19,7 +19,7 @@ window.addEventListener('load', function () {
         required 
         min="0"
         max="1000000000"
-        name="product_variant_quantity_list"
+        name="product_variant_quantity_list[]"
       >
       </div>
       <div class="interaction-form__sub-variant-row-cell-3">

@@ -96,23 +96,81 @@
     case 'add':
       $notification = '';
       
+      // print_r($_POST['product_variant_size_list'][0]);
+
       // INSERT DATA
-      // if (
-      //   isset($_GET['insert_confirm']) && 
-      //   isset($_GET['category_name'])
-      // ) {
-      //   $category_name = $_GET['category_name'];
+      if (
+        isset($_POST['product_name']) &&
+        isset($_POST['product_price']) &&
+        isset($_POST['product_sale']) &&
+        isset($_POST['product_category_id']) &&
+        isset($_POST['product_brand_id']) &&
+        isset($_POST['product_view_status']) &&
+        isset($_POST['product_variant_color_id']) &&
+        isset($_POST['product_variant_main_img']) &&
+        isset($_POST['product_variant_sub_img_list']) &&
+        isset($_POST['product_variant_size_list']) &&
+        isset($_POST['product_variant_quantity_list'])
+      ) {
+        $product_name = $_POST['product_name'];
+        $product_price = $_POST['product_price'];
+        $product_sale = $_POST['product_sale'];
+        $product_category_id = $_POST['product_category_id'];
+        $product_brand_id = $_POST['product_brand_id'];
+        $product_view_status = $_POST['product_view_status'];
+        $product_variant_color_id = $_POST['product_variant_color_id'];
+        $product_variant_main_img = $_POST['product_variant_main_img'];
+        $product_variant_sub_img_list = $_POST['product_variant_sub_img_list'];
+        $product_variant_size_list = $_POST['product_variant_size_list'];
+        $product_variant_quantity_list = $_POST['product_variant_quantity_list'];
+
+        // ************************************************************************************************
+        // ************************************************************************************************
+        // ************************************************************************************************
+        // ************************************************************************************************
+        // ************************************************************************************************
+        function checkImg($img_file) {
+          $check_img = getimagesize($_FILES['file_anh']['tmp_name']); // image real or fake
+          $img_size = $_FILES['file_anh']['size']; 
+
+          $check_img = false;
+          if ($img_size > 2097152) {
+            $notification = 'Vui lòng chọn ảnh có kích thước nhỏ hơn 2MB </br>';
+
+          } elseif ($check_img == false) {
+            $notification = 'Vui lòng kiểm tra hình ảnh được Upload có phải là ảnh thật hay không </br>';
+
+          } else {
+            $check_img = true;
+          }
+
+          return $check_img;
+        }
         
-      //   if (checkCategoryName($category_name) == false) {
-      //     $notification = 'Danh mục có tên "'.$category_name.'" đã tồn tại </br>';
+        if (checkProductName($product_name) == false) {
+          $notification = 'Sản phẩm có tên "'.$product_name.'" đã tồn tại </br>';
 
-      //   } elseif (strlen($category_name) > 32 || strlen($category_name) === 0) {
-      //     $notification = 'Vui lòng nhập tên danh mục ít hơn 32 ký tự </br>';
+        } elseif (strlen($product_name) > 80 || strlen($product_name) === 0) {
+          $notification = 'Vui lòng nhập tên sản phẩm ít hơn 32 ký tự </br>';
 
-      //   } else {
-      //     insertCategory($category_name);
-      //   }
-      // }
+        } elseif (gettype($product_price) == 'integer') {
+          $notification = 'Vui lòng nhập giá sản phẩm là số nguyên </br>';
+
+        } elseif ($product_price < 1000 || $product_price > 1000000000) {
+          $notification = 'Vui lòng nhập giá sản phẩm lớn hơn 1.000 và nhỏ hơn 1.000.000.000 </br>';
+
+        } elseif (gettype($product_sale) == 'integer') {
+          $notification = 'Vui lòng nhập phần trăm giảm giá là số nguyên </br>';
+
+        } elseif ($product_sale < 0 || $product_sale > 100) {
+          $notification = 'Vui lòng nhập phần trăm giảm giá lớn hơn 0 và nhỏ hơn 100 </br>';
+
+        } else {
+          // insertProduct(
+          //   $category_name
+          // );
+        }
+      }
       // END INSERT DATA
 
       // GET INFORMATION FOR PAGE
@@ -147,7 +205,7 @@
           $notification = 'Danh mục có tên "'.$category_name.'" đã tồn tại </br>';
 
         } elseif (strlen($category_name) > 32 || strlen($category_name) === 0) {
-          $notification = 'Vui lòng nhập tên danh mục ít hơn 32 ký tự </br>';
+          $notification = 'Vui lòng nhập tên sản phẩm ít hơn 32 ký tự </br>';
 
         } else {
           $object_id = $_GET['object_id'];
