@@ -34,6 +34,48 @@
       $sub_bread_crumb = 'Danh sách đơn hàng';
       break;
 
+    case 'account':
+      include_once 'controller/c_account.php';
+      
+      $main_bread_crumb = 'Tài khoản';
+      $sub_bread_crumb = '';
+      break;
+
+    case 'cart':
+      include_once 'controller/c_cart.php';
+      
+      $main_bread_crumb = 'Giỏ hàng';
+      $sub_bread_crumb = '';
+      break;
+    
+    case 'order_detail':
+      include_once 'controller/c_order_detail.php';
+      
+      $main_bread_crumb = 'Chi tiết đơn hàng';
+      $sub_bread_crumb = '';
+      break;
+    
+    case 'pay':
+      include_once 'controller/c_pay.php';
+      
+      $main_bread_crumb = 'Thanh toán';
+      $sub_bread_crumb = '';
+      break;
+
+    case 'product':
+      include_once 'controller/c_product.php';
+      
+      $main_bread_crumb = 'Trang sản phẩm';
+      $sub_bread_crumb = '';
+      break;
+
+    case 'product_detail':
+      include_once 'controller/c_product_detail.php';
+      
+      $main_bread_crumb = 'Sản phẩm chi tiết';
+      $sub_bread_crumb = '';
+      break;
+
     
   }
 
