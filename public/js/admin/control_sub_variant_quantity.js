@@ -11,6 +11,7 @@ window.addEventListener('load', function () {
         required 
         min="1" 
         max="99"
+        step="1"
         name="product_variant_size_list[]"
       >
       </div>
@@ -19,6 +20,7 @@ window.addEventListener('load', function () {
         required 
         min="0"
         max="1000000000"
+        step="1"
         name="product_variant_quantity_list[]"
       >
       </div>

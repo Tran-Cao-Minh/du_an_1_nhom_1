@@ -29,15 +29,15 @@
 
     global $notification;
     if ($notification === '') {
-      $notification = 'Lọc danh mục thành công trả về '.$row_quantity.' hàng kết quả </br>';
+      $notification = 'Lọc sản phẩm thành công trả về '.$row_quantity.' hàng kết quả </br>';
 
       $notification .= 'Cột được lọc: ';
       switch ($filter_column) {
         case 'PkType_Id':
-          $notification .= 'Mã danh mục';
+          $notification .= 'Mã sản phẩm';
           break;
         case 'ProductName':
-          $notification .= 'Tên danh mục';
+          $notification .= 'Tên sản phẩm';
           break;
       }
       $notification .= '</br>';
@@ -134,15 +134,15 @@
 
     global $notification;
     if ($notification === '') {
-      $notification = 'Lọc danh mục thành công trả về '.$row_quantity.' hàng kết quả </br>';
+      $notification = 'Lọc sản phẩm thành công trả về '.$row_quantity.' hàng kết quả </br>';
 
       $notification .= 'Cột được lọc: ';
       switch ($filter_column) {
         case 'PkType_Id':
-          $notification .= 'Mã danh mục';
+          $notification .= 'Mã sản phẩm';
           break;
         case 'ProductName':
-          $notification .= 'Tên danh mục';
+          $notification .= 'Tên sản phẩm';
           break;
       }
       $notification .= '</br>';
@@ -238,10 +238,10 @@
 
     global $notification;
     if ($delete_result === 1) {
-      $notification = 'Xóa danh mục thành công </br>';
+      $notification = 'Xóa sản phẩm thành công </br>';
 
     } else {
-      $notification = 'Xóa danh mục không thành công </br>';
+      $notification = 'Xóa sản phẩm không thành công </br>';
     }
 
     $conn = null;
@@ -267,25 +267,165 @@
     }
   }
 
-  function insertProduct($product_name) {
+  function insertProduct(
+    $product_name,
+    $product_price,
+    $product_sale,
+    $product_category_id,
+    $product_brand_id,
+    $product_view_status
+  ) {
     $conn = connectDatabase();
 
     $sql = "INSERT INTO `product` 
-              (`ProductName`) 
+              (
+                `FkType_Id`, 
+                `FKBrand_Id`, 
+                `ProductName`, 
+                `ProductPrice`, 
+                `ProductDiscount`, 
+                `ProductViewStatus`
+              ) 
             VALUES 
-              ('$product_name')";
+              (
+                '$product_category_id', 
+                '$product_brand_id', 
+                '$product_name', 
+                '$product_price', 
+                '$product_sale', 
+                '$product_view_status'
+              )
+          ";
     $insert_result = $conn->exec($sql);
 
     global $notification;
     if ($insert_result === 1) {
-      $notification = 'Thêm danh mục thành công </br>'
-                    . 'Tên danh mục được thêm: '.$product_name.' </br>';
+      $notification = 'Thêm sản phẩm thành công </br>'
+                    . 'Tên sản phẩm được thêm: '.$product_name.' </br>';
 
     } else {
-      $notification = 'Thêm danh mục không thành công </br>';
+      $notification = 'Thêm sản phẩm không thành công </br>';
     }
 
     $conn = null;
+  }
+
+  function checkProduct($product_id) {
+    $conn = connectDatabase();
+
+    $sql = "SELECT `PkProduct_Id` 
+            FROM `product`
+            WHERE `PkProduct_Id` = '$product_id'
+            LIMIT 1";
+    $stmt = $conn->query($sql);
+    $exist_result = $stmt->rowCount();
+
+    $conn = null;
+
+    if ($exist_result === 1) {
+      return true;
+
+    } else {
+      return false;
+    }
+  }
+
+  function checkProductVariant($product_id, $product_variant_color_id) {
+    $conn = connectDatabase();
+
+    $sql = "SELECT `PkVariant_Id`
+            FROM `product_variant`
+            WHERE `FkProduct_Id` = '$product_id'
+            AND `FkColor_Id` = '$product_variant_color_id'
+            LIMIT 1";
+    $stmt = $conn->query($sql);
+    $exist_result = $stmt->rowCount();
+
+    $conn = null;
+
+    if ($exist_result === 1) {
+      return true;
+
+    } else {
+      return false;
+    }
+  }
+
+  function insertProductVariant (
+    $product_id,
+    $product_name,
+    $product_variant_color_id,
+    $product_variant_main_img,
+    $product_variant_sub_img_list,
+    $product_variant_sub_img_quantity,
+    $product_variant_size_list,
+    $product_variant_quantity_list,
+    $product_variant_quantity_by_color
+  ) {
+    // get fk product id
+    $conn = connectDatabase();
+
+    if ($product_id == '') {
+      $sql = "SELECT `PkProduct_Id`
+              FROM `product` 
+              WHERE `ProductName` = '$product_name'";
+      $data_result = $conn->query($sql);
+      $product_id = $data_result->fetch(PDO::FETCH_ASSOC);
+      $product_id = $product_id['PkProduct_Id'];
+    }
+
+    // set name for img and upload
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
+    $current_time = date('mdY_his_', time());
+
+    $img_file_name_prefix = $product_id.'_'.$current_time;
+
+    $file_name = $img_file_name_prefix.'0';
+    $file_extension = substr($product_variant_main_img['type'], 6);
+    $full_file_name = $file_name.'.'.$file_extension;
+    move_uploaded_file (
+      $product_variant_main_img['tmp_name'], 
+      '../public/image/product/'.$full_file_name
+    );
+
+    $sql = "INSERT INTO `product_image` 
+              (`FkProduct_Id`, `FkColor_Id`, `ImageFileName`)
+            VALUES 
+              ('$product_id', '$product_variant_color_id', '$full_file_name')";
+    $conn->exec($sql);
+
+    for ($i = 0; $i < $product_variant_sub_img_quantity; $i++) {
+      $file_index = $i + 1;
+      $file_name = $img_file_name_prefix.$file_index;
+      $file_extension = substr($product_variant_sub_img_list['type'][$i], 6);
+      $full_file_name = $file_name.'.'.$file_extension;
+
+      move_uploaded_file (
+        $product_variant_sub_img_list['tmp_name'][$i], 
+        '../public/image/product/'.$full_file_name
+      );
+
+      $sql = "INSERT INTO `product_image` 
+                (`FkProduct_Id`, `FkColor_Id`, `ImageFileName`)
+              VALUES 
+                ('$product_id', '$product_variant_color_id', '$full_file_name')";
+      $conn->exec($sql);
+    }
+
+    for ($i = 0; $i < $product_variant_quantity_by_color; $i++) {
+      $product_variant_size = (int)$product_variant_size_list[$i];
+      $product_variant_quantiy = (int)$product_variant_quantity_list[$i];
+
+      $sql = "INSERT INTO `product_variant` 
+              (`FkProduct_Id`, `FkColor_Id`, `ProductSize`, `ProductQuantity`)
+            VALUES 
+              ('$product_id', '$product_variant_color_id', '$product_variant_size', '$product_variant_quantiy')";
+      $conn->exec($sql);
+    }
+
+    $conn = null;
+
+    return $product_id;
   }
 
   function getProductDataById($object_id) {
@@ -293,7 +433,7 @@
 
     $sql = "SELECT * 
             FROM `product` 
-            WHERE `PkType_Id` = '$object_id'";
+            WHERE `PkProduct_Id` = '$object_id'";
     $data_result = $conn->query($sql);
 
     $return_quantity = $data_result->rowCount();
@@ -301,12 +441,121 @@
 
     global $notification;
     if ($return_quantity === 0) {
-      $notification = 'Không có danh mục có mã là "'.$object_id.'" </br>';
+      $notification = 'Không có sản phẩm có mã là "'.$object_id.'" </br>';
       return '';
 
     } else {
       return $data_result->fetch(PDO::FETCH_ASSOC);
     }
+  }
+  
+  function getProductTypeById($object_id) {
+    $conn = connectDatabase();
+
+    $sql = "SELECT pt.`PkType_Id`, pt.`TypeName`
+            FROM `product` AS p
+            INNER JOIN `product_type` AS pt
+            ON p.`FkType_Id` = pt.`PkType_Id`
+            WHERE `PkProduct_Id` = '$object_id'";
+    $data_result = $conn->query($sql);
+
+    $return_quantity = $data_result->rowCount();
+    $conn = null;
+
+    if ($return_quantity === 0) {
+      return '';
+
+    } else {
+      return $data_result->fetch(PDO::FETCH_ASSOC);
+    }
+  }
+
+  function getProductBrandById($object_id) {
+    $conn = connectDatabase();
+
+    $sql = "SELECT pb.`PkBrand_Id`, pb.`BrandName`
+            FROM `product` AS p
+            INNER JOIN `product_brand` AS pb
+            ON p.`FkBrand_Id` = pb.`PkBrand_Id`
+            WHERE `PkProduct_Id` = '$object_id'";
+    $data_result = $conn->query($sql);
+
+    $return_quantity = $data_result->rowCount();
+    $conn = null;
+
+    if ($return_quantity === 0) {
+      return '';
+
+    } else {
+      return $data_result->fetch(PDO::FETCH_ASSOC);
+    }
+  }
+
+  function getProductChoosenColor($object_id) {
+    $conn = connectDatabase();
+
+    $sql = "SELECT * 
+            FROM `product_color`
+            WHERE `PkColor_Id` 
+            IN (
+                SELECT `FkColor_Id`
+                FROM `product_variant`
+                WHERE `FkProduct_Id` = '$object_id'
+                GROUP BY `FkColor_Id`
+            )";
+    $data_result = $conn->query($sql);
+
+    $return_quantity = $data_result->rowCount();
+    $conn = null;
+
+    if ($return_quantity === 0) {
+      return '';
+
+    } else {
+      return $data_result->fetchAll(PDO::FETCH_ASSOC);
+    }
+  }
+
+  function getProductNotChoosenColor($object_id) {
+    $conn = connectDatabase();
+
+    $sql = "SELECT * 
+            FROM `product_color`
+            WHERE `PkColor_Id` 
+            NOT IN (
+                SELECT `FkColor_Id`
+                FROM `product_variant`
+                WHERE `FkProduct_Id` = '$object_id'
+                GROUP BY `FkColor_Id`
+            )";
+    $data_result = $conn->query($sql);
+
+    $return_quantity = $data_result->rowCount();
+    $conn = null;
+
+    if ($return_quantity === 0) {
+      return '';
+
+    } else {
+      return $data_result->fetchAll(PDO::FETCH_ASSOC);
+    }
+  }
+
+  function getColorNameById($object_id) {
+    $conn = connectDatabase();
+
+    $sql = "SELECT `ColorName`
+            FROM `product_color` 
+            WHERE `PkColor_Id` = '$object_id'";
+    $data_result = $conn->query($sql);
+
+    $return_quantity = $data_result->rowCount();
+    $conn = null;
+
+    $color_name = $data_result->fetch(PDO::FETCH_ASSOC);
+    $color_name = $color_name['ColorName'];
+
+    return $color_name;
   }
 
   function updateProduct (
@@ -323,11 +572,11 @@
 
     global $notification;
     if ($update_result === 1) {
-      $notification = 'Sửa danh mục thành công </br>'
-                    . 'Mã danh mục được sửa: '.$object_id.' </br>';
+      $notification = 'Sửa sản phẩm thành công </br>'
+                    . 'Mã sản phẩm được sửa: '.$object_id.' </br>';
 
     } else {
-      $notification = 'Sửa danh mục không thành công </br>'
+      $notification = 'Sửa sản phẩm không thành công </br>'
                     . 'Có thể do bạn chưa thay đổi thông tin trước khi nhấn nút xác nhận sửa </br>';
     }
 
@@ -338,7 +587,7 @@
     $conn = connectDatabase();
 
     $sql = "SELECT * 
-            FROM `product`";
+            FROM `product_type`";
     $data_result = $conn->query($sql);
 
     $return_quantity = $data_result->rowCount();
