@@ -19,7 +19,13 @@
       $main_bread_crumb = 'Trang chủ';
       $sub_bread_crumb = '';
       break;
+      
+    case 'introduce':
+      include_once 'controller/c_introduce.php';
 
+      $mein_bread_crumb = "Giới thiệu";
+      $sub_bread_crumb= '';
+      break;
   }
 
   include_once 'view/layout/layout.php';

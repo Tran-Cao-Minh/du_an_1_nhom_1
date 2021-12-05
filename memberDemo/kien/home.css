@@ -263,12 +263,16 @@
 
 }
 
+.top-product__group-img{
+  width: 37rem;
+  height: 37rem;
+  padding:1.5rem;
 
-.top5__productInf-img {
-    width: auto;
-    height: auto;
-    padding:1.5rem;
 }
+/* .top__productInf-img {
+    width: 37rem;
+    height: 37rem;
+} */
 
 /* home__productNameTop */
 .productInf-NameTop {

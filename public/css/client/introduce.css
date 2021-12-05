@@ -1,0 +1,147 @@
+.introduce {
+  max-width: 81.5rem;
+  padding: 0 1.5rem;
+  height: auto;
+  margin: 2rem auto 0;
+}
+
+.introduce__content {
+  display: flex;
+
+  width: 100%;
+  height: 5rem;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 0.5rem;
+
+  background-color: var(--primary-color-blur);
+}
+
+.introduce__content-text {
+  padding: 1.5rem;
+
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  color: var(--primary-color);
+}
+
+.introduce__content-group {
+  width: 5rem;
+  height: 5rem;
+}
+
+.introduce__content-group-button {
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 0.5rem;
+  border-color: transparent;
+  background-color: var(--primary-color-blur);
+  transition: 0.2s;
+}
+
+.introduce__content-icon {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+/* hover */
+.introduce__content:hover .introduce__content-group-button {
+  background-color: var(--secondary-color);
+}
+.introduce__text-group {
+  width: 100%;
+  height: auto;
+
+  padding: 1.5rem 1.5rem;
+  margin-bottom: 2rem;
+
+  border-radius: 0.5rem;
+  border: 0.2rem solid var( --secondary-color);
+
+}
+
+.introduce__text {
+  padding: 0.7rem 0;
+
+  line-height: 2.7rem;
+  text-align: justify;
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  color: var(--black);
+}
+/* google map */
+.introduce__google-map-group {
+  width: auto;
+  height: 32.5rem;
+  border: 0.2rem solid var(--gray-blur);
+  padding: 0.5rem 0.5rem;
+}
+
+.introduce__google-map {
+  width: 100%;
+  height: 31rem;
+}
+
+/* hỗ trợ */
+.introduce__support {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 5rem;
+
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+
+  border-radius: 0.5rem;
+  background-color: var(--primary-color);
+}
+
+.introduce__support-text {
+  line-height: 2.7rem;
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  color: var(--white);
+}
+
+/* ul li */
+
+.introduce__text-group-ul {
+  width: 100%;
+  height: auto;
+
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+/* li */
+.introduce__text-ul {
+  list-style-type: none;
+
+  text-align: justify;
+
+  line-height: 2.7rem;
+  font-size: 1.8rem;
+  font-family: var(--bold);
+  color: var(--black);
+
+}
+
+.introduce__text-li {
+  width: calc(100%-3rem);
+
+  margin-left: 3rem;
+
+  list-style-type: disc;
+  text-align: justify;
+
+  line-height: 2.7rem;
+  font-size: 1.8rem;
+  font-family: var(--regular);
+
+  color: var(--black);
+
+}
