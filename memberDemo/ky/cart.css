@@ -25,58 +25,51 @@
     color: var(--primary-color);
 }
 
-.tittle__bar-my-order {
+.top-bar__tile-bar-my-shopping-cart {
     display: flex;
-    align-items: center;
-    justify-content: center;
 
+    width: 21.9rem;
     height: 5rem;
+
+    position: relative;
     border-radius: 0.5rem;
+    padding-left: 1.5rem;
 
-    background: var(--primary-color-blur);
+    border: 0 solid var(--primary-color-blur);
+    border-color: transparent;
 
-    cursor: pointer;
-}
-
-.tittle__bar-my-order-name {
-    padding: 1.5rem;
+    align-items: center;
 
     font-size: 1.8rem;
-    line-height: 2.1rem;
-
+    font-family: var(--regular);
     color: var(--primary-color);
+    background-color: var(--primary-color-blur);
+
+    transition: 0.2s;
 }
 
-.tittle__bar-my-order-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.top-bar__tile-bar-my-shopping-cart:hover {
+    background-color: var(--secondary-color);
 
+}
+
+.my-shopping-cart__icon {
+    display: flex  !important;
+
+    position: absolute;
+    right: 0;
     width: 5rem;
     height: 5rem;
+
+    align-items: center;
+    justify-content: center;
     border-radius: 0.5rem;
 
-    outline: none;
-    border: none;
-
-    background: var(--primary-color-blur);
-
-    transition: all 0.2s ease;
-}
-
-.tittle__bar-my-order-icon i {
     font-size: 2rem;
-    line-height: 2.3rem;
 
-    color: var(--primary-color);
+    background-color: var(--primary-color-blur);
 }
 
-.tittle__bar-my-order-name:hover, 
-.tittle__bar-my-order-icon:hover {
-    background: var(--secondary-color);
-
-    border-radius: 0.5rem;
-}
 
 .cart__total {
     width: 59.2rem;

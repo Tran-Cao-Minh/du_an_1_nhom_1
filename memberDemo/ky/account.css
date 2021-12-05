@@ -12,7 +12,7 @@
 
     border-radius: 0.5rem;
     padding: 1.5rem;
-    max-width: 56.2rem;
+    width: 56.2rem;
 
     background: var(--primary-color-blur);
 }
@@ -20,8 +20,9 @@
 .account__aside {
     border-radius: 0.5rem;
     padding: 1.5rem;
-    max-width: 56.2rem;
+    width: 56.2rem;
     margin-left: 1.5rem;
+    height: fit-content;
 
     background: var(--primary-color-blur);
 }
@@ -78,7 +79,6 @@
 .account__btn button {
     height: 5rem;
     width: 100%;
-    margin: 0.75rem 0;
     border-radius: 0.5rem;
 
     font-family: var(--regular);
@@ -97,6 +97,8 @@
 
     background: var(--primary-color-blur);
     color: var(--primary-color);
+
+    margin: 1.5rem 0;
 }
 
 .account__btn-change-pass {
@@ -106,8 +108,8 @@
     border: none;
 }
 
-.account__aside .form__group {
-    width: 53.1rem;
+.account__btn-log-out:hover {
+    background: var(--secondary-color);
 }
 
 .account .form__group {
@@ -120,8 +122,12 @@
 
 .account__aside .account__btn {
     position: absolute;
-    top: 0.1rem;
+    top: 1rem;
     right: 0;
+}
+
+.account__article-right .account__btn {
+    padding-left: 1.5rem;
 }
 
 .account__btn .account__btn-accept-change {
@@ -224,6 +230,7 @@
     margin-top: 1rem;
     border: 0.2rem solid var(--secondary-color);
     border-radius: 0.5rem;
+    background: var(--white);
     height: 5rem;
 }
 
@@ -302,81 +309,75 @@ input[type="radio"]:checked~.form__sex-label {
     color: var(--white);
 }
 
-.account .tittle__bar-my-order {
+.top-bar__tile-bar-my-shopping-cart {
     display: flex;
-    align-items: center;
 
-    margin: 1.5rem 0;
-
-    width: fit-content;
+    width: 21.9rem;
     height: 5rem;
+
+    position: relative;
     border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
 
-    background: var(--primary-color-blur);
+    border: 0 solid var(--primary-color-blur);
+    border-color: transparent;
 
-    cursor: pointer;
-}
-
-.account .tittle__bar-my-order-name {
-    padding: 1.5rem;
+    align-items: center;
 
     font-size: 1.8rem;
-    line-height: 2.1rem;
-
+    font-family: var(--regular);
     color: var(--primary-color);
+    background-color: var(--primary-color-blur);
+
+    transition: 0.2s;
 }
 
-.account .tittle__bar-my-order-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.top-bar__tile-bar-my-shopping-cart:hover {
+    background-color: var(--secondary-color);
 
+}
+
+.my-shopping-cart__icon {
+    display: flex  !important;
+
+    position: absolute;
+    right: 0;
     width: 5rem;
     height: 5rem;
+
+    align-items: center;
+    justify-content: center;
     border-radius: 0.5rem;
 
-    outline: none;
-    border: none;
-
-    background: var(--primary-color-blur);
-
-    transition: all 0.2s ease;
-}
-
-.account .tittle__bar-my-order-icon i {
     font-size: 2rem;
-    line-height: 2.3rem;
 
-    color: var(--primary-color);
+    background-color: var(--primary-color-blur);
 }
 
-.account .tittle__bar-my-order-name:hover,
-.account .tittle__bar-my-order-icon:hover {
-    background: var(--secondary-color);
-
-    border-radius: 0.5rem;
-}
-
-@media only screen and (max-width: 1024px) { 
+@media only screen and (max-width: 1024px) {
     .account {
         padding: 0 1.5rem;
 
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .account__aside {
+        margin-top: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .account {
+        padding: 0 1.5rem;
         flex-wrap: wrap;
     }
 
     .account__aside {
         margin-top: 1.5rem;
-    }
-}
-
-@media only screen and (max-width: 768px) { 
-    .account {
-        padding: 0 1.5rem;
-
-        flex-wrap: wrap;
-    }
-
-    .account__aside {
-        margin-top: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
