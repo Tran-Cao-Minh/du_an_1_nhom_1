@@ -200,7 +200,7 @@
     }
 }
 
-/* Start animate slide*/
+/* Start animate slide*//*
 @-webkit-keyframes slideIn {
     100% {
         left: 0;
@@ -258,7 +258,7 @@
     -webkit-animation: slideOutRight 1s forwards;
     animation: slideOutRight 1s forwards;
 }
-
+*/
 /*End animate Slide*/
 
 /* thương hiệu uy tín - top 5 sản phẩm nổi bật */
