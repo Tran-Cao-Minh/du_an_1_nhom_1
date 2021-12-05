@@ -34,8 +34,8 @@
       <i class="fas fa-chevron-left top-product__button-icon"></i>
     </button>
     <!-- Featured product images -->
-    <div class="top-product__img">
-      <img src="../public/image/client/home/productImage.png" alt="">
+    <div class="top-product__group-img">
+      <img class="top-product__img" src="../public/image/client/home/productImage.png" alt="">
     </div>
     <!-- Featured product information -->
     <div class="top-product__information">

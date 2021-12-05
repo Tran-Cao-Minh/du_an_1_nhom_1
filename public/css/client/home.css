@@ -261,7 +261,14 @@
   color: var(--primary-color);
 }
 
-
+.top-product__group-img {
+  width: auto;
+  height: auto;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .top-product__img {
   width: 37rem;
   height: 37rem;
@@ -760,7 +767,7 @@
   }
 
   .trademark__contain-logo {
-    width: 100%;
+    max-width: 117rem;
     height: auto;
 
     padding: 0 1rem;
@@ -849,12 +856,6 @@
     display: flex;
     text-align: center;
   }
-
-  .top-product__name-top--number {
-
-    display: none;
-  }
-
   .top-product__size-stocking {
     width: 5rem;
     height: 5rem;
@@ -882,6 +883,7 @@
   .trademark__contain-logo {
     max-width: 100%;
     height: auto;
+
     display: flex;
 
   }
