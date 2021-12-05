@@ -13,7 +13,7 @@
         </li>
       </ul>
       <a class="footer__business-certificate" href="">
-        <img src="/public/image/site/home_page/boCongThuong.png" alt="">
+        <img src="../public/image/client/common/boCongThuong.png" alt="">
       </a>
     </div>
     <div class="footer__column">
@@ -56,7 +56,7 @@
     </div>
     <div class="footer__column">
       <a class="footer__logo" href="">
-        <img src="/public/image/site/home_page/logo.png" alt="Logo">
+        <img src="../public/image/client/common/logo.png" alt="Logo">
       </a>
       <ul class="footer__list">
         <li class="footer__item">

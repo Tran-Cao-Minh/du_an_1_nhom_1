@@ -19,7 +19,22 @@
       $main_bread_crumb = 'Trang chủ';
       $sub_bread_crumb = '';
       break;
+      
+    case 'introduce':
+      include_once 'controller/c_introduce.php';
 
+      $main_bread_crumb = 'Giới thiệu';
+      $sub_bread_crumb= '';
+      break;
+
+    case 'order_list':
+      include_once 'controller/c_order_list.php';
+      
+      $main_bread_crumb = 'Giỏ hàng';
+      $sub_bread_crumb = 'Danh sách đơn hàng';
+      break;
+
+    
   }
 
   include_once 'view/layout/layout.php';

@@ -2,7 +2,7 @@
   <div class="banner__container">
     <!-- banner photo -->
     <div class="banner__contain-img">
-      <img src="./img/banner.png" alt="">
+      <img src="../public/image/client/banner/banner.png" alt="">
     </div>
     <!-- button -->
     <button class="banner__prev-btn">
@@ -34,8 +34,8 @@
       <i class="fas fa-chevron-left top-product__button-icon"></i>
     </button>
     <!-- Featured product images -->
-    <div class="top-product__img">
-      <img src="./img/productImage.png" alt="">
+    <div class="top-product__group-img">
+      <img class="top-product__img" src="../public/image/client/home/productImage.png" alt="">
     </div>
     <!-- Featured product information -->
     <div class="top-product__information">
@@ -133,13 +133,13 @@
   </div>
   <div class="trademark__contain-logo">
     <a class="trademark__logo" href="">
-      <img src="./img/adidas.png" alt="">
+      <img src="../public/image/client/home/adidas.png" alt="">
     </a>
     <a class="trademark__logo" href="">
-      <img src="./img/nike.png" alt="">
+      <img src="../public/image/client/home/nike.png" alt="">
     </a>
     <a class="trademark__logo" href="">
-      <img src="./img/puma.png" alt="">
+      <img src="../public/image/client/home/puma.png" alt="">
     </a>
   </div>
 </section>

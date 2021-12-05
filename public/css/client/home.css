@@ -14,8 +14,7 @@
 
 .banner__container-img {
   width: 100%;
-  height: auto;
-
+  height: 48.6rem;
   display: flex;
 }
 
@@ -174,8 +173,8 @@
 }
 
 .top-product__product-inf {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 37rem;
 
 
   margin-bottom: 4rem;
@@ -262,10 +261,17 @@
   color: var(--primary-color);
 }
 
-
-.top-product__img {
+.top-product__group-img {
   width: auto;
   height: auto;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-product__img {
+  width: 37rem;
+  height: 37rem;
   margin: 1.5rem 0 1.5rem 1.5rem;
 }
 
@@ -761,8 +767,8 @@
   }
 
   .trademark__contain-logo {
-    max-width: 100%;
-    height: 10rem;
+    max-width: 117rem;
+    height: auto;
 
     padding: 0 1rem;
   }
@@ -850,12 +856,6 @@
     display: flex;
     text-align: center;
   }
-
-  .top-product__name-top--number {
-
-    display: none;
-  }
-
   .top-product__size-stocking {
     width: 5rem;
     height: 5rem;
@@ -882,7 +882,8 @@
 
   .trademark__contain-logo {
     max-width: 100%;
-    height: 10rem;
+    height: auto;
+
     display: flex;
 
   }
