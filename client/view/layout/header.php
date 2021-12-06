@@ -444,19 +444,19 @@
                     </a>
                     <ul class="header__sub-menu">
                         <li>
-                            <a href="#" class="header__sub-menu-item">
+                            <a href="?page=introduce#about" class="header__sub-menu-item">
                                 Về Ignite
                                 <div class="header__sub-menu-item-line"></div>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="header__sub-menu-item">
+                            <a href="?page=introduce#contact" class="header__sub-menu-item">
                                 Liên hệ
                                 <div class="header__sub-menu-item-line"></div>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="header__sub-menu-item">
+                            <a href="?page=introduce#support" class="header__sub-menu-item">
                                 Hỗ trợ
                                 <div class="header__sub-menu-item-line"></div>
                             </a>
@@ -688,17 +688,17 @@
                         name="header__mobile-sub-menu-check">
                     <ul class="header__mobile-sub-menu">
                         <li>
-                            <a href="#" class="header__mobile-sub-menu-item">
+                            <a href="?page=introduce#about" class="header__mobile-sub-menu-item">
                                 Về Ignite
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="header__mobile-sub-menu-item">
+                            <a href="?page=introduce#contact" class="header__mobile-sub-menu-item">
                                 Liên hệ
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="header__mobile-sub-menu-item">
+                            <a href="?page=introduce#support" class="header__mobile-sub-menu-item">
                                 Hỗ trợ
                             </a>
                         </li>

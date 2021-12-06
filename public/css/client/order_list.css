@@ -4,7 +4,7 @@
   max-width: 117rem;
   height: auto;
   padding: 0 1.5rem;
-  margin: 1.5rem auto 1.5rem;
+  margin: 2rem auto 1.5rem;
 }
 
 .top-bar__tile-bar {
@@ -506,7 +506,7 @@
   max-width: 33rem;
   height: 5rem;
 
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 4rem;
 
   align-items: center;
   justify-content: space-between;

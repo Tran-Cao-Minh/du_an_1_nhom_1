@@ -1,10 +1,12 @@
 <section class="introduce">
     <!-- Ignite -->
     <div class="introduce__content">
+      <div id="about" class="introduce__milestones">
+      </div>
       <div class="introduce__content-text">
         Về Ignite
       </div>
-      <div class="introduce__content-group">
+      <div class="introduce__content-group ">
         <button class="introduce__content-group-button">
           <i class="fas fa-chevron-down introduce__content-icon"></i>
         </button>
@@ -21,8 +23,10 @@
         Công ty IGNITE đã nhận được nhiều Bằng khen cao quý của nhà nước trao tặng, và được người tiêu dùng tín nhiệm bình chọn là Thương Hiệu Mạnh Việt Nam, Top 100 Thương hiệu nổi tiếng nhất Việt Nam.
       </p>
     </div>
-    <!-- google map -->
+    <!-- google map (liên hệ) -->
     <div class="introduce__content">
+      <div id="contact" class="introduce__milestones-1">
+      </div>
       <div class="introduce__content-text">
         Liên hệ
       </div>
@@ -50,10 +54,15 @@
     </div>
     <!-- Hỗ trợ -->
     <div class="introduce__support">
+      <div id="support" class="introduce__milestones-2">
+      </div>
       <p class="introduce__support-text">HỖ TRỢ</p>
     </div>
     <!-- return policy (chính sách đổi trả) -->
     <div class="introduce__content">
+      <div id="return-policy" class=introduce__milestones-3>
+
+      </div>
       <div class="introduce__content-text">
         Chính sách đổi trả
       </div>
@@ -160,6 +169,9 @@
     </div>
       <!-- Warranty Policy  (chính sách bảo hành)-->
       <div class="introduce__content">
+        <div id="warranty-policy" class="introduce__milestones-4">
+
+        </div>
         <div class="introduce__content-text">
           Chính sách bảo hành
         </div>
@@ -233,9 +245,10 @@
         </ul>
       </div>
     </div>
-    <!--  -->
-    <!--  -->
+    <!-- Hình thức thanh toán -->
     <div class="introduce__content">
+      <div id="payments" class="introduce__milestones-5">
+      </div>
       <div class="introduce__content-text">
         Hình thức thanh toán
       </div>
@@ -300,6 +313,8 @@
 
     <!-- delivery form (Hình thức giao hàng) -->
     <div class="introduce__content">
+      <div id="delivery-method" class="introduce__milestones-6">
+      </div>
       <div class="introduce__content-text">
         Hình thư giao hàng
       </div>
