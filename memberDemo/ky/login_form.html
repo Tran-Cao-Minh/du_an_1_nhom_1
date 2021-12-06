@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <div class="open">Open</div>
   <div class="overlay">
     <section class="form">
       <!-- Start form -->
@@ -30,10 +31,11 @@
         <!-- Start form group -->
         <div class="form__group form__password">
           <label class="form__label" for="">Mật khẩu</label>
-          <input class="form__input form__input--error" type="password" placeholder="Nhập mật khẩu của bạn" />
-          <p class="form__toggle form__password__icon">
+          <input class="form__input form__input--error" id="form__password" type="password" placeholder="Nhập mật khẩu của bạn" />
+          <label for="toggle__eye" class="form__toggle form__password__icon">
+            <input type="checkbox" name="" id="toggle__eye">
             <i class="far fa-eye-slash "></i>
-          </p>
+          </label>
           <span class="form__message">Độ dài mật khẩu phải từ 4 đến 20 ký tự!</span>
         </div>
         <!-- End form group -->
@@ -73,6 +75,25 @@
   </div>
   <!-- Font Awsome -->
   <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
+  <script>
+    const open = document.querySelector('.open');
+    const overlay = document.querySelector('.overlay');
+    const closeFormIcon = document.querySelector(".form__close__icon");
+    const inputPassword = document.querySelector("#form__password");
+    const eyeToggle = document.querySelector(".form__password__icon");
+    // Open form
+    open.addEventListener('click',() => {
+      overlay.classList.add("overlay--active");
+    })
+    // Close form
+    closeFormIcon.addEventListener('click', () => {
+      overlay.classList.remove("overlay--active");
+    })
+    // Hide/show pass
+    eyeToggle.addEventListener('click', () => {
+        inputPassword.type === "password" ? inputPassword.type = "text" : inputPassword.type = "password";
+    })
+  </script>
 </body>
 
 </html>
