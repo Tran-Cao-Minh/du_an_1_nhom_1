@@ -1,7 +1,7 @@
 <!-- bread-crumb -->
 <section class="bread-crumb">
   <div class="bread-crumb__container">
-    <a class="bread-crumb__link" href="#">
+    <a class="bread-crumb__link" href="?page=home">
       Trang chủ
     </a>
     <div class="bread-crumb__contain-icon">

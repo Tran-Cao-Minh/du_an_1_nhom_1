@@ -396,7 +396,7 @@
     <div class="header__sub-container">
       <ul class="header__menu">
         <li>
-          <a href="#" class="header__menu-item">
+          <a href="?page=home" class="header__menu-item">
             <div class="header__menu-title">
               Trang chủ
             </div>
@@ -431,7 +431,7 @@
           </ul>
         </li>
         <li>
-          <a href="#" class="header__menu-item">
+          <a href="?page=introduce" class="header__menu-item">
             <div class="header__menu-title">
               giới thiệu
               <i class="fas fa-chevron-down header__menu-icon"></i>
@@ -621,7 +621,7 @@
         </div>
       </div>
 
-      <a href="#" class="header__menu-mobile-favorite-product">
+      <a href="?page=favorite_product" class="header__menu-mobile-favorite-product">
         <div class="header__menu-mobile-favorite-product-title">
           Sản phẩm yêu thích
         </div>
@@ -630,7 +630,7 @@
         </div>
       </a>
 
-      <a href="#" class="header__menu-mobile-basket">
+      <a href="?page=cart" class="header__menu-mobile-basket">
         <div class="header__menu-mobile-basket-title">
           Giỏ hàng của tôi
         </div>
@@ -641,7 +641,7 @@
 
       <ul class="header__menu-mobile-menu-list">
         <li>
-          <a href="#" class="header__menu-mobile-menu-item">
+          <a href="?page=home" class="header__menu-mobile-menu-item">
             <div class="header__menu-mobile-menu-item-title">
               trang chủ
             </div>
