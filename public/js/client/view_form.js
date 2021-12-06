@@ -14,7 +14,6 @@ window.addEventListener('load', function () {
         overlay.classList.remove("overlay--active");
     })
 
-    alert ('50');
     // // Hide/show pass 
     // eyeToggle.addEventListener('click', () => {
     //     if (inputPassword.type === "password") {

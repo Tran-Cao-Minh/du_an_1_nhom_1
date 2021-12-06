@@ -710,6 +710,7 @@
   position: absolute;
   top: 5rem;
   right: 1.5rem;
+  z-index: 1;
 
   width: 25rem;
   height: auto;
