@@ -1,33 +1,5 @@
 <section class="interaction-form">
   <form method="POST" enctype="multipart/form-data">
-    <?php
-      if (
-        isset($_POST['product_name']) &&
-        isset($_POST['product_price']) &&
-        isset($_POST['product_sale']) &&
-        isset($_POST['product_category_id']) &&
-        isset($_POST['product_brand_id']) &&
-        isset($_POST['product_view_status']) &&
-        isset($_POST['product_variant_color_id'])
-      ) {
-        $product_name = $_POST['product_name'];
-        $product_price = $_POST['product_price'];
-        $product_sale = $_POST['product_sale'];
-        $product_category_id = $_POST['product_category_id'];
-        $product_brand_id = $_POST['product_brand_id'];
-        $product_view_status = $_POST['product_view_status'];
-        $product_variant_color_id = $_POST['product_variant_color_id'];
-
-      } else {
-        $product_name = '';
-        $product_price = '';
-        $product_sale = '';
-        $product_category_id = '';
-        $product_brand_id = '';
-        $product_view_status = 1;
-        $product_variant_color_id = '';
-      }
-    ?>
     <div class="interaction-form__title--update">
       Sửa sản phẩm
     </div>
@@ -40,38 +12,6 @@
         maxlength="80"
         name="product_name"
         value="<?php echo $product_name; ?>"
-      >
-      <div class="interaction-form__notification">
-        <!-- Some test case ~ -->
-      </div>
-    </div>
-    <div class="interaction-form__form-group">
-      <label for="product_price" class="interaction-form__form-title">
-        Giá sản phẩm (VND)
-      </label>
-      <input type="number" id="product_price" class="interaction-form__input"
-        required 
-        min="1000"
-        max="1000000000"
-        step="1"
-        name="product_price" 
-        value="<?php echo $product_price; ?>"
-      >
-      <div class="interaction-form__notification">
-        <!-- Some test case ~ -->
-      </div>
-    </div>
-    <div class="interaction-form__form-group">
-      <label for="product_sale" class="interaction-form__form-title">
-        Giảm giá (%)
-      </label>
-      <input type="number" id="product_sale" class="interaction-form__input"
-        required 
-        min="0"
-        max="100"
-        step="1"
-        name="product_sale"
-        value="<?php echo $product_sale; ?>"
       >
       <div class="interaction-form__notification">
         <!-- Some test case ~ -->
@@ -141,112 +81,102 @@
         ?>
       </select>
     </div>
-    <div class="interaction-form__form-group">
-      <div class="interaction-form__form-title">
-        Trạng thái
+    <input type="checkbox" id="interaction-form__collapse-product-form" style="display: none;">
+    <div class="interaction-form__collapse-product-form">
+      <div class="interaction-form__form-group">
+        <label for="product_price" class="interaction-form__form-title">
+          Giá sản phẩm (VND)
+        </label>
+        <input type="number" id="product_price" class="interaction-form__input"
+          required 
+          min="1000"
+          max="1000000000"
+          step="1"
+          name="product_price" 
+          value="<?php echo $product_price; ?>"
+        >
+        <div class="interaction-form__notification">
+          <!-- Some test case ~ -->
+        </div>
       </div>
-      <div class="interaction-form__radio-group">
-        <?php if ($product_view_status == 1): ?>
-          <div class="interaction-form__radio-item-50">
-            <input type="radio" class="interaction-form__input--hidden" id="show" 
-              checked 
-              name="product_view_status"
-              value="1"
-            >
-            <label for="show" class="interaction-form__radio-item-label">
-              Hiển thị
-            </label>
-          </div>
-          <div class="interaction-form__radio-item-50">
-            <input type="radio" class="interaction-form__input--hidden" id="hide" 
-              name="product_view_status"
-              value="0"
-            >
-            <label for="hide" class="interaction-form__radio-item-label">
-              Ẩn
-            </label>
-          </div>
-        <?php else: ?>
-          <div class="interaction-form__radio-item-50">
-            <input type="radio" class="interaction-form__input--hidden" id="show" 
-              name="product_view_status"
-              value="show"
-            >
-            <label for="show" class="interaction-form__radio-item-label">
-              Hiển thị
-            </label>
-          </div>
-          <div class="interaction-form__radio-item-50">
-            <input type="radio" class="interaction-form__input--hidden" id="hide" 
-              checked 
-              name="product_view_status"
-              value="hide"
-            >
-            <label for="hide" class="interaction-form__radio-item-label">
-              Ẩn
-            </label>
-          </div>
-        <?php endif; ?>
+      <div class="interaction-form__form-group">
+        <label for="product_sale" class="interaction-form__form-title">
+          Giảm giá (%)
+        </label>
+        <input type="number" id="product_sale" class="interaction-form__input"
+          required 
+          min="0"
+          max="100"
+          step="1"
+          name="product_sale"
+          value="<?php echo $product_sale; ?>"
+        >
+        <div class="interaction-form__notification">
+          <!-- Some test case ~ -->
+        </div>
       </div>
-    </div>
-    <div class="interaction-form__title--sub">
-      Danh sách biến thể
-    </div>
-    <div class="interaction-form__form-group">
-      <div class="interaction-form__form-title">
-        Màu sắc
+      <div class="interaction-form__form-group">
+        <div class="interaction-form__form-title">
+          Trạng thái
+        </div>
+        <div class="interaction-form__radio-group">
+          <?php if ($product_view_status == 1): ?>
+            <div class="interaction-form__radio-item-50">
+              <input type="radio" class="interaction-form__input--hidden" id="show" 
+                checked 
+                name="product_view_status"
+                value="1"
+              >
+              <label for="show" class="interaction-form__radio-item-label">
+                Hiển thị
+              </label>
+            </div>
+            <div class="interaction-form__radio-item-50">
+              <input type="radio" class="interaction-form__input--hidden" id="hide" 
+                name="product_view_status"
+                value="0"
+              >
+              <label for="hide" class="interaction-form__radio-item-label">
+                Ẩn
+              </label>
+            </div>
+          <?php else: ?>
+            <div class="interaction-form__radio-item-50">
+              <input type="radio" class="interaction-form__input--hidden" id="show" 
+                name="product_view_status"
+                value="show"
+              >
+              <label for="show" class="interaction-form__radio-item-label">
+                Hiển thị
+              </label>
+            </div>
+            <div class="interaction-form__radio-item-50">
+              <input type="radio" class="interaction-form__input--hidden" id="hide" 
+                checked 
+                name="product_view_status"
+                value="hide"
+              >
+              <label for="hide" class="interaction-form__radio-item-label">
+                Ẩn
+              </label>
+            </div>
+          <?php endif; ?>
+        </div>
       </div>
-      <div class="interaction-form__color-group">
-        <?php
-          if ($color_list != '') {
-            foreach ($color_list as $color) {
-              if ($product_variant_color_id == '') {
-                $product_variant_color_id = $color_list[0]['PkColor_Id']; 
-              }
-              if ($color['PkColor_Id'] != $product_variant_color_id) {
-                echo '
-                  <label for="'.$color['PkColor_Id'].'" class="interaction-form__color-item"
-                    title="'.$color['ColorName'].'"
-                  >
-                    <input class="interaction-form__input--hidden" type="radio" 
-                      id="'.$color['PkColor_Id'].'"
-                      name="product_variant_color_id"
-                      value="'.$color['PkColor_Id'].'"
-                    >
-                    <div class="interaction-form__color-icon" 
-                      style="--bg-color:#'.$color['PkColor_Id'].';">
-                    </div>
-                  </label>
-                ';
-              } else {
-                echo '
-                  <label for="'.$color['PkColor_Id'].'" class="interaction-form__color-item"
-                    title="'.$color['ColorName'].'"
-                  >
-                    <input checked class="interaction-form__input--hidden" type="radio" 
-                      id="'.$color['PkColor_Id'].'"
-                      name="product_variant_color_id"
-                      value="'.$color['PkColor_Id'].'"
-                    >
-                    <div class="interaction-form__color-icon" 
-                      style="--bg-color:#'.$color['PkColor_Id'].';">
-                    </div>
-                  </label>
-                ';
-              }
-            }
-          } else {
-            echo '
-              <a href="?page_name=manage_color&view_name=add&previous_page=add_product" class="interaction-form__color-item--add-btn" title="Thêm màu sắc">
-                <div class="interaction-form__color-icon--contain-add-icon">
-                  <i class="fas fa-plus interaction-form__color-icon--add-icon"></i>
-                </div>
-              </a>
-            ';
-          }
-        ?>
+      <div class="interaction-form__action-group">
+        <button type="submit" class="interaction-form__submit-btn--add">
+          Xác nhận sửa
+        </button>
+        <a href="#" class="interaction-form__return-link">
+          Quay lại
+        </a>
       </div>
     </div>
+
+
+    
+
+    
     <div class="interaction-form__form-group">
       <label for="product_variant_main_img" class="interaction-form__form-title">
         Hình ảnh chính
@@ -342,6 +272,69 @@
       </a>
     </div>
   </form>
+
+  <div class="interaction-form__variant-list-group">
+    <div class="interaction-form__title--sub">
+      Danh sách biến thể
+    </div>
+    <div class="interaction-form__form-group">
+      <div class="interaction-form__form-title">
+        Màu sắc
+      </div>
+      <div class="interaction-form__color-group">
+        <?php
+          if ($color_list != '') {
+            foreach ($color_list as $color) {
+              if ($product_variant_color_id == '') {
+                $product_variant_color_id = $color_list[0]['PkColor_Id']; 
+              }
+              if ($color['PkColor_Id'] != $product_variant_color_id) {
+                echo '
+                  <label for="'.$color['PkColor_Id'].'" class="interaction-form__color-item"
+                    title="'.$color['ColorName'].'"
+                  >
+                    <input class="interaction-form__input--hidden" type="radio" 
+                      id="'.$color['PkColor_Id'].'"
+                      name="product_variant_color_id"
+                      value="'.$color['PkColor_Id'].'"
+                    >
+                    <div class="interaction-form__color-icon" 
+                      style="--bg-color:#'.$color['PkColor_Id'].';">
+                    </div>
+                  </label>
+                ';
+              } else {
+                echo '
+                  <label for="'.$color['PkColor_Id'].'" class="interaction-form__color-item"
+                    title="'.$color['ColorName'].'"
+                  >
+                    <input checked class="interaction-form__input--hidden" type="radio" 
+                      id="'.$color['PkColor_Id'].'"
+                      name="product_variant_color_id"
+                      value="'.$color['PkColor_Id'].'"
+                    >
+                    <div class="interaction-form__color-icon" 
+                      style="--bg-color:#'.$color['PkColor_Id'].';">
+                    </div>
+                  </label>
+                ';
+              }
+            }
+          } else {
+            echo '
+              <a href="?page_name=manage_color&view_name=add&previous_page=add_product" class="interaction-form__color-item--add-btn" title="Thêm màu sắc">
+                <div class="interaction-form__color-icon--contain-add-icon">
+                  <i class="fas fa-plus interaction-form__color-icon--add-icon"></i>
+                </div>
+              </a>
+            ';
+          }
+        ?>
+      </div>
+    </div>
+  </div>
+
+  
 </section>
 
 <section class="notification">
