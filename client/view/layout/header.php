@@ -9,7 +9,7 @@
             </div>
 
             <div class="header__contain-logo">
-                <a class="header__logo" href="#">
+                <a class="header__logo" href="?page=home">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417.34 163.29">
                         <defs>
                             <style>
@@ -169,10 +169,10 @@
                     <div class="header__interaction-sub-menu">
                         <div class="header__interaction-sub-menu-decorate"></div>
                         <div class="header__interaction-sub-menu-container" style="--width: 18rem;">
-                            <button class="header__user-btn js-btn-sign-in">
+                            <button class="header__user-btn">
                                 Đăng nhập
                             </button>
-                            <button class="header__user-btn js-btn-sign-up-1">
+                            <button class="header__user-btn">
                                 Đăng ký
                             </button>
                         </div>
@@ -196,7 +196,7 @@
                                 <ul class="header__product-list">
                                     <li class="header__product-item">
                                         <div class="header__contain-product-img">
-                                            <img class="header__product-img" src="image/headerImgProduct.png" alt="">
+                                            <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                                         </div>
                                         <div class="header__contain-product-inf">
                                             <div class="header__product-name">
@@ -214,7 +214,7 @@
                                     </li>
                                     <li class="header__product-item">
                                         <div class="header__contain-product-img">
-                                            <img class="header__product-img" src="image/headerImgProduct.png" alt="">
+                                            <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                                         </div>
                                         <div class="header__contain-product-inf">
                                             <div class="header__product-name">
@@ -232,7 +232,7 @@
                                     </li>
                                     <li class="header__product-item">
                                         <div class="header__contain-product-img">
-                                            <img class="header__product-img" src="image/headerImgProduct.png" alt="">
+                                            <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                                         </div>
                                         <div class="header__contain-product-inf">
                                             <div class="header__product-name">
@@ -255,7 +255,7 @@
                                 </label>
                             </div>
                             <div class="header__interaction-sub-menu-line"></div>
-                            <a href="#">
+                            <a href="?page=favorite_product">
                                 <button class="header__view-favorite-prod-btn">
                                     Chi tiết yêu thích
                                 </button>
@@ -282,7 +282,7 @@
 
                                     <li class="header__product-item">
                                         <div class="header__contain-product-img">
-                                            <img class="header__product-img" src="image/headerImgProduct.png" alt="">
+                                            <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                                         </div>
                                         <div class="header__contain-product-inf">
                                             <div class="header__product-name">
@@ -310,7 +310,7 @@
                                     </li>
                                     <li class="header__product-item">
                                         <div class="header__contain-product-img">
-                                            <img class="header__product-img" src="image/headerImgProduct.png" alt="">
+                                            <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                                         </div>
                                         <div class="header__contain-product-inf">
                                             <div class="header__product-name">
@@ -338,7 +338,7 @@
                                     </li>
                                     <li class="header__product-item">
                                         <div class="header__contain-product-img">
-                                            <img class="header__product-img" src="image/headerImgProduct.png" alt="">
+                                            <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                                         </div>
                                         <div class="header__contain-product-inf">
                                             <div class="header__product-name">
@@ -379,12 +379,12 @@
                                 </span>
                             </div>
                             <div class="header__basket-btn-group">
-                                <a href="#">
+                                <a href="?page=order_list">
                                     <button class="header__view-basket-btn">
                                         Xem giỏ hàng
                                     </button>
                                 </a>
-                                <a href="#">
+                                <a href="?page=pay">
                                     <button class="header__pay-btn">
                                         Thanh toán
                                     </button>
@@ -473,7 +473,7 @@
                 <i class="fas fa-times header__menu-mobile-close-btn-icon"></i>
             </label>
             <div class="header__contain-logo">
-                <a class="header__logo" href="#">
+                <a class="header__logo" href="?page=home">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417.34 163.29">
                         <defs>
                             <style>
