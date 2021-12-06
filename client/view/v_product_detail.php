@@ -3,21 +3,21 @@
     <div class="prod__detail-left">
       <div class="prod__detail-image">
         <div class="prod__detail-image">
-          <img src="/public/image/site/product/productMainImg.png" alt="">
+          <img src="../public/image/site/product/productMainImg.png" alt="">
           <input type="checkbox" name="" id="heart__icon">
           <label for="heart__icon" class="heart__icon">
           </label>
         </div>
         <ul class="prod__detail-other">
-          <li class="prod__detail-other-item"><img src="/public/image/site/product/image 8.png" alt="">
+          <li class="prod__detail-other-item"><img src="../public/image/site/product/image 8.png" alt="">
           </li>
-          <li class="prod__detail-other-item"><img src="/public/image/site/product/image 9.png" alt="">
+          <li class="prod__detail-other-item"><img src="../public/image/site/product/image 9.png" alt="">
           </li>
-          <li class="prod__detail-other-item"><img src="/public/image/site/product/image 10.png" alt="">
+          <li class="prod__detail-other-item"><img src="../public/image/site/product/image 10.png" alt="">
           </li>
-          <li class="prod__detail-other-item"><img src="/public/image/site/product/image 11.png" alt="">
+          <li class="prod__detail-other-item"><img src="../public/image/site/product/image 11.png" alt="">
           </li>
-          <li class="prod__detail-other-item"><img src="/public/image/site/product/image 12.png" alt="">
+          <li class="prod__detail-other-item"><img src="../public/image/site/product/image 12.png" alt="">
           </li>
           <span class="prev__icon">
             <i class="fas fa-chevron-left"></i>
@@ -167,7 +167,7 @@
     <div class="prod__detail-similar-prod">
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -198,7 +198,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -229,7 +229,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -260,7 +260,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -353,7 +353,7 @@
         <div class="prod__detail-comment-content-item-heading">
           <div class="prod__detail-comment-content-item-heading-user">
             <div class="prod__detail-comment-content-item-heading-user-img">
-              <img src="/public/image/site/home_page/girl.jpg" alt="">
+              <img src="../public/image/site/home_page/girl.jpg" alt="">
             </div>
             <div class="prod__detail-comment-content-item-heading-user-name">
               <p>Nụ Cười Thần Chết</p>
@@ -379,7 +379,7 @@
         <div class="prod__detail-comment-content-item-heading">
           <div class="prod__detail-comment-content-item-heading-user">
             <div class="prod__detail-comment-content-item-heading-user-img">
-              <img src="/public/image/site/home_page/girl.jpg" alt="">
+              <img src="../public/image/site/home_page/girl.jpg" alt="">
             </div>
             <div class="prod__detail-comment-content-item-heading-user-name">
               <p>Nụ Cười Thần Chết</p>
@@ -405,7 +405,7 @@
         <div class="prod__detail-comment-content-item-heading">
           <div class="prod__detail-comment-content-item-heading-user">
             <div class="prod__detail-comment-content-item-heading-user-img">
-              <img src="/public/image/site/home_page/girl.jpg" alt="">
+              <img src="../public/image/site/home_page/girl.jpg" alt="">
             </div>
             <div class="prod__detail-comment-content-item-heading-user-name">
               <p>Nụ Cười Thần Chết</p>
@@ -431,7 +431,7 @@
         <div class="prod__detail-comment-content-item-heading">
           <div class="prod__detail-comment-content-item-heading-user">
             <div class="prod__detail-comment-content-item-heading-user-img">
-              <img src="/public/image/site/home_page/girl.jpg" alt="">
+              <img src="../public/image/site/home_page/girl.jpg" alt="">
             </div>
             <div class="prod__detail-comment-content-item-heading-user-name">
               <p>Nụ Cười Thần Chết</p>
@@ -457,7 +457,7 @@
         <div class="prod__detail-comment-content-item-heading">
           <div class="prod__detail-comment-content-item-heading-user">
             <div class="prod__detail-comment-content-item-heading-user-img">
-              <img src="/public/image/site/home_page/girl.jpg" alt="">
+              <img src="../public/image/site/home_page/girl.jpg" alt="">
             </div>
             <div class="prod__detail-comment-content-item-heading-user-name">
               <p>Nụ Cười Thần Chết</p>

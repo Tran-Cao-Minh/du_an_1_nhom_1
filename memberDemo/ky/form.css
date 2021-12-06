@@ -37,7 +37,10 @@
   z-index: 2;
   cursor: pointer;
 
-  display: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  /* display: none; */
 }
 
 .overlay--active {
@@ -103,6 +106,90 @@
   font-size: 1.6rem;
   font-family: var(--regular);
 }
+
+
+.form__sex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 1rem;
+  border: 0.2rem solid var(--secondary-color);
+  border-radius: 0.5rem;
+  background: var(--white);
+  height: 5rem;
+
+  font-family: var(--regular);
+}
+
+.form__sex .form__sex-label {
+  position: relative;
+  display: block;
+
+  min-height: 3.2rem;
+  padding: 1.5rem 4.9rem;
+  margin-bottom: 0;
+  border-radius: 0.5rem;
+
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+
+  color: var(--primary-color);
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.form__sex .form__sex-label::before {
+  content: '';
+
+  position: absolute;
+  top: 1.2rem;
+  left: 1rem;
+
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+
+  background: var(--primary-color-blur);
+}
+
+.form__sex .form__sex-label::after {
+  content: '';
+
+  position: absolute;
+  top: 1.9rem;
+  left: 1.7rem;
+
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+
+  background: var(--primary-color);
+
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+input[type="radio"]:checked~.form__sex-label::after {
+  transform: scale(1);
+}
+
+input[type="radio"]:checked~.form__sex-label {
+  background: var(--primary-color-blur);
+
+  border-radius: 0.5rem;
+}
+
+.form__sex .form__sex-label:hover {
+  background: var(--primary-color-blur);
+}
+
 
 .form__date,
 .form__password {
@@ -278,7 +365,7 @@
   height: 5rem;
 
   font-size: 3rem;
-  
+
   color: var(--gray);
 }
 
@@ -336,7 +423,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"]:checked ~ .fa-eye-slash::before {
+input[type="checkbox"]:checked~.fa-eye-slash::before {
   content: "\f06e";
 }
 

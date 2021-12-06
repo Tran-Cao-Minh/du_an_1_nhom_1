@@ -34,7 +34,7 @@
     <!-- Start cart product item -->
     <div class="cart__prod-item">
       <div class="cart__prod-item-image">
-        <img src="/public/image/client/home_page/prodImg (2).png" alt="">
+        <img src="../public/image/client/home_page/prodImg (2).png" alt="">
       </div>
       <div class="cart__prod-item-info">
         <div class="cart__prod-item-info-name">
@@ -72,7 +72,7 @@
     <!-- Start cart product item -->
     <div class="cart__prod-item">
       <div class="cart__prod-item-image">
-        <img src="/public/image/client/home_page/prodImg (2).png" alt="">
+        <img src="../public/image/client/home_page/prodImg (2).png" alt="">
       </div>
       <div class="cart__prod-item-info">
         <div class="cart__prod-item-info-name">
@@ -110,7 +110,7 @@
     <!-- Start cart product item -->
     <div class="cart__prod-item">
       <div class="cart__prod-item-image">
-        <img src="/public/image/client/home_page/prodImg (2).png" alt="">
+        <img src="../public/image/client/home_page/prodImg (2).png" alt="">
       </div>
       <div class="cart__prod-item-info">
         <div class="cart__prod-item-info-name">
@@ -148,7 +148,7 @@
     <!-- Start cart product item -->
     <div class="cart__prod-item">
       <div class="cart__prod-item-image">
-        <img src="/public/image/client/home_page/prodImg (2).png" alt="">
+        <img src="../public/image/client/home_page/prodImg (2).png" alt="">
       </div>
       <div class="cart__prod-item-info">
         <div class="cart__prod-item-info-name">
