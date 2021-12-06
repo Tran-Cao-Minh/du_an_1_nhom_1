@@ -14,9 +14,9 @@ window.addEventListener('load', function () {
     const closeSignUpTwo = document.querySelector(".js-sign-up-close-2");
     const closeSignUpThree = document.querySelector(".js-sign-up-close-3");
 
-    const inputPassword = document.querySelector("#form__password");
-    const eyeToggle = document.querySelector(".js-show-password");
-    const eyeSlash = document.querySelector(".fa-eye-slash");
+    // const inputPassword = document.querySelector("#form__password");
+    // const eyeToggle = document.querySelector(".js-show-password");
+    // const eyeSlash = document.querySelector(".fa-eye-slash");
     // Mở form đăng nhập
     signInBtn.addEventListener('click', (e) => {
         overlay.classList.add("overlay--active");
