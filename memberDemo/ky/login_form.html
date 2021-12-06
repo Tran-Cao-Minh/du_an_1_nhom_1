@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="./form.css" />
+  <link rel="stylesheet" href="/public/css/client/form.css" />
   <!-- <link rel="stylesheet" href="./reset.css" /> -->
   <!-- Global CSS -->
   <link rel="stylesheet" href="/public/css/base/reset.css">
@@ -15,7 +15,6 @@
 </head>
 
 <body>
-  <div class="open">Open</div>
   <div class="overlay">
     <section class="form">
       <!-- Start form -->
@@ -75,34 +74,6 @@
   </div>
   <!-- Font Awsome -->
   <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
-  <script>
-    const open = document.querySelector('.open');
-    const overlay = document.querySelector('.overlay');
-    const closeFormIcon = document.querySelector(".form__close__icon");
-    const inputPassword = document.querySelector("#form__password");
-    const eyeToggle = document.querySelector(".form__password__icon");
-    const eyeSlash = document.querySelector(".fa-eye-slash");
-    // Open form
-    open.addEventListener('click', () => {
-      overlay.classList.add("overlay--active");
-    })
-    // Close form
-    closeFormIcon.addEventListener('click', () => {
-      overlay.classList.remove("overlay--active");
-    })
-    // Hide/show pass
-    eyeToggle.addEventListener('click', () => {
-      if (inputPassword.type === "password") {
-        eyeSlash.classList.add("fa-eye")
-        eyeSlash.classList.remove("fa-eye-slash")
-        inputPassword.setAttribute("type", "text");
-      } else {
-        eyeSlash.classList.remove("fa-eye")
-        eyeSlash.classList.add("fa-eye-slash")
-        inputPassword.setAttribute("type", "password");
-      }
-    })
-  </script>
 </body>
 
 </html>
