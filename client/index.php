@@ -3,16 +3,16 @@
     session_start();
   }
 
-  if (isset($_GET['page_name_c'])) {
-    $_SESSION['page_name_c'] = $_GET['page_name_c'];
+  if (isset($_GET['page'])) {
+    $_SESSION['page'] = $_GET['page'];
 
-  } elseif (!isset($_SESSION['page_name_c'])) {
-    $_SESSION['page_name_c'] = 'home';
+  } elseif (!isset($_SESSION['page'])) {
+    $_SESSION['page'] = 'home';
   }
-  $page_name_c = $_SESSION['page_name_c'];
-  // echo $page_name_c; ////////////////////////////////////////
+  $page = $_SESSION['page'];
+  // echo $page; ////////////////////////////////////////
 
-  switch ($page_name_c) {
+  switch ($page) {
     case 'home': 
       include_once 'controller/c_home.php';
 

@@ -403,7 +403,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="header__menu-item">
+          <a href="?page=product" class="header__menu-item">
             <div class="header__menu-title">
               sản phẩm
               <i class="fas fa-chevron-down header__menu-icon"></i>
