@@ -1,17 +1,15 @@
 window.addEventListener('load', function () {
-  const inputMultipleImg = document.querySelector('.js-multiple-img-input');
+  const inputMultipleImgList = document.querySelectorAll('.js-multiple-img-input');
 
-  inputMultipleImg.addEventListener('change', function (e) {
-    const previewImgContainer = document.querySelector('.js-multiple-img-container');
-    previewImgContainer.innerHTML = '';
-    
-    const imgFileList = e.target.files;
-    const notification = document.querySelector('.js-preview-multiple-img-notification');
+  inputMultipleImgList.forEach(input => {
+    input.addEventListener('change', function (e) {
+      let inputMultipleImgFormGroup = this.parentElement;
+      let previewImgContainer = inputMultipleImgFormGroup.querySelector('.js-multiple-img-container');
+      previewImgContainer.innerHTML = '';
 
-    if (imgFileList.length < 4 || imgFileList.length > 10) {
-      notification.innerHTML = 'Bạn vui lòng chọn 4 đến 10 ảnh';
+      let imgFileList = e.target.files;
+      let notification = inputMultipleImgFormGroup.querySelector('.js-preview-multiple-img-notification');
 
-    } else {
       notification.innerHTML = '';
 
       for (i = 0; i < imgFileList.length; i++) {
@@ -19,18 +17,18 @@ window.addEventListener('load', function () {
         reader.readAsDataURL(imgFileList[i]);
 
         reader.onload = function () {
-          const imgUrl = reader.result;
+          let imgUrl = reader.result;
           previewImgContainer.innerHTML += `
-            <div class="interaction-form__contain-sub-img">
-              <img class="interaction-form__sub-img" src="${imgUrl}">
-            </div>
-          `; 
+              <div class="interaction-form__contain-sub-img">
+                <img class="interaction-form__sub-img" src="${imgUrl}">
+              </div>
+            `;
         }
 
         if (imgFileList[i]['size'] > 2097152) {
           notification.innerHTML = 'Vui lòng chọn ảnh có kích thước nhỏ hơn 2MB'
-        } 
+        }
       }
-    }
-  })
+    })
+  });
 })

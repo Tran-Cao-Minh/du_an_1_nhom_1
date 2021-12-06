@@ -110,10 +110,12 @@
 }
 
 .interaction-form__variant-inf {
-  width: 100%;
-  height: auto;
+  overflow: hidden;
 
-  background: blue;
+  width: 100%;
+  max-height: 0rem;
+
+  /* background: blue; */
 }
 
 .interaction-form__main-img-uploaded {
@@ -130,4 +132,19 @@
 
 .interaction-form__main-img-uploaded:hover {
   opacity: 0.9 !important;
+}
+
+.interaction-form__collapse-product-form {
+  overflow: hidden;
+
+  width: 100%;
+  max-height: 100rem;
+
+  /* background: lightgreen; */
+
+  transition: 0.2s;
+}
+
+#interaction-form__collapse-product-form:checked ~ .interaction-form__collapse-product-form {
+  max-height: 0;
 }

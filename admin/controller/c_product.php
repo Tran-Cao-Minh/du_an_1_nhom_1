@@ -467,8 +467,15 @@
 
       $link_css_arr = array (
         '../public/css/admin/interaction_form.css',
+        '../public/css/admin/update_product_form.css',
       );
-      $link_js_arr = '';
+      $link_js_arr = array (
+        '../public/js/admin/preview_img.js',
+        '../public/js/admin/preview_multiple_img.js',
+        '../public/js/admin/control_sub_variant_quantity.js',
+        '../public/js/admin/delete_img_update_product.js',
+        '../public/js/admin/open_variant_form.js',
+      );
       $view_link = 'v_product/v_product_update.php';
       break;
   }

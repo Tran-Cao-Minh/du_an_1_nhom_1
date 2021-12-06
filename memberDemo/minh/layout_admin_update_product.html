@@ -396,102 +396,106 @@
               <!-- Some test case ~ -->
             </div>
           </div>
-          <div class="interaction-form__form-group">
-            <div class="interaction-form__form-title">
-              Danh mục
-            </div>
-            <select class="interaction-form__select-input">
-              <option value="a" data-type="text" class="interaction-form__select-option">
-                Adidas
-              </option>
-              <option value="v" data-type="text" class="interaction-form__select-option">
-                Nike
-              </option>
-            </select>
-          </div>
-          <div class="interaction-form__form-group">
-            <div class="interaction-form__form-title">
-              Thương hiệu
-            </div>
-            <select class="interaction-form__select-input">
-              <option value="a" data-type="text" class="interaction-form__select-option">
-                Adidas
-              </option>
-              <option value="v" data-type="text" class="interaction-form__select-option">
-                Nike
-              </option>
-            </select>
-          </div>
-          <div class="interaction-form__form-group">
-            <div class="interaction-form__form-title">
-              Trạng thái
-            </div>
-            <div class="interaction-form__radio-group">
-              <div class="interaction-form__radio-item-50">
-                <input type="radio" class="interaction-form__input--hidden" id="show" checked name="product_view_status"
-                  value="show">
-                <label for="show" class="interaction-form__radio-item-label">
-                  Hiển thị
-                </label>
+          <input type="checkbox" id="interaction-form__collapse-product-form" style="display: none;">
+          <div class="interaction-form__collapse-product-form">
+            <div class="interaction-form__form-group">
+              <div class="interaction-form__form-title">
+                Danh mục
               </div>
-              <div class="interaction-form__radio-item-50">
-                <input type="radio" class="interaction-form__input--hidden" id="hide" name="product_view_status"
-                  value="hide">
-                <label for="hide" class="interaction-form__radio-item-label">
-                  Ẩn
-                </label>
+              <select class="interaction-form__select-input">
+                <option value="a" data-type="text" class="interaction-form__select-option">
+                  Adidas
+                </option>
+                <option value="v" data-type="text" class="interaction-form__select-option">
+                  Nike
+                </option>
+              </select>
+            </div>
+            <div class="interaction-form__form-group">
+              <div class="interaction-form__form-title">
+                Thương hiệu
+              </div>
+              <select class="interaction-form__select-input">
+                <option value="a" data-type="text" class="interaction-form__select-option">
+                  Adidas
+                </option>
+                <option value="v" data-type="text" class="interaction-form__select-option">
+                  Nike
+                </option>
+              </select>
+            </div>
+            <div class="interaction-form__form-group">
+              <div class="interaction-form__form-title">
+                Trạng thái
+              </div>
+              <div class="interaction-form__radio-group">
+                <div class="interaction-form__radio-item-50">
+                  <input type="radio" class="interaction-form__input--hidden" id="show" checked
+                    name="product_view_status" value="show">
+                  <label for="show" class="interaction-form__radio-item-label">
+                    Hiển thị
+                  </label>
+                </div>
+                <div class="interaction-form__radio-item-50">
+                  <input type="radio" class="interaction-form__input--hidden" id="hide" name="product_view_status"
+                    value="hide">
+                  <label for="hide" class="interaction-form__radio-item-label">
+                    Ẩn
+                  </label>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="interaction-form__action-group">
-            <button type="submit" class="interaction-form__submit-btn--add">
-              Xác nhận sửa
-            </button>
-            <a href="#" class="interaction-form__return-link">
-              Quay lại
-            </a>
-          </div>
-          <div class="interaction-form__variant-list-group">
-            <div class="interaction-form__title--update">
-              Danh sách biến thể
-            </div>
-            <div class="interaction-form__color-group">
-              <label for="1" class="interaction-form__color-item">
-                <input class="interaction-form__input--hidden" type="radio" name="product_color" id="1">
-                <div class="interaction-form__color-icon" style="--bg-color:#EE6F57;">
-                </div>
-              </label>
-              <label for="2" class="interaction-form__color-item">
-                <input class="interaction-form__input--hidden" type="radio" name="product_color" id="2">
-                <div class="interaction-form__color-icon" style="--bg-color:#EE6F57;">
-                </div>
-              </label>
-              <label for="3" class="interaction-form__color-item">
-                <input class="interaction-form__input--hidden" type="radio" name="product_color" id="3">
-                <div class="interaction-form__color-icon" style="--bg-color:#EE6F57;">
-                </div>
-              </label>
-              <label for="4" class="interaction-form__color-item">
-                <input class="interaction-form__input--hidden" type="radio" name="product_color" id="4">
-                <div class="interaction-form__color-icon" style="--bg-color:#EE6F57;">
-                </div>
-              </label>
-              <label for="5" class="interaction-form__color-item">
-                <input class="interaction-form__input--hidden" type="radio" name="product_color" id="5">
-                <div class="interaction-form__color-icon" style="--bg-color:#EE6F57;">
-                </div>
-              </label>
-              <a href="?page_name=manage_color&view_name=add&previous_page=add_product"
-                class="interaction-form__color-item--add-btn" title="Thêm biến thể">
-                <div class="interaction-form__color-icon--contain-add-icon">
-                  <i class="fas fa-plus interaction-form__color-icon--add-icon"></i>
-                </div>
+            <div class="interaction-form__action-group">
+              <button type="submit" class="interaction-form__submit-btn--add">
+                Xác nhận sửa
+              </button>
+              <a href="#" class="interaction-form__return-link">
+                Quay lại
               </a>
             </div>
           </div>
         </form>
 
-        <form class="interaction-form__variant-inf">
+        <div class="interaction-form__variant-list-group">
+          <div class="interaction-form__title--update">
+            Danh sách biến thể
+          </div>
+          <div class="interaction-form__color-group">
+            <label data-color-id='1' for="1" class="interaction-form__color-item js-open-variant-form">
+              <input class="interaction-form__input--hidden" type="radio" name="product_color" id="1">
+              <div class="interaction-form__color-icon" style="--bg-color:#EE6F57;">
+              </div>
+            </label>
+            <label data-color-id="2" for="2" class="interaction-form__color-item js-open-variant-form">
+              <input class="interaction-form__input--hidden" type="radio" name="product_color" id="2">
+              <div class="interaction-form__color-icon" style="--bg-color:#EE6F57;">
+              </div>
+            </label>
+            <label for="3" class="interaction-form__color-item">
+              <input class="interaction-form__input--hidden" type="radio" name="product_color" id="3">
+              <div class="interaction-form__color-icon" style="--bg-color:#EE6F57;">
+              </div>
+            </label>
+            <label for="4" class="interaction-form__color-item">
+              <input class="interaction-form__input--hidden" type="radio" name="product_color" id="4">
+              <div class="interaction-form__color-icon" style="--bg-color:#EE6F57;">
+              </div>
+            </label>
+            <label for="5" class="interaction-form__color-item">
+              <input class="interaction-form__input--hidden" type="radio" name="product_color" id="5">
+              <div class="interaction-form__color-icon" style="--bg-color:#EE6F57;">
+              </div>
+            </label>
+            <a href="?page_name=manage_color&view_name=add&previous_page=add_product"
+              class="interaction-form__color-item--add-btn" title="Thêm biến thể">
+              <div class="interaction-form__color-icon--contain-add-icon">
+                <i class="fas fa-plus interaction-form__color-icon--add-icon"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form data-color-id="1" class="interaction-form__variant-inf js-variant-form">
           <div class="interaction-form__form-group">
             <label for="main_img" class="interaction-form__form-title">
               Hình ảnh chính
@@ -590,11 +594,15 @@
               Xóa biến thể
             </button>
           </div>
+          <label for="interaction-form__collapse-product-form"
+            class="js-collapse-all-variant-form interaction-form__submit-btn--add-full">
+            Sửa sản phẩm
+          </label>
         </form>
 
-        <form class="interaction-form__variant-inf">
+        <form data-color-id="2" class="interaction-form__variant-inf js-variant-form">
           <div class="interaction-form__form-group">
-            <label for="main_img" class="interaction-form__form-title">
+            <label for="main_img_1" class="interaction-form__form-title">
               Hình ảnh chính
             </label>
             <label for="main_img_1" class="interaction-form__form-title--main-img">
@@ -611,29 +619,29 @@
             </div>
           </div>
           <div class="interaction-form__form-group">
-            <label for="sub_img" class="interaction-form__form-title">
+            <label for="sub_img_1" class="interaction-form__form-title">
               Hình ảnh phụ (4 ~ 10 ảnh)
             </label>
             <div class="interaction-form__sub-img-group">
-              <label for="23" class="interaction-form__contain-sub-img">
-                <input id="23" type="checkbox" class="js-delete-sub-img interaction-form__delete-sub-img-uploaded"
-                  name="sub_img_uploaded[]" value="23">
+              <label for="13" class="interaction-form__contain-sub-img">
+                <input id="13" type="checkbox" class="js-delete-sub-img interaction-form__delete-sub-img-uploaded"
+                  name="sub_img_uploaded[]" value="13">
                 <div class="interaction-form__check-delete-sub-img-uploaded">
                   <i class="interaction-form__check-delete-sub-img-uploaded-icon fas fa-check"></i>
                 </div>
                 <img class="interaction-form__sub-img" src="../kien/img/productImage.png">
               </label>
-              <label for="24" class="interaction-form__contain-sub-img">
-                <input id="24" type="checkbox" class="js-delete-sub-img interaction-form__delete-sub-img-uploaded"
-                  name="sub_img_uploaded[]" value="24">
+              <label for="14" class="interaction-form__contain-sub-img">
+                <input id="14" type="checkbox" class="js-delete-sub-img interaction-form__delete-sub-img-uploaded"
+                  name="sub_img_uploaded[]" value="14">
                 <div class="interaction-form__check-delete-sub-img-uploaded">
                   <i class="interaction-form__check-delete-sub-img-uploaded-icon fas fa-check"></i>
                 </div>
                 <img class="interaction-form__sub-img" src="../kien/img/productImage.png">
               </label>
-              <label for="25" class="interaction-form__contain-sub-img">
-                <input id="25" type="checkbox" class="js-delete-sub-img interaction-form__delete-sub-img-uploaded"
-                  name="sub_img_uploaded[]" value="25">
+              <label for="15" class="interaction-form__contain-sub-img">
+                <input id="15" type="checkbox" class="js-delete-sub-img interaction-form__delete-sub-img-uploaded"
+                  name="sub_img_uploaded[]" value="15">
                 <div class="interaction-form__check-delete-sub-img-uploaded">
                   <i class="interaction-form__check-delete-sub-img-uploaded-icon fas fa-check"></i>
                 </div>
@@ -641,14 +649,14 @@
               </label>
             </div>
             <div class="interaction-form__action-group-m0">
-              <label for="sub_img" class="interaction-form__img-custom-input-50">
+              <label for="sub_img_1" class="interaction-form__img-custom-input-50">
                 Tải ảnh lên
               </label>
               <button type="button" class="js-delete-sub-img-btn interaction-form__submit-btn--update">
                 Xóa ảnh đã chọn
               </button>
             </div>
-            <input type="file" multiple accept="image/*" name="sub_img" id="sub_img"
+            <input type="file" multiple accept="image/*" name="sub_img" id="sub_img_1"
               class="js-multiple-img-input interaction-form__input--hidden">
             <div class="interaction-form__sub-img-group js-multiple-img-container">
               <!-- add img when up file by preview_multiple_img.js -->
@@ -677,6 +685,23 @@
                     max="1000000000">
                 </div>
                 <div class="interaction-form__sub-variant-row-cell-3">
+                  <button type="button" class="interaction-form__sub-variant-delete-btn js-delete-sub-variant-btn">
+                    <i class="fas fa-times interaction-form__sub-variant-delete-icon"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="interaction-form__sub-variant-row">
+                <div class="interaction-form__sub-variant-row-cell-1">
+                  <input type="number" class="interaction-form__sub-variant-size-input" required min="1" max="99">
+                </div>
+                <div class="interaction-form__sub-variant-row-cell-2">
+                  <input type="number" class="interaction-form__sub-variant-quantity-input" required min="0"
+                    max="1000000000">
+                </div>
+                <div class="interaction-form__sub-variant-row-cell-3">
+                  <button type="button" class="interaction-form__sub-variant-delete-btn js-delete-sub-variant-btn">
+                    <i class="fas fa-times interaction-form__sub-variant-delete-icon"></i>
+                  </button>
                 </div>
               </li>
             </ul>
@@ -692,7 +717,12 @@
               Xóa biến thể
             </button>
           </div>
+          <label for="interaction-form__collapse-product-form"
+            class="js-collapse-all-variant-form interaction-form__submit-btn--add-full">
+            Sửa sản phẩm
+          </label>
         </form>
+
       </section>
       <section class="notification">
         <span class="notification__title">Thông báo: </span>
@@ -708,6 +738,7 @@
   <script src="../../public/js/admin/preview_multiple_img.js"></script>
   <script src="../../public/js/admin/control_sub_variant_quantity.js"></script>
   <script src="../../public/js/admin/delete_img_update_product.js"></script>
+  <script src="../../public/js/admin/open_variant_form.js"></script>
 </body>
 
 </html>
