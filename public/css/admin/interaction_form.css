@@ -125,19 +125,26 @@
   font-size: 1.4rem;
 }
 
-.interaction-form__action-group {
+.interaction-form__action-group,
+.interaction-form__action-group-m0 {
   display: flex;
   justify-content: space-between;
 
   width: 100%;
   height: 5rem;
-  margin-top: 2rem;
 
   /* background: lightgreen; */
 }
+.interaction-form__action-group {
+  margin-top: 2rem;
+}
+.interaction-form__action-group-m0 {
+  margin-top: 0;
+}
 
 .interaction-form__submit-btn--add,
-.interaction-form__submit-btn--update {
+.interaction-form__submit-btn--update,
+.interaction-form__submit-btn--delete {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,6 +175,13 @@
   border: 0.2rem solid var(--primary-contrast-color);
 }
 
+.interaction-form__submit-btn--delete {
+  background: var(--white);
+  color: var(--red);
+
+  border: 0.2rem solid var(--red);
+}
+
 .interaction-form__return-link {
   display: flex;
   justify-content: center;
@@ -195,6 +209,11 @@
 
 .interaction-form__submit-btn--update:hover {
   background: var(--primary-contrast-color);
+  color: var(--white);
+}
+
+.interaction-form__submit-btn--delete:hover {
+  background: var(--red);
   color: var(--white);
 }
 
@@ -493,6 +512,8 @@
 
 .interaction-form__contain-sub-img {
   overflow: hidden;
+
+  position: relative;
 
   display: flex;
   justify-content: center;

@@ -1,7 +1,133 @@
-.interaction-form__variant-list-group{
+:root {
+  --primary-color: rgb(18, 109, 130);
+  --primary-color-blur: rgba(18, 109, 130, 0.05);
+  --secondary-color: rgb(216, 227, 231);
+  --tertiary-color: rgb(81, 196, 211);
+  --primary-contrast-color: rgb(238, 111, 87);
+  --primary-contrast-color-blur: rgba(238, 111, 87, 0.05);
 
+  --red: rgb(207, 69, 92);
+  --gray: rgb(153, 153, 153);
+  --gray-blur: rgba(153, 153, 153, 0.1);
+  --white: rgb(255, 255, 255);
+  --black: rgb(51, 51, 51);
+
+  --bg-overlay: rgba(0, 0, 0, 0.35);
 }
 
-.interaction-form__add-variant-btn-small{
+:root {
+  --regular: 'Roboto Regular', sans-serif;
+  --medium: 'Roboto Medium', sans-serif;
+  --bold: 'Roboto Bold', sans-serif;
+}
 
+.interaction-form__variant-list-group{
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+} 
+
+.interaction-form__add-variant-btn-small{
+  display: flex;
+  align-items: center;
+
+  width: auto;
+  height: 5rem;
+  padding: 1.5rem;
+
+  background-color: var(--primary-color-blur);
+  color: var(--primary-color);
+
+  border-radius: 0.5rem;
+
+  font-family: var(--regular);
+  font-size: 1.6rem;
+}
+
+.interaction-form__delete-sub-img-uploaded {
+  position: absolute;
+  
+  opacity: 0;
+}
+
+
+.interaction-form__check-delete-sub-img-uploaded{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+
+  background: transparent;
+  color: transparent;
+
+  border: 0.2rem solid var(--primary-contrast-color);
+
+  transition: 0.2s;
+}
+
+.interaction-form__delete-sub-img-uploaded:checked ~ .interaction-form__check-delete-sub-img-uploaded {
+
+  background: var(--primary-contrast-color);
+  color: var(--white);
+}
+
+.interaction-form__check-delete-sub-img-uploaded-icon {
+  margin-top: 0.2rem;
+
+  font-size: 1rem;
+}
+
+.interaction-form__img-custom-input-50{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: calc(50% - 0.5rem);
+  height: 5rem;
+
+  background: var(--primary-color-blur);
+  color: var(--primary-color);
+
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--secondary-color);
+
+  font-family: var(--regular);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+  transition: 0.2s;
+}
+
+.interaction-form__img-custom-input-50:hover {
+  border-color: var(--primary-color);
+}
+
+.interaction-form__variant-inf {
+  width: 100%;
+  height: auto;
+
+  background: blue;
+}
+
+.interaction-form__main-img-uploaded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: auto;
+
+  transition: 0.2s;
+}
+
+.interaction-form__main-img-uploaded:hover {
+  opacity: 0.9 !important;
 }

@@ -86,5 +86,9 @@
     
   }
 
+  $check_login = false;
+  if ($check_login == false) {
+    // include dang nhap, dang ky
+  }
   include_once 'view/layout/layout.php';
 ?>
