@@ -89,11 +89,23 @@
   $check_login = false;
   if ($check_login == false) {
     include_once 'view/popup/v_sign_in.php';
+
     if ($link_js_arr == '') {
       $link_js_arr = array (
         '../public/js/client/view_form.js',
       );
+    } else {
+      $link_js_arr[] = '../public/js/client/view_form.js';
     }
+
+    if ($link_css_arr == '') {
+      $link_css_arr = array (
+        '../public/css/client/layout/form.css',
+      );
+    } else {
+      $link_css_arr[] = '../public/css/client/layout/form.css';
+    }
+
   }
   include_once 'view/layout/layout.php';
 ?>
