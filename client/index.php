@@ -88,7 +88,12 @@
 
   $check_login = false;
   if ($check_login == false) {
-    // include dang nhap, dang ky
+    include_once 'view/popup/v_sign_in.php';
+    if ($link_js_arr == '') {
+      $link_js_arr = array (
+        '../public/js/client/view_form.js',
+      );
+    }
   }
   include_once 'view/layout/layout.php';
 ?>
