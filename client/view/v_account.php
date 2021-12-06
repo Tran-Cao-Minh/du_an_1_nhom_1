@@ -2,7 +2,7 @@
   <article class="account__article">
     <div class="account__article-left">
       <div class="account__image">
-        <img src="/public/image/site/home_page/girl.jpg" alt="">
+        <img src="../public/image/site/home_page/girl.jpg" alt="">
         <div class="account__image-icon">
           <i class="fas fa-camera"></i>
         </div>

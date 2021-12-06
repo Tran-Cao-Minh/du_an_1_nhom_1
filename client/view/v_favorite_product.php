@@ -3,7 +3,7 @@
     <div class="product__section">
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -42,7 +42,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -81,7 +81,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -120,7 +120,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -159,7 +159,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -198,7 +198,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -237,7 +237,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -276,7 +276,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -315,7 +315,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -354,7 +354,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -393,7 +393,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
@@ -432,7 +432,7 @@
       </div>
       <div class="product__column">
         <div class="product__image">
-          <a href=""> <img src="/public/image/site/product/prodImg (1).png" alt=""></a>
+          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
         </div>
         <div class="product__info">
           <div class="product__variant">
