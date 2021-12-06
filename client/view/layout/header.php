@@ -169,10 +169,10 @@
                     <div class="header__interaction-sub-menu">
                         <div class="header__interaction-sub-menu-decorate"></div>
                         <div class="header__interaction-sub-menu-container" style="--width: 18rem;">
-                            <button class="header__user-btn">
+                            <button class="header__user-btn js-btn-sign-in">
                                 Đăng nhập
                             </button>
-                            <button class="header__user-btn">
+                            <button class="header__user-btn js-btn-sign-up-1">
                                 Đăng ký
                             </button>
                         </div>
