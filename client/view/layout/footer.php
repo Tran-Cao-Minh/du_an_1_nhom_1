@@ -6,10 +6,10 @@
       </div>
       <ul class="footer__list">
         <li>
-          <a href="" class="footer__link">Liên hệ</a>
+          <a href="?page=introduce#contact" class="footer__link">Liên hệ</a>
         </li>
         <li>
-          <a href="" class="footer__link">Về ignite</a>
+          <a href="?page=introduce#about" class="footer__link">Về ignite</a>
         </li>
       </ul>
       <a class="footer__business-certificate" href="">
@@ -22,16 +22,16 @@
       </div>
       <ul class="footer__list">
         <li>
-          <a href="" class="footer__link">Chính sách đổi trả</a>
+          <a href="?page=introduce#return-policy" class="footer__link">Chính sách đổi trả</a>
         </li>
         <li>
-          <a href="" class="footer__link">Chính sách bảo hành</a>
+          <a href="?page=introduce#warranty-policy" class="footer__link">Chính sách bảo hành</a>
         </li>
         <li>
-          <a href="" class="footer__link">Chính sách thanh toán</a>
+          <a href="?page=introduce#payments" class="footer__link">Chính sách thanh toán</a>
         </li>
         <li>
-          <a href="" class="footer__link">Hình thức giao hàng</a>
+          <a href="?page=introduce#delivery-method" class="footer__link">Hình thức giao hàng</a>
         </li>
       </ul>
     </div>

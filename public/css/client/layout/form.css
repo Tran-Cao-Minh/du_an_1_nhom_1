@@ -4,13 +4,27 @@
   justify-content: center;
 
   width: 56.2rem;
-  margin: 2% auto;
+  margin: auto;
   border-radius: 2rem;
 
   background: var(--white);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 0.7rem 2.9rem 0px;
 
   position: relative;
+
+  animation: fadeToCenter 0.3s ease-in-out;
+}
+
+@keyframes fadeToCenter {
+  from {
+    opacity: 0.5;
+    transform: translateY(-5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .pt3-5 {
@@ -19,6 +33,10 @@
 
 .mb2-5 {
   margin-bottom: 2.5rem !important;
+}
+
+.pb1-5 {
+  padding-bottom: 1.5rem !important;
 }
 
 .overlay {
@@ -43,8 +61,87 @@
   display: none;
 }
 
+.overlay-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-overlay);
+  z-index: 1000;
+  cursor: pointer;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  display: none;
+}
+
+.overlay-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-overlay);
+  z-index: 1000;
+  cursor: pointer;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  display: none;
+}
+
+.overlay-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-overlay);
+  z-index: 1000;
+  cursor: pointer;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  display: none;
+}
+
 .overlay--active {
-  display: block;
+  display: flex;
+}
+
+.overlay--active-2 {
+  display: flex;
+}
+
+.overlay--active-3 {
+  display: flex;
+}
+
+.overlay--active-4 {
+  display: flex;
 }
 
 .form__product,
@@ -370,7 +467,7 @@ input[type="radio"]:checked~.form__sex-label {
 }
 
 .form__close:hover {
-  background: var(--light-gray);
+  background: var(--secondary-color);
 }
 
 .form__close i:hover {

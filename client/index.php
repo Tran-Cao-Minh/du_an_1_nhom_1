@@ -89,6 +89,9 @@
   $check_login = false;
   if ($check_login == false) {
     include_once 'view/popup/v_sign_in.php';
+    include_once 'view/popup/v_sign_up_phone.php';
+    include_once 'view/popup/v_sign_up_phone_verify.php';
+    include_once 'view/popup/v_sign_up.php';
 
     if ($link_js_arr == '') {
       $link_js_arr = array (
@@ -105,7 +108,8 @@
     } else {
       $link_css_arr[] = '../public/css/client/layout/form.css';
     }
-
+    
   }
+  
   include_once 'view/layout/layout.php';
 ?>

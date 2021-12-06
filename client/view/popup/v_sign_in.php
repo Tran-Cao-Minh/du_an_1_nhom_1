@@ -13,12 +13,11 @@
             <!-- Start form group -->
             <div class="form__group form__password">
                 <label class="form__label" for="">Mật khẩu</label>
-                <input class="form__input form__input--error" id="form__password" type="password"
-                    placeholder="Nhập mật khẩu của bạn" />
-                <label for="toggle__eye" class="form__toggle form__password__icon">
+                <input class="form__input" id="form__password" type="password" placeholder="Nhập mật khẩu của bạn" />
+                <label for="toggle__eye" class="form__toggle form__password__icon js-show-password">
                     <i class="far fa-eye-slash "></i>
                 </label>
-                <span class="form__message">Độ dài mật khẩu phải từ 4 đến 20 ký tự!</span>
+                <span class="form__message"></span>
             </div>
             <!-- End form group -->
             <!-- Start form group -->

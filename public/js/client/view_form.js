@@ -1,17 +1,50 @@
 window.addEventListener('load', function () {
-    const logInBtn = document.querySelector('.header__user-btn');
+    const signInBtn = document.querySelector('.js-btn-sign-in');
+    const signUpBtn = document.querySelector('.js-btn-sign-up-1');
+    const signUpBtnTwo = document.querySelector('.js-btn-sign-up-2');
+    const signUpBtnThree = document.querySelector('.js-btn-sign-up-3');
+
     const overlay = document.querySelector('.overlay');
-    const closeFormIcon = document.querySelector(".form__close");
-    const inputPassword = document.querySelector("#form__password");
-    const eyeToggle = document.querySelector(".form__password__icon");
-    const eyeSlash = document.querySelector(".fa-eye-slash");
-    // Open form
-    logInBtn.addEventListener('click', () => {
+    const overlayTwo = document.querySelector('.overlay-2');
+    const overlayThree = document.querySelector('.overlay-3');
+    const overlayFour = document.querySelector('.overlay-4');
+
+    const closeSignIn = document.querySelector(".form__close");
+    const closeSignUp = document.querySelector(".js-sign-up-close-1");
+    const closeSignUpTwo = document.querySelector(".js-sign-up-close-2");
+    const closeSignUpThree = document.querySelector(".js-sign-up-close-3");
+
+    // const inputPassword = document.querySelector("#form__password");
+    // const eyeToggle = document.querySelector(".js-show-password");
+    // const eyeSlash = document.querySelector(".fa-eye-slash");
+    // Mở form đăng nhập
+    signInBtn.addEventListener('click', (e) => {
         overlay.classList.add("overlay--active");
     })
-    // Close form
-    closeFormIcon.addEventListener('click', () => {
+    // Mở form đăng ký email
+    signUpBtn.addEventListener('click', (e) => {
+        overlayTwo.classList.add("overlay--active-2");
+    })
+
+    // Mở form xác thưc OTP
+    signUpBtnTwo.addEventListener('click', (e) => {
+        overlayTwo.classList.remove("overlay--active-2");
+        overlayThree.classList.add("overlay--active-3");
+    })
+
+    // Mở form đăng ký thành viên
+    signUpBtnThree.addEventListener('click', () => {
+        overlayThree.classList.remove("overlay--active-3");
+        overlayFour.classList.add("overlay--active-4");
+    })
+
+    // Đóng form đăng nhập
+    closeSignIn.addEventListener('click', () => {
         overlay.classList.remove("overlay--active");
+    })
+    // Đóng form đăng ký
+    closeSignUp.addEventListener('click', () => {
+        overlayTwo.classList.remove("overlay--active-2");
     })
 
     // // Hide/show pass 
