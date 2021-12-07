@@ -269,11 +269,11 @@
               Chỉnh sửa bình luận
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="#" class="sidebar__sub-menu-item">
               Thống kê bình luận
             </a>
-          </li>
+          </li> -->
         </ul>
       </li>
       <li>
@@ -292,17 +292,17 @@
         <ul class="sidebar__sub-menu-list" style="--heigth: 15rem;">
           <li>
             <a href="#" class="sidebar__sub-menu-item">
-              Chỉnh sửa đơn hàng
+              Cập nhật đơn hàng
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="#" class="sidebar__sub-menu-item">
               Thống kê đơn hàng
             </a>
-          </li>
+          </li> -->
         </ul>
       </li>
-      <li>
+      <!-- <li>
         <input type="radio" name="sidebar__menu-check" id="sidebar__menu-check-6" class="sidebar__menu-check">
         <label for="sidebar__menu-check-6" class="sidebar__menu-item">
           <div class="sidebar__contain-menu-icon">
@@ -322,7 +322,7 @@
             </a>
           </li>
         </ul>
-      </li>
+      </li> -->
     </ul>
   </aside>
   <main>

@@ -232,16 +232,30 @@
   function deleteBrand($object_id) {
     $conn = connectDatabase();
 
-    $sql = "DELETE FROM `product_brand` 
-            WHERE `PkBrand_Id` = '$object_id'";
-    $delete_result = $conn->exec($sql);
+    $sql = "SELECT `ProductName`
+            FROM `product` 
+            WHERE `FkBrand_Id` = '$object_id' 
+            LIMIT 1";
+    $stmt = $conn->query($sql);
+    $exist_result = $stmt->rowCount();
 
+    // if product have this brand it can not be deleted
     global $notification;
-    if ($delete_result === 1) {
-      $notification = 'Xóa thương hiệu thành công </br>';
+    if ($exist_result === 1) {
+      $notification = 'Không thể xóa do có sản phẩm mang thương hiệu này tồn tại </br>';
 
     } else {
-      $notification = 'Xóa thương hiệu không thành công </br>';
+      $sql = "DELETE FROM `product_brand` 
+              WHERE `PkBrand_Id` = '$object_id'";
+      $delete_result = $conn->exec($sql);
+  
+      global $notification;
+      if ($delete_result === 1) {
+        $notification = 'Xóa thương hiệu thành công </br>';
+  
+      } else {
+        $notification = 'Xóa thương hiệu không thành công </br>';
+      }
     }
 
     $conn = null;
