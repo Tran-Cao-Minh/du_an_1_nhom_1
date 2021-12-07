@@ -92,6 +92,7 @@
     include_once 'view/popup/v_sign_up_phone.php';
     include_once 'view/popup/v_sign_up_phone_verify.php';
     include_once 'view/popup/v_sign_up.php';
+    include_once 'view/popup/v_buy_prod_form.php';
 
     if ($link_js_arr == '') {
       $link_js_arr = array (
@@ -106,9 +107,11 @@
     if ($link_css_arr == '') {
       $link_css_arr = array (
         '../public/css/client/layout/form.css',
+        '../public/css/client/product.css',
       );
     } else {
       $link_css_arr[] = '../public/css/client/layout/form.css';
+      $link_css_arr[] = '../public/css/client/product.css';
     }
     
   }
