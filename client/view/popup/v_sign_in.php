@@ -38,13 +38,13 @@
             <!-- Start social -->
             <div class="social">
                 <a href="" class="social__facebook">
-                    <img class="social__image" src="/public/image/client/home_page/facebook.png" alt="" />
+                    <img class="social__image" src="../public/image/client/home_page/facebook.png" alt="" />
                 </a>
                 <a href="" class="social__google">
-                    <img class="social__image" src="/public/image/client/home_page/google.png" alt="" />
+                    <img class="social__image" src="../public/image/client/home_page/google.png" alt="" />
                 </a>
                 <a href="" class="social__zalo">
-                    <img class="social__image" src="/public/image/client/home_page/zalo.png" alt="" />
+                    <img class="social__image" src="../public/image/client/home_page/zalo.png" alt="" />
                 </a>
             </div>
             <!-- End social -->
