@@ -107,11 +107,9 @@
     if ($link_css_arr == '') {
       $link_css_arr = array (
         '../public/css/client/layout/form.css',
-        '../public/css/client/product.css',
       );
     } else {
       $link_css_arr[] = '../public/css/client/layout/form.css';
-      $link_css_arr[] = '../public/css/client/product.css';
     }
     
   }
