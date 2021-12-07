@@ -4,7 +4,8 @@
             <h2 class="form__heading">Đăng ký tài khoản</h2>
             <div class="form__group">
                 <label class="form__label" for="">Email</label>
-                <input class="form__input form__input--primary" type="text" placeholder="Nhập email của bạn" />
+                <input class="js-email-input form__input form__input--primary" type="text"
+                    placeholder="Nhập email của bạn" />
                 <span class="form__message"></span>
             </div>
             <div class="form__group mb2-5">

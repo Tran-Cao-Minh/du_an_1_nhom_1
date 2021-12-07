@@ -96,9 +96,11 @@
     if ($link_js_arr == '') {
       $link_js_arr = array (
         '../public/js/client/view_form.js',
+        '../public/js/client/form_validation.js',
       );
     } else {
       $link_js_arr[] = '../public/js/client/view_form.js';
+      $link_js_arr[] = '../public/js/client/form_validation.js';
     }
 
     if ($link_css_arr == '') {

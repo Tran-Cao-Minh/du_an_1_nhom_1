@@ -4,7 +4,7 @@
             <h2 class="form__heading">Đăng ký tài khoản</h2>
             <div class="form__group">
                 <label class="form__label" for="">Nhập mã xác nhận</label>
-                <input class="form__input form__input--primary" type="text"
+                <input class="js-otp-input form__input form__input--primary" type="text"
                     placeholder="Nhập mã xác nhận gồm 6 chữ số" />
                 <span class="form__message"></span>
             </div>
