@@ -249,19 +249,54 @@
     return $data_result;
   }
 
-  function deleteProduct($object_id) {
+  function deleteProduct($object_id, $product_name) {
     $conn = connectDatabase();
 
-    $sql = "DELETE FROM `product` 
-            WHERE `PkType_Id` = '$object_id'";
-    $delete_result = $conn->exec($sql);
+    // check if variant exist in order detail
+    $sql = "SELECT `FkOrder_Id`, `FkVariant_Id`
+            FROM `order_detail` 
+            WHERE `FkVariant_Id` 
+            IN ( 
+              SELECT `PkVariant_Id` 
+              FROM `product_variant` 
+              WHERE `FkProduct_Id` = '$object_id' 
+            ) 
+            LIMIT 1";
+    $stmt = $conn->query($sql);
+    $exist_result = $stmt->rowCount();
 
+    // if product variant exist in order detail it can not be deleted
     global $notification;
-    if ($delete_result === 1) {
-      $notification = 'Xóa sản phẩm thành công </br>';
+    if ($exist_result === 1) {
+      $notification = 'Không thể xóa sản phẩm với tên là "'.$product_name.'" do có đơn hàng mang biến thể của sản phẩm tồn tại </br>';
 
     } else {
-      $notification = 'Xóa sản phẩm không thành công </br>';
+      // get all product variant images to delete
+      $sql = "SELECT `ImageFileName` 
+              FROM `product_image` 
+              WHERE `FkProduct_Id` = '$object_id'";
+      $data_result = $conn->query($sql);  
+      $image_file_name_list = $data_result->fetchAll(PDO::FETCH_ASSOC);
+      
+      foreach ($image_file_name_list as $image_file_name) {
+        unlink('../public/image/product/'.$image_file_name['ImageFileName']);
+      }
+
+      // delete product variant
+      $sql = "DELETE FROM `product_image` 
+              WHERE `FkProduct_Id` = '$object_id'";
+      $conn->exec($sql);
+
+      $sql = "DELETE FROM `product_variant` 
+              WHERE `FkProduct_Id` = '$object_id'";
+      $conn->exec($sql);
+
+      // delete product
+      $sql = "DELETE FROM `product` 
+              WHERE `PkProduct_Id` = '$object_id'";
+      $conn->exec($sql);
+
+      $notification = 'Xóa sản phẩm với tên là "'.$product_name.'" thành công </br>';
     }
 
     $conn = null;
@@ -514,6 +549,36 @@
     } else {
       $notification = 'Sửa sản phẩm không thành công </br>'
                     . 'Có thể do bạn chưa thay đổi thông tin trước khi nhấn nút xác nhận sửa </br>';
+    }
+
+    $conn = null;
+  }
+
+  function updateProductViewStatus(
+    $product_id,
+    $view_status_id,
+    $product_name
+  ) {
+    $conn = connectDatabase();
+
+    $sql = "UPDATE `product` 
+            SET `ProductViewStatus` = '$view_status_id' 
+            WHERE `PkProduct_Id` = '$product_id'";
+    $update_result = $conn->exec($sql);
+
+    global $notification;
+    if ($update_result === 1) {
+      $notification = 'Sửa trạng thái hiển thị của sản phẩm thành công </br>'
+                    . 'Tên sản phẩm được sửa: '.$product_name.' </br>';
+      if ($view_status_id == 1) {
+        $notification .= 'Trạng thái hiển thị: Hiển thị </br>';
+      } else {
+        $notification .= 'Trạng thái hiển thị: Ẩn </br>';
+      }
+
+    } else {
+      $notification = 'Sửa trạng thái hiển thị của sản phẩm không thành công </br>'
+                    . 'Tên sản phẩm được sửa: '.$product_name.' </br>';
     }
 
     $conn = null;

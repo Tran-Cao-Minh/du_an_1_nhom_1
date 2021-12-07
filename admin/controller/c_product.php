@@ -19,11 +19,40 @@
       $notification = '';
       
       // DELETE DATA
-      if (isset($_GET['delete_confirm']) && isset($_GET['object_id'])) {
+      if (
+        isset($_GET['delete_confirm']) && 
+        isset($_GET['object_id']) &&
+        isset($_GET['product_name'])
+      ) {
         $object_id = $_GET['object_id'];
-        deleteCategory($object_id);
+        $product_name = $_GET['product_name'];
+        deleteProduct($object_id, $product_name);
       }
       // END DELETE DATA
+
+      // UPDATE VIEW STATUS
+      if (
+        isset($_GET['change_view_status']) && 
+        isset($_GET['object_id']) &&
+        isset($_GET['product_name'])
+      ) {
+        $object_id = $_GET['object_id'];
+        $product_name = $_GET['product_name'];
+        $current_status = $_GET['change_view_status'];
+
+        if ($current_status == 'true') {
+          $view_status_id = 0;
+        } else {
+          $view_status_id = 1;
+        }
+        
+        updateProductViewStatus(
+          $product_id = $object_id,
+          $view_status_id,
+          $product_name
+        );
+      }
+      // END UPDATE VIEW STATUS
 
       // DATA FILTER
       $page_quantity = '';

@@ -160,6 +160,7 @@
                     <td class="data-table__table-body-cell">
                       <form class="data-table__table-cell-btn-group">
                         <input type="hidden" name="object_id" value="'.$row['PkProduct_Id'].'">
+                        <input type="hidden" name="product_name" value="'.$row['ProductName'].'">
                         '.$change_view_status_btn.'
                         <button type="submit" name="delete_confirm" value="true" class="data-table__delete-btn">
                           <i class="far fa-trash-alt data-table__delete-icon"></i>

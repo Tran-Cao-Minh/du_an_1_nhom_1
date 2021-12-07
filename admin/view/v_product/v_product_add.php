@@ -325,14 +325,10 @@
       </button>
     </div>
     <?php if (isset($product_id)): ?>
-        <a href="?view_name=add_variant&product_id=<?php echo $product_id; ?>" class="interaction-form__add-variant-btn">
-          Thêm biến thể
-        </a>
-      <?php else: ?>
-        <a href="?view_name=add_variant" class="interaction-form__add-variant-btn">
-          Thêm biến thể
-        </a>
-      <?php endif; ?>
+      <a href="?view_name=add_variant&product_id=<?php echo $product_id; ?>" class="interaction-form__add-variant-btn">
+        Thêm biến thể
+      </a>
+    <?php endif; ?>
     <div class="interaction-form__action-group">
       <button type="submit" name="insert_confirm" value="true" class="interaction-form__submit-btn--add">
         Xác nhận thêm
