@@ -169,10 +169,10 @@
                     <div class="header__interaction-sub-menu">
                         <div class="header__interaction-sub-menu-decorate"></div>
                         <div class="header__interaction-sub-menu-container" style="--width: 18rem;">
-                            <button class="header__user-btn">
+                            <button class="header__user-btn js-btn-sign-in">
                                 Đăng nhập
                             </button>
-                            <button class="header__user-btn">
+                            <button class="header__user-btn js-btn-sign-up-1">
                                 Đăng ký
                             </button>
                         </div>
@@ -196,7 +196,8 @@
                                 <ul class="header__product-list">
                                     <li class="header__product-item">
                                         <div class="header__contain-product-img">
-                                            <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
+                                            <img class="header__product-img"
+                                                src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                                         </div>
                                         <div class="header__contain-product-inf">
                                             <div class="header__product-name">
@@ -214,7 +215,8 @@
                                     </li>
                                     <li class="header__product-item">
                                         <div class="header__contain-product-img">
-                                            <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
+                                            <img class="header__product-img"
+                                                src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                                         </div>
                                         <div class="header__contain-product-inf">
                                             <div class="header__product-name">
@@ -232,7 +234,8 @@
                                     </li>
                                     <li class="header__product-item">
                                         <div class="header__contain-product-img">
-                                            <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
+                                            <img class="header__product-img"
+                                                src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                                         </div>
                                         <div class="header__contain-product-inf">
                                             <div class="header__product-name">
@@ -282,7 +285,8 @@
 
                                     <li class="header__product-item">
                                         <div class="header__contain-product-img">
-                                            <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
+                                            <img class="header__product-img"
+                                                src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                                         </div>
                                         <div class="header__contain-product-inf">
                                             <div class="header__product-name">
@@ -310,7 +314,8 @@
                                     </li>
                                     <li class="header__product-item">
                                         <div class="header__contain-product-img">
-                                            <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
+                                            <img class="header__product-img"
+                                                src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                                         </div>
                                         <div class="header__contain-product-inf">
                                             <div class="header__product-name">
@@ -338,7 +343,8 @@
                                     </li>
                                     <li class="header__product-item">
                                         <div class="header__contain-product-img">
-                                            <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
+                                            <img class="header__product-img"
+                                                src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                                         </div>
                                         <div class="header__contain-product-inf">
                                             <div class="header__product-name">

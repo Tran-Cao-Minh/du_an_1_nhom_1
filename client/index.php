@@ -92,13 +92,16 @@
     include_once 'view/popup/v_sign_up_phone.php';
     include_once 'view/popup/v_sign_up_phone_verify.php';
     include_once 'view/popup/v_sign_up.php';
+    include_once 'view/popup/v_buy_prod_form.php';
 
     if ($link_js_arr == '') {
       $link_js_arr = array (
         '../public/js/client/view_form.js',
+        '../public/js/client/form_validation.js',
       );
     } else {
       $link_js_arr[] = '../public/js/client/view_form.js';
+      $link_js_arr[] = '../public/js/client/form_validation.js';
     }
 
     if ($link_css_arr == '') {
