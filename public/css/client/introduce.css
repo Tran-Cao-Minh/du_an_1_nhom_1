@@ -2,7 +2,10 @@
   max-width: 81.5rem;
   padding: 0 1.5rem;
   height: auto;
-  margin: 2rem auto 0;
+
+  position: relative;
+
+  margin: 2rem auto 4rem;
 }
 
 .introduce__content {
@@ -18,7 +21,69 @@
 
   background-color: var(--primary-color-blur);
 }
+/* về ingnite */
+.introduce__milestones {
+  position: absolute;
 
+  top: -13rem;
+
+  width: 0;
+  height: 0;
+}
+/* liên hệ */
+.introduce__milestones-1 {
+  position: absolute;
+
+  top: 31.5rem;
+
+  width: 0;
+  height: 0;
+}
+/* hỗ trợ */
+.introduce__milestones-2 {
+  position: absolute;
+
+  top: 87rem;
+
+  width: 0;
+  height: 0;
+}
+/* chính sách đổi trả */
+.introduce__milestones-3 {
+  position: absolute;
+
+  top: 95.5rem;
+
+  width: 0;
+  height: 0;
+}
+/*  Warranty Policy  (chính sách bảo hành) */
+.introduce__milestones-4 {
+  position: absolute;
+
+  top: 208rem;
+
+  width: 0;
+  height: 0;
+}
+/* hình thức thanh toán  */
+.introduce__milestones-5 {
+  position: absolute;
+
+  top: 268.4rem;
+
+  width: 0;
+  height: 0;
+}
+/* hình thức giao hàng */
+.introduce__milestones-6 {
+  position: absolute;
+
+  top: 338.5rem;
+
+  width: 0;
+  height: 0;
+}
 .introduce__content-text {
   padding: 1.5rem;
 
@@ -143,5 +208,81 @@
   font-family: var(--regular);
 
   color: var(--black);
+
+}
+
+@media only screen and (max-width: 767px) { 
+  /* về ingnite */
+.introduce__milestones {
+  position: absolute;
+
+  top: -13rem;
+
+  width: 0;
+  height: 0;
+}
+/* liên hệ */
+.introduce__milestones {
+  position: absolute;
+
+  top: 45rem;
+
+  width: 0;
+  height: 0;
+}
+/* liên hệ */
+.introduce__milestones-1 {
+  position: absolute;
+
+  top: 45rem;
+
+  width: 0;
+  height: 0;
+}
+/* hỗ trợ */
+.introduce__milestones-2 {
+  position: absolute;
+
+  top: 100rem;
+
+  width: 0;
+  height: 0;
+}
+/* chính sách đổi trả */
+.introduce__milestones-3 {
+  position: absolute;
+
+  top: 109rem;
+
+  width: 0;
+  height: 0;
+}
+/*  Warranty Policy  (chính sách bảo hành) */
+.introduce__milestones-4 {
+  position: absolute;
+
+  top: 254rem;
+
+  width: 0;
+  height: 0;
+}
+/* hình thức thanh toán  */
+.introduce__milestones-5 {
+  position: absolute;
+
+  top: 328rem;
+
+  width: 0;
+  height: 0;
+}
+/* hình thức giao hàng */
+.introduce__milestones-6 {
+  position: absolute;
+
+  top: 328rem;
+
+  width: 0;
+  height: 0;
+}
 
 }

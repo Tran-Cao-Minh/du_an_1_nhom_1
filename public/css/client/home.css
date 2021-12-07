@@ -1,32 +1,35 @@
-/* banner */
+/* background */
 .banner__container {
   width: auto;
   height: auto;
-
-  margin: 2rem 0;
-
-
   position: relative;
   display: flex;
   align-items: center;
-
+  margin: 2rem 0;
+  overflow: hidden;
 }
 
-.banner__container-img {
+.banner__contain-img:not(:first-child) {
+  display: none;
+}
+
+.banner__contain-img {
+
   width: 100%;
-  height: 48.6rem;
+  height: auto;
   display: flex;
+
 }
 
-/* reverse button ( nút lùi )*/
+/* nút lùi */
 .banner__prev-btn {
   width: 5rem;
   height: 6rem;
-  left: 0;
 
   position: absolute;
   border-color: transparent;
-  border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0px 5px 5px 0px;
+  left: 0;
 
   display: flex;
   align-items: center;
@@ -37,13 +40,30 @@
 }
 
 .banner__prev-btn:hover {
+  background-color: var(--black);
   opacity: 0.8;
   transition: 0.2s;
-
-  background-color: var(--black);
 }
 
-/* next button (nút tiếp) */
+/* Hiệu ứng khi chuyển đổi các slide */
+/*.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+ 
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+ 
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+*/
+/* nút tiếp */
 
 .banner__next-btn {
   width: 5rem;
@@ -51,18 +71,18 @@
   right: 0;
 
 
-  border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0px 5px 5px 0px;
   border-color: transparent;
 
   display: flex;
   position: absolute;
   align-items: center;
   justify-content: center;
-  transform: rotate(180deg);
-
 
   background-color: var(--black);
   opacity: 0.6;
+  transform: rotate(180deg);
+
 }
 
 .banner__next-btn:hover {
@@ -70,22 +90,37 @@
   Transition: 0.2s;
 
   background-color: var(--black);
+
+}
+
+.banner__prev-btn,
+.banner__next-btn {
+  display: none;
+}
+
+.banner:hover .banner__prev-btn,
+.banner:hover .banner__next-btn {
+  display: block;
 }
 
 .banner__icon-prev {
   margin-right: 0.65rem;
 
+
   font-size: 5rem;
   font-weight: 900;
   color: var(--white);
+
 }
 
 .banner__icon-next {
   margin-right: 0.65rem;
 
+
   font-size: 5rem;
   font-weight: 900;
   color: var(--white);
+
 }
 
 
@@ -99,21 +134,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .banner__index {
   width: 3rem;
   height: 1rem;
-
   margin: 0 0.75rem;
 
+  opacity: 0.6;
   border-radius: 0.5rem;
-  border-color: transparent;
   transform: rotate(-180deg);
-
+  border-color: transparent;
 
   background-color: var(--black);
-  opacity: 0.6;
+
 
 }
 
@@ -125,16 +160,106 @@
 .banner__index--choosen {
   width: 3rem;
   height: 1rem;
-
   margin: 0 0.75rem;
 
   opacity: 0.6;
   border-radius: 0.5rem;
-  border-color: transparent;
   transform: rotate(-180deg);
+  border-color: transparent;
 
   background-color: var(--primary-color);
+
 }
+.imgIn { 
+  animation: moveImgIn 0.3s forwards;
+}
+
+.imgOutRight {
+  animation: moveImgOutRight 0.3s forwards;
+}
+
+.imgOutLeft {
+  animation: moveImgOutLeft 0.3s forwards;
+}
+
+@keyframes moveImgIn {
+  100% {
+      left: 0;
+  }
+}
+
+@keyframes moveImgOutRight {
+  100% {
+      left: 100%;
+  }
+}
+
+@keyframes moveImgOutLeft {
+  100% {
+      left: -100%;
+  }
+}
+
+/* Start animate slide*//*
+@-webkit-keyframes slideIn {
+  100% {
+      left: 0;
+  }
+}
+
+@keyframes slideIn {
+  100% {
+      left: 0;
+  }
+}
+
+.slideInRight {
+  left: -100%;
+  -webkit-animation: slideIn 1s forwards;
+  animation: slideIn 1s forwards;
+}
+
+.slideInLeft {
+  left: 100%;
+  -webkit-animation: slideIn 1s forwards;
+  animation: slideIn 1s forwards;
+}
+
+@-webkit-keyframes slideOutLeft {
+  100% {
+      left: -100%;
+  }
+}
+
+@keyframes slideOutLeft {
+  100% {
+      left: -100%;
+  }
+}
+
+.slideOutLeft {
+  -webkit-animation: slideOutLeft 1s forwards;
+  animation: slideOutLeft 1s forwards;
+}
+
+@-webkit-keyframes slideOutRight {
+  100% {
+      left: 100%;
+  }
+}
+
+@keyframes slideOutRight {
+  100% {
+      left: 100%;
+  }
+}
+
+.slideOutRight {
+  -webkit-animation: slideOutRight 1s forwards;
+  animation: slideOutRight 1s forwards;
+}
+*/
+/*End animate Slide*/
 
 
 /* thương hiệu uy tín - top 5 sản phẩm nổi bật */
@@ -639,7 +764,7 @@
   max-width: 117rem;
   height: auto;
 
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 2.5rem;
 }
 
 .trademark__title-bar {

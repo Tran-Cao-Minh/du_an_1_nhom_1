@@ -560,14 +560,24 @@
 
   function updateProduct (
     $object_id,
-    $product_name
+    $product_name,
+    $product_category_id,
+    $product_brand_id,
+    $product_price,
+    $product_sale,
+    $product_view_status
   ) {
     $conn = connectDatabase();
 
     $sql = "UPDATE `product` 
             SET 
-              `ProductName` = '$product_name' 
-            WHERE `PkType_Id` = '$object_id'";
+              `ProductName` = '$product_name',
+              `FkType_Id` = '$product_category_id',
+              `FKBrand_Id` = '$product_brand_id',
+              `ProductPrice` = '$product_price',
+              `ProductDiscount` = '$product_sale',
+              `ProductViewStatus` = '$product_view_status' 
+            WHERE `PkProduct_Id` = '$object_id'";
     $update_result = $conn->exec($sql);
 
     global $notification;
@@ -581,6 +591,46 @@
     }
 
     $conn = null;
+  }
+
+  function getProductVariantInf($product_id, $product_variant_color_id) {
+    $conn = connectDatabase();
+
+    $sql = "SELECT * 
+            FROM `product_variant`
+            WHERE `FkProduct_Id` = '$product_id'
+            AND `FkColor_Id` = '$product_variant_color_id'";
+    $data_result = $conn->query($sql);
+
+    $return_quantity = $data_result->rowCount();
+    $conn = null;
+
+    if ($return_quantity === 0) {
+      return '';
+
+    } else {
+      return $data_result->fetchAll(PDO::FETCH_ASSOC);
+    }
+  }
+
+  function getProductVariantImg($product_id, $product_variant_color_id) {
+    $conn = connectDatabase();
+
+    $sql = "SELECT * 
+            FROM `product_image`
+            WHERE `FkProduct_Id` = '$product_id'
+            AND `FkColor_Id` = '$product_variant_color_id'";
+    $data_result = $conn->query($sql);
+
+    $return_quantity = $data_result->rowCount();
+    $conn = null;
+
+    if ($return_quantity === 0) {
+      return '';
+
+    } else {
+      return $data_result->fetchAll(PDO::FETCH_ASSOC);
+    }
   }
 
   function getProductCategory() {

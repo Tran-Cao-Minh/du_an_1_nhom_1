@@ -1,21 +1,30 @@
 <section class="banner">
   <div class="banner__container">
     <!-- banner photo -->
-    <div class="banner__contain-img">
-      <img src="../public/image/client/banner/banner.png" alt="">
+    <div class="banner__contain-img js-banner">
+      <img src="../public/image/client/banner/banner_1.jpg" alt="">
+    </div>
+    <div class="banner__contain-img js-banner">
+      <img src="../public/image/client/banner/banner_2.jpg" alt="">
+    </div>
+    <div class="banner__contain-img js-banner">
+      <img src="../public/image/client/banner/banner_3.jpg" alt="">
+    </div>
+    <div class="banner__contain-img js-banner">
+      <img src="../public/image/client/banner/banner_4.jpg" alt="">
     </div>
     <!-- button -->
-    <button class="banner__prev-btn">
+    <button class="banner__prev-btn" onclick="prevSlides(1)">
       <i class="fas fa-caret-left banner__icon-prev"></i>
     </button>
-    <button class="banner__next-btn">
+    <button class="banner__next-btn" onclick="plusSlides(0)">
       <i class="fas fa-caret-left banner__icon-next"></i>
     </button>
     <div class="banner__index-group">
-      <button class="banner__index"></button>
-      <button class="banner__index--choosen"></button>
-      <button class="banner__index"></button>
-      <button class="banner__index"></button>
+      <button class="banner__index" onclick="currentSlide(0)"></button>
+      <button class="banner__index" onclick="currentSlide(1)"></button>
+      <button class="banner__index" onclick="currentSlide(2)"></button>
+      <button class="banner__index" onclick="currentSlide(3)"></button>
     </div>
   </div>
 </section>
