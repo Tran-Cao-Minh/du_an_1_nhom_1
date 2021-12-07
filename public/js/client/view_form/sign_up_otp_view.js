@@ -1,5 +1,6 @@
 window.addEventListener('load', function () {
     const signUpBtnTwo = document.querySelectorAll('.js-btn-sign-up-2');
+    const overlayTwo = document.querySelector('.overlay-2');
     const overlayThree = document.querySelector('.overlay-3');
     const closeSignUpTwo = document.querySelector(".js-sign-up-close-2");
 
