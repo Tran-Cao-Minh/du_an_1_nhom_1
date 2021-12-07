@@ -186,37 +186,37 @@
             <div class="product__filter-content product__filter-content--color">
                 <label class="product__filter-item-color">
                     <input type="checkbox" id="orange">
-                    <label class="product__filter-label--circle" for="orange" style="--bg-color:#EE6F57;"></label>
+                    <div class="product__filter-label--circle" for="orange" style="--bg-color:#EE6F57;"></div>
                 </label>
                 <label class="product__filter-item-color">
                     <input type="checkbox" id="red">
-                    <label class="product__filter-label--circle" for="red" style="--bg-color:
-                            #CF455C;"></label>
+                    <div class="product__filter-label--circle" for="red" style="--bg-color:
+                            #CF455C;"></div>
                 </label>
                 <label class="product__filter-item-color">
                     <input type="checkbox" id="turqoise">
-                    <label class="product__filter-label--circle" for="turqoise" style="--bg-color:
-                                #51C4D3;"></label>
+                    <div class="product__filter-label--circle" for="turqoise" style="--bg-color:
+                                #51C4D3;"></div>
                 </label>
                 <label class="product__filter-item-color">
                     <input type="checkbox" id="black">
-                    <label class="product__filter-label--circle" for="black" style="--bg-color:
-                                #333333;"></label>
+                    <div class="product__filter-label--circle" for="black" style="--bg-color:
+                                #333333;"></div>
                 </label>
                 <label class="product__filter-item-color">
                     <input type="checkbox" id="white">
-                    <label class="product__filter-label--circle" for="white" style="--bg-color:
-                                #ffffff;"></label>
+                    <div class="product__filter-label--circle" for="white" style="--bg-color:
+                                #ffffff;"></div>
                 </label>
                 <label class="product__filter-item-color">
                     <input type="checkbox" id="gray">
-                    <label class="product__filter-label--circle" for="gray" style="--bg-color:
-                                #8d886f;"></label>
+                    <div class="product__filter-label--circle" for="gray" style="--bg-color:
+                                #8d886f;"></div>
                 </label>
                 <label class="product__filter-item-color">
                     <input type="checkbox" id="lightgray">
-                    <label class="product__filter-label--circle" for="lightgray" style="--bg-color:
-                                #999999;"></label>
+                    <div class="product__filter-label--circle" for="lightgray" style="--bg-color:
+                                #999999;"></div>
                 </label>
             </div>
         </div>
@@ -232,43 +232,41 @@
             <div class="product__filter-content product__filter-content-size">
                 <label class="product__filter-item">
                     <input type="checkbox" id="24">
-                    <label class="product__filter-label-size" for="24"><span
-                            class="prodduct__size-name">24</span></label>
+                    <div class="product__filter-label-size" for="24"><span class="prodduct__size-name">24</span></div>
                 </label>
                 <label class="product__filter-item">
                     <input type="checkbox" id="25">
-                    <label class="product__filter-label-size" for="25"><span
-                            class="prodduct__size-name">25</span></label>
+                    <div class="product__filter-label-size" for="25"><span class="prodduct__size-name">25</span></div>
                 </label>
                 <label class="product__filter-item">
                     <input type="checkbox" id="26">
-                    <label class="product__filter-label-size" for="26"><span class="prodduct__size-name">
-                            26</span></label>
+                    <div class="product__filter-label-size" for="26"><span class="prodduct__size-name">
+                            26</span></div>
                 </label>
                 <label class="product__filter-item">
                     <input type="checkbox" id="27">
-                    <label class="product__filter-label-size" for="27"><span class="prodduct__size-name">
-                            27</span></label>
+                    <div class="product__filter-label-size" for="27"><span class="prodduct__size-name">
+                            27</span></div>
                 </label>
                 <label class="product__filter-item">
                     <input type="checkbox" id="28">
-                    <label class="product__filter-label-size" for="28"><span class="prodduct__size-name">
-                            28</span></label>
+                    <div class="product__filter-label-size" for="28"><span class="prodduct__size-name">
+                            28</span></div>
                 </label>
                 <label class="product__filter-item">
                     <input type="checkbox" id="29">
-                    <label class="product__filter-label-size" for="29"><span class="prodduct__size-name">
-                            29</span></label>
+                    <div class="product__filter-label-size" for="29"><span class="prodduct__size-name">
+                            29</span></div>
                 </label>
                 <label class="product__filter-item">
                     <input type="checkbox" id="30">
-                    <label class="product__filter-label-size" for="30"><span class="prodduct__size-name">
-                            30</span></label>
+                    <div class="product__filter-label-size" for="30"><span class="prodduct__size-name">
+                            30</span></div>
                 </label>
                 <label class="product__filter-item">
                     <input type="checkbox" id="31">
-                    <label class="product__filter-label-size" for="31"><span class="prodduct__size-name">
-                            31</span></label>
+                    <div class="product__filter-label-size" for="31"><span class="prodduct__size-name">
+                            31</span></div>
                 </label>
             </div>
         </div>
