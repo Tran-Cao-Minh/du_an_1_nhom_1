@@ -4,21 +4,23 @@
             <!-- Start form group -->
             <div class="form__group pb1-5 pt3-5">
                 <label class="form__label" for="">Email</label>
-                <input class="form__input form__input--primary" type="text" placeholder="Nhập email của bạn" />
+                <input class="js-email-input form__input form__input--primary" type="text"
+                    placeholder="Nhập email của bạn" />
                 <span class="form__message"></span>
             </div>
             <!-- End form group -->
             <!-- Start form group -->
             <div class="form__group pb1-5">
                 <label class="form__label" for="">Họ và tên</label>
-                <input class="form__input form__input--primary" type="text" placeholder="Nhập họ tên của bạn" />
+                <input class="js-name-input form__input form__input--primary" type="text"
+                    placeholder="Nhập họ tên của bạn" />
                 <span class="form__message"></span>
             </div>
             <!-- End form group -->
             <!-- Start form group -->
             <div class="form__group pb1-5 form__date">
                 <label class="form__label" for="">Ngày sinh</label>
-                <input class="form__input form__input--primary" type="date" />
+                <input class="js-date-input form__input form__input--primary" type="date" />
                 <span class="form__message"></span>
                 <!-- <p class="form__date__icon"><i class="far fa-calendar-alt"></i></p> -->
             </div>
@@ -45,10 +47,10 @@
             <!-- Start form group -->
             <div class="form__group pb1-5 form__password">
                 <label class="form__label" for="">Mật khẩu</label>
-                <input class="form__input" type="password" placeholder="Nhập mật khẩu của bạn" />
+                <input class="js-password-input form__input" type="password" placeholder="Nhập mật khẩu của bạn" />
                 <span class="form__message"></span>
                 <p class="  js-show-password form__password__icon">
-                    <i class="far fa-eye-slash "></i>
+                    <i class="far fa-eye "></i>
                 </p>
                 <span class="form__message"></span>
             </div>
@@ -56,10 +58,10 @@
             <!-- Start form group -->
             <div class="form__group pb1-5 form__password">
                 <label class="form__label" for="">Nhập lại mật khẩu của bạn </label>
-                <input class="form__input" type="password" placeholder="Nhập mật khẩu của bạn" />
+                <input class="js-password-input form__input" type="password" placeholder="Nhập mật khẩu của bạn" />
                 <span class="form__message"></span>
                 <p class=" js-show-password form__password__icon">
-                    <i class="far fa-eye-slash "></i>
+                    <i class="far fa-eye "></i>
                 </p>
                 <span class="form__message"></span>
             </div>

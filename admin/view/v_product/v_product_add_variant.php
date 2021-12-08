@@ -41,8 +41,8 @@
         </div>
         <div class="interaction-form__color-group">
           <?php
-            if ($productChoosenColorList != '') {
-              foreach ($productChoosenColorList as $color) {
+            if ($product_choosen_color_list != '') {
+              foreach ($product_choosen_color_list as $color) {
                 echo '
                   <div class="interaction-form__color-item--choosen"
                     title="Đã có biến thể với màu '.$color['ColorName'].'">
@@ -179,6 +179,14 @@
           Thêm kích cỡ
         </button>
       </div>
+      <div class="interaction-form__action-group">
+        <button type="submit" name="insert_confirm" value="true" class="interaction-form__submit-btn--add">
+          Xác nhận thêm
+        </button>
+        <a href="?view_name=update&object_id=<?php echo $object_id; ?>" class="interaction-form__return-link">
+          Quay lại
+        </a>
+      </div>
     <?php else: ?>
       <div class="interaction-form__form-group">
         <div class="interaction-form__form-title">
@@ -190,14 +198,6 @@
         >
       </div>
     <?php endif; ?>
-    <div class="interaction-form__action-group">
-      <button type="submit" name="insert_confirm" value="true" class="interaction-form__submit-btn--add">
-        Xác nhận thêm
-      </button>
-      <a href="?view_name=overview" class="interaction-form__return-link">
-        Quay lại
-      </a>
-    </div>
   </form>
 </section>
 

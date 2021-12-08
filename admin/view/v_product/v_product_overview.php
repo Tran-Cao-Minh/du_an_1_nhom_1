@@ -15,11 +15,14 @@
           Chọn cột được lọc
         </div>
         <select name="filter_column" class="filter-form__select-input js-select-filter-column-input">
-          <option value="TypeName" data-type="text" class="filter-form__select-option">
-            Tên danh mục
+          <option value="ProductName" data-type="text" class="filter-form__select-option">
+            Tên sản phẩm
           </option>
-          <option value="PkType_Id" data-type="text" class="filter-form__select-option">
-            Mã danh mục
+          <option value="ProductPrice" data-type="number" class="filter-form__select-option">
+            Giá sản phẩm
+          </option>
+          <option value="ProductView" data-type="number" class="filter-form__select-option">
+            Số lượt xem
           </option>
         </select>
       </div>
@@ -102,7 +105,7 @@
     </div>
     <a href="?view_name=add" class="data-table__header-add-object">
       <div class="data-table__header-add-object-title">
-        Thêm danh mục
+        Thêm sản phẩm
       </div>
       <div class="data-table__header-add-object-contain-icon">
         <i class="fas fa-plus data-table__header-add-object-icon"></i>
@@ -110,14 +113,18 @@
     </a>
   </div>
   <div class="data-table__body">
-    <table class="data-table__table" style="--cell-1-width: 18rem; --cell-2-width: 25rem; --cell-3-width: 13.5rem;">
+    <table class="data-table__table" 
+      style="--cell-1-width: 18rem; --cell-2-width: 25rem; --cell-3-width: 13.5rem; --cell-4-width: 19rem;">
       <thead class="data-table__contain-table-header">
         <tr class="data-table__table-header-row">
           <th class="data-table__table-header-cell">
-            Mã danh mục
+            Tên sản phẩm
           </th>
           <th class="data-table__table-header-cell">
-            Tên danh mục
+            Giá sản phẩm
+          </th>
+          <th class="data-table__table-header-cell">
+            Số lượt xem
           </th>
           <th class="data-table__table-header-cell"></th>
         </tr>
@@ -126,22 +133,40 @@
           <?php if ($page_quantity !== 0): ?>
             <?php
               foreach ($data_result as $row) {
+                if ($row['ProductViewStatus'] == 1) {
+                  $change_view_status_btn = '
+                    <button type="submit" name="change_view_status" value="true" class="data-table__change-view-status-btn--show">
+                      <i class="fas fa-eye data-table__change-view-status-icon--show"></i>
+                    </button>
+                  ';
+                } else {
+                  $change_view_status_btn = '
+                    <button type="submit" name="change_view_status" value="false" class="data-table__change-view-status-btn--not-show">
+                      <i class="fas fa-eye-slash data-table__change-view-status-icon--not-show"></i>
+                    </button>
+                  ';
+                }
                 echo '
                   <tr class="data-table__table-body-row">
                     <td class="data-table__table-body-cell">
-                      '.$row['PkType_Id'].'
+                      '.$row['ProductName'].'
                     </td>
                     <td class="data-table__table-body-cell">
-                      '.$row['TypeName'].'
+                      '.$row['ProductPrice'].'
+                    </td>
+                    <td class="data-table__table-body-cell">
+                      '.$row['ProductView'].'
                     </td>
                     <td class="data-table__table-body-cell">
                       <form class="data-table__table-cell-btn-group">
-                        <input type="hidden" name="object_id" value="'.$row['PkType_Id'].'">
+                        <input type="hidden" name="object_id" value="'.$row['PkProduct_Id'].'">
+                        <input type="hidden" name="product_name" value="'.$row['ProductName'].'">
+                        '.$change_view_status_btn.'
                         <button type="submit" name="delete_confirm" value="true" class="data-table__delete-btn">
                           <i class="far fa-trash-alt data-table__delete-icon"></i>
                         </button>
                       </form>
-                      <a href="?view_name=update&object_id='.$row['PkType_Id'].'" class="data-table__view-detail-link">
+                      <a href="?view_name=update&object_id='.$row['PkProduct_Id'].'" class="data-table__view-detail-link">
                         <i class="fas fa-wrench data-table__view-detail-icon"></i>
                       </a>
                     </td>

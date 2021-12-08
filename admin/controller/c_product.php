@@ -1,5 +1,7 @@
 <?php
-  include_once 'model/m_product.php';
+  include_once 'model/m_product/m_product.php';
+  include_once 'model/m_product/m_product_variant.php';
+  include_once 'model/m_product/m_product_img.php';
 
   if (isset($_GET['view_name'])) {
     $_SESSION['view_name'] = $_GET['view_name'];
@@ -8,7 +10,7 @@
     $_SESSION['view_name'] = $_POST['view_name'];
 
   } elseif (!isset($_SESSION['view_name'])) {
-    $_SESSION['view_name'] = 'update';
+    $_SESSION['view_name'] = 'overview';
   }
   $view_name = $_SESSION['view_name'];
 
@@ -17,11 +19,40 @@
       $notification = '';
       
       // DELETE DATA
-      if (isset($_GET['delete_confirm']) && isset($_GET['object_id'])) {
+      if (
+        isset($_GET['delete_confirm']) && 
+        isset($_GET['object_id']) &&
+        isset($_GET['product_name'])
+      ) {
         $object_id = $_GET['object_id'];
-        deleteCategory($object_id);
+        $product_name = $_GET['product_name'];
+        deleteProduct($object_id, $product_name);
       }
       // END DELETE DATA
+
+      // UPDATE VIEW STATUS
+      if (
+        isset($_GET['change_view_status']) && 
+        isset($_GET['object_id']) &&
+        isset($_GET['product_name'])
+      ) {
+        $object_id = $_GET['object_id'];
+        $product_name = $_GET['product_name'];
+        $current_status = $_GET['change_view_status'];
+
+        if ($current_status == 'true') {
+          $view_status_id = 0;
+        } else {
+          $view_status_id = 1;
+        }
+        
+        updateProductViewStatus(
+          $product_id = $object_id,
+          $view_status_id,
+          $product_name
+        );
+      }
+      // END UPDATE VIEW STATUS
 
       // DATA FILTER
       $page_quantity = '';
@@ -48,7 +79,7 @@
       } elseif (!isset($_SESSION['filter_confirm'])) {
         $_SESSION['filter_confirm'] = 'true';
 
-        $_SESSION['filter_column'] = 'PkType_Id';
+        $_SESSION['filter_column'] = 'PkProduct_Id';
         $_SESSION['sort_rule'] = 'ASC';
 
         $_SESSION['filter_value'] = 'identify';
@@ -63,7 +94,7 @@
       }
 
       if ($_SESSION['filter_value'] === 'identify') {
-        $data_result = getCategoryByIdentifyValue(
+        $data_result = getProductByIdentifyValue (
           $_SESSION['filter_column'],
           $_SESSION['sort_rule'],
           $_SESSION['filter_value_identify'],
@@ -72,7 +103,7 @@
         );
 
       } else if ($_SESSION['filter_value'] === 'interval') {
-        $data_result = getCategoryByIntervalValue(
+        $data_result = getProductByIntervalValue (
           $_SESSION['filter_column'],
           $_SESSION['sort_rule'],
           $_SESSION['filter_value_interval_min'],
@@ -123,54 +154,14 @@
         $product_variant_size_list = $_POST['product_variant_size_list'];
         $product_variant_quantity_list = $_POST['product_variant_quantity_list'];
 
-        function checkImg($img_file, $index) {
-          if ($index != '') {
-            $real_img = getimagesize($img_file['tmp_name'][$index]);
-            $img_size = $img_file['size'][$index]; 
-
-          } else {
-            $real_img = getimagesize($img_file['tmp_name']);
-            $img_size = $img_file['size']; 
-          }
-
-          $check_img = false;
-          if ($img_size > 2097152) {
-            global $notification;
-            $notification = 'Vui lòng chọn ảnh có kích thước nhỏ hơn 2MB </br>';
-
-          } elseif ($real_img == false) {
-            global $notification;
-            $notification = 'Vui lòng kiểm tra hình ảnh được Upload có phải là ảnh thật hay không </br>';
-            $notification .= 'Ảnh thật được chấp nhận thường có định dạng PNG hoặc JPG </br>';
-
-          } else {
-            $check_img = true;
-          }
-
-          return $check_img;
-        }
-
+        include_once '../global/function/check_img.php';
         $check_img = checkImg($product_variant_main_img, '');
-
         $product_variant_sub_img_quantity = count($product_variant_sub_img_list['name']); // array of FILES always equal to 5 
         for ($i = 0; $i < $product_variant_sub_img_quantity; $i++) {
           if ($check_img == false) {
             break;
           }
           $check_img = checkImg($product_variant_sub_img_list, $i);
-        }
-
-        function checkDuplicateValue($array) {
-          $check_array = array_count_values($array);
-          $check_result = true;
-          foreach ($check_array as $check_value) {
-            if ($check_value > 1) {
-              $check_result = false;
-              break;
-            }
-          }
-
-          return $check_result;
         }
 
         $check_product_variant_size = true;
@@ -182,7 +173,6 @@
             break;
           }
         }
-        
         $check_product_variant_quantity = true;
         foreach ($product_variant_quantity_list as $product_variant_quantity) {
           $product_variant_quantity = (int)$product_variant_quantity;
@@ -192,6 +182,8 @@
             break;
           }
         }
+
+        include_once '../global/function/check_duplicate.php';
 
         if (checkProductName($product_name) == false) {
           $notification = 'Sản phẩm có tên "'.$product_name.'" đã tồn tại </br>';
@@ -280,54 +272,14 @@
         $product_variant_size_list = $_POST['product_variant_size_list'];
         $product_variant_quantity_list = $_POST['product_variant_quantity_list'];
 
-        function checkImg($img_file, $index) {
-          if ($index != '') {
-            $real_img = getimagesize($img_file['tmp_name'][$index]);
-            $img_size = $img_file['size'][$index]; 
-
-          } else {
-            $real_img = getimagesize($img_file['tmp_name']);
-            $img_size = $img_file['size']; 
-          }
-
-          $check_img = false;
-          if ($img_size > 2097152) {
-            global $notification;
-            $notification = 'Vui lòng chọn ảnh có kích thước nhỏ hơn 2MB </br>';
-
-          } elseif ($real_img == false) {
-            global $notification;
-            $notification = 'Vui lòng kiểm tra hình ảnh được Upload có phải là ảnh thật hay không </br>';
-            $notification .= 'Ảnh thật được chấp nhận thường có định dạng PNG hoặc JPG </br>';
-
-          } else {
-            $check_img = true;
-          }
-
-          return $check_img;
-        }
-
+        include_once '../global/function/check_img.php';
         $check_img = checkImg($product_variant_main_img, '');
-
         $product_variant_sub_img_quantity = count($product_variant_sub_img_list['name']); // array of FILES always equal to 5 
         for ($i = 0; $i < $product_variant_sub_img_quantity; $i++) {
           if ($check_img == false) {
             break;
           }
           $check_img = checkImg($product_variant_sub_img_list, $i);
-        }
-
-        function checkDuplicateValue($array) {
-          $check_array = array_count_values($array);
-          $check_result = true;
-          foreach ($check_array as $check_value) {
-            if ($check_value > 1) {
-              $check_result = false;
-              break;
-            }
-          }
-
-          return $check_result;
         }
 
         $check_product_variant_size = true;
@@ -339,7 +291,6 @@
             break;
           }
         }
-        
         $check_product_variant_quantity = true;
         foreach ($product_variant_quantity_list as $product_variant_quantity) {
           $product_variant_quantity = (int)$product_variant_quantity;
@@ -349,6 +300,8 @@
             break;
           }
         }
+
+        include_once '../global/function/check_duplicate.php';
 
         if (checkProduct($product_id) == false) {
           $notification = 'Có thể sản phẩm đã bị xóa trước khi thêm biến thể </br>';
@@ -397,7 +350,7 @@
         if ($product_data != '') {
           $product_type = getProductTypeById($object_id);
           $product_brand = getProductBrandById($object_id);
-          $productChoosenColorList = getProductChoosenColor($object_id);
+          $product_choosen_color_list = getProductChoosenColor($object_id);
           $productNotChoosenColorList = getProductNotChoosenColor($object_id);
         }
 
@@ -407,7 +360,7 @@
         if ($product_data != '') {
           $product_type = getProductTypeById($object_id);
           $product_brand = getProductBrandById($object_id);
-          $productChoosenColorList = getProductChoosenColor($object_id);
+          $product_choosen_color_list = getProductChoosenColor($object_id);
           $productNotChoosenColorList = getProductNotChoosenColor($object_id);
         }
 
@@ -429,41 +382,321 @@
     case 'update':
       $notification = '';
       
-      // // UPDATE DATA
-      // if (
-      //   isset($_GET['update_confirm']) && 
-      //   isset($_GET['object_id']) &&
-      //   isset($_GET['category_name'])
-      // ) {
-      //   $category_name = $_GET['category_name'];
+      // UPDATE PRODUCT DATA
+      if (
+        !isset($_POST['update_variant_confirm']) && 
+        !isset($_POST['delete_variant_confirm']) && 
+        isset($_GET['update_product_confirm']) && 
+        isset($_GET['object_id']) &&
+        isset($_GET['product_old_name']) &&
+        isset($_GET['product_name']) &&
+        isset($_GET['product_category_id']) &&
+        isset($_GET['product_brand_id']) &&
+        isset($_GET['product_price']) &&
+        isset($_GET['product_sale']) &&
+        isset($_GET['product_view_status'])
+      ) {
+        $object_id = $_GET['object_id'];
+        $product_old_name = $_GET['product_old_name'];
+        $product_name = $_GET['product_name'];
+        $product_category_id = $_GET['product_category_id'];
+        $product_brand_id = $_GET['product_brand_id'];
+        $product_price = $_GET['product_price'];
+        $product_sale = $_GET['product_sale'];
+        $product_view_status = $_GET['product_view_status'];       
+
+        if ($product_old_name == $product_name) {
+          $check_product_name = true;
+
+        } else {
+          $check_product_name = checkProductName($product_name);
+        }
         
-      //   if (checkCategoryName($category_name) == false) {
-      //     $notification = 'Danh mục có tên "'.$category_name.'" đã tồn tại </br>';
+        if ($check_product_name == false) {
+          $notification = 'Sản phẩm có tên "'.$product_name.'" đã tồn tại </br>';
+        
+        } elseif (strlen($product_name) > 80 || strlen($product_name) === 0) {
+          $notification = 'Vui lòng nhập tên sản phẩm ít hơn 32 ký tự </br>';
 
-      //   } elseif (strlen($category_name) > 32 || strlen($category_name) === 0) {
-      //     $notification = 'Vui lòng nhập tên sản phẩm ít hơn 32 ký tự </br>';
+        } elseif ($product_price < 1000 || $product_price > 1000000000) {
+          $notification = 'Vui lòng nhập giá sản phẩm lớn hơn 1.000 và nhỏ hơn 1.000.000.000 </br>';
 
-      //   } else {
-      //     $object_id = $_GET['object_id'];
-      //     updateCategory(
-      //       $object_id,
-      //       $category_name
-      //     );
-      //   }
-      // }
-      // // END UPDATE DATA
+        } elseif ($product_sale < 0 || $product_sale > 100) {
+          $notification = 'Vui lòng nhập phần trăm giảm giá lớn hơn 0 và nhỏ hơn 100 </br>';
 
-      // // GET DATA FOR UPDATE PAGE
-      // if (isset($_GET['object_id'])) {
-      //   $object_id = $_GET['object_id'];
+        } else {
+          updateProduct(
+            $object_id,
+            $product_name,
+            $product_category_id,
+            $product_brand_id,
+            $product_price,
+            $product_sale,
+            $product_view_status
+          );
+        }
+      }
+      // END UPDATE PRODUCT DATA
 
-      //   $object_data = getCategoryDataById($object_id);
+      // UPDATE PRODUCT VARIANT DATA
+      if (
+        isset($_POST['update_variant_confirm']) && 
+        isset($_POST['object_id']) &&
+        isset($_POST['product_variant_color_id']) &&
+        isset($_POST['product_variant_size_list']) &&
+        isset($_POST['product_variant_quantity_list']) &&
+        isset($_POST['product_variant_main_img_id'])
+      ) {
+        $object_id = $_POST['object_id'];
+        $product_variant_color_id = $_POST['product_variant_color_id'];
+        $product_variant_size_list = $_POST['product_variant_size_list'];
+        $product_variant_quantity_list = $_POST['product_variant_quantity_list'];
+        $check_img = true;
+        
+        // check inf before update
+        if (
+          $_FILES['product_variant_main_img']['name'] != '' ||
+          $_FILES['product_variant_sub_img_list']['name'][0] != ''
+        ) {
+          include_once '../global/function/check_img.php';
 
-      // } else {
-      //   $object_data = '';
-      //   $notification = 'Vui lòng truyền vào khóa chính để lấy thông tin của đối tượng </br>';
-      // }
-      // // END GET DATA FOR UPDATE PAGE
+          if ($_FILES['product_variant_main_img']['name'] != '') {
+            $product_variant_main_img = $_FILES['product_variant_main_img'];
+
+            $check_img = checkImg($product_variant_main_img, '');
+          }
+
+          if ($_FILES['product_variant_sub_img_list']['name'][0] != '') {
+            $product_variant_sub_img_list = $_FILES['product_variant_sub_img_list'];
+
+            $product_variant_sub_img_quantity = count($product_variant_sub_img_list['name']); // array of FILES always equal to 5 
+            for ($i = 0; $i < $product_variant_sub_img_quantity; $i++) {
+              if ($check_img == false) {
+                break;
+              }
+              $check_img = checkImg($product_variant_sub_img_list, $i);
+            }
+          }
+        }
+
+        $sub_img_quantity = 0;
+        if (isset($_POST['sub_img_uploaded'])) {
+          $sub_img_quantity += count($_POST['sub_img_uploaded']);
+        }
+        if (isset($product_variant_sub_img_quantity)) {
+          $sub_img_quantity += $product_variant_sub_img_quantity;
+        }
+        if ($sub_img_quantity < 4 || $sub_img_quantity > 10) {
+          $notification = 'Vui lòng chọn 4 đến 10 ảnh phụ </br>';
+          $check_img = false;
+        }
+
+        $check_product_variant_size = true;
+        foreach ($product_variant_size_list as $product_variant_size) {
+          $product_variant_size = (int)$product_variant_size;
+          if ($product_variant_size < 1 || $product_variant_size > 99) {
+            $check_product_variant_size = false;
+            $notification = 'Vui nhập kích thước biến thể trong phạm vi từ 1 đến 99 </>';
+            break;
+          }
+        }
+        
+        $check_product_variant_quantity = true;
+        foreach ($product_variant_quantity_list as $product_variant_quantity) {
+          $product_variant_quantity = (int)$product_variant_quantity;
+          if ($product_variant_quantity < 0 || $product_variant_quantity > 1000000000) {
+            $check_product_variant_quantity = false;
+            $notification = 'Vui nhập số lượng biến thể trong phạm vi từ 0 đến 1.000.000.000 </>';
+            break;
+          }
+        }
+
+        include_once '../global/function/check_duplicate.php';
+
+        if (checkDuplicateValue($product_variant_size_list) == false) {
+          $notification = 'Vui lòng không nhập kích thước các biến thể trùng nhau </br>';
+
+        } elseif (count($product_variant_size_list) != count($product_variant_quantity_list)) {
+          $notification = 'Số lượng các kích thước biến thể và số lượng biến thể phải bằng nhau </br>';
+
+        } elseif (
+          $check_img == true &&
+          $check_product_variant_size == true &&
+          $check_product_variant_quantity == true
+        ) {
+          // update product variant
+          if (isset($product_variant_main_img)) {
+            $product_variant_main_img_id = $_POST['product_variant_main_img_id'];
+            updateProductVariantMainImage (
+              $product_id = $object_id,
+              $product_variant_main_img_id,
+              $product_variant_main_img
+            );
+          }
+
+          $product_variant_sub_img_id_list = getProductSubImgIdList (
+            $product_id = $object_id,
+            $product_variant_color_id
+          );
+          if ($product_variant_sub_img_id_list != '') {
+            // delete first main img id
+            array_shift($product_variant_sub_img_id_list);
+            // delete sub img uploaded
+            if (!isset($_POST['sub_img_uploaded'])) {
+              foreach ($product_variant_sub_img_id_list as $sub_img_id) {
+                deleteProductVariantSubImage($sub_img_id['PkImage_Id']);
+              }
+            } else {
+              $sub_img_uploaded_id_list = $_POST['sub_img_uploaded'];
+
+              foreach ($product_variant_sub_img_id_list as $sub_img_id) {
+                $check_delete = true;
+                foreach ($sub_img_uploaded_id_list as $sub_img_uploaded_id) {
+                  if ($sub_img_id['PkImage_Id'] == $sub_img_uploaded_id) {
+                    $check_delete = false;
+                    break;
+                  }
+                }
+                if ($check_delete == true) {
+                  deleteProductVariantSubImage($sub_img_id['PkImage_Id']);
+                }
+              }
+            }
+            // insert sub image
+            if (isset($product_variant_sub_img_list)) {
+              insertProductVariantImg(
+                $product_id = $object_id,
+                $product_variant_color_id,
+                $product_variant_sub_img_list,
+                $product_variant_sub_img_quantity
+              );
+            }
+          } else {
+            $notification = 'Lỗi truy cập các hình ảnh phụ với mã sản phẩm là "'.$object_id.'" '
+                          . 'và mã màu là "'.$product_variant_color_id.'" </br>';
+          }
+
+          $product_variant_size_list_in_db = getProductVariantSizeList (
+            $product_id = $object_id,
+            $product_variant_color_id
+          );
+          if ($product_variant_size_list_in_db != '') {
+            // delete sub variant
+            foreach ($product_variant_size_list_in_db as $size_in_db) {
+              $check_delete = true;
+              foreach ($product_variant_size_list as $size) {
+                if ($size_in_db['ProductSize'] == $size) {
+                  $check_delete = false;
+                  break;
+                }
+              }
+              if ($check_delete == true) {
+                deleteProductSubVariant(
+                  $product_id = $object_id,
+                  $product_variant_color_id,
+                  $size = $size_in_db['ProductSize']
+                );
+              }
+            }
+            // update, insert sub variant
+            $i = 0;
+            foreach ($product_variant_size_list as $size) {
+              $check_exist = false;
+              foreach ($product_variant_size_list_in_db as $size_in_db) {
+                if ($size == $size_in_db['ProductSize']) {
+                  $check_exist = true;
+                  break;
+                }
+              }
+              if ($check_exist == true) {
+                updateProductSubVariant(
+                  $product_id = $object_id,
+                  $product_variant_color_id,
+                  $size,
+                  $quantity = $product_variant_quantity_list[$i]
+                );
+              } else {
+                insertProductSubVariant(
+                  $product_id = $object_id,
+                  $product_variant_color_id,
+                  $size,
+                  $quantity = $product_variant_quantity_list[$i]
+                );
+              }
+              $i++;
+            }
+
+            if ($notification == '') {
+              $notification = 'Sửa biến thể sản phẩm thành công </br>';
+            }
+          } else {
+            $notification = 'Lỗi truy cập các biến thể với mã sản phẩm là "'.$object_id.'" '
+                          . 'và mã màu là "'.$product_variant_color_id.'" </br>';
+          }
+        }
+      }
+      // END UPDATE PRODUCT VARIANT DATA
+
+      // DELETE PRODUCT VARIANT DATA
+      if (
+        isset($_POST['delete_variant_confirm']) && 
+        isset($_POST['object_id']) &&
+        isset($_POST['product_variant_color_id'])
+      ) {
+        $delete_variant_confirm = $_POST['delete_variant_confirm'];
+        $object_id = $_POST['object_id'];
+        $product_variant_color_id = $_POST['product_variant_color_id'];
+
+        $next_product_variant_color_id = getNextVariantProductColorId (
+          $product_id = $object_id, 
+          $product_variant_color_id
+        );
+
+        if ($next_product_variant_color_id == '') {
+          $notification = 'Sản phẩm phải có ít nhất một biến thể để tồn tại </br>';
+
+        } else {
+          $check_delete = deleteProductVariant(
+            $product_id = $object_id, 
+            $product_variant_color_id
+          );
+
+          if ($check_delete == true) {
+            $notification = 'Xóa biến thể với mã màu là "'.$product_variant_color_id.'" thành công </br>';
+            $_POST['product_variant_color_id'] = $next_product_variant_color_id['FkColor_Id'];
+          }
+        }
+      }
+      // END DELETE PRODUCT VARIANT DATA
+
+      // GET DATA FOR UPDATE PAGE
+      if (isset($_GET['object_id'])) {
+        $product_id = $_GET['object_id'];
+
+        $product_data = getProductDataById($product_id);
+
+        if ($product_data != '') {
+          $category_list = getProductCategory();
+          $brand_list = getProductBrand();
+          $product_choosen_color_list = getProductChoosenColor($product_id);
+        }
+
+      } elseif (isset($_POST['object_id'])) {
+        $product_id = $_POST['object_id'];
+
+        $product_data = getProductDataById($product_id);
+
+        if ($product_data != '') {
+          $category_list = getProductCategory();
+          $brand_list = getProductBrand();
+          $product_choosen_color_list = getProductChoosenColor($product_id);
+        }
+
+      } else {
+        $product_data = '';
+        $notification = 'Vui lòng truyền vào khóa chính để lấy thông tin của đối tượng </br>';
+      }
+      // END GET DATA FOR UPDATE PAGE
 
       $link_css_arr = array (
         '../public/css/admin/interaction_form.css',

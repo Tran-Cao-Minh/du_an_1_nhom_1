@@ -232,16 +232,30 @@
   function deleteCategory($object_id) {
     $conn = connectDatabase();
 
-    $sql = "DELETE FROM `product_type` 
-            WHERE `PkType_Id` = '$object_id'";
-    $delete_result = $conn->exec($sql);
+    $sql = "SELECT `ProductName`
+            FROM `product` 
+            WHERE `FkType_Id` = '$object_id' 
+            LIMIT 1";
+    $stmt = $conn->query($sql);
+    $exist_result = $stmt->rowCount();
 
+    // if product have this category it can not be deleted
     global $notification;
-    if ($delete_result === 1) {
-      $notification = 'Xóa danh mục thành công </br>';
+    if ($exist_result === 1) {
+      $notification = 'Không thể xóa do có sản phẩm mang danh mục này tồn tại </br>';
 
     } else {
-      $notification = 'Xóa danh mục không thành công </br>';
+      $sql = "DELETE FROM `product_type` 
+            WHERE `PkType_Id` = '$object_id'
+            LIMIT 1";
+      $delete_result = $conn->exec($sql);
+
+      if ($delete_result === 1) {
+        $notification = 'Xóa danh mục thành công </br>';
+
+      } else {
+        $notification = 'Xóa danh mục không thành công </br>';
+      }
     }
 
     $conn = null;
