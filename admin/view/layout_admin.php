@@ -244,7 +244,7 @@
         </label>
         <ul class="sidebar__sub-menu-list" style="--heigth: 15rem;">
           <li>
-            <a href="#" class="sidebar__sub-menu-item">
+            <a href="?page_name=manage_account" class="sidebar__sub-menu-item">
               Chỉnh sửa tài khoản
             </a>
           </li>
@@ -265,7 +265,7 @@
         </label>
         <ul class="sidebar__sub-menu-list" style="--heigth: 15rem;">
           <li>
-            <a href="#" class="sidebar__sub-menu-item">
+            <a href="?page_name=manage_comment" class="sidebar__sub-menu-item">
               Chỉnh sửa bình luận
             </a>
           </li>
@@ -291,7 +291,7 @@
         </label>
         <ul class="sidebar__sub-menu-list" style="--heigth: 15rem;">
           <li>
-            <a href="#" class="sidebar__sub-menu-item">
+            <a href="?page_name=manage_order" class="sidebar__sub-menu-item">
               Cập nhật đơn hàng
             </a>
           </li>
