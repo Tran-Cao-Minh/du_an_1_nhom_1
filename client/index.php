@@ -118,6 +118,8 @@
         '../public/js/validation/otp_validation.js',
         '../public/js/validation/password_validation.js',
         '../public/js/validation/hide_show_password.js',
+        '../public/js/client/jquery.js',
+        '../public/js/client/send_comment.js',
       );
     } else {
       $link_js_arr[] = '../public/js/client/view_form/sign_in_view.js';
@@ -132,6 +134,8 @@
       $link_js_arr[] = '../public/js/validation/otp_validation.js';
       $link_js_arr[] = '../public/js/validation/password_validation.js';
       $link_js_arr[] = '../public/js/validation/hide_show_password.js';
+      $link_js_arr[] = '../public/js/client/jquery.js';
+      $link_js_arr[] = '../public/js/client/send_comment.js';
     }
 
     if ($link_css_arr == '') {
