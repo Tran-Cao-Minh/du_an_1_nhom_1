@@ -18,13 +18,14 @@
 
       $main_bread_crumb = 'Trang chủ';
       $main_bread_crumb_link = '?page=home';
-      $sub_bread_crumb = '';
+      $sub_bread_crumb = '';  
       break;
       
     case 'introduce':
       include_once 'controller/c_introduce.php';
 
       $main_bread_crumb = 'Giới thiệu';
+      $main_bread_crumb_link = '?page=introduce';
       $sub_bread_crumb= '';
       break;
 
@@ -32,6 +33,7 @@
       include_once 'controller/c_order_list.php';
       
       $main_bread_crumb = 'Giỏ hàng';
+      $main_bread_crumb_link = '?page=order_list';
       $sub_bread_crumb = 'Danh sách đơn hàng';
       break;
 
@@ -39,6 +41,7 @@
       include_once 'controller/c_account.php';
       
       $main_bread_crumb = 'Tài khoản';
+      $main_bread_crumb_link = '?page=account';
       $sub_bread_crumb = '';
       break;
 
@@ -46,6 +49,7 @@
       include_once 'controller/c_cart.php';
       
       $main_bread_crumb = 'Giỏ hàng';
+      $main_bread_crumb_link = '?page=cart';
       $sub_bread_crumb = '';
       break;
     
@@ -53,6 +57,7 @@
       include_once 'controller/c_order_detail.php';
       
       $main_bread_crumb = 'Chi tiết đơn hàng';
+      $main_bread_crumb_link = '?page=order_detail';
       $sub_bread_crumb = '';
       break;
     
@@ -60,6 +65,7 @@
       include_once 'controller/c_pay.php';
       
       $main_bread_crumb = 'Thanh toán';
+      $main_bread_crumb_link = '?page=pay';
       $sub_bread_crumb = '';
       break;
 
@@ -67,6 +73,7 @@
       include_once 'controller/c_product.php';
       
       $main_bread_crumb = 'Trang sản phẩm';
+      $main_bread_crumb_link = '?page=product';
       $sub_bread_crumb = '';
       break;
 
@@ -74,6 +81,7 @@
       include_once 'controller/c_product_detail.php';
       
       $main_bread_crumb = 'Sản phẩm chi tiết';
+      $main_bread_crumb_link = '?page=product_detail';
       $sub_bread_crumb = '';
       break;
 
@@ -81,6 +89,7 @@
       include_once 'controller/c_favorite_product.php';
       
       $main_bread_crumb = 'Sản phẩm yêu thích';
+      $main_bread_crumb_link = '?page=favorite_product';
       $sub_bread_crumb = '';
       break;
 
@@ -109,6 +118,8 @@
         '../public/js/validation/otp_validation.js',
         '../public/js/validation/password_validation.js',
         '../public/js/validation/hide_show_password.js',
+        '../public/js/client/jquery.js',
+        '../public/js/client/send_comment.js',
       );
     } else {
       $link_js_arr[] = '../public/js/client/view_form/sign_in_view.js';
@@ -123,6 +134,8 @@
       $link_js_arr[] = '../public/js/validation/otp_validation.js';
       $link_js_arr[] = '../public/js/validation/password_validation.js';
       $link_js_arr[] = '../public/js/validation/hide_show_password.js';
+      $link_js_arr[] = '../public/js/client/jquery.js';
+      $link_js_arr[] = '../public/js/client/send_comment.js';
     }
 
     if ($link_css_arr == '') {
