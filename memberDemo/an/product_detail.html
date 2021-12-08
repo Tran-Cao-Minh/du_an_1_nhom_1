@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./prod_detail.css">
+    <link rel="stylesheet" href="./product.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/public/css/base/reset.css">
+    <link rel="stylesheet" href="/public/css/base/theme.css">
+    <link rel="stylesheet" href="/public/css/base/font.css">
+</head>
+
+<body>
+    <section class="prod__detail">
+        <div class="prod__detail-wrapper">
+            <div class="prod__detail-left">
+                <div class="prod__detail-image">
+                    <div class="prod__detail-image">
+                        <ul>
+                            <li class="prod__detail-image-item--pop_up"><img src="/public/image/site/product/nike_1.png" alt="">
+                            </li>
+                            <li class="prod__detail-image-item "><img src="/public/image/site/product/nike_2.png" alt="">
+                            </li>
+                            <li class="prod__detail-image-item "><img src="/public/image/site/product/nike_3.png" alt="">
+                            </li>
+                            <li class="prod__detail-image-item "><img src="/public/image/site/product/nike_4.png" alt="">
+                            </li>
+                            <li class="prod__detail-image-item "><img src="/public/image/site/product/nike_5.png" alt="">
+                            </li>
+                            
+                        </ul>
+                        <input type="checkbox" name="" id="heart__icon">
+                        <label for="heart__icon" class="heart__icon">
+                        </label>
+                    </div>
+                    <ul class="prod__detail-other">
+                        <li class="prod__detail-other-item--choosen js-small-image"><img src="/public/image/site/product/nike_1.png" alt="">
+                        </li>
+                        <li class="prod__detail-other-item js-small-image"><img src="/public/image/site/product/nike_2.png" alt="">
+                        </li>
+                        <li class="prod__detail-other-item js-small-image"><img src="/public/image/site/product/nike_3.png" alt="">
+                        </li>
+                        <li class="prod__detail-other-item js-small-image"><img src="/public/image/site/product/nike_4.png" alt="">
+                        </li>
+                        <li class="prod__detail-other-item js-small-image"><img src="/public/image/site/product/nike_5.png" alt="">
+                        </li>
+                        <span class="prev__icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="next__icon">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </ul>
+                </div>
+            </div>
+            <div class="prod__detail-right">
+                <div class="prod__detail-info">
+                    <div class="prod__detail-info-name">
+                        Giày Học Viện Nike Phantom GT
+                    </div>
+                    <ul class="prod__detail-info-tag">
+                        <li class="prod__detail-info-tag-name">Thương hiệu - Nike</li>
+                        <li class="prod__detail-info-tag-name">Giày thể thao</li>
+                        <li class="prod__detail-info-tag-name">Nam</li>
+                        <li class="prod__detail-info-tag-name">Người lớn</li>
+                    </ul>
+                    <div class="prod__detail-info-overview">
+                        <div class="prod__detail-info-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            ( Xem 257 đánh giá )
+                        </div>
+                        <div class="prod__detail-info-view-quantity">
+                            <span class="prod__detail-info-view-quantity-icon"><i class="far fa-eye"></i></span>
+                            <p class="prod__detail-info-view-quantity-text">1.6903</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prod__detail-form">
+                    <!-- Start variant color -->
+                    <div class="form__product__variant__color">
+                        <div class="form__product__variant__top">
+                            <p>Màu sắc</p>
+                        </div>
+                        <div class="form__product__variant__bottom">
+                            <div class="product__filter-item-color">
+                                <input type="checkbox" id="orange">
+                                <label class="product__filter-label--circle" for="orange"
+                                    style="--bg-color:#EE6F57;"></label>
+                            </div>
+                            <div class="product__filter-item-color">
+                                <input type="checkbox" id="turqoise">
+                                <label class="product__filter-label--circle" for="turqoise" style="--bg-color:
+                                #51C4D3;"></label>
+                            </div>
+                            <div class="product__filter-item-color">
+                                <input type="checkbox" id="black">
+                                <label class="product__filter-label--circle" for="black" style="--bg-color:
+                                #333333;"></label>
+                            </div>
+                            <div class="product__filter-item-color">
+                                <input type="checkbox" id="white">
+                                <label class="product__filter-label--circle" for="white" style="--bg-color:
+                                #ffffff;"></label>
+                            </div>
+                            <div class="product__filter-item-color">
+                                <input type="checkbox" id="lightgray">
+                                <label class="product__filter-label--circle" for="lightgray" style="--bg-color:
+                                #999999;"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End variant color -->
+                    <!-- Start variant size -->
+                    <div class="form__product__variant__size">
+                        <div class="form__product__variant__top">
+                            <p>Kích cỡ</p>
+                        </div>
+                        <div class="product__filter-content-size form__product__variant__bottom">
+                            <div class="product__filter-item">
+                                <input type="checkbox" id="24">
+                                <label class="product__filter-label-size" for="24"><span
+                                        class="prodduct__size-name">24</span></label>
+                            </div>
+                            <div class="product__filter-item">
+                                <input type="checkbox" id="26">
+                                <label class="product__filter-label-size" for="26"><span class="prodduct__size-name">
+                                        26</span></label>
+                            </div>
+                            <div class="product__filter-item product__filter-label--disabled">
+                                <input type="checkbox" id="28">
+                                <label class="product__filter-label-size  product__filter-label--disabled"
+                                    for="28"><span class="prodduct__size-name">
+                                        28</span></label>
+                            </div>
+                            <div class="product__filter-item">
+                                <input type="checkbox" id="29">
+                                <label class="product__filter-label-size" for="29"><span class="prodduct__size-name">
+                                        29</span></label>
+                            </div>
+                            <div class="product__filter-item">
+                                <input type="checkbox" id="30">
+                                <label class="product__filter-label-size" for="30"><span class="prodduct__size-name">
+                                        30</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End variant size -->
+                </div>
+                <div class="prod__detail-inventory">
+                    <div class="product__choose-number">
+                        Số lượng
+                        <div class="product__choose-number-decrease">
+                            <i class="fas fa-minus"></i>
+                        </div>
+                        <input value="1" class="product__choose-number-count">
+                        </input>
+                        <div class="product__choose-number-increase">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="prod__detail-inventory-remain">
+                        Còn lại <span>69</span> sản phẩm
+                    </div>
+                </div>
+                <div class="prod__detail-price">
+                    <div class="prod__detail-price-new">
+                        1.199.000 đ
+                    </div>
+                    <div class="prod__detail-price-sale">
+                        12%
+                    </div>
+                    <div class="prod__detail-price-old">
+                        <small>1.599.000</small> đ
+                    </div>
+                </div>
+                <form action="" class="prod__detail-action">
+                    <button type="submit" class="btn btn__add">
+                        Thêm vào giỏ
+                    </button>
+                    <button type="submit" class="btn btn__buy">
+                        Mua ngay
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
+    <script src="pro_detail.js"></script>
+</body>
+
+</html>
