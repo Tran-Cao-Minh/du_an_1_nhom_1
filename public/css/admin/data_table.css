@@ -209,6 +209,11 @@
   width: var(--cell-4-width);
 }
 
+.data-table__table-body-cell:nth-child(5),
+.data-table__table-header-cell:nth-child(5) {
+  width: var(--cell-5-width);
+}
+
 .data-table__table-cell-btn-group {
   display: flex;
 
@@ -309,6 +314,29 @@
   font-size: 1.5rem;
 }
 
+.data-table__view-statistic-detail-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+
+  background: var(--primary-color-blur);
+
+  transition: 0.2s;
+}
+
+.data-table__view-statistic-detail-icon {
+  color: var(--primary-color);
+
+  font-size: 1.7rem;
+}
+
+.data-table__view-statistic-detail-link:hover {
+  background: var(--secondary-color);
+}
 .data-table__delete-btn:hover,
 .data-table__view-detail-link:hover {
   opacity: 0.9;

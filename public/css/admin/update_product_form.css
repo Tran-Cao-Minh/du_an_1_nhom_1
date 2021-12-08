@@ -1,26 +1,3 @@
-:root {
-  --primary-color: rgb(18, 109, 130);
-  --primary-color-blur: rgba(18, 109, 130, 0.05);
-  --secondary-color: rgb(216, 227, 231);
-  --tertiary-color: rgb(81, 196, 211);
-  --primary-contrast-color: rgb(238, 111, 87);
-  --primary-contrast-color-blur: rgba(238, 111, 87, 0.05);
-
-  --red: rgb(207, 69, 92);
-  --gray: rgb(153, 153, 153);
-  --gray-blur: rgba(153, 153, 153, 0.1);
-  --white: rgb(255, 255, 255);
-  --black: rgb(51, 51, 51);
-
-  --bg-overlay: rgba(0, 0, 0, 0.35);
-}
-
-:root {
-  --regular: 'Roboto Regular', sans-serif;
-  --medium: 'Roboto Medium', sans-serif;
-  --bold: 'Roboto Bold', sans-serif;
-}
-
 .interaction-form__variant-list-group{
   width: 100%;
   height: auto;

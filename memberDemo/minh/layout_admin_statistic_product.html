@@ -7,22 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <!-- Global CSS -->
-  <link rel="stylesheet" href="../public/css/base/reset.css">
-  <link rel="stylesheet" href="../public/css/base/theme.css">
-  <link rel="stylesheet" href="../public/css/base/font.css">
+  <link rel="stylesheet" href="/public/css/base/reset.css">
+  <link rel="stylesheet" href="/public/css/base/theme.css">
+  <link rel="stylesheet" href="/public/css/base/font.css">
   <!-- Font Awsome -->
   <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
   <!-- Layout CSS -->
-  <link rel="stylesheet" href="../public/css/admin/layout/sidebar.css">
-  <link rel="stylesheet" href="../public/css/admin/layout/main_header.css">
-  <?php
-    if ($link_css_arr != '') {
-      echo '<!-- Link CSS -->';
-      foreach ($link_css_arr as $link_css) {
-        echo '<link rel="stylesheet" href="'.$link_css.'">';
-      }
-    }
-  ?>
+  <link rel="stylesheet" href="../../public/css/admin/layout/sidebar.css">
+  <link rel="stylesheet" href="../../public/css/admin/layout/main_header.css">
+  <!-- Statistic Chart CSS -->
+  <link rel="stylesheet" href="../../public/css/admin/statistic_chart.css">
+  <!-- Data Table CSS -->
+  <link rel="stylesheet" href="../../public/css/admin/data_table.css">
 </head>
 
 <body>
@@ -187,17 +183,17 @@
         </label>
         <ul class="sidebar__sub-menu-list" style="--heigth: 15rem;">
           <li>
-            <a href="?page_name=manage_category" class="sidebar__sub-menu-item">
+            <a href="#" class="sidebar__sub-menu-item">
               Chỉnh sửa danh mục
             </a>
           </li>
           <li>
-            <a href="?page_name=manage_color" class="sidebar__sub-menu-item">
+            <a href="#" class="sidebar__sub-menu-item">
               Chỉnh sửa màu sắc
             </a>
           </li>
           <li>
-            <a href="?page_name=manage_brand" class="sidebar__sub-menu-item">
+            <a href="#" class="sidebar__sub-menu-item">
               Chỉnh sửa thương hiệu
             </a>
           </li>
@@ -218,12 +214,12 @@
         </label>
         <ul class="sidebar__sub-menu-list" style="--heigth: 15rem;">
           <li>
-            <a href="?page_name=manage_product" class="sidebar__sub-menu-item">
+            <a href="#" class="sidebar__sub-menu-item">
               Chỉnh sửa sản phẩm
             </a>
           </li>
           <li>
-            <a href="?page_name=statistic_product" class="sidebar__sub-menu-item">
+            <a href="#" class="sidebar__sub-menu-item">
               Thống kê sản phẩm
             </a>
           </li>
@@ -269,11 +265,11 @@
               Chỉnh sửa bình luận
             </a>
           </li>
-          <!-- <li>
+          <li>
             <a href="#" class="sidebar__sub-menu-item">
               Thống kê bình luận
             </a>
-          </li> -->
+          </li>
         </ul>
       </li>
       <li>
@@ -292,17 +288,17 @@
         <ul class="sidebar__sub-menu-list" style="--heigth: 15rem;">
           <li>
             <a href="#" class="sidebar__sub-menu-item">
-              Cập nhật đơn hàng
+              Chỉnh sửa đơn hàng
             </a>
           </li>
-          <!-- <li>
+          <li>
             <a href="#" class="sidebar__sub-menu-item">
               Thống kê đơn hàng
             </a>
-          </li> -->
+          </li>
         </ul>
       </li>
-      <!-- <li>
+      <li>
         <input type="radio" name="sidebar__menu-check" id="sidebar__menu-check-6" class="sidebar__menu-check">
         <label for="sidebar__menu-check-6" class="sidebar__menu-item">
           <div class="sidebar__contain-menu-icon">
@@ -322,7 +318,7 @@
             </a>
           </li>
         </ul>
-      </li> -->
+      </li>
     </ul>
   </aside>
   <main>
@@ -333,7 +329,7 @@
         </label>
         <div class="main-header__user-control">
           <div class="main-header__contain-user-avatar">
-            <img src="../memberDemo/minh/image/userImg.png" alt="" class="main-header__user-avatar">
+            <img src="image/userImg.png" alt="" class="main-header__user-avatar">
           </div>
           <div class="main-header__contain-dropdown-icon">
             <i class="fas fa-sort-down main-header__dropdown-icon"></i>
@@ -357,32 +353,242 @@
         </div>
       </div>
       <div class="main-header__bread-crumb">
-        <div class="main-header__bread-crumb-link">
-          <?php echo $main_bread_crumb; ?>
-        </div>
+        <a class="main-header__bread-crumb-link" href="#">
+          Quản lý thuộc tính
+        </a>
         <div class="main-header__bread-crumb-contain-icon">
           <i class="fas fa-chevron-right main-header__bread-crumb-icon"></i>
         </div>
-        <div class="main-header__bread-crumb-link">
-          <?php echo $sub_bread_crumb; ?>
-        </div>
+        <a class="main-header__bread-crumb-link" href="#">
+          Chỉnh sửa danh mục
+        </a>
       </div>
     </section>
     <section class="main-body">
-      <?php
-        include_once $view_link;
-      ?>
+      <section class="statistic-chart">
+        <div class="statistic-chart__header">
+          Thống kê sản phẩm
+        </div>
+        <div class="statistic-chart__choose-statistic-group">
+          <a href="" class="statistic-chart__choose-statistic-item">
+            Số lượng
+          </a>
+          <div class="statistic-chart__choose-statistic-item--choosen">
+            Tồn kho
+          </div>
+          <a href="" class="statistic-chart__choose-statistic-item">
+            Đã bán
+          </a>
+        </div>
+        <div class="statistic-chart__contain-chart">
+          <canvas class="statistic-chart__chart" id="myChart"></canvas>
+        </div>
+        <!-- lay du lieu tao bieu do thong ke -->
+        <!-- PHP -->
+        <!-- PHP -->
+        <!-- PHP -->
+        <!-- PHP -->
+        <!-- PHP -->
+        <!-- link chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+          var ctx = document.getElementById('myChart').getContext('2d');
+          var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+              labels: ["Kinh Tế", "Thiếu Nhi", "Kỹ Năng Sống", "Tâm Lý",],
+              datasets: [{
+                data: [5, 5, 5, 5,],
+                backgroundColor: ["#a2d2ffdd", "#F43B86dd", "#a5e1addd", "#B980F0dd",],
+              }]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: {
+                  position: 'bottom',
+                },
+              }
+            }
+          });
+        </script>
+      </section>
+      <section class="data-table">
+        <div class="data-table__body">
+          <table class="data-table__table" style="--cell-1-width: 18rem; --cell-2-width: 25rem; --cell-3-width: 19rem;">
+            <thead class="data-table__contain-table-header">
+              <tr class="data-table__table-header-row">
+                <th class="data-table__table-header-cell">
+                  Mã danh mục
+                </th>
+                <th class="data-table__table-header-cell">
+                  Tên danh mục
+                </th>
+                <th class="data-table__table-header-cell"></th>
+              </tr>
+            </thead>
+            <tbody class="data-table__contain-table-body">
+              <tr class="data-table__table-body-row">
+                <td class="data-table__table-body-cell">
+                  1
+                </td>
+                <td class="data-table__table-body-cell">
+                  Giày thể thao
+                </td>
+                <td class="data-table__table-body-cell">
+                  <form class="data-table__table-cell-btn-group">
+                    <button type="submit" name="a" value="a" class="data-table__change-view-status-btn--show">
+                      <i class="fas fa-eye data-table__change-view-status-icon--show"></i>
+                    </button>
+                    <!-- <button type="submit" class="data-table__change-view-status-btn--not-show">
+                      <i class="fas fa-eye-slash data-table__change-view-status-icon--not-show"></i>
+                    </button> -->
+                    <button type="submit" class="data-table__delete-btn">
+                      <i class="far fa-trash-alt data-table__delete-icon"></i>
+                    </button>
+                  </form>
+                  <a href="#" class="data-table__view-detail-link">
+                    <i class="fas fa-wrench data-table__view-detail-icon"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr class="data-table__table-body-row">
+                <td class="data-table__table-body-cell">
+                  1
+                </td>
+                <td class="data-table__table-body-cell">
+                  Giày thể thao
+                  Giày thể thao
+                  Giày thể thao
+                  Giày thể thao
+                </td>
+                <td class="data-table__table-body-cell">
+                  <form class="data-table__table-cell-btn-group">
+                    <!-- <button type="submit" name="a" value="a" class="data-table__change-view-status-btn--show">
+                      <i class="fas fa-eye data-table__change-view-status-icon--show"></i>
+                    </button> -->
+                    <button type="submit" class="data-table__change-view-status-btn--not-show">
+                      <i class="fas fa-eye-slash data-table__change-view-status-icon--not-show"></i>
+                    </button>
+                    <button type="submit" class="data-table__delete-btn">
+                      <i class="far fa-trash-alt data-table__delete-icon"></i>
+                    </button>
+                  </form>
+                  <a href="#" class="data-table__view-detail-link">
+                    <i class="fas fa-wrench data-table__view-detail-icon"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr class="data-table__table-body-row">
+                <td class="data-table__table-body-cell">
+                  1
+                </td>
+                <td class="data-table__table-body-cell">
+                  Giày thể thao
+                </td>
+                <td class="data-table__table-body-cell">
+                  <form class="data-table__table-cell-btn-group">
+                    <!-- <button type="submit" name="a" value="a" class="data-table__change-view-status-btn--show">
+                      <i class="fas fa-eye data-table__change-view-status-icon--show"></i>
+                    </button> -->
+                    <button type="submit" class="data-table__change-view-status-btn--not-show">
+                      <i class="fas fa-eye-slash data-table__change-view-status-icon--not-show"></i>
+                    </button>
+                    <button type="submit" class="data-table__delete-btn">
+                      <i class="far fa-trash-alt data-table__delete-icon"></i>
+                    </button>
+                  </form>
+                  <a href="#" class="data-table__view-detail-link">
+                    <i class="fas fa-wrench data-table__view-detail-icon"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr class="data-table__table-body-row">
+                <td class="data-table__table-body-cell">
+                  1
+                </td>
+                <td class="data-table__table-body-cell">
+                  Giày thể thao
+                </td>
+                <td class="data-table__table-body-cell">
+                  <form class="data-table__table-cell-btn-group">
+                    <!-- <button type="submit" name="a" value="a" class="data-table__change-view-status-btn--show">
+                      <i class="fas fa-eye data-table__change-view-status-icon--show"></i>
+                    </button> -->
+                    <button type="submit" class="data-table__change-view-status-btn--not-show">
+                      <i class="fas fa-eye-slash data-table__change-view-status-icon--not-show"></i>
+                    </button>
+                    <button type="submit" class="data-table__delete-btn">
+                      <i class="far fa-trash-alt data-table__delete-icon"></i>
+                    </button>
+                  </form>
+                  <a href="#" class="data-table__view-detail-link">
+                    <i class="fas fa-wrench data-table__view-detail-icon"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr class="data-table__table-body-row">
+                <td class="data-table__table-body-cell">
+                  1
+                </td>
+                <td class="data-table__table-body-cell">
+                  Giày thể thao
+                </td>
+                <td class="data-table__table-body-cell">
+                  <form class="data-table__table-cell-btn-group">
+                    <!-- <button type="submit" name="a" value="a" class="data-table__change-view-status-btn--show">
+                      <i class="fas fa-eye data-table__change-view-status-icon--show"></i>
+                    </button> -->
+                    <button type="submit" class="data-table__change-view-status-btn--not-show">
+                      <i class="fas fa-eye-slash data-table__change-view-status-icon--not-show"></i>
+                    </button>
+                    <button type="submit" class="data-table__delete-btn">
+                      <i class="far fa-trash-alt data-table__delete-icon"></i>
+                    </button>
+                  </form>
+                  <a href="#" class="data-table__view-detail-link">
+                    <i class="fas fa-wrench data-table__view-detail-icon"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="data-table__footer">
+          <ul class="data-table__footer-bread-crumb">
+            <li>
+              <a href="#" class="data-table__footer-bread-crumb-link">
+                1
+              </a>
+            </li>
+            <li>
+              <a href="#" class="data-table__footer-bread-crumb-link">
+                2
+              </a>
+            </li>
+            <li>
+              <span class="data-table__footer-bread-crumb-link--disabled">
+                3
+              </span>
+            </li>
+            <li>
+              <a href="#" class="data-table__footer-bread-crumb-link">
+                4
+              </a>
+            </li>
+            <li>
+              <a href="#" class="data-table__footer-bread-crumb-link">
+                <i class="data-table__footer-bread-crumb-link-icon fas fa-angle-double-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </section>
   </main>
-  
-  <?php
-    if ($link_js_arr != '') {
-      echo '<!-- link JS -->';
-      foreach ($link_js_arr as $link_js) {
-        echo '<script src="'.$link_js.'"></script>';
-      }
-    }
-  ?>
+
+  <!-- link JS -->
+  <script src="../../public/js/admin/filter_form.js"></script>
 </body>
 
 </html>

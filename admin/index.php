@@ -44,6 +44,13 @@
       $main_bread_crumb = 'Quản lý sản phẩm';
       $sub_bread_crumb = 'Chỉnh sửa sản phẩm';
       break; 
+
+    case 'statistic_product': 
+      include_once 'controller/c_statistic_product.php';
+
+      $main_bread_crumb = 'Quản lý sản phẩm';
+      $sub_bread_crumb = 'Thống kê sản phẩm';
+      break; 
   }
 
   include_once 'view/layout_admin.php';

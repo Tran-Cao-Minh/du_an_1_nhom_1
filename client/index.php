@@ -17,6 +17,7 @@
       include_once 'controller/c_home.php';
 
       $main_bread_crumb = 'Trang chủ';
+      $main_bread_crumb_link = '?page=home';
       $sub_bread_crumb = '';
       break;
       

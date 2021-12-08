@@ -149,7 +149,6 @@
                 ';
               };
             ?>
-            <!-- <input type="hidden" name="object_id" value=""> -->
           <?php else: ?>
             <?php
                 echo '
