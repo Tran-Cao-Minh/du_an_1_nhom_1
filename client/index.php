@@ -51,6 +51,7 @@
       $main_bread_crumb = 'Giỏ hàng';
       $main_bread_crumb_link = '?page=cart';
       $sub_bread_crumb = '';
+      $sub_bread_crumb_link = '?page=order_detail';
       break;
     
     case 'order_detail':
@@ -75,6 +76,7 @@
       $main_bread_crumb = 'Trang sản phẩm';
       $main_bread_crumb_link = '?page=product';
       $sub_bread_crumb = '';
+      $sub_bread_crumb_link = '?page=product_detail';
       break;
 
     case 'product_detail':
@@ -83,7 +85,6 @@
       $main_bread_crumb = 'Sản phẩm chi tiết';
       $main_bread_crumb_link = '?page=product_detail';
       $sub_bread_crumb = '';
-      $sub_crumb_link = '?page=product';
       break;
 
     case 'favorite_product':
@@ -94,7 +95,6 @@
       $sub_bread_crumb = '';
       break;
 
-    
   }
 
   $check_login = false;
