@@ -10,21 +10,23 @@ try {
   echo "Connection failed: " . $e->getMessage();
 }
 
-    $commentContent = $_GET['commentContent'];
+    
 
+    $commentContent = $_GET['commentContent'];
+    $productId = $_GET['productId'];
+    
     $sql = "INSERT INTO `product_comment` 
             (`PkProductComment_Id`, `FkCustomer_Id`, `FkProduct_Id`, `CommentContent`)
             VALUES 
-            ('1', '1', '5', '$commentContent')";
+            (NULL, '1', '2', '$commentContent')";
 
     if ($conn->query($sql) == true) {
         
     $sql = "SELECT `CustomerName`
             FROM `customer` 
-            WHERE `Pk_Customer_Id` = '1'
-            AND `CustomerPhone` = '332345012'";
+            WHERE `PkCustomer_Id` = '1'";
     $result = $conn->query($sql);
-    $result = $result->fetch_array();
+    $result = $result->fetch();
     $username = $result[0];
 
     $date = date('d-m-Y');
@@ -60,8 +62,9 @@ try {
     
     }
 
-
-
+    if($output != "fail") {
+        echo $output;
+    }
 
 
 
