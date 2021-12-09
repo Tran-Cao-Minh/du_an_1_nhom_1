@@ -83,6 +83,7 @@
       $main_bread_crumb = 'Sản phẩm chi tiết';
       $main_bread_crumb_link = '?page=product_detail';
       $sub_bread_crumb = '';
+      $sub_crumb_link = '?page=product';
       break;
 
     case 'favorite_product':
