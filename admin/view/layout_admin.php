@@ -29,7 +29,7 @@
   <input type="checkbox" id="check-sidebar">
   <aside class="sidebar">
     <div class="sidebar__contain-logo">
-      <a class="sidebar__logo" href="#">
+      <div class="sidebar__logo">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417.34 163.29">
           <defs>
             <style>
@@ -168,7 +168,7 @@
             </g>
           </g>
         </svg>
-      </a>
+      </div>
     </div>
     <ul class="sidebar__menu-list">
       <li>
@@ -333,7 +333,11 @@
         </label>
         <div class="main-header__user-control">
           <div class="main-header__contain-user-avatar">
-            <img src="../memberDemo/minh/image/userImg.png" alt="" class="main-header__user-avatar">
+            <?php if ($admin_data['CustomerAvatar'] != ''): ?>
+              <img src="../public/image/account_avatar/<?php echo $admin_data['CustomerAvatar']; ?>" class="main-header__user-avatar">
+            <?php else: ?>
+              <img src="../public/image/account_avatar/default.jpeg" class="main-header__user-avatar">
+            <?php endif; ?>
           </div>
           <div class="main-header__contain-dropdown-icon">
             <i class="fas fa-sort-down main-header__dropdown-icon"></i>
@@ -342,17 +346,24 @@
             <div class="main-header__user-name">
               Xin chào,&nbsp;
               <span class="main-header__emphasize-user-name">
-                Trần Cao Minh
+                <?php echo $admin_data['CustomerName']; ?>
               </span>
             </div>
             <div class="main-header__user-role">
-              Quản trị tối cao
+              <?php
+                switch ($admin_data['AccountRole']) {
+                  case '1':
+                    echo 'Quản trị viên';
+                    break;
+                }
+              ?>
             </div>
-            <a href="">
-              <button class="main-header__logout-btn">
+            <form method="POST">
+              <button type="submit" class="main-header__logout-btn"
+                name="logout_confirm">
                 Đăng xuất
               </button>
-            </a>
+            </form>
           </div>
         </div>
       </div>
