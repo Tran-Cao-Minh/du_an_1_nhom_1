@@ -6,7 +6,6 @@ Thông tin chung:
 Thành viên phát triển dự án:
 - Lê Trọng Ân
 - Lê Vĩnh Kỳ
-- Võ Trường Duy
 - Nguyễn Trung Kiên
 - Trần Cao Minh
 
