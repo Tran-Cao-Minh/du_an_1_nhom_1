@@ -59,6 +59,13 @@
       $sub_bread_crumb = 'Chỉnh sửa tài khoản';
       break; 
 
+    case 'manage_comment': 
+      include_once 'controller/c_comment.php';
+
+      $main_bread_crumb = 'Quản lý bình luận';
+      $sub_bread_crumb = 'Chỉnh sửa bình luận';
+      break;
+
     case 'manage_order': 
       include_once 'controller/c_order.php';
 

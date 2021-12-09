@@ -18,11 +18,14 @@
           <option value="ProductName" data-type="text" class="filter-form__select-option">
             Tên sản phẩm
           </option>
-          <option value="ProductPrice" data-type="number" class="filter-form__select-option">
-            Giá sản phẩm
+          <option value="CustomerName" data-type="text" class="filter-form__select-option">
+            Người bình luận
           </option>
-          <option value="ProductView" data-type="number" class="filter-form__select-option">
-            Số lượt xem
+          <option value="CommentDate" data-type="date" class="filter-form__select-option">
+            Ngày đăng
+          </option>
+          <option value="CommentContent" data-type="text" class="filter-form__select-option">
+            Nội dung
           </option>
         </select>
       </div>
@@ -103,28 +106,30 @@
     <div class="data-table__header-title">
       Bảng dữ liệu
     </div>
-    <a href="?view_name=add" class="data-table__header-add-object">
-      <div class="data-table__header-add-object-title">
-        Thêm sản phẩm
-      </div>
-      <div class="data-table__header-add-object-contain-icon">
-        <i class="fas fa-plus data-table__header-add-object-icon"></i>
-      </div>
-    </a>
   </div>
   <div class="data-table__body">
     <table class="data-table__table" 
-      style="--cell-1-width: 30rem; --cell-2-width: 25rem; --cell-3-width: 13.5rem; --cell-4-width: 19rem;">
+      style="
+        --cell-1-width: 25rem; 
+        --cell-2-width: 25rem; 
+        --cell-3-width: 16rem;
+        --cell-4-width: 32rem;
+        --cell-5-width: 13.5rem;
+      "
+    >
       <thead class="data-table__contain-table-header">
         <tr class="data-table__table-header-row">
           <th class="data-table__table-header-cell">
             Tên sản phẩm
           </th>
           <th class="data-table__table-header-cell">
-            Giá sản phẩm (VND)
+            Người bình luận
           </th>
           <th class="data-table__table-header-cell">
-            Số lượt xem
+            Ngày đăng
+          </th>
+          <th class="data-table__table-header-cell">
+            Nội dung
           </th>
           <th class="data-table__table-header-cell"></th>
         </tr>
@@ -133,40 +138,28 @@
           <?php if ($page_quantity !== 0): ?>
             <?php
               foreach ($data_result as $row) {
-                if ($row['ProductViewStatus'] == 1) {
-                  $change_view_status_btn = '
-                    <button type="submit" name="change_view_status" value="true" class="data-table__change-view-status-btn--show">
-                      <i class="fas fa-eye data-table__change-view-status-icon--show"></i>
-                    </button>
-                  ';
-                } else {
-                  $change_view_status_btn = '
-                    <button type="submit" name="change_view_status" value="false" class="data-table__change-view-status-btn--not-show">
-                      <i class="fas fa-eye-slash data-table__change-view-status-icon--not-show"></i>
-                    </button>
-                  ';
-                }
                 echo '
                   <tr class="data-table__table-body-row">
                     <td class="data-table__table-body-cell">
                       '.$row['ProductName'].'
                     </td>
                     <td class="data-table__table-body-cell">
-                      '.number_format($row['ProductPrice'], 0, ',', '.').'
+                      '.$row['CustomerName'].'
                     </td>
                     <td class="data-table__table-body-cell">
-                      '.$row['ProductView'].'
+                      '.$row['CommentDate'].'
+                    </td>
+                    <td class="data-table__table-body-cell">
+                      '.$row['CommentContent'].'
                     </td>
                     <td class="data-table__table-body-cell">
                       <form class="data-table__table-cell-btn-group">
-                        <input type="hidden" name="object_id" value="'.$row['PkProduct_Id'].'">
-                        <input type="hidden" name="product_name" value="'.$row['ProductName'].'">
-                        '.$change_view_status_btn.'
+                        <input type="hidden" name="object_id" value="'.$row['PkProductComment_Id'].'">
                         <button type="submit" name="delete_confirm" value="true" class="data-table__delete-btn">
                           <i class="far fa-trash-alt data-table__delete-icon"></i>
                         </button>
                       </form>
-                      <a href="?view_name=update&object_id='.$row['PkProduct_Id'].'" class="data-table__view-detail-link">
+                      <a href="?view_name=update&object_id='.$row['PkProductComment_Id'].'" class="data-table__view-detail-link">
                         <i class="fas fa-wrench data-table__view-detail-icon"></i>
                       </a>
                     </td>
@@ -174,7 +167,6 @@
                 ';
               };
             ?>
-            <!-- <input type="hidden" name="object_id" value=""> -->
           <?php else: ?>
             <?php
                 echo '
