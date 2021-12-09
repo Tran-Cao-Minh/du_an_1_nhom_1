@@ -13,7 +13,7 @@ try {
     
 
     $commentContent = $_GET['commentContent'];
-    $productId = $_GET['productId'];
+    // $productId = $_GET['productId'];
     
     $sql = "INSERT INTO `product_comment` 
             (`PkProductComment_Id`, `FkCustomer_Id`, `FkProduct_Id`, `CommentContent`)
