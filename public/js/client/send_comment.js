@@ -5,7 +5,7 @@ $(document).ready(function () {
             alert("Bạn chưa nhập bình luận!");
         } else {
             let commentButton = $('.prod__detail-comment-form-icon');
-            let productId = commentButton.data('PkProduct_Id');
+            // let productId = commentButton.data('PkProduct_Id');
 
             $.ajax({
                 url: './model/ajax_post_comment.php',
@@ -13,7 +13,7 @@ $(document).ready(function () {
                 dataType: 'html',
                 data: {
                     commentContent: commentContent,
-                    productId: productId,
+                    // productId: productId,
                 }
             }).done(function (output) {
                 if (output === "fail") {
