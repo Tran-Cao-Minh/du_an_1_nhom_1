@@ -170,7 +170,7 @@
           <div class="interaction-form__radio-item-50">
             <input type="radio" class="interaction-form__input--hidden" id="show" 
               name="product_view_status"
-              value="show"
+              value="1"
             >
             <label for="show" class="interaction-form__radio-item-label">
               Hiển thị
@@ -180,7 +180,7 @@
             <input type="radio" class="interaction-form__input--hidden" id="hide" 
               checked 
               name="product_view_status"
-              value="hide"
+              value="0"
             >
             <label for="hide" class="interaction-form__radio-item-label">
               Ẩn

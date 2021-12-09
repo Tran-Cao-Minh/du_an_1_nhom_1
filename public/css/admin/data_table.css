@@ -166,6 +166,7 @@
 .data-table__table-body-cell:last-child {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .data-table__table-header-cell {

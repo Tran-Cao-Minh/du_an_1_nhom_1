@@ -51,6 +51,13 @@
       $main_bread_crumb = 'Quản lý sản phẩm';
       $sub_bread_crumb = 'Thống kê sản phẩm';
       break; 
+
+    case 'manage_account': 
+      include_once 'controller/c_account.php';
+
+      $main_bread_crumb = 'Quản lý tài khoản';
+      $sub_bread_crumb = 'Chỉnh sửa tài khoản';
+      break; 
   }
 
   include_once 'view/layout_admin.php';
