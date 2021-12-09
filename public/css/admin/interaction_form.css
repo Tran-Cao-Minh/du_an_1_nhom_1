@@ -108,6 +108,13 @@
   transition: 0.2s;
 }
 
+.paragraph {
+  height: 12rem;
+  resize: vertical;
+
+  line-height: 3rem;
+}
+
 .interaction-form__input:focus,
 .interaction-form__input:hover {
   border-color: var(--primary-color);

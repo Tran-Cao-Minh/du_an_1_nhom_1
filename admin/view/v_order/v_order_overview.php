@@ -15,14 +15,17 @@
           Chọn cột được lọc
         </div>
         <select name="filter_column" class="filter-form__select-input js-select-filter-column-input">
-          <option value="CustomerName" data-type="text" class="filter-form__select-option">
-            Tên người dùng
+          <option value="PkOrder_Id" data-type="text" class="filter-form__select-option">
+            Mã đơn hàng
           </option>
-          <option value="CustomerPhone" data-type="tel" class="filter-form__select-option">
-            Số điện thoại
+          <option value="OrderDate" data-type="date" class="filter-form__select-option">
+            Ngày tạo
           </option>
-          <option value="CustomerEmail" data-type="email" class="filter-form__select-option">
-            Email
+          <option value="OrderTotalMoney" data-type="number" class="filter-form__select-option">
+            Tổng tiền
+          </option>
+          <option value="OrderStatusName" data-type="text" class="filter-form__select-option">
+            Trạng thái
           </option>
         </select>
       </div>
@@ -103,29 +106,30 @@
     <div class="data-table__header-title">
       Bảng dữ liệu
     </div>
-    <a href="?view_name=add" class="data-table__header-add-object">
-      <div class="data-table__header-add-object-title">
-        Thêm người dùng
-      </div>
-      <div class="data-table__header-add-object-contain-icon">
-        <i class="fas fa-plus data-table__header-add-object-icon"></i>
-      </div>
-    </a>
   </div>
   <div class="data-table__body">
     <table class="data-table__table" 
-      style="--cell-1-width: 22rem; --cell-2-width: 16rem; --cell-3-width: 30rem; --cell-4-width: 13.5rem;"
+      style="
+        --cell-1-width: 15rem; 
+        --cell-2-width: 15rem; 
+        --cell-3-width: 16rem;
+        --cell-4-width: 20rem;
+        --cell-5-width: 8rem;
+      "
     >
       <thead class="data-table__contain-table-header">
         <tr class="data-table__table-header-row">
           <th class="data-table__table-header-cell">
-            Tên người dùng
+            Mã đơn hàng
           </th>
           <th class="data-table__table-header-cell">
-            Số điện thoại
+            Ngày tạo
           </th>
           <th class="data-table__table-header-cell">
-            Email
+            Tổng tiền (VND)
+          </th>
+          <th class="data-table__table-header-cell">
+            Trạng thái
           </th>
           <th class="data-table__table-header-cell"></th>
         </tr>
@@ -134,38 +138,24 @@
           <?php if ($page_quantity !== 0): ?>
             <?php
               foreach ($data_result as $row) {
-                if ($row['AccountRole'] != 0) {
-                  $btn_interaction = '
-                    <a href="?view_name=update&object_id='.$row['PkCustomer_Id'].'" class="data-table__view-statistic-detail-link">
-                      <i class="fas fa-info data-table__view-statistic-detail-icon"></i>
-                    </a>
-                  ';
-                } else {
-                  $btn_interaction = '
-                    <form class="data-table__table-cell-btn-group">
-                      <input type="hidden" name="object_id" value="'.$row['PkCustomer_Id'].'">
-                      <button type="submit" name="delete_confirm" value="true" class="data-table__delete-btn">
-                        <i class="far fa-trash-alt data-table__delete-icon"></i>
-                      </button>
-                    </form>
-                    <a href="?view_name=update&object_id='.$row['PkCustomer_Id'].'" class="data-table__view-detail-link">
-                      <i class="fas fa-wrench data-table__view-detail-icon"></i>
-                    </a>
-                  ';
-                }
                 echo '
                   <tr class="data-table__table-body-row">
                     <td class="data-table__table-body-cell">
-                      '.$row['CustomerName'].'
+                      '.$row['PkOrder_Id'].'
                     </td>
                     <td class="data-table__table-body-cell">
-                      '.$row['CustomerPhone'].'
+                      '.$row['OrderDate'].'
                     </td>
                     <td class="data-table__table-body-cell">
-                      '.$row['CustomerEmail'].'
+                      '.number_format($row['OrderTotalMoney'], 0, ',', '.').'
                     </td>
                     <td class="data-table__table-body-cell">
-                      '.$btn_interaction.'
+                      '.$row['OrderStatusName'].'
+                    </td>
+                    <td class="data-table__table-body-cell">
+                      <a href="?view_name=update&object_id='.$row['PkOrder_Id'].'" class="data-table__view-detail-link">
+                        <i class="fas fa-wrench data-table__view-detail-icon"></i>
+                      </a>
                     </td>
                   </tr>
                 ';

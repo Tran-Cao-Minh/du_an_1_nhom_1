@@ -58,6 +58,13 @@
       $main_bread_crumb = 'Quản lý tài khoản';
       $sub_bread_crumb = 'Chỉnh sửa tài khoản';
       break; 
+
+    case 'manage_order': 
+      include_once 'controller/c_order.php';
+
+      $main_bread_crumb = 'Quản lý đơn hàng';
+      $sub_bread_crumb = 'Cập nhật đơn hàng';
+      break; 
   }
 
   include_once 'view/layout_admin.php';
