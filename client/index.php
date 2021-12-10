@@ -33,8 +33,9 @@
       include_once 'controller/c_order_list.php';
       
       $main_bread_crumb = 'Giỏ hàng';
-      $main_bread_crumb_link = '?page=order_list';
+      $main_bread_crumb_link = '?page=cart';
       $sub_bread_crumb = 'Danh sách đơn hàng';
+      $sub_bread_crumb_link = '?page=order_list';
       break;
 
     case 'account':
@@ -51,23 +52,24 @@
       $main_bread_crumb = 'Giỏ hàng';
       $main_bread_crumb_link = '?page=cart';
       $sub_bread_crumb = '';
-      $sub_bread_crumb_link = '?page=order_detail';
       break;
     
     case 'order_detail':
       include_once 'controller/c_order_detail.php';
       
-      $main_bread_crumb = 'Chi tiết đơn hàng';
-      $main_bread_crumb_link = '?page=order_detail';
-      $sub_bread_crumb = '';
+      $main_bread_crumb = 'Giỏ hàng';
+      $main_bread_crumb_link = '?page=cart';
+      $sub_bread_crumb = 'Chi tiết đơn hàng';
+      $sub_bread_crumb_link = '?page=order_detail';
       break;
     
     case 'pay':
       include_once 'controller/c_pay.php';
       
-      $main_bread_crumb = 'Thanh toán';
-      $main_bread_crumb_link = '?page=pay';
-      $sub_bread_crumb = '';
+      $main_bread_crumb = 'Giỏ hàng';
+      $main_bread_crumb_link = '?page=cart';
+      $sub_bread_crumb = 'Thanh toán';
+      $sub_bread_crumb_link = '?page=pay';
       break;
 
     case 'product':
@@ -76,15 +78,15 @@
       $main_bread_crumb = 'Trang sản phẩm';
       $main_bread_crumb_link = '?page=product';
       $sub_bread_crumb = '';
-      $sub_bread_crumb_link = '?page=product_detail';
       break;
 
     case 'product_detail':
       include_once 'controller/c_product_detail.php';
       
-      $main_bread_crumb = 'Sản phẩm chi tiết';
-      $main_bread_crumb_link = '?page=product_detail';
-      $sub_bread_crumb = '';
+      $main_bread_crumb = 'Trang sản phẩm';
+      $main_bread_crumb_link = '?page=product';
+      $sub_bread_crumb = 'Sản phẩm chi tiết';
+      $sub_bread_crumb_link = '?page=product_detail';
       break;
 
     case 'favorite_product':
