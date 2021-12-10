@@ -2,8 +2,11 @@
   function getProductCategory() {
     $conn = connectDatabase();
 
-    $sql = "SELECT * 
-            FROM `product_type`";
+    $sql = "SELECT pt.* 
+            FROM `product_type` pt
+            INNER JOIN `product` p 
+              ON pt.`PkType_Id` = p.`FkType_Id`
+            GROUP BY pt.`PkType_Id`";
     $data_result = $conn->query($sql);
 
     $return_quantity = $data_result->rowCount();

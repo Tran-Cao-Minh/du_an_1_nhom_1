@@ -3,6 +3,13 @@
     session_start();
   }
 
+  // GET SOME GENERAL INFORMARION
+  include_once '../global/connect_database.php';
+  include_once 'model/m_common.php';
+  $product_category_list = getProductCategory();
+  // END GET SOME GENERAL INFORMARION
+
+  // NAVIGATE TO PAGE
   if (isset($_GET['page'])) {
     $_SESSION['page'] = $_GET['page'];
 
@@ -10,7 +17,6 @@
     $_SESSION['page'] = 'home';
   }
   $page = $_SESSION['page'];
-  // echo $page; ////////////////////////////////////////
 
   switch ($page) {
     case 'home': 
@@ -98,7 +104,10 @@
       break;
 
   }
+  include_once 'view/layout/layout.php';
+  // NAVIGATE TO PAGE
 
+  // CHECK LOGIN
   $check_login = false;
   if ($check_login == false) {
     include_once 'view/popup/v_sign_in.php';
@@ -154,8 +163,6 @@
     } else {
       $link_css_arr[] = '../public/css/client/layout/form.css';
     }
-    
   }
-  
-  include_once 'view/layout/layout.php';
+  // END CHECK LOGIN
 ?>
