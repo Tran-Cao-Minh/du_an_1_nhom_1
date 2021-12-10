@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded",function(){
         //1.Lấy vị trí slide hiện tại
         let vitrislideht = 0
         let slideht = document.querySelector('ul li.prod__detail-image-item--pop_up');
-        let anhnhoht = document.querySelector('ul.prod__detail-other li');
-        for(let i = 0; slideht = slideht.previousElementSibling; vitrislideht++){
+        for(let i = 0; i<(slideht = slideht-1); vitrislideht++){
  
         }// đã lấy được vị trí sau khi thực hiện vòng lặp for này.
         //2. Bỏ tất cả các class hienlen
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded",function(){
         //1.Lấy vị trí slide hiện tại
         let vitrislideht = 0;
         let slideht = document.querySelector('.prod__detail-image ul li.prod__detail-image-item--pop_up');
-        for(let i = 0; slideht = slideht.previousElementSibling; vitrislideht++){
+        for(let i = 0; i<(slideht = slideht-1); vitrislideht++){
  
         }// đã lấy được vị trí sau khi thực hiện vòng lặp for này.
         //2. Bỏ tất cả các class hienlen
