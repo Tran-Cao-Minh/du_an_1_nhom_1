@@ -28,11 +28,18 @@
 
 <body>
     <?php 
-    include_once 'header.php';
-    include_once 'bread_crumb.php';
-    include_once $view_link;
-    include_once 'footer.php'; 
-  ?>
+      include_once 'header.php';
+      include_once 'bread_crumb.php';
+      include_once $view_link;
+      if ($check_login == false) {
+        include_once 'view/popup/v_sign_in.php';
+        include_once 'view/popup/v_sign_up_phone.php';
+        include_once 'view/popup/v_sign_up_phone_verify.php';
+        include_once 'view/popup/v_sign_up.php';
+        include_once 'view/popup/v_buy_prod_form.php';
+      }
+      include_once 'footer.php'; 
+    ?>
     <?php
     if ($link_js_arr != '') {
       echo '<!-- link JS -->';
