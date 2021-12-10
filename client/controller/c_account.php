@@ -1,5 +1,4 @@
 <?php
-  include_once '../global/connect_database.php';
   include_once 'model/m_account.php';
 
   // some action like take banner, top product
