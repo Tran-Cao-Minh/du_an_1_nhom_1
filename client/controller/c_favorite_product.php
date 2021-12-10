@@ -1,5 +1,4 @@
 <?php
-  include_once '../global/connect_database.php';
   include_once 'model/m_favorite_product.php';
 
   // some action like take banner, top product

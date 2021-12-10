@@ -114,14 +114,14 @@
   </div>
   <div class="data-table__body">
     <table class="data-table__table" 
-      style="--cell-1-width: 18rem; --cell-2-width: 25rem; --cell-3-width: 13.5rem; --cell-4-width: 19rem;">
+      style="--cell-1-width: 30rem; --cell-2-width: 25rem; --cell-3-width: 13.5rem; --cell-4-width: 19rem;">
       <thead class="data-table__contain-table-header">
         <tr class="data-table__table-header-row">
           <th class="data-table__table-header-cell">
             Tên sản phẩm
           </th>
           <th class="data-table__table-header-cell">
-            Giá sản phẩm
+            Giá sản phẩm (VND)
           </th>
           <th class="data-table__table-header-cell">
             Số lượt xem
@@ -152,7 +152,7 @@
                       '.$row['ProductName'].'
                     </td>
                     <td class="data-table__table-body-cell">
-                      '.$row['ProductPrice'].'
+                      '.number_format($row['ProductPrice'], 0, ',', '.').'
                     </td>
                     <td class="data-table__table-body-cell">
                       '.$row['ProductView'].'

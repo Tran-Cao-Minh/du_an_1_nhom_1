@@ -3,6 +3,13 @@
     session_start();
   }
 
+  // GET SOME GENERAL INFORMARION
+  include_once '../global/connect_database.php';
+  include_once 'model/m_common.php';
+  $product_category_list = getProductCategory();
+  // END GET SOME GENERAL INFORMARION
+
+  // NAVIGATE TO PAGE
   if (isset($_GET['page'])) {
     $_SESSION['page'] = $_GET['page'];
 
@@ -10,7 +17,6 @@
     $_SESSION['page'] = 'home';
   }
   $page = $_SESSION['page'];
-  // echo $page; ////////////////////////////////////////
 
   switch ($page) {
     case 'home': 
@@ -33,8 +39,9 @@
       include_once 'controller/c_order_list.php';
       
       $main_bread_crumb = 'Giỏ hàng';
-      $main_bread_crumb_link = '?page=order_list';
+      $main_bread_crumb_link = '?page=cart';
       $sub_bread_crumb = 'Danh sách đơn hàng';
+      $sub_bread_crumb_link = '?page=order_list';
       break;
 
     case 'account':
@@ -56,23 +63,25 @@
     case 'order_detail':
       include_once 'controller/c_order_detail.php';
       
-      $main_bread_crumb = 'Chi tiết đơn hàng';
-      $main_bread_crumb_link = '?page=order_detail';
-      $sub_bread_crumb = '';
+      $main_bread_crumb = 'Giỏ hàng';
+      $main_bread_crumb_link = '?page=cart';
+      $sub_bread_crumb = 'Chi tiết đơn hàng';
+      $sub_bread_crumb_link = '?page=order_detail';
       break;
     
     case 'pay':
       include_once 'controller/c_pay.php';
       
-      $main_bread_crumb = 'Thanh toán';
-      $main_bread_crumb_link = '?page=pay';
-      $sub_bread_crumb = '';
+      $main_bread_crumb = 'Giỏ hàng';
+      $main_bread_crumb_link = '?page=cart';
+      $sub_bread_crumb = 'Thanh toán';
+      $sub_bread_crumb_link = '?page=pay';
       break;
 
     case 'product':
       include_once 'controller/c_product.php';
       
-      $main_bread_crumb = 'Trang sản phẩm';
+      $main_bread_crumb = 'Sản phẩm';
       $main_bread_crumb_link = '?page=product';
       $sub_bread_crumb = '';
       break;
@@ -80,10 +89,10 @@
     case 'product_detail':
       include_once 'controller/c_product_detail.php';
       
-      $main_bread_crumb = 'Sản phẩm chi tiết';
-      $main_bread_crumb_link = '?page=product_detail';
-      $sub_bread_crumb = '';
-      $sub_crumb_link = '?page=product';
+      $main_bread_crumb = 'Trang sản phẩm';
+      $main_bread_crumb_link = '?page=product';
+      $sub_bread_crumb = 'Sản phẩm chi tiết';
+      $sub_bread_crumb_link = '?page=product_detail';
       break;
 
     case 'favorite_product':
@@ -94,17 +103,12 @@
       $sub_bread_crumb = '';
       break;
 
-    
   }
+  // NAVIGATE TO PAGE
 
+  // CHECK LOGIN
   $check_login = false;
   if ($check_login == false) {
-    include_once 'view/popup/v_sign_in.php';
-    include_once 'view/popup/v_sign_up_phone.php';
-    include_once 'view/popup/v_sign_up_phone_verify.php';
-    include_once 'view/popup/v_sign_up.php';
-    include_once 'view/popup/v_buy_prod_form.php';
-
     if ($link_js_arr == '') {
       $link_js_arr = array (
         '../public/js/client/view_form/sign_in_view.js',
@@ -119,8 +123,11 @@
         '../public/js/validation/otp_validation.js',
         '../public/js/validation/password_validation.js',
         '../public/js/validation/hide_show_password.js',
-        '../public/js/client/jquery.js',
+        '../library/jquery.js',
         '../public/js/client/send_comment.js',
+        '../public/js/client/send_login.js',
+        '../public/js/client/send_otp.js',
+        '../public/js/client/send_otp_check.js',
       );
     } else {
       $link_js_arr[] = '../public/js/client/view_form/sign_in_view.js';
@@ -135,8 +142,11 @@
       $link_js_arr[] = '../public/js/validation/otp_validation.js';
       $link_js_arr[] = '../public/js/validation/password_validation.js';
       $link_js_arr[] = '../public/js/validation/hide_show_password.js';
-      $link_js_arr[] = '../public/js/client/jquery.js';
+      $link_js_arr[] = '../library/jquery.js';
       $link_js_arr[] = '../public/js/client/send_comment.js';
+      $link_js_arr[] = '../public/js/client/send_login.js';
+      $link_js_arr[] = '../public/js/client/send_otp.js';
+      $link_js_arr[] = '../public/js/client/send_otp_check.js';
     }
 
     if ($link_css_arr == '') {
@@ -146,8 +156,8 @@
     } else {
       $link_css_arr[] = '../public/css/client/layout/form.css';
     }
-    
   }
-  
+  // END CHECK LOGIN
+
   include_once 'view/layout/layout.php';
 ?>

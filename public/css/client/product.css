@@ -1,6 +1,6 @@
 .product {
     max-width: 117rem;
-    margin: 2% auto;
+    margin: 0 auto 4rem;
 
     display: flex;
 }
@@ -389,7 +389,7 @@ input[type="checkbox"]:checked~.product-bar__label {
 }
 
 .product__section {
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
     margin-left: -0.75rem;
 
     display: flex;

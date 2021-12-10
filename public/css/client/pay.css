@@ -2,7 +2,7 @@
     display: flex;
 
     max-width: 114rem;
-    margin: 2% auto;
+    margin: 0 auto 4rem;
 
     font-family: var(--regular);
 }
