@@ -413,25 +413,18 @@
             </div>
           </a>
           <ul class="header__sub-menu">
-            
-            <li>
-              <a href="#" class="header__sub-menu-item">
-                Nam
-                <div class="header__sub-menu-item-line"></div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="header__sub-menu-item">
-                Nữ
-                <div class="header__sub-menu-item-line"></div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="header__sub-menu-item">
-                Trung tính
-                <div class="header__sub-menu-item-line"></div>
-              </a>
-            </li>
+            <?php 
+              foreach ($product_category_list as $category) {
+                echo '
+                  <li>
+                    <a href="?page=product&category='.$category['PkType_Id'].'" class="header__sub-menu-item">
+                      '.$category['TypeName'].'
+                      <div class="header__sub-menu-item-line"></div>
+                    </a>
+                  </li>
+                ';
+              }
+            ?>
           </ul>
         </li>
         <li>
@@ -659,21 +652,17 @@
           <input type="radio" id="header__mobile-sub-menu-1" class="header__mobile-sub-menu-check"
             name="header__mobile-sub-menu-check">
           <ul class="header__mobile-sub-menu">
-            <li>
-              <a href="#" class="header__mobile-sub-menu-item">
-                Nam
-              </a>
-            </li>
-            <li>
-              <a href="#" class="header__mobile-sub-menu-item">
-                Nữ
-              </a>
-            </li>
-            <li>
-              <a href="#" class="header__mobile-sub-menu-item">
-                Trung tính
-              </a>
-            </li>
+            <?php 
+              foreach ($product_category_list as $category) {
+                echo '
+                  <li>
+                    <a href="?page=product&category='.$category['PkType_Id'].'" class="header__mobile-sub-menu-item">
+                      '.$category['TypeName'].'
+                    </a>
+                  </li>
+                ';
+              }
+            ?>
           </ul>
         </li>
         <li class="header__menu-mobile-menu-item">

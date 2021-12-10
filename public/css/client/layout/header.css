@@ -736,7 +736,7 @@
   border-radius: 0.5rem;
 
   font-family: var(--medium);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 
   transition: 0.2s;
 }
@@ -971,7 +971,7 @@
     list-style: none;
 
     width: 100%;
-    height: 0;
+    max-height: 0rem;
 
     /* background: green; */
 
@@ -1002,11 +1002,11 @@
   }
 
   .header__mobile-sub-menu-check {
-    display: none;
+    /* display: none; */
   }
 
   .header__mobile-sub-menu-check:checked~.header__mobile-sub-menu {
-    height: 15rem;
+    max-height: 30rem;
   }
 
   .header__user-control,

@@ -104,7 +104,6 @@
       break;
 
   }
-  include_once 'view/layout/layout.php';
   // NAVIGATE TO PAGE
 
   // CHECK LOGIN
@@ -165,4 +164,6 @@
     }
   }
   // END CHECK LOGIN
+
+  include_once 'view/layout/layout.php';
 ?>
