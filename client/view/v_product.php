@@ -10,7 +10,9 @@
       <button class="js-delete-filter-btn product__filter-action-clear">
         Xóa tất cả
       </button>
-      <button class="product__filter-action-apply">Chấp nhận</button>
+      <label class="product__filter-action-apply" for="toggle__filter">
+        Chấp nhận
+      </label>
     </div>
     <!-- Start filter column -->
     <div class="product__filter-column">
@@ -342,7 +344,7 @@
     </ul>
     <!-- End product__breadcrumb -->
     <!-- Start product section -->
-    <div class="product__section">
+    <div class="product__section js-product-container">
       <div class="product__column">
         <div class="product__image">
           <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
@@ -715,17 +717,21 @@
           <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
         </div>
       </div>
+    
+
+
+      
+      <ul class="product__pagination">
+        <li class="product__pagination__link"><button type="submit">1</button></li>
+        <li class="product__pagination__link"><button type="submit">2</button></li>
+        <li class="product__pagination__link product__pagination__link--active"><button type="submit">3</button>
+        </li>
+        <li class="product__pagination__link"><button type="submit">4</button></li>
+        <li class="product__pagination__link"><button type="submit"><i class="fas fa-angle-double-right"></i></button>
+        </li>
+      </ul>
     </div>
 
-    <ul class="product__pagination">
-      <li class="product__pagination__link"><button type="submit">1</button></li>
-      <li class="product__pagination__link"><button type="submit">2</button></li>
-      <li class="product__pagination__link product__pagination__link--active"><button type="submit">3</button>
-      </li>
-      <li class="product__pagination__link"><button type="submit">4</button></li>
-      <li class="product__pagination__link"><button type="submit"><i class="fas fa-angle-double-right"></i></button>
-      </li>
-    </ul>
   </div>
   <!-- End  product area -->
 

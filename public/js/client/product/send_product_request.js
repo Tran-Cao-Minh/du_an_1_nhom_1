@@ -1,10 +1,30 @@
 window.addEventListener('load', function () {
-  function getProductListData () {
+  function getProductListData() {
     // alert(sessionStorage.getItem("SessionName"));
+    if (sessionStorage.getItem('keyWord') == null) {
+      sessionStorage.setItem('keyWord', '');
+    }
+    $.ajax({
+      url: '../../../../ajax/ajax_product.php',
+      type: 'GET',
+      dataType: 'html',
+      data: {
+        order_rule: sessionStorage.getItem('orderRule'),
+        price_range: sessionStorage.getItem('priceRange'),
+        brand_list: sessionStorage.getItem('brandList'),
+        color_list: sessionStorage.getItem('colorList'),
+        size_list: sessionStorage.getItem('sizeList'),
+        page_num: sessionStorage.getItem('pageNum'),
+        key_word: sessionStorage.getItem('keyWord')
+      }
+    }).done(function (output) {
+      $('.js-product-container').empty();
+      $('.js-product-container').append(output);
+    })
   }
 
 
-  function clearFilterSessionData () {
+  function clearFilterSessionData() {
     sessionStorage.setItem('orderRule', 'newest');
     sessionStorage.setItem('priceRange', 'allPrice');
     sessionStorage.setItem('brandList', JSON.stringify([]));
@@ -15,7 +35,7 @@ window.addEventListener('load', function () {
 
   // get product list data when first time go to product page
   clearFilterSessionData();
-  getProductListData();
+  // getProductListData();
 
   // set sessionStorage for category
   const categoryInputList = document.querySelectorAll('.js-category-input');
