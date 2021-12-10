@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
     const inputAccountList = document.querySelectorAll(".js-account-input");
 
     inputAccountList.forEach(input => {
-        input.addEventListener("blur", (e) => {
+        input.addEventListener("input", (e) => {
             let notification = input.parentElement.querySelector(".form__message");
 
             // kiểm tra giá trị

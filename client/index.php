@@ -81,7 +81,7 @@
     case 'product':
       include_once 'controller/c_product.php';
       
-      $main_bread_crumb = 'Trang sản phẩm';
+      $main_bread_crumb = 'Sản phẩm';
       $main_bread_crumb_link = '?page=product';
       $sub_bread_crumb = '';
       break;

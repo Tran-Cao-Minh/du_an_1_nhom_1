@@ -22,7 +22,7 @@
     $recipient_email = $email_value, 
     $recipient_name = 'Maeve',
     $email_subject = 'Gửi mã xác nhận đến khách hàng',  
-    $email_content = 'Mã xác nhận của bạn là: '.$account_otp.' '
+    $email_content = 'Mã xác nhận của bạn là: '.$account_otp.'.Lưu ý ! sau 5 phút mã xác nhận này sẽ bị hủy !'
   );
 
   if ($send_mail_result == true) {

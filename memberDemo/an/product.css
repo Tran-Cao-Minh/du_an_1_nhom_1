@@ -1,6 +1,6 @@
 .product {
     max-width: 117rem;
-    margin: 2% auto;
+    margin: 0 auto 4rem;
 
     display: flex;
 }

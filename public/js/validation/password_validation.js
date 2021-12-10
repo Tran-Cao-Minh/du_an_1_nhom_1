@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
     const inputPasswordList = document.querySelectorAll(".js-password-input");
 
     inputPasswordList.forEach(input => {
-        input.addEventListener("blur", (e) => {
+        input.addEventListener("input", (e) => {
             let notification = input.parentElement.querySelector(".form__message");
 
             // kiểm tra giá trị

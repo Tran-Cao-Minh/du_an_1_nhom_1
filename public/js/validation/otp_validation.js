@@ -2,7 +2,7 @@ window.addEventListener('load', function () {
     const inputOtpList = document.querySelectorAll(".js-otp-input");
 
     inputOtpList.forEach(input => {
-        input.addEventListener("blur", (e) => {
+        input.addEventListener("input", (e) => {
             let notification = input.parentElement.querySelector(".form__message");
 
             if (input.value === "") {
