@@ -8,7 +8,7 @@ $(document).ready(function () {
             // let productId = commentButton.data('PkProduct_Id');
 
             $.ajax({
-                url: './model/ajax_post_comment.php',
+                url: '../ajax/ajax_post_comment.php',
                 type: 'GET',
                 dataType: 'html',
                 data: {

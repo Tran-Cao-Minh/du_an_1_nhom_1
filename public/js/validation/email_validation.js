@@ -1,6 +1,9 @@
 window.addEventListener('load', function () {
     // check email đăng ký
     const inputEmailList = document.querySelectorAll(".js-email-input");
+    let formBtn = document.querySelector(".js-btn-sign-up-2");
+
+    // formBtn.disabled = true;
 
     inputEmailList.forEach(input => {
         input.addEventListener("blur", (e) => {
@@ -13,6 +16,7 @@ window.addEventListener('load', function () {
 
             } else if (regexEmail.test(input.value)) {
                 notification.innerHTML = '';
+                // formBtn.disabled = false;
 
             } else {
                 notification.innerHTML = '* Email không đúng định dạng';
