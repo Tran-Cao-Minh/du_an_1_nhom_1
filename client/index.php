@@ -109,12 +109,6 @@
   // CHECK LOGIN
   $check_login = false;
   if ($check_login == false) {
-    include_once 'view/popup/v_sign_in.php';
-    include_once 'view/popup/v_sign_up_phone.php';
-    include_once 'view/popup/v_sign_up_phone_verify.php';
-    include_once 'view/popup/v_sign_up.php';
-    include_once 'view/popup/v_buy_prod_form.php';
-
     if ($link_js_arr == '') {
       $link_js_arr = array (
         '../public/js/client/view_form/sign_in_view.js',
