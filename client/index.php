@@ -33,8 +33,9 @@
       include_once 'controller/c_order_list.php';
       
       $main_bread_crumb = 'Giỏ hàng';
-      $main_bread_crumb_link = '?page=order_list';
+      $main_bread_crumb_link = '?page=cart';
       $sub_bread_crumb = 'Danh sách đơn hàng';
+      $sub_bread_crumb_link = '?page=order_list';
       break;
 
     case 'account':
@@ -51,23 +52,24 @@
       $main_bread_crumb = 'Giỏ hàng';
       $main_bread_crumb_link = '?page=cart';
       $sub_bread_crumb = '';
-      $sub_bread_crumb_link = '?page=order_detail';
       break;
     
     case 'order_detail':
       include_once 'controller/c_order_detail.php';
       
-      $main_bread_crumb = 'Chi tiết đơn hàng';
-      $main_bread_crumb_link = '?page=order_detail';
-      $sub_bread_crumb = '';
+      $main_bread_crumb = 'Giỏ hàng';
+      $main_bread_crumb_link = '?page=cart';
+      $sub_bread_crumb = 'Chi tiết đơn hàng';
+      $sub_bread_crumb_link = '?page=order_detail';
       break;
     
     case 'pay':
       include_once 'controller/c_pay.php';
       
-      $main_bread_crumb = 'Thanh toán';
-      $main_bread_crumb_link = '?page=pay';
-      $sub_bread_crumb = '';
+      $main_bread_crumb = 'Giỏ hàng';
+      $main_bread_crumb_link = '?page=cart';
+      $sub_bread_crumb = 'Thanh toán';
+      $sub_bread_crumb_link = '?page=pay';
       break;
 
     case 'product':
@@ -76,15 +78,15 @@
       $main_bread_crumb = 'Trang sản phẩm';
       $main_bread_crumb_link = '?page=product';
       $sub_bread_crumb = '';
-      $sub_bread_crumb_link = '?page=product_detail';
       break;
 
     case 'product_detail':
       include_once 'controller/c_product_detail.php';
       
-      $main_bread_crumb = 'Sản phẩm chi tiết';
-      $main_bread_crumb_link = '?page=product_detail';
-      $sub_bread_crumb = '';
+      $main_bread_crumb = 'Trang sản phẩm';
+      $main_bread_crumb_link = '?page=product';
+      $sub_bread_crumb = 'Sản phẩm chi tiết';
+      $sub_bread_crumb_link = '?page=product_detail';
       break;
 
     case 'favorite_product':
@@ -119,8 +121,11 @@
         '../public/js/validation/otp_validation.js',
         '../public/js/validation/password_validation.js',
         '../public/js/validation/hide_show_password.js',
-        '../public/js/client/jquery.js',
+        '../library/jquery.js',
         '../public/js/client/send_comment.js',
+        '../public/js/client/send_login.js',
+        '../public/js/client/send_otp.js',
+        '../public/js/client/send_otp_check.js',
       );
     } else {
       $link_js_arr[] = '../public/js/client/view_form/sign_in_view.js';
@@ -135,8 +140,11 @@
       $link_js_arr[] = '../public/js/validation/otp_validation.js';
       $link_js_arr[] = '../public/js/validation/password_validation.js';
       $link_js_arr[] = '../public/js/validation/hide_show_password.js';
-      $link_js_arr[] = '../public/js/client/jquery.js';
+      $link_js_arr[] = '../library/jquery.js';
       $link_js_arr[] = '../public/js/client/send_comment.js';
+      $link_js_arr[] = '../public/js/client/send_login.js';
+      $link_js_arr[] = '../public/js/client/send_otp.js';
+      $link_js_arr[] = '../public/js/client/send_otp_check.js';
     }
 
     if ($link_css_arr == '') {
