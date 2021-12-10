@@ -3,20 +3,20 @@ window.addEventListener('load', function () {
     const inputEmailList = document.querySelectorAll(".js-email-input");
     let formBtn = document.querySelector(".js-btn-sign-up-2");
 
-    // formBtn.disabled = true;
+    formBtn.disabled = true;
 
     inputEmailList.forEach(input => {
-        input.addEventListener("blur", (e) => {
+        input.addEventListener("input", (e) => {
             let notification = input.parentElement.querySelector(".form__message");
 
-            let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            let regexEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
             if (input.value === "") {
                 notification.innerHTML = '* Vui lòng nhập email!';
 
             } else if (regexEmail.test(input.value)) {
                 notification.innerHTML = '';
-                // formBtn.disabled = false;
+                formBtn.disabled = false;
 
             } else {
                 notification.innerHTML = '* Email không đúng định dạng';

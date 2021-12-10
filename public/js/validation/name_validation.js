@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
     const inputNameList = document.querySelectorAll(".js-name-input");
 
     inputNameList.forEach(input => {
-        input.addEventListener("blur", (e) => {
+        input.addEventListener("input", (e) => {
             let notification = input.parentElement.querySelector(".form__message");
 
             if (input.value === "") {
