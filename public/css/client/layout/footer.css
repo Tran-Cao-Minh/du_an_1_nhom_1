@@ -91,10 +91,8 @@ footer {
     padding-bottom: 1.7rem;
   }
 
-  .footer__logo img {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2rem;
+  .footer__logo {
+    margin: 0 auto 2rem;
   }
 
   .footer__business-certificate img {
