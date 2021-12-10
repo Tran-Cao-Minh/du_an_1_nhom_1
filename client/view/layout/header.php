@@ -377,7 +377,7 @@
                 </span>
               </div>
               <div class="header__basket-btn-group">
-                <a href="?page=order_list">
+                <a href="?page=cart">
                   <button class="header__view-basket-btn">
                     Xem giỏ hàng
                   </button>
