@@ -7,6 +7,5 @@
     '../public/css/client/product_detail.css',
     '../public/css/client/product.css',
   );
-  $link_js_arr = '';
   $view_link = 'view/v_product_detail.php';
 ?>

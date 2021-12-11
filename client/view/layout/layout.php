@@ -41,6 +41,11 @@
         include_once 'view/popup/v_buy_prod_form.php';
       }
       include_once 'footer.php'; 
+      echo '
+        <script type="text/javascript">
+          sessionStorage.setItem("pageName", "'.$page.'");
+        </script>
+      ';
     ?>
     <?php
     if ($link_js_arr != '') {

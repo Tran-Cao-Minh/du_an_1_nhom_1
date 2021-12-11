@@ -6,6 +6,5 @@
   $link_css_arr = array (
     '../public/css/client/account.css',
   );
-  $link_js_arr = '';
   $view_link = 'view/v_account.php';
 ?>

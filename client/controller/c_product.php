@@ -9,10 +9,10 @@
   $link_css_arr = array (
     '../public/css/client/product.css',
   );
-  $link_js_arr = array (
-    '../public/js/client/product/send_product_request.js',
-    '../public/js/client/product/create_label.js',
-    '../public/js/client/product/change_session_filter.js',
-  );
+  $link_js_arr[] = '../public/js/client/product/send_product_request.js';
+  $link_js_arr[] = '../public/js/client/product/create_label.js';
+  $link_js_arr[] = '../public/js/client/product/change_session_filter.js';
+  $link_js_arr[] = '../public/js/client/product/close_buy_product_form.js';
+
   $view_link = 'view/v_product.php';
 ?>

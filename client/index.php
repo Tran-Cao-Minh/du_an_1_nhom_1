@@ -7,6 +7,10 @@
   include_once '../global/connect_database.php';
   include_once 'model/m_common.php';
   $product_category_list = getProductCategory();
+
+  $link_js_arr = array (
+    '../public/js/client/common/find_product_by_keyword.js',
+  );
   // END GET SOME GENERAL INFORMARION
 
   // NAVIGATE TO PAGE
@@ -109,43 +113,21 @@
   // CHECK LOGIN
   $check_login = false;
   if ($check_login == false) {
-    if ($link_js_arr == '') {
-      $link_js_arr = array (
-        '../public/js/client/view_form/sign_in_view.js',
-        '../public/js/client/view_form/sign_up_main_view.js',
-        '../public/js/client/view_form/sign_up_email_view.js',
-        '../public/js/client/view_form/sign_up_otp_view.js',
-        '../public/js/client/view_form/buy_prod_view.js',
-        '../public/js/validation/account_validation.js',
-        '../public/js/validation/date_validation.js',
-        '../public/js/validation/email_validation.js',
-        '../public/js/validation/name_validation.js',
-        '../public/js/validation/otp_validation.js',
-        '../public/js/validation/password_validation.js',
-        '../public/js/validation/hide_show_password.js',
-        '../public/js/client/send_comment.js',
-        '../public/js/client/send_login.js',
-        '../public/js/client/send_otp.js',
-        '../public/js/client/send_otp_check.js',
-      );
-    } else {
-      $link_js_arr[] = '../public/js/client/view_form/sign_in_view.js';
-      $link_js_arr[] = '../public/js/client/view_form/sign_up_main_view.js';
-      $link_js_arr[] = '../public/js/client/view_form/sign_up_email_view.js';
-      $link_js_arr[] = '../public/js/client/view_form/sign_up_otp_view.js';
-      $link_js_arr[] = '../public/js/client/view_form/buy_prod_view.js';
-      $link_js_arr[] = '../public/js/validation/account_validation.js';
-      $link_js_arr[] = '../public/js/validation/date_validation.js';
-      $link_js_arr[] = '../public/js/validation/email_validation.js';
-      $link_js_arr[] = '../public/js/validation/name_validation.js';
-      $link_js_arr[] = '../public/js/validation/otp_validation.js';
-      $link_js_arr[] = '../public/js/validation/password_validation.js';
-      $link_js_arr[] = '../public/js/validation/hide_show_password.js';
-      $link_js_arr[] = '../public/js/client/send_comment.js';
-      $link_js_arr[] = '../public/js/client/send_login.js';
-      $link_js_arr[] = '../public/js/client/send_otp.js';
-      $link_js_arr[] = '../public/js/client/send_otp_check.js';
-    }
+    $link_js_arr[] = '../public/js/client/view_form/sign_in_view.js';
+    $link_js_arr[] = '../public/js/client/view_form/sign_up_main_view.js';
+    $link_js_arr[] = '../public/js/client/view_form/sign_up_email_view.js';
+    $link_js_arr[] = '../public/js/client/view_form/sign_up_otp_view.js';
+    $link_js_arr[] = '../public/js/validation/account_validation.js';
+    $link_js_arr[] = '../public/js/validation/date_validation.js';
+    $link_js_arr[] = '../public/js/validation/email_validation.js';
+    $link_js_arr[] = '../public/js/validation/name_validation.js';
+    $link_js_arr[] = '../public/js/validation/otp_validation.js';
+    $link_js_arr[] = '../public/js/validation/password_validation.js';
+    $link_js_arr[] = '../public/js/validation/hide_show_password.js';
+    $link_js_arr[] = '../public/js/client/send_comment.js';
+    $link_js_arr[] = '../public/js/client/send_login.js';
+    $link_js_arr[] = '../public/js/client/send_otp.js';
+    $link_js_arr[] = '../public/js/client/send_otp_check.js';
 
     if ($link_css_arr == '') {
       $link_css_arr = array (

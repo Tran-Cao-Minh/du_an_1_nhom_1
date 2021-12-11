@@ -1,17 +1,24 @@
 window.addEventListener('load', function () {
   function getProductListData() {
-    // alert(sessionStorage.getItem("SessionName"));
     if (sessionStorage.getItem('keyWord') == null) {
       sessionStorage.setItem('keyWord', '');
     }
+    if (sessionStorage.getItem('keyWord') != '') {
+      $('.js-product-keyword').text(
+        `Sản phẩm - Từ khóa: ${sessionStorage.getItem('keyWord')}`
+      );
+    } else {
+      $('.js-product-keyword').text('Sản phẩm');
+    }
     $.ajax({
-      url: '../../../../ajax/ajax_product.php',
+      url: '../../../../../du_an_1_nhom_1/ajax/ajax_product.php',
       type: 'GET',
       dataType: 'html',
       data: {
         order_rule: sessionStorage.getItem('orderRule'),
         price_range: sessionStorage.getItem('priceRange'),
         brand_list: sessionStorage.getItem('brandList'),
+        category_list: sessionStorage.getItem('categoryList'), 
         color_list: sessionStorage.getItem('colorList'),
         size_list: sessionStorage.getItem('sizeList'),
         page_num: sessionStorage.getItem('pageNum'),
@@ -20,9 +27,47 @@ window.addEventListener('load', function () {
     }).done(function (output) {
       $('.js-product-container').empty();
       $('.js-product-container').append(output);
-    })
-  }
 
+      let btnChangePageNumList = $('.js-change-product-page');
+      btnChangePageNumList.each(function () {
+        $(this).click(function () {
+          sessionStorage.setItem('pageNum', this.dataset.pageNum);
+          getProductListData();
+        })
+      })
+
+      let btnBuyProductList = $('.js-buy-prod-btn');
+      btnBuyProductList.each(function () {
+        $(this).click(function () {
+          $('.overlay-5').addClass("overlay--active-5");
+
+          $.ajax({
+            url: '../../../../../du_an_1_nhom_1/ajax/ajax_buy_product_form.php',
+            type: 'GET',
+            dataType: 'html',
+            data: {
+              product_id: $(this).data('productId'),
+            }
+          }).done(function(output) {
+
+          })
+        })
+      })
+    })
+
+    // alert('ok');
+    // let btnChangePageNumList = $('.js-change-product-page');
+    // console.log(btnChangePageNumList);
+    // btnChangePageNumList.forEach(btn => {
+    //   btn.addEventListener('click', function () {
+    //     sessionStorage.setItem('pageNum', this.dataset.pageNum);
+    //     getProductListData();
+    //     alert('nani');
+    //   })
+    // });
+    // alert('5');
+
+  }
 
   function clearFilterSessionData() {
     sessionStorage.setItem('orderRule', 'newest');
@@ -35,13 +80,23 @@ window.addEventListener('load', function () {
 
   // get product list data when first time go to product page
   clearFilterSessionData();
-  // getProductListData();
+  getProductListData();
+
+  // set sessionStorage for key word
+  const searchProductInputFilter = document.querySelector('.js-search-product-input');
+  searchProductInputFilter.addEventListener('change', function () {
+    sessionStorage.setItem('keyWord', this.value);
+    sessionStorage.setItem('pageNum', 1);
+
+    getProductListData();
+  })
 
   // set sessionStorage for category
   const categoryInputList = document.querySelectorAll('.js-category-input');
   categoryInputList.forEach(input => {
     input.addEventListener('change', function () {
-      let categoryList = JSON.parse(sessionStorage.getItem('categoryList'));
+      // categoryList sessionStorage it set from v_product.php
+      let categoryList = JSON.parse(sessionStorage.getItem('categoryList')); 
       let inputValue = this.dataset.filterValue;
 
       if (input.checked == true) {
@@ -86,6 +141,11 @@ window.addEventListener('load', function () {
       }
     })
   });
+  const priceRangeLabelFilter = document.querySelector('.js-price-range-label');
+  priceRangeLabelFilter.addEventListener('click', function () {
+    sessionStorage.setItem('priceRange', 'allPrice');
+    getProductListData();
+  })
 
   // set sessionStorage for brand
   const brandInputList = document.querySelectorAll('.js-brand-input');
@@ -146,4 +206,15 @@ window.addEventListener('load', function () {
       getProductListData();
     })
   });
+
+  // delete filter
+  const deleteSessionFilterBtnList = document.querySelectorAll('.js-delete-filter-btn');
+  deleteSessionFilterBtnList.forEach(btn => {
+    btn.addEventListener('click', function () {
+      sessionStorage.setItem('keyWord', '');
+      clearFilterSessionData();
+      getProductListData();
+    })
+  });
+  // end delete filter
 })

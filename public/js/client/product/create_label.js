@@ -10,7 +10,7 @@ window.addEventListener('load', function () {
   });
   // end create order label
 
-  // create price range label
+  // create price range label 
   const inputCreatePriceRangeLabelList = document.querySelectorAll('.js-price-range-input');
   const priceRangeLabel = document.querySelector('.js-price-range-label');
   const priceRangeLabelContent = document.querySelector('.js-price-range-label-content');

@@ -46,8 +46,8 @@
         <label class="product__filter-item">
           <input class="js-order-input" 
             value="Giá giảm dần"
-            type="radio" id="pricedown" name="filter__sort">
-          <label class=" product__filter-label__radio" for="pricedown">
+            type="radio" id="priceDown" name="filter__sort">
+          <label class=" product__filter-label__radio" for="priceDown">
             <span class="filter-name">
               Giá giảm dần
             </span>
@@ -56,8 +56,8 @@
         <label class="product__filter-item">
           <input class="js-order-input" 
             value="Giá tăng dần"
-            type="radio" id="priceup" name="filter__sort">
-          <label class=" product__filter-label__radio" for="priceup">
+            type="radio" id="priceUp" name="filter__sort">
+          <label class=" product__filter-label__radio" for="priceUp">
             <span class="filter-name">
               Giá tăng dần
             </span>
@@ -88,8 +88,8 @@
         <label class="product__filter-item">
           <input class="js-price-range-input"
             value="Từ 1 đến 2 triệu" 
-            type="radio" id="1mto2m" name="filter__price">
-          <label class=" product__filter-label__radio" for="1mto2m">
+            type="radio" id="1mTo2m" name="filter__price">
+          <label class=" product__filter-label__radio" for="1mTo2m">
             <span class="filter-name">
               Từ 1 đến 2 triệu
             </span>
@@ -98,8 +98,8 @@
         <label class="product__filter-item">
           <input class="js-price-range-input"
             value="Từ 2 đến 3 triệu" 
-            type="radio" id="2mto3m" name="filter__price">
-          <label class=" product__filter-label__radio" for="2mto3m">
+            type="radio" id="2mTo3m" name="filter__price">
+          <label class=" product__filter-label__radio" for="2mTo3m">
             <span class="filter-name">
               Từ 2 đến 3 triệu
             </span>
@@ -209,7 +209,11 @@
         <?php 
           foreach ($product_color_list as $color) {
             echo '
-              <label for="'.$color['PkColor_Id'].$color['ColorName'].'" class="product__filter-item-color">
+              <label 
+                title="'.$color['ColorName'].'"
+                for="'.$color['PkColor_Id'].$color['ColorName'].'" 
+                class="product__filter-item-color"
+              >
                 <input type="checkbox" 
                   class="js-filter-label-input js-color-input"
                   id="'.$color['PkColor_Id'].$color['ColorName'].'"
@@ -345,393 +349,11 @@
     <!-- End product__breadcrumb -->
     <!-- Start product section -->
     <div class="product__section js-product-container">
-      <div class="product__column">
-        <div class="product__image">
-          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
-        </div>
-        <div class="product__info">
-          <div class="product__variant">
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#EE6F57" for="" class="product__variant--color"></label>
-            </div>
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#51C4D3" for="" class="product__variant--color"></label>
-            </div>
-          </div>
-          <div class="product__name">
-            <p>Nike Air Zoom Pegasus 38</p>
-          </div>
-          <div class="product__price">
-            <div class="product__price--new">
-              4.109.000 đ
-            </div>
-            <div class="product__price--old">
-              <span> 4.509.000</span> <small>đ</small>
-            </div>
-          </div>
-        </div>
-        <div class="product__button">
-          <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
-        </div>
-      </div>
-      <div class="product__column">
-        <div class="product__image">
-          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
-        </div>
-        <div class="product__info">
-          <div class="product__variant">
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#EE6F57" for="" class="product__variant--color"></label>
-            </div>
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#51C4D3" for="" class="product__variant--color"></label>
-            </div>
-          </div>
-          <div class="product__name">
-            <p>Nike Air Zoom Pegasus 38</p>
-          </div>
-          <div class="product__price">
-            <div class="product__price--new">
-              4.109.000 đ
-            </div>
-            <div class="product__price--old">
-              <span> 4.509.000</span> <small>đ</small>
-            </div>
-          </div>
-        </div>
-        <div class="product__button">
-          <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
-        </div>
-      </div>
-      <div class="product__column">
-        <div class="product__image">
-          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
-        </div>
-        <div class="product__info">
-          <div class="product__variant">
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#EE6F57" for="" class="product__variant--color"></label>
-            </div>
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#51C4D3" for="" class="product__variant--color"></label>
-            </div>
-          </div>
-          <div class="product__name">
-            <p>Nike Air Zoom Pegasus 38</p>
-          </div>
-          <div class="product__price">
-            <div class="product__price--new">
-              4.109.000 đ
-            </div>
-            <div class="product__price--old">
-              <span> 4.509.000</span> <small>đ</small>
-            </div>
-          </div>
-        </div>
-        <div class="product__button">
-          <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
-        </div>
-      </div>
-      <div class="product__column">
-        <div class="product__image">
-          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
-        </div>
-        <div class="product__info">
-          <div class="product__variant">
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#EE6F57" for="" class="product__variant--color"></label>
-            </div>
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#51C4D3" for="" class="product__variant--color"></label>
-            </div>
-          </div>
-          <div class="product__name">
-            <p>Nike Air Zoom Pegasus 38</p>
-          </div>
-          <div class="product__price">
-            <div class="product__price--new">
-              4.109.000 đ
-            </div>
-            <div class="product__price--old">
-              <span> 4.509.000</span> <small>đ</small>
-            </div>
-          </div>
-        </div>
-        <div class="product__button">
-          <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
-        </div>
-      </div>
-      <div class="product__column">
-        <div class="product__image">
-          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
-        </div>
-        <div class="product__info">
-          <div class="product__variant">
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#EE6F57" for="" class="product__variant--color"></label>
-            </div>
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#51C4D3" for="" class="product__variant--color"></label>
-            </div>
-          </div>
-          <div class="product__name">
-            <p>Nike Air Zoom Pegasus 38</p>
-          </div>
-          <div class="product__price">
-            <div class="product__price--new">
-              4.109.000 đ
-            </div>
-            <div class="product__price--old">
-              <span> 4.509.000</span> <small>đ</small>
-            </div>
-          </div>
-        </div>
-        <div class="product__button">
-          <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
-        </div>
-      </div>
-      <div class="product__column">
-        <div class="product__image">
-          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
-        </div>
-        <div class="product__info">
-          <div class="product__variant">
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#EE6F57" for="" class="product__variant--color"></label>
-            </div>
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#51C4D3" for="" class="product__variant--color"></label>
-            </div>
-          </div>
-          <div class="product__name">
-            <p>Nike Air Zoom Pegasus 38</p>
-          </div>
-          <div class="product__price">
-            <div class="product__price--new">
-              4.109.000 đ
-            </div>
-            <div class="product__price--old">
-              <span> 4.509.000</span> <small>đ</small>
-            </div>
-          </div>
-        </div>
-        <div class="product__button">
-          <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
-        </div>
-      </div>
-      <div class="product__column">
-        <div class="product__image">
-          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
-        </div>
-        <div class="product__info">
-          <div class="product__variant">
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#EE6F57" for="" class="product__variant--color"></label>
-            </div>
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#51C4D3" for="" class="product__variant--color"></label>
-            </div>
-          </div>
-          <div class="product__name">
-            <p>Nike Air Zoom Pegasus 38</p>
-          </div>
-          <div class="product__price">
-            <div class="product__price--new">
-              4.109.000 đ
-            </div>
-            <div class="product__price--old">
-              <span> 4.509.000</span> <small>đ</small>
-            </div>
-          </div>
-        </div>
-        <div class="product__button">
-          <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
-        </div>
-      </div>
-      <div class="product__column">
-        <div class="product__image">
-          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
-        </div>
-        <div class="product__info">
-          <div class="product__variant">
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#EE6F57" for="" class="product__variant--color"></label>
-            </div>
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#51C4D3" for="" class="product__variant--color"></label>
-            </div>
-          </div>
-          <div class="product__name">
-            <p>Nike Air Zoom Pegasus 38</p>
-          </div>
-          <div class="product__price">
-            <div class="product__price--new">
-              4.109.000 đ
-            </div>
-            <div class="product__price--old">
-              <span> 4.509.000</span> <small>đ</small>
-            </div>
-          </div>
-        </div>
-        <div class="product__button">
-          <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
-        </div>
-      </div>
-      <div class="product__column">
-        <div class="product__image">
-          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
-        </div>
-        <div class="product__info">
-          <div class="product__variant">
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#EE6F57" for="" class="product__variant--color"></label>
-            </div>
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#51C4D3" for="" class="product__variant--color"></label>
-            </div>
-          </div>
-          <div class="product__name">
-            <p>Nike Air Zoom Pegasus 38</p>
-          </div>
-          <div class="product__price">
-            <div class="product__price--new">
-              4.109.000 đ
-            </div>
-            <div class="product__price--old">
-              <span> 4.509.000</span> <small>đ</small>
-            </div>
-          </div>
-        </div>
-        <div class="product__button">
-          <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
-        </div>
-      </div>
-      <div class="product__column">
-        <div class="product__image">
-          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
-        </div>
-        <div class="product__info">
-          <div class="product__variant">
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#EE6F57" for="" class="product__variant--color"></label>
-            </div>
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#51C4D3" for="" class="product__variant--color"></label>
-            </div>
-          </div>
-          <div class="product__name">
-            <p>Nike Air Zoom Pegasus 38</p>
-          </div>
-          <div class="product__price">
-            <div class="product__price--new">
-              4.109.000 đ
-            </div>
-            <div class="product__price--old">
-              <span> 4.509.000</span> <small>đ</small>
-            </div>
-          </div>
-        </div>
-        <div class="product__button">
-          <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
-        </div>
-      </div>
-      <div class="product__column">
-        <div class="product__image">
-          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
-        </div>
-        <div class="product__info">
-          <div class="product__variant">
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#EE6F57" for="" class="product__variant--color"></label>
-            </div>
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#51C4D3" for="" class="product__variant--color"></label>
-            </div>
-          </div>
-          <div class="product__name">
-            <p>Nike Air Zoom Pegasus 38</p>
-          </div>
-          <div class="product__price">
-            <div class="product__price--new">
-              4.109.000 đ
-            </div>
-            <div class="product__price--old">
-              <span> 4.509.000</span> <small>đ</small>
-            </div>
-          </div>
-        </div>
-        <div class="product__button">
-          <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
-        </div>
-      </div>
-      <div class="product__column">
-        <div class="product__image">
-          <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
-        </div>
-        <div class="product__info">
-          <div class="product__variant">
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#EE6F57" for="" class="product__variant--color"></label>
-            </div>
-            <div class="product__variant__item">
-              <input type="checkbox" name="" id="">
-              <label style="--bg-color:#51C4D3" for="" class="product__variant--color"></label>
-            </div>
-          </div>
-          <div class="product__name">
-            <p>Nike Air Zoom Pegasus 38</p>
-          </div>
-          <div class="product__price">
-            <div class="product__price--new">
-              4.109.000 đ
-            </div>
-            <div class="product__price--old">
-              <span> 4.509.000</span> <small>đ</small>
-            </div>
-          </div>
-        </div>
-        <div class="product__button">
-          <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
-        </div>
-      </div>
-    
-
-
-      
-      <ul class="product__pagination">
-        <li class="product__pagination__link"><button type="submit">1</button></li>
-        <li class="product__pagination__link"><button type="submit">2</button></li>
-        <li class="product__pagination__link product__pagination__link--active"><button type="submit">3</button>
-        </li>
-        <li class="product__pagination__link"><button type="submit">4</button></li>
-        <li class="product__pagination__link"><button type="submit"><i class="fas fa-angle-double-right"></i></button>
-        </li>
-      </ul>
+      <!-- 
+        add product list by getProductList function 
+        send_product_request.js and send_general_request.js 
+      -->
     </div>
-
   </div>
   <!-- End  product area -->
 
