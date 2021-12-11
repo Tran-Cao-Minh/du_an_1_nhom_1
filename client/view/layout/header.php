@@ -265,130 +265,131 @@
         </div>
 
         <div class="header__cart">
-          <div class="header__contain-interaction-icon">
+          <div class="js-load-basket-summary header__contain-interaction-icon">
             <i class="fas fa-shopping-basket header__icon"></i>
-            <div class="header__basket-product-quantity">
-              2
+            <div class="header__basket-product-quantity js-cart-quantity">
+              <!-- control by js -->
             </div>
           </div>
           <div class="header__interaction-sub-menu">
             <div class="header__interaction-sub-menu-decorate"></div>
             <div class="header__interaction-sub-menu-container" style="--width: 32rem;">
-              <!-- <span class="header__interaction-notification">
-                  Không có sản phẩm nào ~
-                </span> -->
-              <div class="header__contain-prod-list">
-                <ul class="header__product-list">
-
-                  <li class="header__product-item">
-                    <div class="header__contain-product-img">
-                      <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
-                    </div>
-                    <div class="header__contain-product-inf">
-                      <div class="header__product-name">
-                        Sandal Nam Biti's Hunter
+              <!-- <span class="js-basket-empty-notification header__interaction-notification">
+                Không có sản phẩm nào ~
+              </span> -->
+              <div class="js-show-basket-summary">
+                <div class="header__contain-prod-list">
+                  <ul class="header__product-list">
+                    <li class="header__product-item">
+                      <div class="header__contain-product-img">
+                        <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                       </div>
-                      <div class="header__product-basket-inf">
-                        <div class="header__product-basket-parameter">
-                          <div class="header__product-basket-color" style="--bg-color: red;">
-                          </div>
-                          <div class="header__product-basket-size">
-                            26
-                          </div>
-                          <div class="header__product-basket-price">
-                            3.564.000 đ
-                          </div>
-                          <div class="header__product-basket-quantity">
-                            1
-                          </div>
+                      <div class="header__contain-product-inf">
+                        <div class="header__product-name">
+                          Sandal Nam Biti's Hunter
                         </div>
-                        <button class="header__cancel-product-btn">
-                          <i class="fas fa-trash-alt header__cancel-icon"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="header__product-item">
-                    <div class="header__contain-product-img">
-                      <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
-                    </div>
-                    <div class="header__contain-product-inf">
-                      <div class="header__product-name">
-                        Sandal Nam Biti's Hunter
-                      </div>
-                      <div class="header__product-basket-inf">
-                        <div class="header__product-basket-parameter">
-                          <div class="header__product-basket-color" style="--bg-color: red;">
+                        <div class="header__product-basket-inf">
+                          <div class="header__product-basket-parameter">
+                            <div class="header__product-basket-color" style="--bg-color: red;">
+                            </div>
+                            <div class="header__product-basket-size">
+                              26
+                            </div>
+                            <div class="header__product-basket-price">
+                              3.564.000 đ
+                            </div>
+                            <div class="header__product-basket-quantity">
+                              1
+                            </div>
                           </div>
-                          <div class="header__product-basket-size">
-                            26
-                          </div>
-                          <div class="header__product-basket-price">
-                            3.564.000 đ
-                          </div>
-                          <div class="header__product-basket-quantity">
-                            1
-                          </div>
+                          <button class="header__cancel-product-btn">
+                            <i class="fas fa-trash-alt header__cancel-icon"></i>
+                          </button>
                         </div>
-                        <button class="header__cancel-product-btn">
-                          <i class="fas fa-trash-alt header__cancel-icon"></i>
-                        </button>
                       </div>
-                    </div>
-                  </li>
-                  <li class="header__product-item">
-                    <div class="header__contain-product-img">
-                      <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
-                    </div>
-                    <div class="header__contain-product-inf">
-                      <div class="header__product-name">
-                        Sandal Nam Biti's Hunter
+                    </li>
+                    <li class="header__product-item">
+                      <div class="header__contain-product-img">
+                        <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
                       </div>
-                      <div class="header__product-basket-inf">
-                        <div class="header__product-basket-parameter">
-                          <div class="header__product-basket-color" style="--bg-color: red;">
-                          </div>
-                          <div class="header__product-basket-size">
-                            26
-                          </div>
-                          <div class="header__product-basket-price">
-                            3.564.000 đ
-                          </div>
-                          <div class="header__product-basket-quantity">
-                            1
-                          </div>
+                      <div class="header__contain-product-inf">
+                        <div class="header__product-name">
+                          Sandal Nam Biti's Hunter
                         </div>
-                        <button class="header__cancel-product-btn">
-                          <i class="fas fa-trash-alt header__cancel-icon"></i>
-                        </button>
+                        <div class="header__product-basket-inf">
+                          <div class="header__product-basket-parameter">
+                            <div class="header__product-basket-color" style="--bg-color: red;">
+                            </div>
+                            <div class="header__product-basket-size">
+                              26
+                            </div>
+                            <div class="header__product-basket-price">
+                              3.564.000 đ
+                            </div>
+                            <div class="header__product-basket-quantity">
+                              1
+                            </div>
+                          </div>
+                          <button class="header__cancel-product-btn">
+                            <i class="fas fa-trash-alt header__cancel-icon"></i>
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                </ul>
-                <input type="checkbox" id="header__overlay-1">
-                <label class="header__cover-layer-prod-list" for="header__overlay-1">
-                </label>
-              </div>
-              <div class="header__interaction-sub-menu-line"></div>
-              <div class="header__basket-sum-money">
-                <span class="header__basket-sum-money-title">
-                  Tổng tiền:
-                </span>
-                <span class="header__basket-sum-money-inf">
-                  1.689.000 đ
-                </span>
-              </div>
-              <div class="header__basket-btn-group">
-                <a href="?page=cart">
-                  <button class="header__view-basket-btn">
-                    Xem giỏ hàng
-                  </button>
-                </a>
-                <a href="?page=pay">
-                  <button class="header__pay-btn">
-                    Thanh toán
-                  </button>
-                </a>
+                    </li>
+                    <li class="header__product-item">
+                      <div class="header__contain-product-img">
+                        <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
+                      </div>
+                      <div class="header__contain-product-inf">
+                        <div class="header__product-name">
+                          Sandal Nam Biti's Hunter
+                        </div>
+                        <div class="header__product-basket-inf">
+                          <div class="header__product-basket-parameter">
+                            <div class="header__product-basket-color" style="--bg-color: red;">
+                            </div>
+                            <div class="header__product-basket-size">
+                              26
+                            </div>
+                            <div class="header__product-basket-price">
+                              3.564.000 đ
+                            </div>
+                            <div class="header__product-basket-quantity">
+                              1
+                            </div>
+                          </div>
+                          <button class="header__cancel-product-btn">
+                            <i class="fas fa-trash-alt header__cancel-icon"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <input type="checkbox" id="header__overlay-1">
+                  <label class="header__cover-layer-prod-list" for="header__overlay-1">
+                  </label>
+                </div>
+                <div class="header__interaction-sub-menu-line"></div>
+                <div class="header__basket-sum-money">
+                  <span class="header__basket-sum-money-title">
+                    Tổng tiền:
+                  </span>
+                  <span class="header__basket-sum-money-inf">
+                    1.689.000 đ
+                  </span>
+                </div>
+                <div class="header__basket-btn-group">
+                  <a href="?page=cart">
+                    <button class="header__view-basket-btn">
+                      Xem giỏ hàng
+                    </button>
+                  </a>
+                  <a href="?page=pay">
+                    <button class="header__pay-btn">
+                      Thanh toán
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -633,8 +634,8 @@
         <div class="header__menu-mobile-basket-title">
           Giỏ hàng của tôi
         </div>
-        <div class="header__menu-mobile-basket-quantity">
-          2
+        <div class="header__menu-mobile-basket-quantity js-cart-quantity">
+          <!-- control by js -->
         </div>
       </a>
 

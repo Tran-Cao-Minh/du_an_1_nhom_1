@@ -10,6 +10,7 @@
 
   $link_js_arr = array (
     '../public/js/client/common/find_product_by_keyword.js',
+    '../public/js/client/common/show_product_in_cart.js',
   );
   // END GET SOME GENERAL INFORMARION
 

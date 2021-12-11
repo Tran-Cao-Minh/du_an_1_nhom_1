@@ -38,9 +38,11 @@
         include_once 'view/popup/v_sign_up_phone.php';
         include_once 'view/popup/v_sign_up_phone_verify.php';
         include_once 'view/popup/v_sign_up.php';
-        include_once 'view/popup/v_buy_prod_form.php';
       }
       include_once 'footer.php'; 
+      if ($page == 'product') {
+        include_once 'view/popup/v_buy_prod_form.php';
+      }
       echo '
         <script type="text/javascript">
           sessionStorage.setItem("pageName", "'.$page.'");

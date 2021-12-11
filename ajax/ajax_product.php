@@ -11,7 +11,7 @@
   $order_rule = $_GET['order_rule'];
   $page_num = $_GET['page_num'];
 
-  $page_size = 1;
+  $page_size = 12;
   $start_point = ($page_num - 1) * $page_size;
 
   // get product list in db
@@ -132,6 +132,18 @@
   }
   
   $sql = "SELECT 
+            p.`PkProduct_Id`
+          FROM `product` p
+          INNER JOIN `product_image` p_i
+          ON p.`PkProduct_Id` = p_i.`FkProduct_Id`
+          ".$sql_add."
+          GROUP BY `PkProduct_Id`
+        ";
+    
+  $stmt = $conn->query($sql);
+  $product_quantity = $stmt->rowCount();
+
+  $sql = "SELECT 
             p.`PkProduct_Id`, 
             p.`ProductName`, 
             p.`ProductPrice`, 
@@ -141,34 +153,34 @@
           FROM `product` p
           INNER JOIN `product_image` p_i
           ON p.`PkProduct_Id` = p_i.`FkProduct_Id`
-        " . $sql_add . "
-          GROUP BY `PkProduct_Id`
-        ";
-    
-  $stmt = $conn->query($sql);
-  $product_quantity = $stmt->rowCount();
-
-  $sql_add .= " GROUP BY `PkProduct_Id`, `FkColor_Id`";
+          INNER JOIN
+          ( SELECT p.`PkProduct_Id`
+            FROM `product` p
+            INNER JOIN `product_image` p_i
+            ON p.`PkProduct_Id` = p_i.`FkProduct_Id`
+            ".$sql_add."
+            GROUP BY `PkProduct_Id`
+            LIMIT $start_point, $page_size ) id
+          ON p.`PkProduct_Id` = id.`PkProduct_Id`
+          GROUP BY `PkProduct_Id`, `FkColor_Id`";
 
   switch ($order_rule) {
-      case 'newest':
-          $sql .= " ORDER BY `PkProduct_Id` DESC";
-          break;
+    case 'newest':
+        $sql .= " ORDER BY `PkProduct_Id` DESC";
+        break;
 
-      case 'most':
-          $sql .= " ORDER BY `ProductView` DESC";
-          break;
+    case 'most':
+        $sql .= " ORDER BY `ProductView` DESC";
+        break;
 
-      case 'priceDown':
-          $sql .= " ORDER BY `ProductPrice` DESC";
-          break;
-          
-      case 'priceUp':
-          $sql .= " ORDER BY `ProductPrice` ASC";
-          break;
+    case 'priceDown':
+        $sql .= " ORDER BY `ProductPrice` DESC";
+        break;
+        
+    case 'priceUp':
+        $sql .= " ORDER BY `ProductPrice` ASC";
+        break;
   }
-
-  $sql .= " LIMIT $start_point, $page_size";
 
   $stmt = $conn->query($sql);
   $product_list = $stmt->fetchALL(PDO::FETCH_ASSOC);
@@ -424,19 +436,18 @@
       $paging_link_list .= '</ul>';
       $output .= $paging_link_list;
     }
-  } else {
+  } else { 
     $output .= ' 
-      <div class="prod-list-empty">
-        <i class="fas fa-swatchbook"></i>
-        <span>
-            Không có sản phẩm thỏa điều kiện lọc của bạn <br>
-            Bạn vui lòng thay đổi điều kiện lọc nhé!
-        </span>
+      <div class="product__section-empty">
+        <i class="product__section-empty-icon far fa-laugh-beam"></i>
+        Không có sản phẩm thỏa điều kiện lọc của bạn <br>
+        Bạn vui lòng thay đổi điều kiện lọc nhé!
       </div>
     ';
   }
 
   // $output .= $sql; //########################################
+  // $output .= $product_list; //########################################
   // $output .= $product_quantity; //########################################
 
   $conn = null;

@@ -5,6 +5,18 @@
   display: flex;
 }
 
+.js-buy-product-form-notification {
+  padding-top: 1.2rem;
+  margin-bottom: -0.5rem;
+
+  color: var(--red);
+
+  font-size: 1.4rem;
+  font-family: var(--regular);
+  text-align: center;
+  line-height: 2.2rem;
+}
+
 .product__filter {
   overflow: hidden;
 
@@ -250,6 +262,10 @@ input[type="radio"]:checked~.product__filter-label__radio::after {
   will-change: transform;
 }
 
+input[type="radio"]:checked~.product__filter-label--circle::after {
+  transform: rotate(-45deg) scale(1);
+}
+
 input[type="checkbox"]:checked~.product__filter-label--circle::after {
   transform: rotate(-45deg) scale(1);
 }
@@ -296,7 +312,8 @@ input[type="checkbox"]:checked~.product__filter-label--circle::after {
   will-change: transform;
 }
 
-input[type="checkbox"]:checked~.product__filter-label-size::after {
+input[type="checkbox"]:checked~.product__filter-label-size::after,
+input[type="radio"]:checked~.product__filter-label-size::after {
   transform: scale(1);
 }
 
@@ -402,11 +419,34 @@ input[type="checkbox"]:checked~.product-bar__label {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 2rem 0rem;
 
   width: calc(100% + 1.5rem);
 }
 
+.product__section-empty {
+  width: calc(100% - 3rem);
+  height: auto;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+
+  background: var(--primary-color-blur);
+  color: var(--black);
+
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--secondary-color);
+
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  line-height: 3rem;
+  text-align: center;
+}
+
+.product__section-empty-icon {
+  display: block;
+  margin: 0.5rem 0 1rem 0;
+  color: var(--secondary-color);
+  font-size: 15rem;
+}
 .product__breadcrumb {
   display: flex;
   flex-wrap: wrap;

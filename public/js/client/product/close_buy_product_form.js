@@ -3,7 +3,6 @@ window.addEventListener('load', function () {
   const overlayFive = document.querySelector('.overlay-5');
 
   closeBuyProdBtn.addEventListener('click', () => {
-      overlayFive.classList.remove("overlay--active-5");
+    overlayFive.classList.remove("overlay--active-5");
   })
-
 })

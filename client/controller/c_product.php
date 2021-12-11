@@ -11,7 +11,7 @@
   );
   $link_js_arr[] = '../public/js/client/product/send_product_request.js';
   $link_js_arr[] = '../public/js/client/product/create_label.js';
-  $link_js_arr[] = '../public/js/client/product/change_session_filter.js';
+  $link_js_arr[] = '../public/js/client/product/buy_product_form_interaction.js';
   $link_js_arr[] = '../public/js/client/product/close_buy_product_form.js';
 
   $view_link = 'view/v_product.php';
