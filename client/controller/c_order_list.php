@@ -6,6 +6,5 @@
   $link_css_arr = array (
     '../public/css/client/order_list.css',
   );
-  $link_js_arr = '';
   $view_link = 'view/v_order_list.php';
 ?>

@@ -156,7 +156,9 @@
           <label class="header__contain-interaction-icon" for="header__search-form-input">
             <i class="fas fa-search header__icon"></i>
           </label>
-          <input type="text" class="header__search-form-input" name="" id="header__search-form-input"
+          <input type="text" 
+            class="header__search-form-input js-search-product-input" 
+            id="header__search-form-input"
             placeholder="Tìm kiếm ...">
         </div>
 

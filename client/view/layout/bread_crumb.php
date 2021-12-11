@@ -1,7 +1,7 @@
 <!-- bread-crumb -->
 <section class="bread-crumb">
   <div class="bread-crumb__container">
-    <a class="bread-crumb__link" href="<?php echo $main_bread_crumb_link; ?>">
+    <a class="bread-crumb__link js-product-keyword" href="<?php echo $main_bread_crumb_link; ?>">
       <?php echo $main_bread_crumb; ?>
     </a>
     <?php if ($sub_bread_crumb != ''): ?>

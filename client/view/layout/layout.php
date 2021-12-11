@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../public/css/base/font.css">
     <!-- Font Awsome -->
     <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="../library/jquery.js"></script>
     <!-- Layout CSS -->
     <link rel="stylesheet" href="../public/css/client/layout/header.css">
     <link rel="stylesheet" href="../public/css/client/layout/bread_crumb.css">
@@ -39,6 +41,11 @@
         include_once 'view/popup/v_buy_prod_form.php';
       }
       include_once 'footer.php'; 
+      echo '
+        <script type="text/javascript">
+          sessionStorage.setItem("pageName", "'.$page.'");
+        </script>
+      ';
     ?>
     <?php
     if ($link_js_arr != '') {
