@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./prod_detail.css">
+    <link rel="stylesheet" href="./product_click.css">
     <link rel="stylesheet" href="./product.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
     <!-- Global CSS -->
     <link rel="stylesheet" href="/public/css/base/reset.css">
@@ -22,48 +20,35 @@
         <div class="prod__detail-wrapper">
             <div class="prod__detail-left">
                 <div class="prod__detail-image">
-                    <div class="prod__detail-large__image">
-                        <ul>
-                            <li class="prod__detail-image-item prod__detail-image-item--pop_up"><img src="/public/image/site/product/nike_1.png" alt="">
-                            </li>
-                            <li class="prod__detail-image-item "><img src="/public/image/site/product/nike_2.png" alt="">
-                            </li>
-                            <li class="prod__detail-image-item "><img src="/public/image/site/product/nike_3.png" alt="">
-                            </li>
-                            <li class="prod__detail-image-item"><img src="/public/image/site/product/nike_4.png" alt="">
-                            </li>
-                            <li class="prod__detail-image-item "><img src="/public/image/site/product/nike_5.png" alt="">
-                            </li>
-
-                        </ul>
+                    <div class="prod__detail-image">
+                        <img src="/public/image/site/product/nike_1.png" id="img_main" alt="">
                         <input type="checkbox" name="" id="heart__icon">
                         <label for="heart__icon" class="heart__icon">
                         </label>
                     </div>
                     <ul class="prod__detail-other">
-                        <li class="prod__detail-other-item--choosen "><img src="/public/image/site/product/nike_1.png"
-                                alt="">
+                        <li class="prod__detail-other-item"><img src="/public/image/site/product/nike_1.png"
+                                onclick="changeImage('1')" id="1" alt="">
                         </li>
-                        <li class=""><img src="/public/image/site/product/nike_2.png" alt="">
+                        <li class="prod__detail-other-item"><img src="/public/image/site/product/nike_2.png"
+                                onclick="changeImage('2')" id="2" alt="">
                         </li>
-                        <li class=""><img src="/public/image/site/product/nike_3.png" alt="">
+                        <li class="prod__detail-other-item"><img src="/public/image/site/product/nike_3.png"
+                                onclick="changeImage('3')" id="3" alt="">
                         </li>
-                        <li class=""><img src="/public/image/site/product/nike_4.png" alt="">
+                        <li class="prod__detail-other-item"><img src="/public/image/site/product/nike_4.png"
+                                onclick="changeImage('4')" id="4" alt="">
                         </li>
-                        <li class=""><img src="/public/image/site/product/nike_5.png" alt="">
+                        <li class="prod__detail-other-item"><img src="/public/image/site/product/nike_5.png"
+                                onclick="changeImage('5')" id="5" alt="">
                         </li>
-
+                        <span class="prev__icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="next__icon">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
                     </ul>
-                    <div class="button__icon">
-                        <ul>
-                            <li class="prev__icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </li>
-                            <li class="next__icon">
-                                <i class="fas fa-chevron-right"></i>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
             <div class="prod__detail-right">
@@ -200,11 +185,9 @@
                 </form>
             </div>
         </div>
-
     </section>
-    <!-- Font Awsome -->
     <script src="https://kit.fontawesome.com/aeb1173b82.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="pro_detail.js"></script>
+    <script src="image.js"></script>
 </body>
 
 </html>

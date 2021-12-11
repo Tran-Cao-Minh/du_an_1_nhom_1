@@ -1,16 +1,13 @@
 .prod__detail {
     max-width: 117rem;
 
-    margin: 0 auto 4rem;
+    margin: 2% auto;
 }
 
 .prod__detail-wrapper {
     display: flex;
 }
-.prod__detail-image ul li{
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
+
 .prod__detail-left {
     margin-right: 1.5rem;
     border-radius: 0.5rem;
@@ -24,48 +21,16 @@
 
 .prod__detail-image {
     position: relative;
-    width: 46.6rem;
-    height: 46.6rem;
+
     cursor: pointer;
-
-}
-.prod__detail-large__image{
-    width: 46.6rem;
-    height: 46.6rem;
-    overflow: hidden;
 }
 
-.prod__detail-other li{
-    opacity: 0.6;
-}
-ul li{
-    list-style: none;
-}
-.prod__detail-image-item{
-    opacity: 0;
-}
-ul li.prod__detail-other-item--choosen{
-    border: 1px solid #ff6400;
-    list-style: none;
-    opacity: 1;
-}
-.prod__detail-other-item{
-    opacity: 0.7;
-}
-
-.prod__detail-large__image ul li.prod__detail-image-item--pop_up {
-    opacity: 1;
-    transition: 0.5s;
-}
 .prod__detail-image .heart__icon {
     position: absolute;
     top: 0;
     right: 0;
 }
-.prod__detai-other-tiem--choosen img, .prod__detail-other-item img{
-    width: 100%;
-    height: 100%;
-}
+
 .heart__icon {
     display: flex;
     align-items: center;
@@ -120,12 +85,7 @@ input[type="checkbox"]:checked~.heart__icon {
 
     margin: 0.5rem;
 }
-.button__icon{
-    width: 100%;
-    height: 3rem;
-    position: relative;
-    top: -6em;
-}
+
 .prev__icon,
 .next__icon {
     position: absolute;
@@ -134,7 +94,6 @@ input[type="checkbox"]:checked~.heart__icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
 
     height: 5rem;
     width: 3rem;
@@ -148,12 +107,11 @@ input[type="checkbox"]:checked~.heart__icon {
     cursor: pointer;
 }
 
-
-.prev__icon {
+.prod__detail-other .prev__icon {
     left: -0.5rem;
 }
 
-.next__icon {
+.prod__detail-other .next__icon {
     right: -0.5rem;
 }
 
@@ -161,13 +119,13 @@ input[type="checkbox"]:checked~.heart__icon {
 .prev__icon:hover {
     background: var(--secondary-color);
 }
-.button__icon i{
+
+.prod__detail-other i {
     font-size: 2.5rem;
     line-height: 5rem;
 
     color: var(--primary-color);
 }
-
 
 .prod__detail-info {
     padding-bottom: 1.5rem;
