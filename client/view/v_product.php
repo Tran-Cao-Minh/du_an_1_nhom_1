@@ -7,8 +7,12 @@
       </label>
     </div>
     <div class="product__filter-action">
-      <button for="" class="product__filter-action-clear">Xóa tất cả</button>
-      <button for="" class="product__filter-action-apply">Chấp nhận</button>
+      <button class="js-delete-filter-btn product__filter-action-clear">
+        Xóa tất cả
+      </button>
+      <label class="product__filter-action-apply" for="toggle__filter">
+        Chấp nhận
+      </label>
     </div>
     <!-- Start filter column -->
     <div class="product__filter-column">
@@ -19,28 +23,46 @@
       </label>
       <input class="filter-toggle" type="checkbox" name="" id="sort">
       <div class="product__filter-content">
-        <div class="product__filter-item">
-          <input type="radio" id="newest" name="filter__sort">
-          <label class=" product__filter-label__radio" for="newest"><span class="filter-name">Mới
-              nhất</span></label>
-        </div>
-        <div class="product__filter-item">
-          <input type="radio" id="most" name="filter__sort">
-          <label class=" product__filter-label__radio" for="most"><span class="filter-name">Nổi bật
-              nhất</span></label>
-        </div>
-        <div class="product__filter-item">
-          <input type="radio" id="pricedown" name="filter__sort">
-          <label class=" product__filter-label__radio" for="pricedown"><span class="filter-name">Giá giảm
-              dần
-            </span></label>
-        </div>
-        <div class="product__filter-item">
-          <input type="radio" id="priceup" name="filter__sort">
-          <label class=" product__filter-label__radio" for="priceup"><span class="filter-name">Giá tăng
-              dần
-            </span></label>
-        </div>
+        <label class="product__filter-item">
+          <input class="js-order-input" 
+            value="Mới nhất" checked
+            type="radio" id="newest" name="filter__sort">
+          <label class=" product__filter-label__radio" for="newest">
+            <span class="filter-name">
+              Mới nhất
+            </span>
+          </label>
+        </label>
+        <label class="product__filter-item">
+          <input class="js-order-input" 
+            value="Nổi bật nhất"
+            type="radio" id="most" name="filter__sort">
+          <label class=" product__filter-label__radio" for="most">
+            <span class="filter-name">
+              Nổi bật nhất
+            </span>
+          </label>
+        </label>
+        <label class="product__filter-item">
+          <input class="js-order-input" 
+            value="Giá giảm dần"
+            type="radio" id="pricedown" name="filter__sort">
+          <label class=" product__filter-label__radio" for="pricedown">
+            <span class="filter-name">
+              Giá giảm dần
+            </span>
+          </label>
+        </label>
+        <label class="product__filter-item">
+          <input class="js-order-input" 
+            value="Giá tăng dần"
+            type="radio" id="priceup" name="filter__sort">
+          <label class=" product__filter-label__radio" for="priceup">
+            <span class="filter-name">
+              Giá tăng dần
+            </span>
+          </label>
+        </label>
       </div>
     </div>
     <!-- End filter column -->
@@ -53,40 +75,46 @@
       </label>
       <input class="filter-toggle" type="checkbox" name="" id="price">
       <div class="product__filter-content">
-        <div class="product__filter-item">
-          <input type="radio" id="below1m" name="filter__price">
-          <label class=" product__filter-label__radio" for="below1m"><span class="filter-name">Dưới
-              1 triệu</span></label>
-        </div>
-        <div class="product__filter-item">
-          <input type="radio" id="1mto2m" name="filter__price">
-          <label class=" product__filter-label__radio" for="1mto2m"><span class="filter-name">Từ 1
-              đến 2 triệu</span></label>
-        </div>
-        <div class="product__filter-item">
-          <input type="radio" id="2mto3m" name="filter__price">
-          <label class=" product__filter-label__radio" for="2mto3m"><span class="filter-name">Từ 2
-              đến 3 triệu
-            </span></label>
-        </div>
-        <div class="product__filter-item">
-          <input type="radio" id="3mto4m" name="filter__price">
-          <label class=" product__filter-label__radio" for="3mto4m"><span class="filter-name">Từ 3
-              đến 4 triệu
-            </span></label>
-        </div>
-        <div class="product__filter-item">
-          <input type="radio" id="4mto5m" name="filter__price">
-          <label class=" product__filter-label__radio" for="4mto5m"><span class="filter-name">Từ 4
-              đến 5 triệu
-            </span></label>
-        </div>
-        <div class="product__filter-item">
-          <input type="radio" id="over5m" name="filter__price">
-          <label class=" product__filter-label__radio" for="over5m"><span class="filter-name"> Trên 5
-              triệu
-            </span></label>
-        </div>
+        <label class="product__filter-item">
+          <input class="js-price-range-input"
+            value="Dưới 1 triệu" 
+            type="radio" id="below1m" name="filter__price">
+          <label class=" product__filter-label__radio" for="below1m">
+            <span class="filter-name">
+              Dưới 1 triệu
+            </span>
+          </label>
+        </label>
+        <label class="product__filter-item">
+          <input class="js-price-range-input"
+            value="Từ 1 đến 2 triệu" 
+            type="radio" id="1mto2m" name="filter__price">
+          <label class=" product__filter-label__radio" for="1mto2m">
+            <span class="filter-name">
+              Từ 1 đến 2 triệu
+            </span>
+          </label>
+        </label>
+        <label class="product__filter-item">
+          <input class="js-price-range-input"
+            value="Từ 2 đến 3 triệu" 
+            type="radio" id="2mto3m" name="filter__price">
+          <label class=" product__filter-label__radio" for="2mto3m">
+            <span class="filter-name">
+              Từ 2 đến 3 triệu
+            </span>
+          </label>
+        </label>
+        <label class="product__filter-item">
+          <input class="js-price-range-input"
+            value="Trên 3 triệu" 
+            type="radio" id="over3m" name="filter__price">
+          <label class=" product__filter-label__radio" for="over3m">
+            <span class="filter-name">
+              Trên 3 triệu
+            </span>
+          </label>
+        </label>
       </div>
     </div>
     <!-- End filter column -->
@@ -148,35 +176,22 @@
       <input class="filter-toggle" type="checkbox" name="" id="brand">
       <div class="product__filter-content">
         <?php 
-          if (isset($_GET['category'])) {
-            $category_id = $_GET['category'];
-          } else {
-            $category_id = '';
-          }
-          foreach ($product_category_list as $category) {
-            if ($category['PkType_Id'] != $category_id) {
-              echo '
-                <div class="product__filter-item">
-                  <input type="checkbox" id="'.$category['PkType_Id'].'">
-                  <label class="product__filter-label" for="'.$category['PkType_Id'].'">
-                    <span class="filter-name">
-                      '.$category['TypeName'].'
-                    </span>
-                  </label>
-                </div>
-              ';
-            } else {
-              echo '
-                <div class="product__filter-item">
-                  <input checked type="checkbox" id="'.$category['PkType_Id'].'">
-                  <label class="product__filter-label" for="'.$category['PkType_Id'].'">
-                    <span class="filter-name">
-                      '.$category['TypeName'].'
-                    </span>
-                  </label>
-                </div>
-              ';
-            }
+          foreach ($product_brand_list as $brand) {
+            echo '
+              <label class="product__filter-item">
+                <input type="checkbox" 
+                  class="js-filter-label-input js-brand-input"
+                  id="'.$brand['PkBrand_Id'].$brand['BrandName'].'"
+                  value="Nhãn hiệu: '.$brand['BrandName'].'"
+                  data-filter-value="'.$brand['PkBrand_Id'].'"
+                >
+                <label class="product__filter-label" for="'.$brand['PkBrand_Id'].$brand['BrandName'].'">
+                  <span class="filter-name">
+                    '.$brand['BrandName'].'
+                  </span>
+                </label>
+              </label>
+            ';
           }
         ?>
       </div>
@@ -191,40 +206,24 @@
       </label>
       <input class="filter-toggle" type="checkbox" name="" id="colors">
       <div class="product__filter-content product__filter-content--color">
-        <label class="product__filter-item-color">
-          <input type="checkbox" id="orange">
-          <div class="product__filter-label--circle" for="orange" style="--bg-color:#EE6F57;"></div>
-        </label>
-        <label class="product__filter-item-color">
-          <input type="checkbox" id="red">
-          <div class="product__filter-label--circle" for="red" style="--bg-color:
-                            #CF455C;"></div>
-        </label>
-        <label class="product__filter-item-color">
-          <input type="checkbox" id="turqoise">
-          <div class="product__filter-label--circle" for="turqoise" style="--bg-color:
-                                #51C4D3;"></div>
-        </label>
-        <label class="product__filter-item-color">
-          <input type="checkbox" id="black">
-          <div class="product__filter-label--circle" for="black" style="--bg-color:
-                                #333333;"></div>
-        </label>
-        <label class="product__filter-item-color">
-          <input type="checkbox" id="white">
-          <div class="product__filter-label--circle" for="white" style="--bg-color:
-                                #ffffff;"></div>
-        </label>
-        <label class="product__filter-item-color">
-          <input type="checkbox" id="gray">
-          <div class="product__filter-label--circle" for="gray" style="--bg-color:
-                                #8d886f;"></div>
-        </label>
-        <label class="product__filter-item-color">
-          <input type="checkbox" id="lightgray">
-          <div class="product__filter-label--circle" for="lightgray" style="--bg-color:
-                                #999999;"></div>
-        </label>
+        <?php 
+          foreach ($product_color_list as $color) {
+            echo '
+              <label for="'.$color['PkColor_Id'].$color['ColorName'].'" class="product__filter-item-color">
+                <input type="checkbox" 
+                  class="js-filter-label-input js-color-input"
+                  id="'.$color['PkColor_Id'].$color['ColorName'].'"
+                  value="Màu sắc: '.$color['ColorName'].'"
+                  data-filter-value="'.$color['PkColor_Id'].'"
+                >
+                <div class="product__filter-label--circle"  
+                  style="--bg-color: #'.$color['PkColor_Id'].';"
+                >
+                </div>
+              </label>
+            ';
+          }
+        ?>
       </div>
     </div>
     <!-- End filter column -->
@@ -237,44 +236,25 @@
       </label>
       <input class="filter-toggle" type="checkbox" name="" id="sizes">
       <div class="product__filter-content product__filter-content-size">
-        <label class="product__filter-item">
-          <input type="checkbox" id="24">
-          <div class="product__filter-label-size" for="24"><span class="prodduct__size-name">24</span></div>
-        </label>
-        <label class="product__filter-item">
-          <input type="checkbox" id="25">
-          <div class="product__filter-label-size" for="25"><span class="prodduct__size-name">25</span></div>
-        </label>
-        <label class="product__filter-item">
-          <input type="checkbox" id="26">
-          <div class="product__filter-label-size" for="26"><span class="prodduct__size-name">
-              26</span></div>
-        </label>
-        <label class="product__filter-item">
-          <input type="checkbox" id="27">
-          <div class="product__filter-label-size" for="27"><span class="prodduct__size-name">
-              27</span></div>
-        </label>
-        <label class="product__filter-item">
-          <input type="checkbox" id="28">
-          <div class="product__filter-label-size" for="28"><span class="prodduct__size-name">
-              28</span></div>
-        </label>
-        <label class="product__filter-item">
-          <input type="checkbox" id="29">
-          <div class="product__filter-label-size" for="29"><span class="prodduct__size-name">
-              29</span></div>
-        </label>
-        <label class="product__filter-item">
-          <input type="checkbox" id="30">
-          <div class="product__filter-label-size" for="30"><span class="prodduct__size-name">
-              30</span></div>
-        </label>
-        <label class="product__filter-item">
-          <input type="checkbox" id="31">
-          <div class="product__filter-label-size" for="31"><span class="prodduct__size-name">
-              31</span></div>
-        </label>
+        <?php 
+          foreach ($product_size_list as $size) {
+            echo '
+              <label class="product__filter-item">
+                <input type="checkbox" 
+                  class="js-filter-label-input js-size-input"
+                  id="'.$size['ProductSize'].'"
+                  value="Kích cỡ: '.$size['ProductSize'].'"
+                  data-filter-value="'.$size['ProductSize'].'"
+                >
+                <div class="product__filter-label-size" for="'.$size['ProductSize'].'">
+                  <span class="prodduct__size-name">
+                    '.$size['ProductSize'].'
+                  </span>
+                </div>
+              </label>
+            ';
+          }
+        ?>
       </div>
     </div>
     <!-- End filter column -->
@@ -282,44 +262,89 @@
   <div class="product__area">
     <!-- Start product area -->
     <div class="product__area-top">
-      <div class="filter-menu">
+      <label class="filter-menu" for="toggle__filter">
         <label for="toggle__filter" class="filter-menu__icon"><i class="fas fa-bars"></i></label>
-      </div>
+      </label>
       <ul class="product-bar">
-        <li class="product-bar__item">
-          <input type="checkbox" name="" id="giay_tay">
-          <label for="giay_tay" class="product-bar__label">Giày Tây</label>
-        </li>
-        <li class="product-bar__item">
-          <input type="checkbox" name="" id="giay_the_thao">
-          <label for="giay_the_thao" class="product-bar__label">Giày Thể Thao</label>
-        </li>
-        <li class="product-bar__item">
-          <input type="checkbox" name="sandal" id="sandal">
-          <label for="sandal" class="product-bar__label">Sandal</label>
-        </li>
+        <?php 
+          if (isset($_GET['category'])) {
+            $category_id = $_GET['category'];
+          } else {
+            $category_id = '';
+            echo '
+              <script type="text/javascript">
+                sessionStorage.setItem("categoryList", JSON.stringify([]));
+              </script>
+            ';
+          }
+          foreach ($product_category_list as $category) {
+            if ($category['PkType_Id'] != $category_id) {
+              echo '
+                <li class="product-bar__item">
+                  <input type="checkbox" 
+                    class="js-category-input"
+                    id="'.$category['PkType_Id'].$category['TypeName'].'"
+                    data-filter-value="'.$category['PkType_Id'].'"
+                  >
+                  <label for="'.$category['PkType_Id'].$category['TypeName'].'" class="product-bar__label">
+                    '.$category['TypeName'].'
+                  </label>
+                </li>
+              ';
+            } else {
+              echo '
+                <li class="product-bar__item">
+                  <input checked type="checkbox" 
+                    class="js-category-input"
+                    id="'.$category['TypeName'].'"
+                    data-filter-value="'.$category['PkType_Id'].'"
+                  >
+                  <label for="'.$category['TypeName'].'" class="product-bar__label">
+                    '.$category['TypeName'].'
+                  </label>
+                </li>
+              ';
+              echo '
+                <script type="text/javascript">
+                  sessionStorage.setItem("categoryList", JSON.stringify(["'.$category['PkType_Id'].'"]));
+                </script>
+              ';
+            }
+          }
+        ?>
       </ul>
     </div>
     <!-- End section top -->
     <!-- Start product__breadcrumb -->
     <ul class="product__breadcrumb">
       <li class="product__breadcrumb__item">
-        <label class="product__breadcrumb__item-label">Sắp xếp: Nổi bật nhất
-          <a class="product__breadcrumb__item--icon-close" href=""><i class="fas fa-times"></i></a>
+        <label class="product__breadcrumb__item-label">
+          Sắp xếp: &nbsp;
+          <span class="js-order-label-content">
+            Mới nhất
+          </span>
         </label>
       </li>
-      <li class="product__breadcrumb__item">
-        <label class="product__breadcrumb__item-label">Mức giá: Từ 1 đến 2 triệu
-          <a class="product__breadcrumb__item--icon-close" href=""><i class="fas fa-times"></i></a>
+      <li class="product__breadcrumb__item js-price-range-label" style="display: none;">
+        <label class="product__breadcrumb__item-label">
+          Mức giá: &nbsp;
+          <span class="js-price-range-label-content">
+          </span>
+          <div class="product__breadcrumb__item--icon-close">
+            <i class="fas fa-times"></i>
+          </div>
         </label>
       </li>
-      <div class="product__breadcrumb__btn">
+      <div class="js-product-filter-label-container">
+        <!-- add label by create_label.js -->
+      </div>
+      <div class="product__breadcrumb__btn js-delete-filter-btn">
         <button>XOÁ BỘ LỌC</button>
       </div>
     </ul>
     <!-- End product__breadcrumb -->
     <!-- Start product section -->
-    <div class="product__section">
+    <div class="product__section js-product-container">
       <div class="product__column">
         <div class="product__image">
           <a href=""> <img src="../public/image/site/product/prodImg (1).png" alt=""></a>
@@ -692,17 +717,21 @@
           <button type="submit" class="js-buy-prod-btn">Mua Hàng</button>
         </div>
       </div>
+    
+
+
+      
+      <ul class="product__pagination">
+        <li class="product__pagination__link"><button type="submit">1</button></li>
+        <li class="product__pagination__link"><button type="submit">2</button></li>
+        <li class="product__pagination__link product__pagination__link--active"><button type="submit">3</button>
+        </li>
+        <li class="product__pagination__link"><button type="submit">4</button></li>
+        <li class="product__pagination__link"><button type="submit"><i class="fas fa-angle-double-right"></i></button>
+        </li>
+      </ul>
     </div>
 
-    <ul class="product__pagination">
-      <li class="product__pagination__link"><button type="submit">1</button></li>
-      <li class="product__pagination__link"><button type="submit">2</button></li>
-      <li class="product__pagination__link product__pagination__link--active"><button type="submit">3</button>
-      </li>
-      <li class="product__pagination__link"><button type="submit">4</button></li>
-      <li class="product__pagination__link"><button type="submit"><i class="fas fa-angle-double-right"></i></button>
-      </li>
-    </ul>
   </div>
   <!-- End  product area -->
 

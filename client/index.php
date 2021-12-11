@@ -122,7 +122,6 @@
         '../public/js/validation/otp_validation.js',
         '../public/js/validation/password_validation.js',
         '../public/js/validation/hide_show_password.js',
-        '../library/jquery.js',
         '../public/js/client/send_comment.js',
         '../public/js/client/send_login.js',
         '../public/js/client/send_otp.js',
@@ -140,7 +139,6 @@
       $link_js_arr[] = '../public/js/validation/otp_validation.js';
       $link_js_arr[] = '../public/js/validation/password_validation.js';
       $link_js_arr[] = '../public/js/validation/hide_show_password.js';
-      $link_js_arr[] = '../library/jquery.js';
       $link_js_arr[] = '../public/js/client/send_comment.js';
       $link_js_arr[] = '../public/js/client/send_login.js';
       $link_js_arr[] = '../public/js/client/send_otp.js';
