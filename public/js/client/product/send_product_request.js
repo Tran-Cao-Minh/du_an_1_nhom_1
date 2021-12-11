@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
         order_rule: sessionStorage.getItem('orderRule'),
         price_range: sessionStorage.getItem('priceRange'),
         brand_list: sessionStorage.getItem('brandList'),
-        category_list: sessionStorage.getItem('categoryList'), 
+        category_list: sessionStorage.getItem('categoryList'),
         color_list: sessionStorage.getItem('colorList'),
         size_list: sessionStorage.getItem('sizeList'),
         page_num: sessionStorage.getItem('pageNum'),
@@ -40,33 +40,24 @@ window.addEventListener('load', function () {
       btnBuyProductList.each(function () {
         $(this).click(function () {
           $('.overlay-5').addClass("overlay--active-5");
-
+          let dataProductId = $(this).data('productId');
           $.ajax({
             url: '../../../../../du_an_1_nhom_1/ajax/ajax_buy_product_form.php',
             type: 'GET',
             dataType: 'html',
             data: {
-              product_id: $(this).data('productId'),
+              product_id: dataProductId,
             }
-          }).done(function(output) {
-
+          }).done(function (output) {
+            $('.js-buy-product-form-variant').empty();
+            $('.js-buy-product-form-variant').append(output);
+            document.querySelector('.js-buy-product-form-add').dataset.productId = dataProductId;
+            document.querySelector('.js-get-product-variant-color').click();
+            document.querySelector('.js-buy-product-form-notification').innerHTML = '';
           })
         })
       })
     })
-
-    // alert('ok');
-    // let btnChangePageNumList = $('.js-change-product-page');
-    // console.log(btnChangePageNumList);
-    // btnChangePageNumList.forEach(btn => {
-    //   btn.addEventListener('click', function () {
-    //     sessionStorage.setItem('pageNum', this.dataset.pageNum);
-    //     getProductListData();
-    //     alert('nani');
-    //   })
-    // });
-    // alert('5');
-
   }
 
   function clearFilterSessionData() {
@@ -96,7 +87,7 @@ window.addEventListener('load', function () {
   categoryInputList.forEach(input => {
     input.addEventListener('change', function () {
       // categoryList sessionStorage it set from v_product.php
-      let categoryList = JSON.parse(sessionStorage.getItem('categoryList')); 
+      let categoryList = JSON.parse(sessionStorage.getItem('categoryList'));
       let inputValue = this.dataset.filterValue;
 
       if (input.checked == true) {
@@ -216,5 +207,4 @@ window.addEventListener('load', function () {
       getProductListData();
     })
   });
-  // end delete filter
 })
