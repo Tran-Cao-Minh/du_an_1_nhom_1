@@ -114,7 +114,6 @@
         '../public/js/client/view_form/sign_in_view.js',
         '../public/js/client/view_form/sign_up_main_view.js',
         '../public/js/client/view_form/sign_up_email_view.js',
-        '../public/js/client/view_form/sign_up_otp_view.js',
         '../public/js/client/view_form/buy_prod_view.js',
         '../public/js/validation/account_validation.js',
         '../public/js/validation/date_validation.js',
@@ -133,7 +132,6 @@
       $link_js_arr[] = '../public/js/client/view_form/sign_in_view.js';
       $link_js_arr[] = '../public/js/client/view_form/sign_up_main_view.js';
       $link_js_arr[] = '../public/js/client/view_form/sign_up_email_view.js';
-      $link_js_arr[] = '../public/js/client/view_form/sign_up_otp_view.js';
       $link_js_arr[] = '../public/js/client/view_form/buy_prod_view.js';
       $link_js_arr[] = '../public/js/validation/account_validation.js';
       $link_js_arr[] = '../public/js/validation/date_validation.js';
