@@ -1,6 +1,10 @@
 <?php
+<<<<<<< Updated upstream
     include_once '../global/connect_database.php';
     $conn = connectDatabase();
+=======
+    include '../global/connect_database.php';
+>>>>>>> Stashed changes
 
     $accountValue = $_POST['accountValue'];
 

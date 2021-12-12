@@ -1,15 +1,6 @@
 <?php 
 
-  $servername = "localhost:3325";
-  $username = "root";
-  $password = "";
-  
-  try {
-    $conn = new PDO("mysql:host=$servername;dbname=ignite_shop", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  } catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-  }
+  include '../global/connect_database.php';
 
   $change_email_value = $_POST['changeEmailOtp'];
   
