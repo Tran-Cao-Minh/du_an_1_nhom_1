@@ -31,14 +31,17 @@
              WHERE `AccountPassword` = '$passwordValue'";
 
     $result = $conn->query($sql);
+    $account_id = $result->fetchColumn();
      if ($result->rowCount() === 0) {
         $data = 'saimatkhau';
 
     } else {
         $data = 'dungmatkhau';
     }
+
+
     
-    setcookie('user_id', $accountValue, time() + (3600*24*30), '/');
+    setcookie('user_id', $account_id, time() + (3600*24*30), '/');
     setcookie('user_password', $passwordValue, time() + (3600*24*30), '/');
     }
 

@@ -135,7 +135,9 @@
         '../public/js/client/send_comment.js',
         '../public/js/client/send_login.js',
         '../public/js/client/send_otp.js',
+        '../public/js/client/send_change_email_otp.js',
         '../public/js/client/send_otp_check.js',
+        '../public/js/client/send_change_email.js',
       );
     } else {
       $link_js_arr[] = '../public/js/client/view_form/sign_in_view.js';
@@ -158,6 +160,8 @@
       $link_js_arr[] = '../public/js/client/send_login.js';
       $link_js_arr[] = '../public/js/client/send_otp.js';
       $link_js_arr[] = '../public/js/client/send_otp_check.js';
+      $link_js_arr[] = '../public/js/client/send_change_email_otp.js';
+      $link_js_arr[] = '../public/js/client/send_change_email.js';
     }
 
     if ($link_css_arr == '') {

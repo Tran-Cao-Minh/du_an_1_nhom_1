@@ -19,8 +19,9 @@
     if ($otp_value != $account_otp) {
       $data = 'wrongOtp';
       echo $data;
-      
-    } else {
+      exit();
+    }
+    else {
       $data = 'correctOtp';
       echo $data;
       unset($_COOKIE['account_otp']);
