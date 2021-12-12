@@ -21,9 +21,9 @@
       echo $data;
       
     } else {
-      unset($_COOKIE['account_otp']);
       $data = 'correctOtp';
       echo $data;
+      unset($_COOKIE['account_otp']);
       
     }
 

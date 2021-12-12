@@ -63,7 +63,10 @@
       <div class="form__flex">
         <input class="form__input form__input--primary" type="text" placeholder="69@gmail.com" />
         <div class="account__btn">
-          <button class="account__btn-accept-change">
+          <button class="
+          account__btn-accept-change
+          js-change-email-btn
+          ">
             Thay đổi
           </button>
         </div>

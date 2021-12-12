@@ -2,8 +2,10 @@ window.addEventListener('load', function () {
     // check email đăng ký
     const inputEmailList = document.querySelectorAll(".js-email-input");
     let formBtn = document.querySelector(".js-btn-sign-up-2");
+    const changeEmailOtpBtn = document.querySelector('.js-change-email-otp-btn');
 
     formBtn.disabled = true;
+    changeEmailOtpBtn.disabled = true;
 
     inputEmailList.forEach(input => {
         input.addEventListener("input", (e) => {
@@ -17,6 +19,7 @@ window.addEventListener('load', function () {
             } else if (regexEmail.test(input.value)) {
                 notification.innerHTML = '';
                 formBtn.disabled = false;
+                changeEmailOtpBtn.disabled = false;
 
             } else {
                 notification.innerHTML = '* Email không đúng định dạng';
