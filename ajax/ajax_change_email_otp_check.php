@@ -1,6 +1,7 @@
 <?php 
 
   include '../global/connect_database.php';
+  $conn = connectDatabase();
 
   $change_email_value = $_POST['changeEmailOtp'];
   

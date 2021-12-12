@@ -1,6 +1,7 @@
 <?php 
 
   include '../global/connect_database.php';
+  $conn = connectDatabase();
 
   $otp_value = $_POST['otpValue'];
   

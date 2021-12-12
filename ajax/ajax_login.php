@@ -1,6 +1,6 @@
 <?php
     include '../global/connect_database.php';
-
+    $conn = connectDatabase();
     $accountValue = $_POST['accountValue'];
 
     $sql = "SELECT `PkCustomer_Id`

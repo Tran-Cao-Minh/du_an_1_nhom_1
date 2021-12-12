@@ -3,16 +3,14 @@ window.addEventListener('load', function () {
   const closeChangeEmailOtp = document.querySelector(".js-change-email-otp-close-btn");
   const overlaySeven = document.querySelector('.overlay-7');
   const overlaySix = document.querySelector('.overlay-6');
-
+ 
   changeEmailOtpBtn.forEach(btn => {
-    // Mở form đăng nhập
     btn.addEventListener('click', () => {
       overlaySix.classList.remove("overlay--active-6");
       overlaySeven.classList.add("overlay--active-7");
     })
   })
 
-  // Đóng form đăng nhập
   closeChangeEmailOtp.addEventListener('click', () => {
     overlaySeven.classList.remove("overlay--active-7");
   })

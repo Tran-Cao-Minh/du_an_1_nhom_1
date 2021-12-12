@@ -24,6 +24,7 @@ $(document).ready(function () {
       } else if (data === 'dungmatkhau') {
         location.reload(true);
       }
+      console.log(data);
     })
   })
 

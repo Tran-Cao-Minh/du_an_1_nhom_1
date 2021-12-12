@@ -2,6 +2,7 @@
   include '../global/function/send_mail.php';
 
   include '../global/connect_database.php';
+  $conn = connectDatabase();
     
   $email_value = $_POST["changeEmailValue"];
   $change_email_otp = rand(100000, 999999);

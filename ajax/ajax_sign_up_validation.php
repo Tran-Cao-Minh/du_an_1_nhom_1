@@ -1,6 +1,7 @@
 <?php
 
 include '../global/connect_database.php';
+$conn = connectDatabase();
 
     $email_value = $_POST["emailValue"];
     $name_value = $_POST["nameValue"];
