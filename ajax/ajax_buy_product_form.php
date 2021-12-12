@@ -51,6 +51,7 @@
               data-image="'.$prev_product_variant_img.'"
               data-name="'.$product_name.'"
               data-price="'.$product_price.'"
+              data-color-id="'.$prev_product_variant_color.'"
             >
             <label class="product__filter-label--circle" 
               for="buy_product_form_'.$prev_product_variant_color.'" 
@@ -84,6 +85,7 @@
         data-image="'.$prev_product_variant_img.'"
         data-name="'.$product_name.'"
         data-price="'.$product_price.'"
+        data-color-id="'.$prev_product_variant_color.'"
       >
       <label class="product__filter-label--circle" 
         for="buy_product_form_'.$prev_product_variant_color.'" 

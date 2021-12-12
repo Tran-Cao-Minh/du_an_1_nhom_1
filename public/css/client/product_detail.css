@@ -501,19 +501,19 @@ input[type="checkbox"]:checked~.heart__icon {
 }
 
 .prod__detail-comment-input {
-    height: 8rem;
-    width: 100%;
-    padding: 0 1rem;
-    border-radius: 0.5rem;
-    border: 0.2rem solid var(--secondary-color);
+  height: 9rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--secondary-color);
 
-    font-size: 1.8rem;
-    line-height: 4rem;
-    font-family: var(--regular);
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  font-family: var(--regular);
 
-    transition: all 0.2s ease;
+  transition: all 0.2s ease;
 
-    resize: none;
+  resize: none;
 }
 
 .prod__detail-comment-input:hover {
@@ -522,7 +522,7 @@ input[type="checkbox"]:checked~.heart__icon {
 
 .prod__detail-comment-form-icon {
     position: absolute;
-    bottom: 0;
+    bottom: 0.4rem;
     right: 0;
 
     display: flex;
@@ -719,7 +719,7 @@ input[type="checkbox"]:checked~.heart__icon {
 
     border-radius: 0.5rem;
 
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
 }
 
 .prod__detail-comment-content-item-heading-user {

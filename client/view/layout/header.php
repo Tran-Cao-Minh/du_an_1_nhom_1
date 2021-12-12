@@ -179,7 +179,7 @@
           </div>
         </div>
 
-        <div class="header__favorite-product">
+        <!-- <div class="header__favorite-product">
           <div class="header__contain-interaction-icon">
             <i class="fas fa-heart header__icon" style="--margin-top: 0.1rem;"></i>
             <div class="header__favorite-product-quantity">
@@ -189,9 +189,9 @@
           <div class="header__interaction-sub-menu">
             <div class="header__interaction-sub-menu-decorate"></div>
             <div class="header__interaction-sub-menu-container" style="--width: 32rem;">
-              <!-- <span class="header__interaction-notification">
-                  Không có sản phẩm nào ~
-                </span> -->
+              <span class="header__interaction-notification">
+                Không có sản phẩm nào ~
+              </span>
               <div class="header__contain-prod-list">
                 <ul class="header__product-list">
                   <li class="header__product-item">
@@ -262,7 +262,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="header__cart">
           <div class="js-load-basket-summary header__contain-interaction-icon">
@@ -274,96 +274,13 @@
           <div class="header__interaction-sub-menu">
             <div class="header__interaction-sub-menu-decorate"></div>
             <div class="header__interaction-sub-menu-container" style="--width: 32rem;">
-              <!-- <span class="js-basket-empty-notification header__interaction-notification">
+              <span class="js-basket-empty-notification header__interaction-notification">
                 Không có sản phẩm nào ~
-              </span> -->
+              </span>
               <div class="js-show-basket-summary">
                 <div class="header__contain-prod-list">
-                  <ul class="header__product-list">
-                    <li class="header__product-item">
-                      <div class="header__contain-product-img">
-                        <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
-                      </div>
-                      <div class="header__contain-product-inf">
-                        <div class="header__product-name">
-                          Sandal Nam Biti's Hunter
-                        </div>
-                        <div class="header__product-basket-inf">
-                          <div class="header__product-basket-parameter">
-                            <div class="header__product-basket-color" style="--bg-color: red;">
-                            </div>
-                            <div class="header__product-basket-size">
-                              26
-                            </div>
-                            <div class="header__product-basket-price">
-                              3.564.000 đ
-                            </div>
-                            <div class="header__product-basket-quantity">
-                              1
-                            </div>
-                          </div>
-                          <button class="header__cancel-product-btn">
-                            <i class="fas fa-trash-alt header__cancel-icon"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="header__product-item">
-                      <div class="header__contain-product-img">
-                        <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
-                      </div>
-                      <div class="header__contain-product-inf">
-                        <div class="header__product-name">
-                          Sandal Nam Biti's Hunter
-                        </div>
-                        <div class="header__product-basket-inf">
-                          <div class="header__product-basket-parameter">
-                            <div class="header__product-basket-color" style="--bg-color: red;">
-                            </div>
-                            <div class="header__product-basket-size">
-                              26
-                            </div>
-                            <div class="header__product-basket-price">
-                              3.564.000 đ
-                            </div>
-                            <div class="header__product-basket-quantity">
-                              1
-                            </div>
-                          </div>
-                          <button class="header__cancel-product-btn">
-                            <i class="fas fa-trash-alt header__cancel-icon"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="header__product-item">
-                      <div class="header__contain-product-img">
-                        <img class="header__product-img" src="../memberDemo/minh/image/headerImgProduct.png" alt="">
-                      </div>
-                      <div class="header__contain-product-inf">
-                        <div class="header__product-name">
-                          Sandal Nam Biti's Hunter
-                        </div>
-                        <div class="header__product-basket-inf">
-                          <div class="header__product-basket-parameter">
-                            <div class="header__product-basket-color" style="--bg-color: red;">
-                            </div>
-                            <div class="header__product-basket-size">
-                              26
-                            </div>
-                            <div class="header__product-basket-price">
-                              3.564.000 đ
-                            </div>
-                            <div class="header__product-basket-quantity">
-                              1
-                            </div>
-                          </div>
-                          <button class="header__cancel-product-btn">
-                            <i class="fas fa-trash-alt header__cancel-icon"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </li>
+                  <ul class="js-contain-basket-product header__product-list">
+                    <!-- add product with show_product_in_cart.js -->
                   </ul>
                   <input type="checkbox" id="header__overlay-1">
                   <label class="header__cover-layer-prod-list" for="header__overlay-1">
@@ -374,8 +291,8 @@
                   <span class="header__basket-sum-money-title">
                     Tổng tiền:
                   </span>
-                  <span class="header__basket-sum-money-inf">
-                    1.689.000 đ
+                  <span class="js-basket-sum-money header__basket-sum-money-inf">
+                    <!-- show sum by show_product_in_cart.js -->
                   </span>
                 </div>
                 <div class="header__basket-btn-group">
@@ -621,14 +538,14 @@
         </div>
       </div>
 
-      <a href="?page=favorite_product" class="header__menu-mobile-favorite-product">
+      <!-- <a href="?page=favorite_product" class="header__menu-mobile-favorite-product">
         <div class="header__menu-mobile-favorite-product-title">
           Sản phẩm yêu thích
         </div>
         <div class="header__menu-mobile-favorite-product-quantity">
           2
         </div>
-      </a>
+      </a> -->
 
       <a href="?page=cart" class="header__menu-mobile-basket">
         <div class="header__menu-mobile-basket-title">

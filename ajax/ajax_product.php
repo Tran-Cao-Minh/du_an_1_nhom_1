@@ -11,7 +11,7 @@
   $order_rule = $_GET['order_rule'];
   $page_num = $_GET['page_num'];
 
-  $page_size = 12;
+  $page_size = 9;
   $start_point = ($page_num - 1) * $page_size;
 
   // get product list in db
@@ -137,11 +137,28 @@
           INNER JOIN `product_image` p_i
           ON p.`PkProduct_Id` = p_i.`FkProduct_Id`
           ".$sql_add."
-          GROUP BY `PkProduct_Id`
-        ";
+          GROUP BY `PkProduct_Id`";
     
   $stmt = $conn->query($sql);
   $product_quantity = $stmt->rowCount();
+
+  switch ($order_rule) {
+    case 'newest':
+      $sql_order = "ORDER BY `PkProduct_Id` DESC";
+      break;
+
+    case 'most':
+      $sql_order = "ORDER BY `ProductView` DESC";
+      break;
+
+    case 'priceDown':
+      $sql_order = "ORDER BY `ProductPrice` DESC";
+      break;
+        
+    case 'priceUp':
+      $sql_order = "ORDER BY `ProductPrice` ASC";
+      break;
+  }
 
   $sql = "SELECT 
             p.`PkProduct_Id`, 
@@ -160,26 +177,27 @@
             ON p.`PkProduct_Id` = p_i.`FkProduct_Id`
             ".$sql_add."
             GROUP BY `PkProduct_Id`
+            ".$sql_order."
             LIMIT $start_point, $page_size ) id
           ON p.`PkProduct_Id` = id.`PkProduct_Id`
           GROUP BY `PkProduct_Id`, `FkColor_Id`";
 
   switch ($order_rule) {
     case 'newest':
-        $sql .= " ORDER BY `PkProduct_Id` DESC";
-        break;
+      $sql .= " ORDER BY `PkProduct_Id` DESC, `PkProduct_Id`";
+      break;
 
     case 'most':
-        $sql .= " ORDER BY `ProductView` DESC";
-        break;
+      $sql .= " ORDER BY `ProductView` DESC, `PkProduct_Id`";
+      break;
 
     case 'priceDown':
-        $sql .= " ORDER BY `ProductPrice` DESC";
-        break;
+      $sql .= " ORDER BY `ProductPrice` DESC, `PkProduct_Id`";
+      break;
         
     case 'priceUp':
-        $sql .= " ORDER BY `ProductPrice` ASC";
-        break;
+      $sql .= " ORDER BY `ProductPrice` ASC, `PkProduct_Id`";
+      break;
   }
 
   $stmt = $conn->query($sql);

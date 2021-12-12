@@ -10,21 +10,33 @@ window.addEventListener('load', function () {
         let dataQuantityList = input.dataset.quantity.split(" ");
         let index = 0;
         dataSizeList.forEach(size => {
-          chooseSizeProductForm.innerHTML += `
-            <label class="product__filter-item">
-              <input type="radio" id="buy_product_form_${size}"
-                class="js-get-product-variant-size"
-                name="product_variant_size_in_buy_product_form"
-                data-quantity="${dataQuantityList[index]}"
-                data-size="${size}"
-              >
-              <label class="product__filter-label-size" for="buy_product_form_${size}">
-                <span class="prodduct__size-name">
-                  ${size}
-                </span>
+          if (dataQuantityList[index] > 0) {
+            chooseSizeProductForm.innerHTML += `
+              <label class="product__filter-item">
+                <input type="radio" id="buy_product_form_${size}"
+                  class="js-get-product-variant-size"
+                  name="product_variant_size_in_buy_product_form"
+                  data-quantity="${dataQuantityList[index]}"
+                  data-size="${size}"
+                >
+                <label class="product__filter-label-size" for="buy_product_form_${size}">
+                  <span class="prodduct__size-name">
+                    ${size}
+                  </span>
+                </label>
               </label>
-            </label>
-          `;
+            `;
+          } else {
+            chooseSizeProductForm.innerHTML += `
+              <div class="product__filter-item product__filter-label--disabled">
+                <div class="product__filter-label-size">
+                  <span class="prodduct__size-name">
+                    ${size}
+                  </span>
+                </div>
+              </div>
+            `;
+          }
           index++;
         });
       }

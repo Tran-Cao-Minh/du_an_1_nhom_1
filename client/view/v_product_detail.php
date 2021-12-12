@@ -4,9 +4,9 @@
             <div class="prod__detail-image">
                 <div class="prod__detail-image">
                     <img src="../public/image/site/product/productMainImg.png" alt="">
-                    <input type="checkbox" name="" id="heart__icon">
+                    <!-- <input type="checkbox" name="" id="heart__icon">
                     <label for="heart__icon" class="heart__icon">
-                    </label>
+                    </label> -->
                 </div>
                 <ul class="prod__detail-other">
                     <li class="prod__detail-other-item"><img src="../public/image/site/product/image 8.png" alt="">
@@ -40,14 +40,14 @@
                     <li class="prod__detail-info-tag-name">Người lớn</li>
                 </ul>
                 <div class="prod__detail-info-overview">
-                    <div class="prod__detail-info-rating">
+                    <!-- <div class="prod__detail-info-rating">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
                         ( Xem 257 đánh giá )
-                    </div>
+                    </div> -->
                     <div class="prod__detail-info-view-quantity">
                         <span class="prod__detail-info-view-quantity-icon"><i class="far fa-eye"></i></span>
                         <p class="prod__detail-info-view-quantity-text">1.6903</p>
@@ -170,7 +170,7 @@
             </form>
         </div>
     </div>
-    <div class="prod__detail-similar-tittle tittle__bar">
+    <!-- <div class="prod__detail-similar-tittle tittle__bar">
         SẢN PHẨM TƯƠNG TỰ
     </div>
     <div class="prod__detail-similar">
@@ -306,7 +306,7 @@
                 <i class="fas fa-chevron-right"></i>
             </span>
         </div>
-    </div>
+    </div> -->
     <div class="prod__detail-comment-tittle tittle__bar">
         ĐÁNH GIÁ - NHẬN XÉT
     </div>
@@ -318,7 +318,7 @@
                 <i class="fas fa-comment-medical"></i>
             </span>
         </div>
-        <div class="prod__detail-comment-overview">
+        <!-- <div class="prod__detail-comment-overview">
             <div class="prod__detail-comment-rating">
                 <p>Đánh giá của bạn</p>
                 <form action="">
@@ -358,7 +358,7 @@
                     </li>
                 </ul>
             </ul>
-        </div>
+        </div> -->
         <div class="prod__detail-comment-content">
             <div class="prod__detail-comment-content-item">
                 <div class="prod__detail-comment-content-item-heading">
@@ -368,13 +368,6 @@
                         </div>
                         <div class="prod__detail-comment-content-item-heading-user-name">
                             <p>Nụ Cười Thần Chết</p>
-                            <div class="prod__detail-comment-content-item-heading-user-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
                         </div>
                     </div>
                     <div class="prod__detail-comment-content-item-heading-user-date">
@@ -420,13 +413,6 @@
                         </div>
                         <div class="prod__detail-comment-content-item-heading-user-name">
                             <p>Nụ Cười Thần Chết</p>
-                            <div class="prod__detail-comment-content-item-heading-user-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
                         </div>
                     </div>
                     <div class="prod__detail-comment-content-item-heading-user-date">

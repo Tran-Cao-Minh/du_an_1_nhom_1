@@ -57,6 +57,26 @@ window.addEventListener('load', function () {
           })
         })
       })
+
+      let changePageBtnList = document.querySelectorAll('.js-change-product-page');
+      changePageBtnList.forEach(btn => {
+        btn.addEventListener('click', function () {
+          let view_width = $(document).width();
+          if (view_width > 660) {
+            $('html').animate({
+              scrollTop: $('.bread-crumb__container').height() + 10
+              },
+              'slow'
+            );
+          } else {
+            $('html').animate({
+              scrollTop: $('.bread-crumb__container').height() - 30
+              },
+              'slow'
+            );
+          }
+        })
+      });
     })
   }
 

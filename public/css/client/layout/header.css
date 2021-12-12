@@ -59,7 +59,7 @@
   align-items: center;
   justify-content: space-between;
 
-  width: 26rem;
+  width: 20rem;
   height: 100%;
 
   /* background: lightgreen; */
@@ -125,6 +125,8 @@
 
   font-size: 1.7rem;
   font-family: var(--bold);
+
+  display: none;
 }
 
 .header__favorite-product-quantity {
@@ -470,12 +472,14 @@
 }
 
 .header__product-basket-color {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.2rem;
   margin-right: 1rem;
 
   background: var(--bg-color);
+  border: 0.1rem solid var(--black);
 }
 
 .header__product-basket-size {
@@ -1002,7 +1006,7 @@
   }
 
   .header__mobile-sub-menu-check {
-    /* display: none; */
+    display: none;
   }
 
   .header__mobile-sub-menu-check:checked~.header__mobile-sub-menu {
