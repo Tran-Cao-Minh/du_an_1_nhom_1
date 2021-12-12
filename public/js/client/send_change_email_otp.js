@@ -20,7 +20,7 @@ $(document).ready(function () {
         notification.html('* Mã OTP đã hết hiệu lực!')
 
       } else {
-
+        alert("Thay đổi email thành công!");
       }
     })
   })
