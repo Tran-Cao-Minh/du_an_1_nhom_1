@@ -29,34 +29,29 @@
   </div>
 </section>
 <!-- featured products -->
-<section class="top-product">
+<!-- <section class="top-product">
   <div class="top-product__title-bar">
     <p>TOP 5 SẢN PHẨM NỔI BẬT</p>
   </div>
 
   <div class="top-product__product-inf">
-    <!-- button -->
     <button class="top-product__button-prev--btn">
       <i class="fas fa-chevron-left top-product__button-icon"></i>
     </button>
     <button class="top-product__button-next--btn">
       <i class="fas fa-chevron-left top-product__button-icon"></i>
     </button>
-    <!-- Featured product images -->
     <div class="top-product__group-img">
       <img class="top-product__img" src="../public/image/client/home/productImage.png" alt="">
     </div>
-    <!-- Featured product information -->
     <div class="top-product__information">
       <div class="top-product__name-top">
         <div class="top-product__name-top--number">
           <p class="top-product__name-top--number--letter">1</p>
         </div>
-        <!-- Featured product name -->
         <p class="top-product__name-top--number--letter"> Giày Thể Thao Nam Biti's Hunter X Z Collection
           InGereenZ</p>
       </div>
-      <!-- featured product color -->
       <div class="top-product__color">
         <div class="top-product__color-size">
           <input class="top-product__color-input" type="radio" id="1" name="hoose-color" value="">
@@ -77,7 +72,6 @@
           </label>
         </div>
       </div>
-      <!-- Product size featured -->
       <div class="top-product__size">
         <div class="top-product__size-stocking">
           <input class="top-product__size-input" type="radio" id="1" name="size" value="">
@@ -110,9 +104,7 @@
           <label class="  top-product__size-stocking--label" for="">45</label>
         </div>
       </div>
-      <!-- dash line -->
       <div class="top-product__line"></div>
-      <!-- price -->
       <div class="top-product__price">
         <div class="top-product__price-cost">
           <p>1.199.000đ</p>
@@ -134,7 +126,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!--trademark -->
 <section class="trademark">
   <div class="trademark__title-bar">

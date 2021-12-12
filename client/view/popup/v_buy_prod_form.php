@@ -31,7 +31,7 @@
             class="btn__add js-buy-product-form-add">
             Thêm vào giỏ
           </button>
-          <button type="submit" class="btn__pay">
+          <button type="button" class="btn__pay">
             Thanh toán
           </button>
         </div>
@@ -39,12 +39,14 @@
           <!-- Không thế thêm sản phẩm vào giỏ hàng do sản phẩm đã vượt quá số lượng tối đa có trong kho là: "5" -->
         </div>
         <div class="form__product__action__bottom">
-          <button type="submit" class="btn__detail">
-            Chi tiết sản phẩm
-          </button>
+          <a href="" class="js-product-view-detail-link">
+            <button type="button" class="btn__detail">
+              Chi tiết sản phẩm
+            </button>
+          </a>
         </div>
       </div>
-    </form>
+    </div>
     <div class="form__close js-close-buy-prod-btn">
       <span class="form__close__icon">
         <i class="fas fa-times"></i> 

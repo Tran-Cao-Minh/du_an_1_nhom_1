@@ -219,14 +219,14 @@
           $old_price = ceil($old_price) * 100;
           $output .= '
             <div class="product__column">
-              <div class="product__image">
-                <a href=""> 
-                  <img 
-                    src="../public/image/product/'.$prev_product_img.'" 
-                    alt="'.$prev_product_name.'"
-                  >
-                </a>
-              </div>
+              <a href="?page=product_detail&product_id='.$prev_product_id.'"> 
+                <div class="product__image">
+                    <img 
+                      src="../public/image/product/'.$prev_product_img.'" 
+                      alt="'.$prev_product_name.'"
+                    >
+                </div>
+              </a>
               <div class="product__info">
                 <div class="product__variant">
                   '.$prev_product_color.'
@@ -290,14 +290,14 @@
     $old_price = ceil($old_price) * 100;
     $output .= '
       <div class="product__column">
-        <div class="product__image">
-          <a href=""> 
-            <img 
-              src="../public/image/product/'.$prev_product_img.'" 
-              alt="'.$prev_product_name.'"
-            >
-          </a>
-        </div>
+        <a href="?page=product_detail&product_id='.$prev_product_id.'"> 
+          <div class="product__image">
+              <img 
+                src="../public/image/product/'.$prev_product_img.'" 
+                alt="'.$prev_product_name.'"
+              >
+          </div>
+        </a>
         <div class="product__info">
           <div class="product__variant">
             '.$prev_product_color.'

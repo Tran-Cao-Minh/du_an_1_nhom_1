@@ -93,6 +93,7 @@ window.addEventListener('load', function () {
               checkProductInCart = true;
               if ((product.quantity + 1) > productVariantQuantity) {
                 let buyProductFormNotification = document.querySelector('.js-buy-product-form-notification');
+                buyProductFormNotification.style.display = 'block';
                 buyProductFormNotification.innerHTML = `
                   Không thế thêm sản phẩm vào giỏ hàng do sản phẩm đã vượt quá số lượng tối đa có trong kho là: "${productVariantQuantity}"
                 `;
@@ -114,7 +115,11 @@ window.addEventListener('load', function () {
         let showProductQuantityInCartList = document.querySelectorAll('.js-cart-quantity');
         showProductQuantityInCartList.forEach(element => {
           element.style.display = 'flex';
-          element.innerHTML = productInCart.length;
+          let productQuantity = 0;
+          productInCart.forEach(product => {
+            productQuantity += product.quantity;
+          });
+          element.innerHTML = productQuantity;
         });
 
         localStorage.setItem('productInCart', JSON.stringify(productInCart));
@@ -123,6 +128,7 @@ window.addEventListener('load', function () {
 
     if (checkChooseProductSize == false) {
       let buyProductFormNotification = document.querySelector('.js-buy-product-form-notification');
+      buyProductFormNotification.style.display = 'block';
       buyProductFormNotification.innerHTML = 'Bạn vui lòng chọn kích thước trước khi thêm sản phẩm vào giỏ hàng ~';
     }
 

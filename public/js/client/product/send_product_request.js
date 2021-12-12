@@ -54,6 +54,9 @@ window.addEventListener('load', function () {
             document.querySelector('.js-buy-product-form-add').dataset.productId = dataProductId;
             document.querySelector('.js-get-product-variant-color').click();
             document.querySelector('.js-buy-product-form-notification').innerHTML = '';
+            document.querySelector('.js-product-view-detail-link').href = `
+              ?page=product_detail&product_id=${dataProductId}
+            `;
           })
         })
       })
