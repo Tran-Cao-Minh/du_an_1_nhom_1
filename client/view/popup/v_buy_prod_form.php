@@ -1,6 +1,6 @@
 <div class="overlay-5">
   <section class="form">
-    <form action="" class="form__product"> 
+    <div class="form__product">
       <div class="form__product__variant">
         <!-- Start variant color -->
         <div class="form__product__variant__color js-click">
@@ -22,35 +22,33 @@
           </div>
         </div>
         <!-- End variant size -->
-      </div>
-      <div class="form__product__action">
-        <div class="form__product__action__top">
-          <button 
-            data-product-id=""
-            type="button" 
-            class="btn__add js-buy-product-form-add">
-            Thêm vào giỏ
-          </button>
-          <button type="button" class="btn__pay">
-            Thanh toán
-          </button>
         </div>
-        <div class="js-buy-product-form-notification">
-          <!-- Không thế thêm sản phẩm vào giỏ hàng do sản phẩm đã vượt quá số lượng tối đa có trong kho là: "5" -->
-        </div>
-        <div class="form__product__action__bottom">
-          <a href="" class="js-product-view-detail-link">
-            <button type="button" class="btn__detail">
-              Chi tiết sản phẩm
+        <div class="form__product__action">
+          <div class="form__product__action__top">
+            <button data-product-id="" type="button" class="btn__add js-buy-product-form-add">
+              Thêm vào giỏ
             </button>
-          </a>
+            <button type="button" class="btn__pay">
+              Thanh toán
+            </button>
+          </div>
+          <div class="js-buy-product-form-notification">
+            <!-- Không thế thêm sản phẩm vào giỏ hàng do sản phẩm đã vượt quá số lượng tối đa có trong kho là: "5" -->
+          </div>
+          <div class="form__product__action__bottom">
+            <a href="" class="js-product-view-detail-link">
+              <button type="button" class="btn__detail">
+                Chi tiết sản phẩm
+              </button>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="form__close js-close-buy-prod-btn">
-      <span class="form__close__icon">
-        <i class="fas fa-times"></i> 
-      </span>
+      <div class="form__close js-close-buy-prod-btn">
+        <span class="form__close__icon">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
     </div>
   </section>
 </div>

@@ -110,11 +110,11 @@ window.addEventListener('load', function () {
         checkChooseProductSize = true;
 
         productVariantSize = input.dataset.size;
-        let productVariantQuantity = input.dataset.quantity;
+        let productVariantQuantity = parseInt(input.dataset.quantity);
         let productVariantColor = input.dataset.color;
         let productVariantImg = productMainImg.dataset.image;
         let productId = this.dataset.id;
-        let productQuantity = inputProductQuantity.value;
+        let productQuantity = parseInt(inputProductQuantity.value);
 
         let productObject = {
           'id': productId,
@@ -123,11 +123,11 @@ window.addEventListener('load', function () {
           'image': productVariantImg,
           'price': productPrice,
           'size': productVariantSize,
-          'quantity': 1
+          'quantity': productQuantity
         };
 
         if (localStorage.getItem('productInCart') !== null) {
-          productInCart = JSON.parse(localStorage.getItem('productInCart'));
+          let productInCart = JSON.parse(localStorage.getItem('productInCart'));
           let checkProductInCart = false;
           productInCart.forEach(product => {
             if (
@@ -135,16 +135,27 @@ window.addEventListener('load', function () {
               product.color == productVariantColor &&
               product.size == productVariantSize
             ) {
-              
+              let productQuantityAfterAdd = parseInt(product.quantity) + parseInt(productQuantity);
               checkProductInCart = true;
-              if ((product.quantity + productQuantity) > productVariantQuantity) {
+              if (productQuantityAfterAdd > productVariantQuantity) {
                 buyProductNotification.style.display = 'block';
                 buyProductNotification.innerHTML = `
                   Bạn không thể thêm sản phẩm vào giỏ hàng do số lượng sản phẩm sau khi thêm vượt quá số lượng tối đa có trong kho là: "${productVariantQuantity}"
                 `;
               } else {
                 buyProductNotification.style.display = 'none';
-                product.quantity = parseInt(product.quantity) + parseInt(productQuantity);
+                product.quantity = productQuantityAfterAdd;
+
+                let showProductQuantityInCartList = document.querySelectorAll('.js-cart-quantity');
+                showProductQuantityInCartList.forEach(element => {
+                  element.style.display = 'flex';
+                  let productQuantity = 0;
+                  productInCart.forEach(product => {
+                    productQuantity += product.quantity;
+                  });
+                  element.innerHTML = productQuantity;
+                });
+                localStorage.setItem('productInCart', JSON.stringify(productInCart));
               }
             }
           });
@@ -152,6 +163,17 @@ window.addEventListener('load', function () {
             if (productQuantity <= productVariantQuantity) {
               buyProductNotification.style.display = 'none';
               productInCart.push(productObject);
+
+              let showProductQuantityInCartList = document.querySelectorAll('.js-cart-quantity');
+              showProductQuantityInCartList.forEach(element => {
+                element.style.display = 'flex';
+                let productQuantity = 0;
+                productInCart.forEach(product => {
+                  productQuantity = parseInt(product.quantity) + parseInt(productQuantity);
+                });
+                element.innerHTML = productQuantity;
+              });
+              localStorage.setItem('productInCart', JSON.stringify(productInCart));
             } else {
               buyProductNotification.style.display = 'block';
               buyProductNotification.innerHTML = `
@@ -164,25 +186,27 @@ window.addEventListener('load', function () {
             buyProductNotification.style.display = 'none';
             productInCart = [];
             productInCart.push(productObject);
+
+            let showProductQuantityInCartList = document.querySelectorAll('.js-cart-quantity');
+            showProductQuantityInCartList.forEach(element => {
+              element.style.display = 'flex';
+              let productQuantity = 0;
+              productInCart.forEach(product => {
+                productQuantity = parseInt(product.quantity) + parseInt(productQuantity);
+              });
+              element.innerHTML = productQuantity;
+            });
+            localStorage.setItem('productInCart', JSON.stringify(productInCart));
           } else {
+            alert(productQuantity);
+            alert(productVariantQuantity);
+
             buyProductNotification.style.display = 'block';
             buyProductNotification.innerHTML = `
               Bạn không thể thêm sản phẩm vào giỏ hàng do số lượng sản phẩm sau khi thêm vượt quá số lượng tối đa có trong kho là: "${productVariantQuantity}"
-            `;
+            `; 
           }
         }
-
-        let showProductQuantityInCartList = document.querySelectorAll('.js-cart-quantity');
-        showProductQuantityInCartList.forEach(element => {
-          element.style.display = 'flex';
-          let productQuantity = 0;
-          productInCart.forEach(product => {
-            productQuantity += product.quantity;
-          });
-          element.innerHTML = productQuantity;
-        });
-
-        localStorage.setItem('productInCart', JSON.stringify(productInCart));
       }
     });
 
