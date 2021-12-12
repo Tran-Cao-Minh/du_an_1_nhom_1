@@ -234,7 +234,7 @@
   transition: 0.2s;
 }
 
-.header__user-btn:first-child {
+.header__user-btn--first-child {
   margin-top: 0;
 }
 

@@ -9,6 +9,7 @@
   $link_css_arr = array (
     '../public/css/client/product.css',
   );
+  $link_js_arr[] = '../public/js/client/view_form/buy_prod_view.js';
   $link_js_arr[] = '../public/js/client/product/send_product_request.js';
   $link_js_arr[] = '../public/js/client/product/create_label.js';
   $link_js_arr[] = '../public/js/client/product/buy_product_form_interaction.js';
