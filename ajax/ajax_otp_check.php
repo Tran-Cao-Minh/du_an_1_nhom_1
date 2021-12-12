@@ -22,7 +22,7 @@
   } elseif (!isset($_COOKIE['account_otp'])) {
     $data = "noOtp";
     echo $data;
-
+    $conn = null;
   }
 
 ?>

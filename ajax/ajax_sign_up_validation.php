@@ -78,7 +78,7 @@ include '../global/connect_database.php';
     echo "Failed";
   }
   
-  
+  $conn = null;
 
 
 ?>

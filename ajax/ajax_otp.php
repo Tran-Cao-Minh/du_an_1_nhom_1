@@ -22,7 +22,7 @@
   } else {
     echo "Mail failed: " . $send_mail_result;
   }
-
+  $conn = null;
   
 
 

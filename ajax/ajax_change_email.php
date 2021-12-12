@@ -23,6 +23,6 @@
     echo "<script>console.log('Mail failed' );</script>";
   }
       
-
+  $conn = null;
 
 ?>

@@ -57,32 +57,7 @@ include '../global/connect_database.php';
         echo $output;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    $conn = null;
 
 
 ?>
