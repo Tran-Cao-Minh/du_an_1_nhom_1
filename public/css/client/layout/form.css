@@ -15,6 +15,11 @@
   animation: fadeToCenter 0.3s ease-in-out;
 }
 
+.form-message-center {
+  margin: -0.5rem 0 0.5rem;
+  text-align: center;
+}
+
 @keyframes fadeToCenter {
   from {
     opacity: 0.5;
@@ -481,7 +486,7 @@ input[type="radio"]:checked~.form__sex-label {
 }
 
 .social {
-  padding-top: 3.2rem;
+  /* padding-top: 3.2rem; */
   padding-bottom: 3.2rem;
 
   display: flex;

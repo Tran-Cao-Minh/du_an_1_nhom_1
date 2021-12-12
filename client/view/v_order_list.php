@@ -10,7 +10,7 @@
       </button>
     </a>
   </div>
-  <div class="top-bar__status-group">
+  <!-- <div class="top-bar__status-group">
     <button class="top-bar__status-order-status-1">
       Đang sử lý
       <i class="fas fa-cart-arrow-down top-bar__status-order-status-1-icon"></i>
@@ -27,7 +27,7 @@
       Bị hủy
       <i class="fas fa-trash-alt top-bar__status-order-status-4-icon  "></i>
     </button>
-  </div>
+  </div> -->
 </section>
 <!-- table -->
 <section class="table">

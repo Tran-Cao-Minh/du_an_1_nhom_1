@@ -139,13 +139,13 @@
       $sub_bread_crumb_link = '?page=product_detail';
       break;
 
-    case 'favorite_product':
-      include_once 'controller/c_favorite_product.php';
+    // case 'favorite_product':
+    //   include_once 'controller/c_favorite_product.php';
       
-      $main_bread_crumb = 'Sản phẩm yêu thích';
-      $main_bread_crumb_link = '?page=favorite_product';
-      $sub_bread_crumb = '';
-      break;
+    //   $main_bread_crumb = 'Sản phẩm yêu thích';
+    //   $main_bread_crumb_link = '?page=favorite_product';
+    //   $sub_bread_crumb = '';
+    //   break;
 
   }
   // NAVIGATE TO PAGE
@@ -177,10 +177,11 @@
     $link_js_arr[] = '../public/js/client/send_change_email.js';
 
   } else {
-    // $link_js_arr[] = '../public/js/client/view_form/change_email_view.js';
-    // $link_js_arr[] = '../public/js/client/view_form/change_email_otp_view.js';
-    // $link_js_arr[] = '../public/js/client/send_change_email_otp.js';
-    // $link_js_arr[] = '../public/js/client/send_change_email.js';
+    $link_js_arr[] = '../public/js/client/view_form/change_email_view.js';
+    $link_js_arr[] = '../public/js/client/view_form/change_email_otp_view.js';
+    $link_js_arr[] = '../public/js/client/send_change_email_otp.js';
+    $link_js_arr[] = '../public/js/client/send_change_email.js';
+    $link_js_arr[] = '../public/js/client/common/save_product_to_db.js';
 
   }
 

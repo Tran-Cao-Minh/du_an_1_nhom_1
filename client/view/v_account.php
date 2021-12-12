@@ -8,16 +8,16 @@
         </div>
       </div>
       <div class="account__btn">
-        <button class="account__btn-log-out">
+        <!-- <button class="account__btn-log-out">
           Đăng xuất
-        </button>
-        <button class="account__btn-change-pass">
+        </button> -->
+        <button class="account__btn-log-out">
           Đổi mật khẩu
         </button>
       </div>
     </div>
     <div class="account__article-right">
-      <div class="form__group">
+      <div class="form__group" style="padding-top: 0;">
         <label class="form__label" for="">Họ và tên</label>
         <input class="form__input form__input--primary" type="text" placeholder="Mikaki" />
       </div>
@@ -83,9 +83,11 @@
         </div>
       </div>
     </div>
-    <button class="top-bar__tile-bar-my-shopping-cart">
-      Giỏ hàng của tôi
-      <i class="fas fa-shopping-basket my-shopping-cart__icon"></i>
-    </button>
+    <a href="?page=cart">
+      <button class="top-bar__tile-bar-my-shopping-cart">
+        Giỏ hàng của tôi
+        <i class="fas fa-shopping-basket my-shopping-cart__icon"></i>
+      </button>
+    </a>
   </aside>
 </section>

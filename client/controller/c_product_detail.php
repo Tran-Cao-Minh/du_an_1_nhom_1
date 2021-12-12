@@ -17,9 +17,9 @@
     $product_data = '';
   }
 
-  // if ($product_data == '') {
-  //   header('Location: /du_an_1_nhom_1/client/index.php?page=home');
-  // }
+  if ($product_data == '') {
+    header('Location: /du_an_1_nhom_1/client/index.php?page=home');
+  }
 
   $link_css_arr = array (
     '../public/css/client/product_detail.css',

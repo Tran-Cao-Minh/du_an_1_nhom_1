@@ -27,24 +27,24 @@
         Ghi chú
       </div>
       <div class="order__detail-info-note-area">
-        <textarea name=""
+        <textarea name="" readonly
           id="">Khi giao hàng mong Shop bọc giày cẩn thận. Giao hàng vào buổi sáng giúp, tại tối em không có ở nhà ạ.</textarea>
       </div>
       <div class="payment__info-result">
-        <div class="payment__info-result-1 payment__info-result-0">
+        <!-- <div class="payment__info-result-1 payment__info-result-0">
           <p class="payment__info-result-name">Phí vận chuyển</p>
           <p class="payment__info-result-price">50.000 đ</p>
-        </div>
-        <div class="payment__info-result-2 payment__info-result-0">
+        </div> -->
+        <!-- <div class="payment__info-result-2 payment__info-result-0">
           <p class="payment__info-result-name">Tổng tiền</p>
           <p class="payment__info-result-price">2.535.000 đ</p>
-        </div>
-        <div class="payment__info-result-3 payment__info-result-0">
+        </div> -->
+        <!-- <div class="payment__info-result-3 payment__info-result-0">
           <p class="payment__info-result-name">Giảm giá</p>
           <p class="payment__info-result-price">20.000 đ</p>
-        </div>
+        </div> -->
         <div class="payment__info-result-4 payment__info-result-0">
-          <p class="payment__info-result-name--18">Tổng cộng</p>
+          <p class="payment__info-result-name--18">Tổng tiền</p>
           <p class="payment__info-result-price">50.000 đ</p>
         </div>
       </div>
@@ -93,7 +93,7 @@
       </div>
     </div>
   </div>
-  <div class="order__detail-delivery-box">
+  <!-- <div class="order__detail-delivery-box">
     <div class="tittle__bar">
       <div class="tittle__bar-name">
         Lịch sử giao hàng
@@ -146,7 +146,7 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
   <div class="order__detail-prod">
     <div class="tittle__bar">
       <div class="tittle__bar-name">

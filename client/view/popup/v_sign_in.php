@@ -32,7 +32,7 @@
                  form__button
                  js-login-form-btn
                  js-form-btn" type="button">Đăng nhập</button>
-        <span class="form__message js-login-form-message" style="margin-top:-1.5rem;"></span>
+        <span class="form__message js-login-form-message form-message-center"></span>
       </div>
       <!-- End form group -->
       <!-- Start action -->
@@ -41,12 +41,12 @@
         <a class="js-btn-sign-up-1 form__create">Tạo tài khoản</a>
       </div>
       <!-- Enđ action -->
-      <div class="line">
+      <!-- <div class="line">
         <span class="line__text">Hoặc đăng nhập với</span>
-      </div>
+      </div> -->
       <!-- Start social -->
       <div class="social">
-        <a href="" class="social__facebook">
+        <!-- <a href="" class="social__facebook">
           <img class="social__image" src="../public/image/client/home_page/facebook.png" alt="" />
         </a>
         <a href="" class="social__google">
@@ -54,7 +54,7 @@
         </a>
         <a href="" class="social__zalo">
           <img class="social__image" src="../public/image/client/home_page/zalo.png" alt="" />
-        </a>
+        </a> -->
       </div>
       <!-- End social -->
     </form>

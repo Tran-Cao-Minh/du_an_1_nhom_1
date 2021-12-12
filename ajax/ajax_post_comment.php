@@ -8,7 +8,7 @@ $conn = connectDatabase();
     // $productId = $_GET['productId'];
     
     $sql = "INSERT INTO `product_comment` 
-            (`PkProductComment_Id`, `FkCustomer_Id`, `FkProduct_Id`, `CommentContent`)
+              (`PkProductComment_Id`, `FkCustomer_Id`, `FkProduct_Id`, `CommentContent`)
             VALUES 
             (NULL, '1', '2', '$commentContent')";
 
