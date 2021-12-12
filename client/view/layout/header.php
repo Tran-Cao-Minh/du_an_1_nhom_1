@@ -13,34 +13,34 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417.34 163.29">
             <defs>
               <style>
-                .cls-1 {
-                  isolation: isolate;
-                }
+              .cls-1 {
+                isolation: isolate;
+              }
 
-                .cls-2 {
-                  opacity: 0.8;
-                  mix-blend-mode: multiply;
-                }
+              .cls-2 {
+                opacity: 0.8;
+                mix-blend-mode: multiply;
+              }
 
-                .cls-3 {
-                  fill: #232966;
-                }
+              .cls-3 {
+                fill: #232966;
+              }
 
-                .cls-4 {
-                  fill: #11473d;
-                }
+              .cls-4 {
+                fill: #11473d;
+              }
 
-                .cls-5 {
-                  fill: #f7a965;
-                }
+              .cls-5 {
+                fill: #f7a965;
+              }
 
-                .cls-6 {
-                  fill: #141519;
-                }
+              .cls-6 {
+                fill: #141519;
+              }
 
-                .cls-7 {
-                  fill: #4cb3c7;
-                }
+              .cls-7 {
+                fill: #4cb3c7;
+              }
               </style>
             </defs>
             <g class="cls-1">
@@ -156,9 +156,7 @@
           <label class="header__contain-interaction-icon" for="header__search-form-input">
             <i class="fas fa-search header__icon"></i>
           </label>
-          <input type="text" 
-            class="header__search-form-input js-search-product-input" 
-            id="header__search-form-input"
+          <input type="text" class="header__search-form-input js-search-product-input" id="header__search-form-input"
             placeholder="Tìm kiếm ...">
         </div>
 
@@ -314,11 +312,9 @@
                       Xem giỏ hàng
                     </button>
                   </a>
-                  <a href="?page=pay">
-                    <button class="header__pay-btn">
-                      Thanh toán
-                    </button>
-                  </a>
+                  <button type="button" class="header__pay-btn js-pay-btn">
+                    Thanh toán
+                  </button>
                 </div>
               </div>
             </div>
@@ -402,34 +398,34 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417.34 163.29">
             <defs>
               <style>
-                .cls-1 {
-                  isolation: isolate;
-                }
+              .cls-1 {
+                isolation: isolate;
+              }
 
-                .cls-2 {
-                  opacity: 0.8;
-                  mix-blend-mode: multiply;
-                }
+              .cls-2 {
+                opacity: 0.8;
+                mix-blend-mode: multiply;
+              }
 
-                .cls-3 {
-                  fill: #232966;
-                }
+              .cls-3 {
+                fill: #232966;
+              }
 
-                .cls-4 {
-                  fill: #11473d;
-                }
+              .cls-4 {
+                fill: #11473d;
+              }
 
-                .cls-5 {
-                  fill: #f7a965;
-                }
+              .cls-5 {
+                fill: #f7a965;
+              }
 
-                .cls-6 {
-                  fill: #141519;
-                }
+              .cls-6 {
+                fill: #141519;
+              }
 
-                .cls-7 {
-                  fill: #4cb3c7;
-                }
+              .cls-7 {
+                fill: #4cb3c7;
+              }
               </style>
             </defs>
             <g class="cls-1">
