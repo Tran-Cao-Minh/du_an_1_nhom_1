@@ -282,7 +282,7 @@
               <!-- control by js -->
             </div>
           </div>
-          <div class="header__interaction-sub-menu">
+          <div class="js-hide-basket-in-cart-page header__interaction-sub-menu">
             <div class="header__interaction-sub-menu-decorate"></div>
             <div class="header__interaction-sub-menu-container" style="--width: 32rem;">
               <span class="js-basket-empty-notification header__interaction-notification">

@@ -3,10 +3,12 @@
     <div class="top-bar__tile-bar-status">
       <p class="top-bar__tile-bar-text-status">Trạng thái</p>
     </div>
-    <button class="top-bar__tile-bar-my-shopping-cart">
-      Giỏ hàng của tôi
-      <i class="fas fa-shopping-basket my-shopping-cart__icon"></i>
-    </button>
+    <a href="?page=cart">
+      <button class="top-bar__tile-bar-my-shopping-cart">
+        Giỏ hàng của tôi
+        <i class="fas fa-shopping-basket my-shopping-cart__icon"></i>
+      </button>
+    </a>
   </div>
   <div class="top-bar__status-group">
     <button class="top-bar__status-order-status-1">

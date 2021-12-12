@@ -78,6 +78,7 @@ window.addEventListener('load', function () {
 
   const inputProductQuantity = document.querySelector('.js-product-quantity');
   inputProductQuantity.addEventListener('input', function () {
+    input.value = parseInt(input.value); 
     if (this.value < 1) {
       this.value = 1;
     } else if (this.value >= 99) {
@@ -123,7 +124,8 @@ window.addEventListener('load', function () {
           'image': productVariantImg,
           'price': productPrice,
           'size': productVariantSize,
-          'quantity': productQuantity
+          'quantity': productQuantity,
+          'max': productVariantQuantity
         };
 
         if (localStorage.getItem('productInCart') !== null) {
@@ -198,9 +200,6 @@ window.addEventListener('load', function () {
             });
             localStorage.setItem('productInCart', JSON.stringify(productInCart));
           } else {
-            alert(productQuantity);
-            alert(productVariantQuantity);
-
             buyProductNotification.style.display = 'block';
             buyProductNotification.innerHTML = `
               Bạn không thể thêm sản phẩm vào giỏ hàng do số lượng sản phẩm sau khi thêm vượt quá số lượng tối đa có trong kho là: "${productVariantQuantity}"

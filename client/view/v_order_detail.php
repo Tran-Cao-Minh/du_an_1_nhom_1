@@ -4,8 +4,8 @@
       Tổng quan
     </div>
     <button class="top-bar__tile-bar-my-shopping-cart">
-      Giỏ hàng của tôi
-      <i class="fas fa-shopping-basket my-shopping-cart__icon"></i>
+      Đơn hàng của tôi
+      <i class="fas fa-address-card my-shopping-cart__icon"></i>
     </button>
   </div>
   <div class="order__detail-info">

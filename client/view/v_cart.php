@@ -3,185 +3,49 @@
     <div class="tittle__bar-name">
       Tổng quan
     </div>
-    <button class="top-bar__tile-bar-my-shopping-cart">
-      Giỏ hàng của tôi
-      <i class="fas fa-shopping-basket my-shopping-cart__icon"></i>
-    </button>
+    <?php if ($check_login == true): ?>
+      <a href="?page=order_list">
+        <button class="top-bar__tile-bar-my-shopping-cart">
+          Đơn hàng của tôi
+          <i class="fas fa-address-card my-shopping-cart__icon"></i>
+        </button>
+      </a>
+    <?php endif; ?>
   </div>
-  <div class="cart__total">
+  <div class="js-show-sum-basket cart__total">
     <div class="cart__total-top">
       <p>Tổng tiền</p>
-      <p class="cart__total-top-price">3.069.000 đ</p>
+      <p class="js-sum-basket cart__total-top-price">
+        3.069.000 đ
+      </p>
     </div>
     <div class="cart__total-desc">
       Tổng số tiền đã bao gồm VAT
     </div>
     <div class="cart__total-action">
-      <button class="cart__total-action-update">
-        Cập nhật giỏ hàng
-      </button>
+      <a href="?page=product">
+        <button class="cart__total-action-update">
+          Thêm sản phẩm
+        </button>
+      </a>
       <button class="cart__total-action-pay">
         Thanh toán
       </button>
     </div>
   </div>
-  <div class="tittle__bar">
+  <div class="js-basket-empty-notification-cart-page cart__empty">
+    <i class="cart__empty-icon far fa-laugh-beam"></i>
+    Chưa có sản phẩm nào trong giỏ hàng của bạn ~
+    <a href="?page=product" class="cart__go-to-product-page">
+      Tiếp tục mua sắm
+    </a>
+  </div>
+  <div class="js-detail-product-title tittle__bar">
     <div class="tittle__bar-name">
       Chi tiết
     </div>
   </div>
-  <div class="cart__prod">
-    <!-- Start cart product item -->
-    <div class="cart__prod-item">
-      <div class="cart__prod-item-image">
-        <img src="../public/image/client/home_page/prodImg (2).png" alt="">
-      </div>
-      <div class="cart__prod-item-info">
-        <div class="cart__prod-item-info-name">
-          Giày Nike Air Presto
-        </div>
-        <div class="cart__prod-item-info-variant">
-          <label class="cart__prod-item-info-variant-color" style="--bg-color: #EE6F57;
-                        ">
-          </label>
-          <div class="cart__prod-item-info-variant-size">
-            41
-          </div>
-          <div class="cart__prod-item-info-variant-price">
-            3.829.000 đ
-          </div>
-        </div>
-        <div class="cart__prod-item-info-action">
-          <div class="product__choose-number">
-            <div class="product__choose-number-decrease">
-              <i class="fas fa-minus"></i>
-            </div>
-            <input value="1" class="product__choose-number-count">
-            </input>
-            <div class="product__choose-number-increase">
-              <i class="fas fa-plus"></i>
-            </div>
-          </div>
-          <button class="cart__prod-item-info-action-close">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- End cart product item -->
-    <!-- Start cart product item -->
-    <div class="cart__prod-item">
-      <div class="cart__prod-item-image">
-        <img src="../public/image/client/home_page/prodImg (2).png" alt="">
-      </div>
-      <div class="cart__prod-item-info">
-        <div class="cart__prod-item-info-name">
-          Giày Nike Air Presto
-        </div>
-        <div class="cart__prod-item-info-variant">
-          <label class="cart__prod-item-info-variant-color" style="--bg-color: #EE6F57;
-                            ">
-          </label>
-          <div class="cart__prod-item-info-variant-size">
-            41
-          </div>
-          <div class="cart__prod-item-info-variant-price">
-            3.829.000 đ
-          </div>
-        </div>
-        <div class="cart__prod-item-info-action">
-          <div class="product__choose-number">
-            <div class="product__choose-number-decrease">
-              <i class="fas fa-minus"></i>
-            </div>
-            <input value="1" class="product__choose-number-count">
-            </input>
-            <div class="product__choose-number-increase">
-              <i class="fas fa-plus"></i>
-            </div>
-          </div>
-          <button class="cart__prod-item-info-action-close">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- End cart product item -->
-    <!-- Start cart product item -->
-    <div class="cart__prod-item">
-      <div class="cart__prod-item-image">
-        <img src="../public/image/client/home_page/prodImg (2).png" alt="">
-      </div>
-      <div class="cart__prod-item-info">
-        <div class="cart__prod-item-info-name">
-          Giày Nike Air Presto
-        </div>
-        <div class="cart__prod-item-info-variant">
-          <label class="cart__prod-item-info-variant-color" style="--bg-color: #EE6F57;
-                        ">
-          </label>
-          <div class="cart__prod-item-info-variant-size">
-            41
-          </div>
-          <div class="cart__prod-item-info-variant-price">
-            3.829.000 đ
-          </div>
-        </div>
-        <div class="cart__prod-item-info-action">
-          <div class="product__choose-number">
-            <div class="product__choose-number-decrease">
-              <i class="fas fa-minus"></i>
-            </div>
-            <input value="1" class="product__choose-number-count">
-            </input>
-            <div class="product__choose-number-increase">
-              <i class="fas fa-plus"></i>
-            </div>
-          </div>
-          <button class="cart__prod-item-info-action-close">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- End cart product item -->
-    <!-- Start cart product item -->
-    <div class="cart__prod-item">
-      <div class="cart__prod-item-image">
-        <img src="../public/image/client/home_page/prodImg (2).png" alt="">
-      </div>
-      <div class="cart__prod-item-info">
-        <div class="cart__prod-item-info-name">
-          Giày Nike Air Presto
-        </div>
-        <div class="cart__prod-item-info-variant">
-          <label class="cart__prod-item-info-variant-color" style="--bg-color: #EE6F57;
-                            ">
-          </label>
-          <div class="cart__prod-item-info-variant-size">
-            41
-          </div>
-          <div class="cart__prod-item-info-variant-price">
-            3.829.000 đ
-          </div>
-        </div>
-        <div class="cart__prod-item-info-action">
-          <div class="product__choose-number">
-            <div class="product__choose-number-decrease">
-              <i class="fas fa-minus"></i>
-            </div>
-            <input value="1" class="product__choose-number-count">
-            </input>
-            <div class="product__choose-number-increase">
-              <i class="fas fa-plus"></i>
-            </div>
-          </div>
-          <button class="cart__prod-item-info-action-close">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- End cart product item -->
+  <div class="js-contain-basket-product-cart-page cart__prod">
+    <!-- add product item by js -->
   </div>
 </section>

@@ -77,7 +77,8 @@ window.addEventListener('load', function () {
           'image': productVariantImg,
           'price': productVariantPrice,
           'size': productVariantSize,
-          'quantity': 1
+          'quantity': 1,
+          'max': productVariantQuantity
         };
 
         let containtBuyProductForm = document.querySelector('.overlay-5');
