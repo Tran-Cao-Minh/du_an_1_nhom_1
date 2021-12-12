@@ -151,6 +151,52 @@
   display: none;
 }
 
+.overlay-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-overlay);
+  z-index: 1000;
+  cursor: pointer;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  display: none;
+}
+
+.overlay-7 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-overlay);
+  z-index: 1000;
+  cursor: pointer;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  display: none;
+}
+
 .overlay--active {
   display: flex;
 }
@@ -170,6 +216,15 @@
 .overlay--active-5 {
   display: flex;
 }
+
+.overlay--active-6 {
+  display: flex;
+}
+
+.overlay--active-7 {
+  display: flex;
+}
+
 
 
 .form__product,

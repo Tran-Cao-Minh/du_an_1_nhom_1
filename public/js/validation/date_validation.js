@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
     const inputDateList = document.querySelectorAll(".js-date-input");
 
     inputDateList.forEach(input => {
-        input.addEventListener("input", (e) => {
+        input.addEventListener("blur", (e) => {
             let notification = input.parentElement.querySelector(".form__message");
 
             if (input.value === "") {
