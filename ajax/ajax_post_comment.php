@@ -1,5 +1,6 @@
 <?php 
 include '../global/connect_database.php';
+$conn = connectDatabase();
 
     
 
