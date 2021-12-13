@@ -11,7 +11,7 @@
         <!-- <button class="account__btn-log-out">
           Đăng xuất
         </button> -->
-        <button class="account__btn-log-out">
+        <button class="account__btn-log-out js-change-password-btn">
           Đổi mật khẩu
         </button>
       </div>

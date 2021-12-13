@@ -10,5 +10,8 @@
   $link_js_arr[] = '../public/js/client/send_change_email.js';
   $link_js_arr[] = '../public/js/client/view_form/change_email_view.js';
   $link_js_arr[] = '../public/js/client/view_form/change_email_otp_view.js';
+  $link_js_arr[] = '../public/js/client/view_form/change_password_form.js';
+  $link_js_arr[] = '../public/js/validation/password_validation.js';
+  $link_js_arr[] = '../public/js/validation/hide_show_password.js';
   $view_link = 'view/v_account.php';
 ?>

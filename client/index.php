@@ -175,18 +175,18 @@
     $link_js_arr[] = '../public/js/client/view_form/change_email_otp_view.js';
     $link_js_arr[] = '../public/js/client/send_change_email_otp.js';
     $link_js_arr[] = '../public/js/client/send_change_email.js';
-
-<<<<<<< Updated upstream
-  } else {
-    $link_js_arr[] = '../public/js/client/view_form/change_email_view.js';
-    $link_js_arr[] = '../public/js/client/view_form/change_email_otp_view.js';
-    $link_js_arr[] = '../public/js/client/send_change_email_otp.js';
-    $link_js_arr[] = '../public/js/client/send_change_email.js';
+    $link_js_arr[] = '../public/js/client/send_change_password.js';
     $link_js_arr[] = '../public/js/client/common/save_product_to_db.js';
 
-=======
->>>>>>> Stashed changes
-  }
+  } 
+  // else {
+  //   $link_js_arr[] = '../public/js/client/view_form/change_email_view.js';
+  //   $link_js_arr[] = '../public/js/client/view_form/change_email_otp_view.js';
+  //   $link_js_arr[] = '../public/js/client/send_change_email_otp.js';
+  //   $link_js_arr[] = '../public/js/client/send_change_email.js';
+  //   $link_js_arr[] = '../public/js/client/common/save_product_to_db.js';
+
+  // }
 
   
   // END CHECK LOGIN
@@ -201,7 +201,7 @@
   }
 
   $link_js_arr[] = '../public/js/client/send_comment.js';
-  $link_js_arr[] = '../public/js/validation/pay_check.js';
+
   // END INCLUDE SOME GENERAL LINK
 
   include_once 'view/layout/layout.php';

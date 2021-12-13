@@ -42,6 +42,7 @@
         include_once 'view/popup/v_change_email_form.php';
         include_once 'view/popup/v_change_email_otp_form.php';
         include_once 'view/popup/v_change_phone_form.php';
+        include_once 'view/popup/v_change_password.php';
       }
       include_once 'footer.php'; 
       if ($page == 'product') {

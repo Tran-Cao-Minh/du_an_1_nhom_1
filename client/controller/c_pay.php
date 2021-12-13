@@ -12,5 +12,6 @@
   $link_css_arr = array (
     '../public/css/client/pay.css',
   );
+  $link_js_arr[] = '../public/js/validation/pay_check.js';
   $view_link = 'view/v_pay.php';
 ?>

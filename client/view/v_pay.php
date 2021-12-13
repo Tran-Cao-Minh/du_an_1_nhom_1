@@ -97,7 +97,7 @@
           <p class="payment__info-result-price">50.000 đ</p>
         </div>
         <div class="payment__info-result-5">
-          <button class="payment__info-result-btn">
+          <button class="payment__info-result-btn js-pay-btn js-btn-sign-in">
             Xác nhận thanh toán
           </button>
         </div>
