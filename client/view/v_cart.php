@@ -28,9 +28,11 @@
           Thêm sản phẩm
         </button>
       </a>
-      <button class="cart__total-action-pay">
-        Thanh toán
-      </button>
+      <a href="?page=pay">
+        <button class="cart__total-action-pay">
+          Thanh toán
+        </button>
+      </a>
     </div>
   </div>
   <div class="js-basket-empty-notification-cart-page cart__empty">

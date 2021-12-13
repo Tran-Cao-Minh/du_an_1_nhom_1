@@ -38,7 +38,7 @@
         include_once 'view/popup/v_sign_up_phone.php';
         include_once 'view/popup/v_sign_up_phone_verify.php';
         include_once 'view/popup/v_sign_up.php';
-        include_once 'view/popup/v_buy_prod_form.php';
+      } else {
         include_once 'view/popup/v_change_email_form.php';
         include_once 'view/popup/v_change_email_otp_form.php';
         include_once 'view/popup/v_change_phone_form.php';

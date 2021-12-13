@@ -12,23 +12,35 @@
     <div class="order__detail-info-article">
       <div class="order__detail-info-date-created">
         <p>Ngày tạo</p>
-        <p>06/05/2021</p>
+        <p>
+          <?php echo $order_data['OrderDate']; ?>
+        </p>
       </div>
       <div class="order__detail-info-status">
         <div class="order__detail-info-status-name">
           Trạng thái
         </div>
         <button class="order__detail-info-status-btn">
-          Hoàn tất
-          <i class="fas fa-user-check order__detail-info-status-icon"></i>
+          <?php 
+            switch ($order_data['FkOrderStatus_Id']) {
+              case '0':
+                echo 'Đang xử lý';
+              case '1':
+                echo 'Đang giao hàng';
+              case '2':
+                echo 'Hoàn tất';      
+              case '3':
+                echo 'Bị hủy';  
+            }
+          ?>
+          <!-- <i class="fas fa-user-check order__detail-info-status-icon"></i> -->
         </button>
       </div>
       <div class="order__detail-info-note-name">
         Ghi chú
       </div>
       <div class="order__detail-info-note-area">
-        <textarea name="" readonly
-          id="">Khi giao hàng mong Shop bọc giày cẩn thận. Giao hàng vào buổi sáng giúp, tại tối em không có ở nhà ạ.</textarea>
+        <textarea readonly><?php echo $order_data['OrderNote']; ?></textarea>
       </div>
       <div class="payment__info-result">
         <!-- <div class="payment__info-result-1 payment__info-result-0">
@@ -45,7 +57,7 @@
         </div> -->
         <div class="payment__info-result-4 payment__info-result-0">
           <p class="payment__info-result-name--18">Tổng tiền</p>
-          <p class="payment__info-result-price">50.000 đ</p>
+          <p class="payment__info-result-price"><?php echo number_format($order_data['OrderTotalMoney'], 0, ',', '.'); ?> đ</p>
         </div>
       </div>
     </div>
@@ -57,8 +69,8 @@
           </div>
           <div class="payment__info-method-body">
             <div class="payment__info-method-item">
-              <input type="radio" name="" id="direct">
-              <label class="payment__info-method-label" for="direct">Trực tiếp</label>
+              <input type="radio" checked>
+              <label class="payment__info-method-label">Trực tiếp</label>
             </div>
           </div>
         </div>
@@ -67,8 +79,8 @@
             Đơn vị giao hàng
           </div>
           <div class="payment__info-method-item">
-            <input type="radio" name="" id="viettel-post">
-            <label class="payment__info-method-label" for="viettel-post">Viettel post</label>
+            <input type="radio" checked>
+            <label class="payment__info-method-label">Viettel Post</label>
           </div>
         </div>
       </div>
@@ -79,15 +91,24 @@
         <div class="payment__left-customer-form">
           <div class="form__group">
             <label class="form__label" for="">Họ và tên</label>
-            <input class="form__input form__input--primary" type="text" placeholder="Nhập họ và tên người nhận" />
+            <input class="form__input form__input--primary" type="text" 
+              readonly
+              value="<?php echo $order_data['CustomerName']; ?>" 
+            />
           </div>
           <div class="form__group">
             <label class="form__label" for="">Số điện thoại</label>
-            <input class="form__input form__input--primary" type="text" placeholder="Nhập số điện thoại người nhận" />
+            <input class="form__input form__input--primary" type="text" 
+              readonly
+              value="<?php echo $order_data['CustomerPhone']; ?>" 
+            />
           </div>
           <div class="form__group">
             <label class="form__label" for="">Địa chỉ</label>
-            <input class="form__input form__input--primary" type="text" placeholder="Nhập địa chỉ người nhận" />
+            <input class="form__input form__input--primary" type="text" 
+              readonly
+              value="<?php echo $order_data['CustomerAddress']; ?>" 
+            />
           </div>
         </div>
       </div>
@@ -155,110 +176,39 @@
     </div>
   </div>
   <div class="cart__prod">
-    <!-- Start cart product item -->
-    <div class="cart__prod-item">
-      <div class="cart__prod-item-image">
-        <img src="../public/image/client/home_page/prodImg (2).png" alt="">
-      </div>
-      <div class="cart__prod-item-info">
-        <div class="cart__prod-item-info-name">
-          Giày Nike Air Presto
-        </div>
-        <div class="cart__prod-item-info-variant">
-          <label class="cart__prod-item-info-variant-color" style="--bg-color: #EE6F57;
-                        ">
-          </label>
-          <div class="cart__prod-item-info-variant-size">
-            41
+    <?php
+      foreach ($product_list as $row) {
+        echo '
+          <div class="cart__prod-item">
+            <div class="cart__prod-item-image">
+              <img src="../public/image/product/'.$row['ImageFileName'].'">
+            </div>
+            <div class="cart__prod-item-info">
+              <div class="cart__prod-item-info-name">
+                '.$row['ProductName'].'
+              </div>
+              <div class="cart__prod-item-info-variant">
+                <label class="cart__prod-item-info-variant-color" 
+                  style="--bg-color: #'.$row['FkColor_Id'].';"
+                >
+                </label>
+                <div class="cart__prod-item-info-variant-size">
+                  '.$row['ProductSize'].'
+                </div>
+                <div class="cart__prod-item-info-variant-price">
+                  '.number_format($row['ProductPrice'], 0, ',', '.').' đ
+                </div>
+              </div>
+              <div class="cart__prod-item-quantity">
+                Số lượng: 
+                <span class="cart__prod-item-quantity-number">
+                  '.$row['OrderQuantity'].'
+                </span>
+              </div>
+            </div>
           </div>
-          <div class="cart__prod-item-info-variant-price">
-            3.829.000 đ
-          </div>
-        </div>
-        <div class="cart__prod-item-quantity">
-          Số lượng: <span class="cart__prod-item-quantity-number">1</span>
-        </div>
-      </div>
-    </div>
-    <!-- End cart product item -->
-    <!-- Start cart product item -->
-    <div class="cart__prod-item">
-      <div class="cart__prod-item-image">
-        <img src="../public/image/client/home_page/prodImg (2).png" alt="">
-      </div>
-      <div class="cart__prod-item-info">
-        <div class="cart__prod-item-info-name">
-          Giày Nike Air Presto
-        </div>
-        <div class="cart__prod-item-info-variant">
-          <label class="cart__prod-item-info-variant-color" style="--bg-color: #EE6F57;
-                            ">
-          </label>
-          <div class="cart__prod-item-info-variant-size">
-            41
-          </div>
-          <div class="cart__prod-item-info-variant-price">
-            3.829.000 đ
-          </div>
-        </div>
-        <div class="cart__prod-item-quantity">
-          Số lượng: <span class="cart__prod-item-quantity-number">1</span>
-        </div>
-      </div>
-    </div>
-    <!-- End cart product item -->
-    <!-- Start cart product item -->
-    <div class="cart__prod-item">
-      <div class="cart__prod-item-image">
-        <img src="../public/image/client/home_page/prodImg (2).png" alt="">
-      </div>
-      <div class="cart__prod-item-info">
-        <div class="cart__prod-item-info-name">
-          Giày Nike Air Presto
-        </div>
-        <div class="cart__prod-item-info-variant">
-          <label class="cart__prod-item-info-variant-color" style="--bg-color: #EE6F57;
-                        ">
-          </label>
-          <div class="cart__prod-item-info-variant-size">
-            41
-          </div>
-          <div class="cart__prod-item-info-variant-price">
-            3.829.000 đ
-          </div>
-        </div>
-        <div class="cart__prod-item-quantity">
-          Số lượng: <span class="cart__prod-item-quantity-number">1</span>
-        </div>
-      </div>
-    </div>
-    <!-- End cart product item -->
-    <!-- Start cart product item -->
-    <div class="cart__prod-item">
-      <div class="cart__prod-item-image">
-        <img src="../public/image/client/home_page/prodImg (2).png" alt="">
-      </div>
-      <div class="cart__prod-item-info">
-        <div class="cart__prod-item-info-name">
-          Giày Nike Air Presto
-        </div>
-        <div class="cart__prod-item-info-variant">
-          <label class="cart__prod-item-info-variant-color" style="--bg-color: #EE6F57;
-                            ">
-          </label>
-          <div class="cart__prod-item-info-variant-size">
-            41
-          </div>
-          <div class="cart__prod-item-info-variant-price">
-            3.829.000 đ
-          </div>
-        </div>
-        <div class="cart__prod-item-quantity">
-          Số lượng: <span class="cart__prod-item-quantity-number">1</span>
-        </div>
-      </div>
-    </div>
-    <!-- End cart product item -->
-
+        ';
+      };
+    ?>
   </div>
 </section>

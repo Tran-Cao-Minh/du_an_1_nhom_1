@@ -286,18 +286,13 @@
   transition: 0.2s;
 }
 
-
-/*  */
-/*  */
 /* table */
 .table {
   max-width: 117rem;
   padding: 0 1.5rem;
   height: auto;
-  margin: 0 auto 1.5rem;
-
+  margin: 0 auto 4rem;
 }
-
 
 /* header */
 .table__row {
@@ -345,6 +340,7 @@
 .table__row-group:nth-child(even) {
   width: 100%;
   height: 6rem;
+  transition: 0.2s;
 }
 
 .table__row-group:nth-child(odd) {
@@ -352,6 +348,11 @@
   height: 6rem;
 
   background-color: var(--primary-color-blur);
+  transition: 0.2s;
+}
+
+.table__row-group:hover {
+  background-color: var(--primary-contrast-color-blur);
 }
 
 /* table-row(1-2-3) */

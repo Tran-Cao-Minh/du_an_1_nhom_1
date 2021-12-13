@@ -38,7 +38,33 @@
       <td class="table__row-header">Trạng thái</td>
       <td class="table__group-icon"></td>
     </tr>
-    <tr class="table__row-group">
+    <?php
+      if ($order_list != '') {
+        foreach ($order_list as $row) {
+          echo '
+            <tr class="table__row-group">
+              <td class="table__row-1">
+                '.$row['OrderDate'].'
+              </td>
+              <td class="table__row-2">
+                '.number_format($row['OrderTotalMoney'], 0, ',', '.').'
+              </td>
+              <td class="table__row-3--delivering">
+                '.$row['OrderStatusName'].'
+              </td>
+              <td class="table__group-icon">
+                <a href="?page=order_detail&order_id='.$row['PkOrder_Id'].'">
+                  <button class="table__button">
+                    <i class="fas fa-info table__icon"></i>
+                  </button>
+                </a>
+              </td>
+            </tr>
+          ';
+        };
+      } 
+    ?>
+    <!-- <tr class="table__row-group">
       <td class="table__row-1">06/05/2021</td>
       <td class="table__row-2">4.291.000 đ</td>
       <td class="table__row-3--processing">Đang xử lý</td>
@@ -62,7 +88,6 @@
         </button>
       </td>
     </tr>
-    <!-- đang giao -->
     <tr class="table__row-group">
       <td class="table__row-1">06/05/2021</td>
       <td class="table__row-2">4.291.000 đ</td>
@@ -75,7 +100,6 @@
         </button>
       </td>
     </tr>
-    <!-- bị hủy -->
     <tr class="table__row-group">
       <td class="table__row-1">08/06/2021</td>
       <td class="table__row-2">6.565.000 đ</td>
@@ -88,7 +112,6 @@
         </button>
       </td>
     </tr>
-    <!-- đang giao -->
     <tr class="table__row-group">
       <td class="table__row-1">06/05/2021</td>
       <td class="table__row-2">4.291.000 đ</td>
@@ -101,7 +124,6 @@
         </button>
       </td>
     </tr>
-    <!-- bị hủy -->
     <tr class="table__row-group">
       <td class="table__row-1">08/06/2021</td>
       <td class="table__row-2">6.565.000 đ</td>
@@ -113,10 +135,10 @@
           </a>
         </button>
       </td>
-    </tr>
+    </tr> -->
   </table>
 </section>
-<section>
+<!-- <section>
   <ul class="product__pagination">
     <li class="product__pagination__link"><button class="product__pagination-button" type="submit">1</button></li>
     <li class="product__pagination__link"><button class="product__pagination-button" type="submit">2</button></li>
@@ -127,4 +149,4 @@
     <li class="product__pagination__link"><button class="product__pagination-button" type="submit">
         <i class="fas fa-angle-double-right"></i></button></li>
   </ul>
-</section>
+</section> -->

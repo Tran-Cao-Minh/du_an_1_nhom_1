@@ -312,9 +312,11 @@
                       Xem giỏ hàng
                     </button>
                   </a>
-                  <button type="button" class="header__pay-btn js-pay-btn">
-                    Thanh toán
-                  </button>
+                  <a href="?page=pay">
+                    <button type="button" class="header__pay-btn">
+                      Thanh toán
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
