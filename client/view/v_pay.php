@@ -28,12 +28,14 @@
       <div class="payment__left-customer-form">
         <div class="form__group">
           <label class="form__label" for="">Họ và tên</label>
-          <input class="form__input form__input--primary" type="text" placeholder="Nhập họ và tên người nhận" />
+          <input class="form__input js-name-input form__input--primary" type="text"
+            placeholder="Nhập họ và tên người nhận" />
           <!-- <span class="form__message">Lỗi</span> -->
         </div>
         <div class="form__group">
           <label class="form__label" for="">Số điện thoại</label>
-          <input class="form__input form__input--primary" type="text" placeholder="Nhập số điện thoại người nhận" />
+          <input class="form__input js-phone-input form__input--primary" type="text"
+            placeholder="Nhập số điện thoại người nhận" />
           <!-- <span class="form__message">Lỗi</span> -->
         </div>
         <div class="form__group">
