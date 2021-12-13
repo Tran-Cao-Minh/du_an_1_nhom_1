@@ -1,4 +1,4 @@
-<div class="overlay-8">
+<div class="overlay-8" style="display: none; ">
   <section class="form">
     <form action="" class="form__register">
       <h2 class="form__heading">Thay đổi mật khẩu</h2>

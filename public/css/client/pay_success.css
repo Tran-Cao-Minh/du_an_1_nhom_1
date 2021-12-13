@@ -1,0 +1,46 @@
+.pay-success__notification {
+  width: 100%;
+  max-width: 50rem;
+  height: auto;
+  margin: 0 auto 4rem;
+  padding: 1rem 2rem;
+
+  background: var(--primary-color-blur);
+  color: var(--black);
+
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--secondary-color);
+
+  font-size: 1.8rem;
+  font-family: var(--regular);
+  line-height: 3rem;
+  text-align: center;
+}
+
+.pay-success__icon {
+  display: block;
+  margin: 0.5rem 0 1rem 0;
+
+  color: var(--secondary-color);
+  font-size: 15rem;
+}
+
+.pay-success__go-to-product-page {
+  display: block;
+  width: 25rem;
+  height: 5rem;
+  margin: 1rem auto 0.5rem;
+  padding: 0 1.5rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 0.5rem;
+  font-family: var(--medium);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  line-height: 5rem;
+  transition: 0.2s;
+}
+
+.pay-success__go-to-product-page:hover {
+  opacity: 0.9;
+}

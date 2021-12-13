@@ -28,9 +28,11 @@
             <button data-product-id="" type="button" class="btn__add js-buy-product-form-add">
               Thêm vào giỏ
             </button>
-            <button type="button" class="btn__pay">
-              Thanh toán
-            </button>
+            <a href="?page=pay">
+              <button type="button" class="btn__pay">
+                Thanh toán
+              </button>
+            </a>
           </div>
           <div class="js-buy-product-form-notification">
             <!-- Không thế thêm sản phẩm vào giỏ hàng do sản phẩm đã vượt quá số lượng tối đa có trong kho là: "5" -->

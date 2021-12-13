@@ -28,18 +28,24 @@
       <div class="payment__left-customer-form">
         <div class="form__group">
           <label class="form__label" for="">Họ và tên</label>
-          <input class="form__input form__input--primary" type="text" placeholder="Nhập họ và tên người nhận" />
-          <!-- <span class="form__message">Lỗi</span> -->
+          <input class="js-name-pay-inf form__input form__input--primary" type="text" 
+            placeholder="Nhập họ và tên người nhận" 
+            value="<?php echo $user_name; ?>"
+          />
+          <span class="js-pay-notification form__message"></span>
         </div>
         <div class="form__group">
           <label class="form__label" for="">Số điện thoại</label>
-          <input class="form__input form__input--primary" type="text" placeholder="Nhập số điện thoại người nhận" />
-          <!-- <span class="form__message">Lỗi</span> -->
+          <input class="js-phone-pay-inf form__input form__input--primary" type="text" 
+            placeholder="Nhập số điện thoại người nhận" 
+            value="<?php echo $user_phone; ?>"
+          />
+          <span class="js-pay-notification form__message"></span>
         </div>
         <div class="form__group">
           <label class="form__label" for="">Địa chỉ</label>
-          <input class="form__input form__input--primary" type="text" placeholder="Nhập địa chỉ người nhận" />
-          <!-- <span class="form__message">Lỗi</span> -->
+          <input class="js-address-pay-inf form__input form__input--primary" type="text" placeholder="Nhập địa chỉ người nhận" />
+          <span class="js-pay-notification form__message"></span>
         </div>
         <!-- <div class="form__group-btn">
           <button class="form__btn">
@@ -77,7 +83,7 @@
         Ghi chú
       </div>
       <div class="payment__info-method-note">
-        <textarea class="payment__info-total-note-area" placeholder="Nhập ghi chú của bạn..." name="" id=""></textarea>
+        <textarea class="js-note-pay-inf payment__info-total-note-area" placeholder="Nhập ghi chú của bạn..." name="" id=""></textarea>
       </div>
       <div class="payment__info-result">
         <!-- <div class="payment__info-result-1 payment__info-result-0">
@@ -94,7 +100,7 @@
         </div> -->
         <div class="payment__info-result-4 payment__info-result-0">
           <p class="payment__info-result-name--18">Tổng tiền</p>
-          <p class="payment__info-result-price">50.000 đ</p>
+          <p class="payment__info-result-price js-pay-sum">50.000 đ</p>
         </div>
         <div class="payment__info-result-5">
           <button class="payment__info-result-btn js-pay-btn js-btn-sign-in">
