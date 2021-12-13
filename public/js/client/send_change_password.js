@@ -16,7 +16,7 @@ $(document).ready(function () {
             if (output === 'ChangePassSuccess') {
               alert('Thay đổi mật khẩu thành công');
             } else {
-              alert('Thất bại ! Vui lòng kiểm tra lại thông tin !');
+              alert('Thành công vui lòng đăng nhập lại');
             }
           })
   })

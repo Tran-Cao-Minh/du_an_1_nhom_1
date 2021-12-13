@@ -3,9 +3,7 @@
     <div class="prod__detail-left">
       <div class="prod__detail-image">
         <div class="prod__detail-image">
-          <img class="js-product-main-img" 
-            src="../public/image/site/product/productMainImg.png" 
-            data-image="">
+          <img class="js-product-main-img" src="../public/image/site/product/productMainImg.png" data-image="">
           <!-- <input type="checkbox" name="" id="heart__icon">
                     <label for="heart__icon" class="heart__icon">
                     </label> -->
@@ -177,24 +175,20 @@
           <div class="js-sub-product-quantity product__choose-number-decrease">
             <i class="fas fa-minus"></i>
           </div>
-          <input type="number" value="1" 
-            class="js-product-quantity product__choose-number-count"
-          >
+          <input type="number" value="1" class="js-product-quantity product__choose-number-count">
           </input>
           <div class="js-add-product-quantity product__choose-number-increase">
             <i class="fas fa-plus"></i>
           </div>
         </div>
         <div class="prod__detail-inventory-remain">
-          Còn lại 
-          <span class="js-remain-product-quantiy">?</span> 
+          Còn lại
+          <span class="js-remain-product-quantiy">?</span>
           sản phẩm
         </div>
       </div>
       <div class="prod__detail-price">
-        <div class="js-product-price prod__detail-price-new"
-          data-price="<?php echo $product_data['ProductPrice']; ?>"
-        >
+        <div class="js-product-price prod__detail-price-new" data-price="<?php echo $product_data['ProductPrice']; ?>">
           <?php echo number_format($product_data['ProductPrice'], 0, ',', '.'); ?> đ
         </div>
         <div class="prod__detail-price-sale">
@@ -211,9 +205,7 @@
         </div>
       </div>
       <div class="prod__detail-action">
-        <button type="button" class="js-buy-product-add btn btn__add" 
-          data-id="<?php echo $product_id; ?>"
-        >
+        <button type="button" class="js-buy-product-add btn btn__add" data-id="<?php echo $product_id; ?>">
           Thêm vào giỏ
         </button>
         <button type="button" class="btn btn__buy">
@@ -367,11 +359,13 @@
   </div>
   <div class="prod__detail-comment">
     <div class="prod__detail-comment-form">
-      <input type="hidden" value="<?php echo $product_id; ?>">
+      <input type="hidden" value="<?php echo $product_id; ?>" class="js-comment-product-id">
       <textarea placeholder="Nhập bình luận của bạn..." class="js-comment-input prod__detail-comment-input"></textarea>
       <span class="prod__detail-comment-form-icon">
         <i class="fas fa-comment-medical"></i>
       </span>
+    </div>
+    <div class="form__message js-comment-message">
     </div>
     <!-- <div class="prod__detail-comment-overview">
             <div class="prod__detail-comment-rating">

@@ -3,14 +3,14 @@
   include '../global/connect_database.php';
   $conn = connectDatabase();
 
-  $old_passwrord_value = $_POST['oldPasswordValue'];
-  $new_passwrord_value = $_POST['newPasswordValue'];
+  $old_password_value = $_POST['oldPasswordValue'];
+  $new_password_value = $_POST['newPasswordValue'];
 
-  setcookie('new_password_value', $new_passwrord_value, time() + (60*1), '/');
+  setcookie('new_password_value', $new_password_value, time() + (60*1), '/');
 
-  if (isset($_COOKIE['new_password_value'])) {
-   $new_passwrord_value = $_COOKIE['new_password_value'];
-   $encode_new_password_value = md5($new_passwrord_value);
+  if (isset($_POST['newPasswordValue'])) {
+    $new_password_value = $_POST['newPasswordValue'];
+    $encode_new_password_value = md5($new_password_value);
     if (isset($_COOKIE['user_id'])) {
       $user_id = $_COOKIE['user_id'];
     }
@@ -32,7 +32,8 @@
     $sql = "UPDATE `account` 
             SET 
                 `AccountPassword` = '$encode_new_password_value'
-             WHERE `FkCustomer_Id` = '$account_id'";
+             WHERE `FkCustomer_Id` = '$account_id'
+             ";
     
     $update_result = $conn->exec($sql);
     if ($update_result === 1) { 
