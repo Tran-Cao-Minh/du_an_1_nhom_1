@@ -24,7 +24,7 @@ $(document).ready(function () {
         })
       
       } else {
-        window.location="http://localhost/du_an_1_nhom_1/client/?page=pay";
+        window.location="http://localhost/du_an_1_nhom_1/client/?page=pay__success";
       }
     })
   })
