@@ -168,23 +168,23 @@
             <div class="header__interaction-sub-menu-decorate"></div>
             <div class="header__interaction-sub-menu-container" style="--width: 18rem;">
               <?php if ($check_login == false): ?>
-                <button class="header__user-btn js-btn-sign-in header__user-btn--first-child">
-                  Đăng nhập
-                </button>
-                <button class="header__user-btn js-btn-sign-up-1">
-                  Đăng ký
-                </button>
+              <button class="header__user-btn js-btn-sign-in header__user-btn--first-child">
+                Đăng nhập
+              </button>
+              <button class="header__user-btn js-btn-sign-up-1">
+                Đăng ký
+              </button>
               <?php else: ?>
-                <a href="?page=account">
-                  <button class="header__user-btn header__user-btn--first-child">
-                    Tài khoản
-                  </button>
-                </a>
-                <a href="?logout=true">
-                  <button class="header__user-btn">
-                    Đăng xuất
-                  </button>
-                </a>
+              <a href="?page=account">
+                <button class="header__user-btn header__user-btn--first-child">
+                  Tài khoản
+                </button>
+              </a>
+              <a href="?logout=true">
+                <button class="header__user-btn">
+                  Đăng xuất
+                </button>
+              </a>
               <?php endif; ?>
             </div>
           </div>
@@ -312,7 +312,7 @@
                       Xem giỏ hàng
                     </button>
                   </a>
-                  <button type="button" class="header__pay-btn js-pay-btn">
+                  <button type="button" class="header__pay-btn js-btn-sign-in js-pay-btn">
                     Thanh toán
                   </button>
                 </div>
@@ -539,23 +539,23 @@
       <div class="header__menu-mobile-user">
         <div class="header__menu-mobile-user-btn-group">
           <?php if ($check_login == false): ?>
-            <button class="header__menu-mobile-user-btn">
-              Đăng nhập
-            </button>
-            <button class="header__menu-mobile-user-btn">
-              Đăng ký
-            </button>
+          <button class="header__menu-mobile-user-btn">
+            Đăng nhập
+          </button>
+          <button class="header__menu-mobile-user-btn">
+            Đăng ký
+          </button>
           <?php else: ?>
-            <a href="?page=account">
-              <button class="header__menu-mobile-user-btn">
-                Tài khoản
-              </button>
-            </a>
-            <a href="?logout=true">
-              <button class="header__menu-mobile-user-btn">
-                Đăng xuất
-              </button>
-            </a>
+          <a href="?page=account">
+            <button class="header__menu-mobile-user-btn">
+              Tài khoản
+            </button>
+          </a>
+          <a href="?logout=true">
+            <button class="header__menu-mobile-user-btn">
+              Đăng xuất
+            </button>
+          </a>
           <?php endif; ?>
         </div>
       </div>
