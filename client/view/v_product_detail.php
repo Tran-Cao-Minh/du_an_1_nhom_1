@@ -367,6 +367,7 @@
   </div>
   <div class="prod__detail-comment">
     <div class="prod__detail-comment-form">
+      <input type="hidden" value="<?php echo $product_id; ?>">
       <textarea placeholder="Nhập bình luận của bạn..." class="js-comment-input prod__detail-comment-input"></textarea>
       <span class="prod__detail-comment-form-icon">
         <i class="fas fa-comment-medical"></i>
@@ -531,7 +532,7 @@
         </div>
       </div>
     </div>
-    <ul class="product__pagination">
+    <!-- <ul class="product__pagination">
       <li class="product__pagination__link">
         1
       </li>
@@ -547,6 +548,6 @@
       <li class="product__pagination__link">
         <i class="fas fa-angle-double-right"></i>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </section>

@@ -139,13 +139,14 @@
       $sub_bread_crumb_link = '?page=product_detail';
       break;
 
-    // case 'favorite_product':
-    //   include_once 'controller/c_favorite_product.php';
+    case 'pay_success':
+      include_once 'controller/c_pay_success.php';
       
-    //   $main_bread_crumb = 'Sản phẩm yêu thích';
-    //   $main_bread_crumb_link = '?page=favorite_product';
-    //   $sub_bread_crumb = '';
-    //   break;
+      $main_bread_crumb = 'Giỏ hàng';
+      $main_bread_crumb_link = '?page=cart';
+      $sub_bread_crumb = 'Thanh toán thành công';
+      $sub_bread_crumb_link = '?page=pay_success';
+      break;
 
   }
   // NAVIGATE TO PAGE

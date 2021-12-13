@@ -1,6 +1,6 @@
 <?php
   function connectDatabase() {
-    $servername = "localhost:3325";
+    $servername = "localhost";
     $database_name = "ignite_shop";
     $username = "root";
     $password = "";

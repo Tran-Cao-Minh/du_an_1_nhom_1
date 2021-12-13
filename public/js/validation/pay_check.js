@@ -10,7 +10,6 @@ $(document).ready(function () {
     }).done(function (data) {
       console.log(data);
       if (data === "null") {
-        alert("Bạn phải đăng nhập trước khi thanh toán !");
         const signInBtn = document.querySelectorAll('.js-btn-sign-in');
         const overlay = document.querySelector('.overlay');
         const overlayFour = document.querySelector('.overlay-4');
@@ -24,7 +23,7 @@ $(document).ready(function () {
         })
       
       } else {
-        window.location="http://localhost/du_an_1_nhom_1/client/?page=pay__success";
+        window.location="index.php?page=pay_success";
       }
     })
   })
