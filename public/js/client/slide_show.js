@@ -1,39 +1,40 @@
+//khai báo biến slideIndex đại diện cho slide hiện tại
+var slideIndex;
 
- //khai báo biến slideIndex đại diện cho slide hiện tại
-  var slideIndex;
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function prevSlides(n) {
+  showSlides(slideIndex -= n);
+}
+// KHai bào hàm hiển thị slide
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("js-banner");
+  var dots = document.getElementsByClassName("banner__index");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    dots[i].className = dots[i].className.replace(" banner__index--choosen", "");
   }
-  function prevSlides(n) {
-    showSlides(slideIndex -= n);
+  slides[slideIndex].style.display = "block";
+  dots[slideIndex].className += " banner__index--choosen";
+  //chuyển đến slide tiếp theo
+  slideIndex++;
+  //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+  if (slideIndex > slides.length - 1) {
+    slideIndex = 0;
   }
-  // KHai bào hàm hiển thị slide
-  function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("js-banner");
-      var dots = document.getElementsByClassName("banner__index");
-      for (i = 0; i < slides.length; i++) {
-         slides[i].style.display = "none";  
-          dots[i].className = dots[i].className.replace(" banner__index--choosen", "");
-      }
-      slides[slideIndex].style.display = "block";  
-      dots[slideIndex].className += " banner__index--choosen";
-      //chuyển đến slide tiếp theo
-      slideIndex++;
-      //nếu đang ở slide cuối cùng thì chuyển về slide đầu
-      if (slideIndex > slides.length - 1) {
-        slideIndex = 0;
-      }    
-      //tự động chuyển đổi slide sau 4s
-      setTimeout(showSlides, 4000);
-  }
-  //mặc định hiển thị slide đầu tiên 
-  showSlides(slideIndex = 0);
- 
-  // nút điều khi
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
+  //tự động chuyển đổi slide sau 4s
+  setTimeout(showSlides, 4000);
+}
+//mặc định hiển thị slide đầu tiên 
+showSlides(slideIndex = 0);
+
+// nút điều khi
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 /*let currentIndex = 1; // xac dinh anh hien tai
 // lay phan tu xac dinh vi tri anh vao mang
 let dot = document.getElementsByClassName("banner_index");
