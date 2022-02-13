@@ -62,7 +62,7 @@
         </li>
       ';
     } elseif ($page_num < ($offset + 1)) {
-      for ($i = 1; $i <= ($offset + 2); $i++) {
+      for ($i = 1; $i <= ($offset * 2); $i++) {
         if ($i == $page_num) {
           echo '
             <li>
